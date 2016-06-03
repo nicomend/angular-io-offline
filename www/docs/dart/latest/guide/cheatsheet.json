@@ -1,0 +1,20 @@
+{
+  "currentEnvironment": "Dart",
+  "version": {
+    "raw": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 1,
+    "prerelease": [
+      "local"
+    ],
+    "build": "sha.1324085",
+    "version": "0.0.1-local",
+    "codeName": "snapshot",
+    "isSnapshot": true,
+    "full": "0.0.1-local+sha.1324085",
+    "branch": "master",
+    "commitSHA": "1324085c0c5d200919993939759165117067ae2e"
+  },
+  "sections": []
+}
