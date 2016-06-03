@@ -2,4 +2,5 @@
 
 - clone this repository
 - run npm install
-- navigate to http:\\localhost:9999
+- node index.js
+- navigate to http://localhost:9999
