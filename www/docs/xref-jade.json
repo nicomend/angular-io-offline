@@ -63,169 +63,14 @@
     ],
     "/Users/Nico/angular.io/angular.io/public/docs/dart/latest/guide/dependency-injection.jade": [
       {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/car/car_no_di-car.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/car/car_no_di.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/car/car_creations-car-ctor-instantiation.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/car/car_creations.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/car/car_creations-car-ctor-instantiation-with-param.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/car/car_creations.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/car/car_creations-car-ctor-instantiation-with-mocks.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/car/car_creations.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/car/car_injector-injector-call.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/car/car_injector.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/web/main-bootstrap.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/web/main.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/web/main_1-bootstrap.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/web/main_1.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/heroes/heroes_component_1-providers.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/heroes/heroes_component_1.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/heroes/hero_list_component_2-ctor.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/heroes/hero_list_component_2.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/car/car_injector-injector-create-and-call.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/car/car_injector.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/providers_component-providers-logger.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/providers_component.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/providers_component-provider-10-ctor.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/providers_component.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/providers_component-provider-10-logger.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/providers_component.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/providers_component-providers-1.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/providers_component.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/providers_component-providers-2.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/providers_component.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/providers_component-providers-4.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/providers_component.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/providers_component-EvenBetterLogger.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/providers_component.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/providers_component-providers-5.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/providers_component.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/providers_component-providers-6a.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/providers_component.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/providers_component-providers-6b.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/providers_component.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/app_config-const-class.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/app_config.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/app_config-const-object.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/app_config.dart",
-        "exists": true
-      },
-      {
         "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/providers_component-providers-9.dart.md",
         "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/providers_component.dart",
         "exists": true
       },
       {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/heroes/hero_service-internals.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/heroes/hero_service.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/heroes/hero_service_provider-factory.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/heroes/hero_service_provider.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/heroes/hero_service_provider-provider.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/heroes/hero_service_provider.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/injector_component-get-hero-service.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/injector_component.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/providers_component-provider-8-ctor.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/providers_component.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/providers_component-opaque-token.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/providers_component.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/providers_component-use-opaque-token.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/providers_component.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/providers_component-configurable-logger.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/providers_component.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/providers_component-providers-7.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/providers_component.dart",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/dart/lib/injector_component-injector.dart.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/dart/lib/injector_component.dart",
-        "exists": true
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/app.config-config-alt.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/app.config.ts",
+        "exists": false
       }
     ],
     "/Users/Nico/angular.io/angular.io/public/docs/dart/latest/guide/displaying-data.jade": [
@@ -844,6 +689,437 @@
         "exists": true
       }
     ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/common/index/AsyncPipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/async_pipe/async_pipe_example-AsyncPipePromise.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/async_pipe/async_pipe_example.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/async_pipe/async_pipe_example-AsyncPipeObservable.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/async_pipe/async_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/common/index/CurrencyPipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/number_pipe/number_pipe_example-CurrencyPipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/number_pipe/number_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/common/index/DatePipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/date_pipe/date_pipe_example-DatePipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/date_pipe/date_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/common/index/DecimalPipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/number_pipe/number_pipe_example-NumberPipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/number_pipe/number_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/common/index/JsonPipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/json_pipe/json_pipe_example-JsonPipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/json_pipe/json_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/common/index/LowerCasePipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/lowerupper_pipe/lowerupper_pipe_example-LowerUpperPipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/lowerupper_pipe/lowerupper_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/common/index/NG_VALIDATORS-let.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/forms/ts/ng_validators/ng_validators-ng_validators.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/forms/ts/ng_validators/ng_validators.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/common/index/PercentPipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/number_pipe/number_pipe_example-PercentPipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/number_pipe/number_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/common/index/SlicePipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/slice_pipe/slice_pipe_example-SlicePipe_list.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/slice_pipe/slice_pipe_example.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/slice_pipe/slice_pipe_example-SlicePipe_string.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/slice_pipe/slice_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/common/index/UpperCasePipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/lowerupper_pipe/lowerupper_pipe_example-LowerUpperPipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/lowerupper_pipe/lowerupper_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/compiler/index/UrlResolver-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/compiler/ts/url_resolver/url_resolver-url_resolver.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/compiler/ts/url_resolver/url_resolver.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/animate-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/animation/ts/dsl/animation_example-Component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/animation/ts/dsl/animation_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/ApplicationRef-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/platform/platform-longform.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/platform/platform.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/Attribute-var.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-attributeMetadata.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/AttributeMetadata-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-attributeMetadata.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/AttributeMetadataFactory-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-attributeFactory.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/Component-decorator.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/ComponentMetadata-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/ComponentMetadataFactory-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/DirectiveMetadataFactory-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-directive.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/forwardRef-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/di/ts/forward_ref/forward_ref-forward_ref.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/di/ts/forward_ref/forward_ref.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/ForwardRefFn-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/di/ts/forward_ref/forward_ref-forward_ref_fn.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/di/ts/forward_ref/forward_ref.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/group-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/animation/ts/dsl/animation_example-Component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/animation/ts/dsl/animation_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/keyframes-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/animation/ts/dsl/animation_example-Component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/animation/ts/dsl/animation_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/Pipe-decorator.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-pipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/PipeMetadata-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-pipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/PipeMetadataFactory-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-pipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/sequence-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/animation/ts/dsl/animation_example-Component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/animation/ts/dsl/animation_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/state-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/animation/ts/dsl/animation_example-Component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/animation/ts/dsl/animation_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/style-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/animation/ts/dsl/animation_example-Component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/animation/ts/dsl/animation_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/transition-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/animation/ts/dsl/animation_example-Component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/animation/ts/dsl/animation_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/index/trigger-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/animation/ts/dsl/animation_example-Component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/animation/ts/dsl/animation_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/testing/afterEach-var.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-afterEach.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/testing/beforeEach-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-beforeEach.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/testing/beforeEachProviders-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-beforeEachProviders.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/testing/describe-var.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-describeIt.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/testing/fakeAsync-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/fake_async-basic.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/fake_async.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/testing/fdescribe-var.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-fdescribe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/testing/fit-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-fit.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/testing/it-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-describeIt.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/testing/tick-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/fake_async-basic.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/fake_async.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/testing/xdescribe-var.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-xdescribe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/core/testing/xit-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-xit.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/platform-browser/index/bootstrap-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/bootstrap/bootstrap-bootstrap.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/bootstrap/bootstrap.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/platform-browser/index/By-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/platform/dom/debug/ts/by/by-by_all.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/platform/dom/debug/ts/by/by.ts",
+        "exists": false
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/platform/dom/debug/ts/by/by-by_css.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/platform/dom/debug/ts/by/by.ts",
+        "exists": false
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/platform/dom/debug/ts/by/by-by_directive.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/platform/dom/debug/ts/by/by.ts",
+        "exists": false
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/platform-browser/testing/expect-var.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toHaveText.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/platform-browser/testing/NgMatchers-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toBePromise.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toBeAnInstanceOf.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toHaveText.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toHaveCssClass.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toHaveCssStyle.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toImplement.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toContainError.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toThrowErrorWith.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toMatchPattern.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": false
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/router-deprecated/index/CanActivate-decorator.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/router/ts/can_activate/can_activate_example-canActivate.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/router/ts/can_activate/can_activate_example.ts",
+        "exists": false
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/router-deprecated/index/CanDeactivate-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/router/ts/can_deactivate/can_deactivate_example-routerCanDeactivate.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/router/ts/can_deactivate/can_deactivate_example.ts",
+        "exists": false
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/router-deprecated/index/CanReuse-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/router/ts/reuse/reuse_example-reuseCmp.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/router/ts/reuse/reuse_example.ts",
+        "exists": false
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/router-deprecated/index/OnActivate-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/router/ts/on_activate/on_activate_example-routerOnActivate.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/router/ts/on_activate/on_activate_example.ts",
+        "exists": false
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/router-deprecated/index/OnDeactivate-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/router/ts/on_deactivate/on_deactivate_example-routerOnDeactivate.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/router/ts/on_deactivate/on_deactivate_example.ts",
+        "exists": false
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/js/latest/api/router-deprecated/index/OnReuse-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/router/ts/reuse/reuse_example-reuseCmp.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/router/ts/reuse/reuse_example.ts",
+        "exists": false
+      }
+    ],
     "/Users/Nico/angular.io/angular.io/public/docs/js/latest/cookbook/ts-to-js.jade": [
       {
         "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/cb-ts-to-js/ts/app/main-ng2import.ts.md",
@@ -1053,6 +1329,437 @@
         "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/quickstart/js/package.1.json.md",
         "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/quickstart/js/package.1.json",
         "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/common/index/AsyncPipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/async_pipe/async_pipe_example-AsyncPipePromise.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/async_pipe/async_pipe_example.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/async_pipe/async_pipe_example-AsyncPipeObservable.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/async_pipe/async_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/common/index/CurrencyPipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/number_pipe/number_pipe_example-CurrencyPipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/number_pipe/number_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/common/index/DatePipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/date_pipe/date_pipe_example-DatePipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/date_pipe/date_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/common/index/DecimalPipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/number_pipe/number_pipe_example-NumberPipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/number_pipe/number_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/common/index/JsonPipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/json_pipe/json_pipe_example-JsonPipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/json_pipe/json_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/common/index/LowerCasePipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/lowerupper_pipe/lowerupper_pipe_example-LowerUpperPipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/lowerupper_pipe/lowerupper_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/common/index/NG_VALIDATORS-let.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/forms/ts/ng_validators/ng_validators-ng_validators.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/forms/ts/ng_validators/ng_validators.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/common/index/PercentPipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/number_pipe/number_pipe_example-PercentPipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/number_pipe/number_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/common/index/SlicePipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/slice_pipe/slice_pipe_example-SlicePipe_list.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/slice_pipe/slice_pipe_example.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/slice_pipe/slice_pipe_example-SlicePipe_string.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/slice_pipe/slice_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/common/index/UpperCasePipe-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/pipes/ts/lowerupper_pipe/lowerupper_pipe_example-LowerUpperPipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/pipes/ts/lowerupper_pipe/lowerupper_pipe_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/compiler/index/UrlResolver-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/compiler/ts/url_resolver/url_resolver-url_resolver.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/compiler/ts/url_resolver/url_resolver.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/animate-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/animation/ts/dsl/animation_example-Component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/animation/ts/dsl/animation_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/ApplicationRef-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/platform/platform-longform.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/platform/platform.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/Attribute-var.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-attributeMetadata.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/AttributeMetadata-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-attributeMetadata.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/AttributeMetadataFactory-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-attributeFactory.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/Component-decorator.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/ComponentMetadata-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/ComponentMetadataFactory-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/DirectiveMetadataFactory-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-directive.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/forwardRef-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/di/ts/forward_ref/forward_ref-forward_ref.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/di/ts/forward_ref/forward_ref.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/ForwardRefFn-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/di/ts/forward_ref/forward_ref-forward_ref_fn.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/di/ts/forward_ref/forward_ref.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/group-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/animation/ts/dsl/animation_example-Component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/animation/ts/dsl/animation_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/keyframes-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/animation/ts/dsl/animation_example-Component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/animation/ts/dsl/animation_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/Pipe-decorator.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-pipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/PipeMetadata-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-pipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/PipeMetadataFactory-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/metadata/metadata-pipe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/metadata/metadata.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/sequence-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/animation/ts/dsl/animation_example-Component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/animation/ts/dsl/animation_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/state-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/animation/ts/dsl/animation_example-Component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/animation/ts/dsl/animation_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/style-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/animation/ts/dsl/animation_example-Component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/animation/ts/dsl/animation_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/transition-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/animation/ts/dsl/animation_example-Component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/animation/ts/dsl/animation_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/index/trigger-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/animation/ts/dsl/animation_example-Component.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/animation/ts/dsl/animation_example.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/testing/afterEach-var.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-afterEach.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/testing/beforeEach-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-beforeEach.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/testing/beforeEachProviders-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-beforeEachProviders.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/testing/describe-var.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-describeIt.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/testing/fakeAsync-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/fake_async-basic.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/fake_async.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/testing/fdescribe-var.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-fdescribe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/testing/fit-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-fit.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/testing/it-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-describeIt.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/testing/tick-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/fake_async-basic.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/fake_async.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/testing/xdescribe-var.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-xdescribe.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/core/testing/xit-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/testing-xit.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/testing.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/platform-browser/index/bootstrap-function.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/core/ts/bootstrap/bootstrap-bootstrap.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/core/ts/bootstrap/bootstrap.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/platform-browser/index/By-class.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/platform/dom/debug/ts/by/by-by_all.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/platform/dom/debug/ts/by/by.ts",
+        "exists": false
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/platform/dom/debug/ts/by/by-by_css.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/platform/dom/debug/ts/by/by.ts",
+        "exists": false
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/platform/dom/debug/ts/by/by-by_directive.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/platform/dom/debug/ts/by/by.ts",
+        "exists": false
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/platform-browser/testing/expect-var.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toHaveText.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/platform-browser/testing/NgMatchers-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toBePromise.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toBeAnInstanceOf.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toHaveText.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toHaveCssClass.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toHaveCssStyle.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toImplement.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toContainError.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toThrowErrorWith.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/testing/ts/matchers-toMatchPattern.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/testing/ts/matchers.ts",
+        "exists": false
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/router-deprecated/index/CanActivate-decorator.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/router/ts/can_activate/can_activate_example-canActivate.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/router/ts/can_activate/can_activate_example.ts",
+        "exists": false
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/router-deprecated/index/CanDeactivate-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/router/ts/can_deactivate/can_deactivate_example-routerCanDeactivate.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/router/ts/can_deactivate/can_deactivate_example.ts",
+        "exists": false
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/router-deprecated/index/CanReuse-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/router/ts/reuse/reuse_example-reuseCmp.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/router/ts/reuse/reuse_example.ts",
+        "exists": false
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/router-deprecated/index/OnActivate-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/router/ts/on_activate/on_activate_example-routerOnActivate.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/router/ts/on_activate/on_activate_example.ts",
+        "exists": false
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/router-deprecated/index/OnDeactivate-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/router/ts/on_deactivate/on_deactivate_example-routerOnDeactivate.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/router/ts/on_deactivate/on_deactivate_example.ts",
+        "exists": false
+      }
+    ],
+    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/api/router-deprecated/index/OnReuse-interface.jade": [
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/_api/router/ts/reuse/reuse_example-reuseCmp.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular/modules/@angular/examples/router/ts/reuse/reuse_example.ts",
+        "exists": false
       }
     ],
     "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/cookbook/a1-a2-quick-reference.jade": [
@@ -1403,11 +2110,6 @@
         "exists": true
       },
       {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/cb-dependency-injection/ts/app/hero-of-the-month-literals.component-providers-using-object-literals.ts.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/cb-dependency-injection/ts/app/hero-of-the-month-literals.component.ts",
-        "exists": true
-      },
-      {
         "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/cb-dependency-injection/ts/app/date-logger.service-date-logger-service-signature.ts.md",
         "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/cb-dependency-injection/ts/app/date-logger.service.ts",
         "exists": true
@@ -1547,13 +2249,6 @@
         "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/docs/_fragments/architecture/ts/app/app.component-import.ts.md",
         "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/docs/_fragments/architecture/ts/app/app.component.ts",
         "exists": false
-      }
-    ],
-    "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/guide/_fragments/dependency-injection-providers-provide-4-1.jade": [
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/providers.component-providers-3a.ts.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/providers.component.ts",
-        "exists": true
       }
     ],
     "/Users/Nico/angular.io/angular.io/public/docs/ts/latest/guide/architecture.jade": [
@@ -1769,12 +2464,12 @@
         "exists": true
       },
       {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/main.1-bootstrap.ts.md",
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/main.1-bootstrap-discouraged.ts.md",
         "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/main.1.ts",
         "exists": true
       },
       {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/heroes/heroes.component.1-providers.ts.md",
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/heroes/heroes.component.1-full.ts.md",
         "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/heroes/heroes.component.1.ts",
         "exists": true
       },
@@ -1799,32 +2494,7 @@
         "exists": true
       },
       {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/providers.component-import-optional.ts.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/providers.component.ts",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/providers.component-provider-10-ctor.ts.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/providers.component.ts",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/providers.component-provider-10-logger.ts.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/providers.component.ts",
-        "exists": true
-      },
-      {
         "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/providers.component-providers-1.ts.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/providers.component.ts",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/providers.component-providers-2.ts.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/providers.component.ts",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/providers.component-providers-3.ts.md",
         "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/providers.component.ts",
         "exists": true
       },
@@ -1889,8 +2559,8 @@
         "exists": true
       },
       {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/providers.component-provider-8-ctor.ts.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/providers.component.ts",
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/heroes/hero-list.component-ctor-signature.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/heroes/hero-list.component.ts",
         "exists": true
       },
       {
@@ -1899,12 +2569,12 @@
         "exists": true
       },
       {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/providers.component-providers-9a-interface.ts.md",
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/providers.component-providers-9-interface.ts.md",
         "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/providers.component.ts",
         "exists": true
       },
       {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/providers.component-provider-9a-ctor-interface.ts.md",
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/providers.component-provider-9-ctor-interface.ts.md",
         "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/providers.component.ts",
         "exists": true
       },
@@ -1914,23 +2584,23 @@
         "exists": true
       },
       {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/providers.component-providers-9b.ts.md",
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/providers.component-providers-9.ts.md",
         "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/providers.component.ts",
         "exists": true
       },
       {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/providers.component-provider-9b-ctor.ts.md",
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/app.component.2-ctor.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/app.component.2.ts",
+        "exists": true
+      },
+      {
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/providers.component-import-optional.ts.md",
         "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/providers.component.ts",
         "exists": true
       },
       {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/app.component-providers.ts.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/app.component.ts",
-        "exists": true
-      },
-      {
-        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/app.component-ctor.ts.md",
-        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/app.component.ts",
+        "fragPath": "/Users/Nico/angular.io/angular.io/public/docs/_fragments/dependency-injection/ts/app/providers.component-provider-10-ctor.ts.md",
+        "examplePath": "/Users/Nico/angular.io/angular.io/public/docs/_examples/dependency-injection/ts/app/providers.component.ts",
         "exists": true
       },
       {

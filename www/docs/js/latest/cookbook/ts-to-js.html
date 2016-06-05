@@ -93,9 +93,7 @@ applications.</p>
 <table width="100%"><col width="50%"><col width="50%"><tr><th>TypeScript</th><th>ES5 JavaScript</th></tr><tr style="vertical-align:top"><td><h3 id="importing-angular-2-code">Importing Angular 2 Code</h3>
 <p>In TypeScript code, Angular 2 classes, functions, and other members
 are imported with TypeScript <code>import</code> statements:</p>
-<code-example language="ts" format="">import { provide }
-  from &#39;@angular/core&#39;;
-import { bootstrap }
+<code-example language="ts" format="">import { bootstrap }
   from &#39;@angular/platform-browser-dynamic&#39;;
 import {
 } from &#39;@angular/router&#39;;
@@ -109,9 +107,7 @@ import {
 we can access Angular code through the global <code>ng</code> object. In the
 nested members of this object we&#39;ll find everything we would import
 from <code>angular2</code> in TypeScript:</p>
-<code-example language="js" format="">var provide =
-  ng.core.provide;
-var bootstrap =
+<code-example language="js" format="">var bootstrap =
   ng.platformBrowserDynamic.bootstrap;
 var LocationStrategy =
   ng.common.LocationStrategy;

@@ -314,9 +314,7 @@ export class HeroesQueriesComponent {
 Copyright 2016 Google Inc. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[app/main.ts]" value="import { provide }
-  from '@angular/core';
-import { bootstrap }
+*/"><input type="hidden" name="files[app/main.ts]" value="import { bootstrap }
   from '@angular/platform-browser-dynamic';
 import {
 } from '@angular/router';
@@ -341,7 +339,7 @@ bootstrap(HeroComponent);
 bootstrap(HeroLifecycleComponent);
 bootstrap(HeroDIComponent, [DataService]);
 bootstrap(HeroDIInjectComponent, [
-  provide('heroName', {useValue: 'Windstorm'})
+  { provide: 'heroName', useValue: 'Windstorm' }
 ]);
 bootstrap(AppDIInjectAdditionalComponent);
 bootstrap(AppIOComponent);

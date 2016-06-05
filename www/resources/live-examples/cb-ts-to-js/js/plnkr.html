@@ -396,8 +396,6 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[app/main.js]" value="(function(app) {
 
-  var provide =
-    ng.core.provide;
   var bootstrap =
     ng.platformBrowserDynamic.bootstrap;
   var LocationStrategy =
@@ -414,10 +412,10 @@ can be found in the LICENSE file at http://angular.io/license
     bootstrap(app.HeroDIComponent, [app.DataService]);
     bootstrap(app.HeroDIInlineComponent, [app.DataService]);
     bootstrap(app.HeroDIInjectComponent, [
-      ng.core.provide('heroName', {useValue: 'Windstorm'})
+      { provide: 'heroName', useValue: 'Windstorm' }
     ]);
     bootstrap(app.HeroDIInjectComponent2, [
-      ng.core.provide('heroName', {useValue: 'Bombasto'})
+      { provide: 'heroName', useValue: 'Bombasto' }
     ]);
     bootstrap(app.HeroDIInjectAdditionalComponent);
     bootstrap(app.HeroIOComponent);

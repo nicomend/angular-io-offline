@@ -714,7 +714,7 @@ the array argument passed to <code>Promise.all</code>.</p>
 <p><strong>Create</strong> a <code>my-uppercase.pipe.ts</code> in <code>app/</code>.</p>
 <p><strong>Stop and restart the TypeScript compiler</strong> to ensure we compile the new file.</p>
 <p><strong>Add</strong> a basic pipe that doesn&#39;t do anything. We know how to make strings uppercase, but we since we&#39;re letting the test take the lead let&#39;s wait for it to tell us what&#39;s next. Maybe it&#39;ll surprise us.</p>
-<div class="example-title">app/my-uppercase.pipe.ts</div><code-example language="ts" format="linenums">import {Pipe, PipeTransform} from &#39;@angular/core&#39;;
+<div class="example-title">app/my-uppercase.pipe.ts</div><code-example language="ts" format="linenums">import { Pipe, PipeTransform } from &#39;@angular/core&#39;;
 
 @Pipe({ name: &#39;my-uppercase&#39; })
 export class MyUppercasePipe implements PipeTransform {
@@ -732,7 +732,7 @@ If it had depended on Angular, we’d still be staring at the Jasmine “big-tim
 <figure class="image-display"><img src="/resources/images/devguide/testing-an-angular-pipe/big-time-fail-screen.png" alt="Jasmine's' big time fail screen"></figure><p>We are writing an Angular application after all and
 we were going to need Angular sooner or later. That time has come.</p>
 <p><code>MyUppercasePipe</code> depends on Angular as is clear in the first few lines:</p>
-<code-example language="ts" format="">import {Pipe, PipeTransform} from &#39;@angular/core&#39;;
+<code-example language="ts" format="">import { Pipe, PipeTransform } from &#39;@angular/core&#39;;
 </code-example><p><strong>Open</strong> <code>unit-tests.html</code></p>
 <p><strong>Find</strong> the <code>&lt;!-- #1. add the system.js library --&gt;</code> comment.</p>
 <p><strong>Replace</strong> the scripts tags beneath it with the all the needed angular scripts:</p>

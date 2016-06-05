@@ -84,13 +84,12 @@ In this cookbook we will explore many of the features of Dependency Injection (D
 <p><a href="#component-element">Inject the component&#39;s DOM element</a></p>
 <p><a href="#providers">Define dependencies with providers</a></p>
 <ul>
-<li><a href="#provide">The <em>provide</em> function</a></li>
+<li><a href="#provide">The <em>provide</em> object literal</a></li>
 <li><a href="#usevalue">useValue - the <em>value provider</em></a></li>
 <li><a href="#useclass">useClass - the <em>class provider</em></a></li>
 <li><a href="#useexisting">useExisting - the <em>alias provider</em></a></li>
-<li><a href="#usefactory">useFactory - the <em>factory provider</em></a>  </li>
+<li><a href="#usefactory">useFactory - the <em>factory provider</em></a></li>
 </ul>
-<p><a href="#object-literals">Define providers with object literals</a></p>
 <p><a href="#tokens">Provider token alternatives</a></p>
 <ul>
 <li><a href="#class-interface">class-interface</a></li>
@@ -155,11 +154,10 @@ The application shouldn&#39;t know or care one way or the other.</p>
 where we list their service providers in an array in the second parameter of the <code>bootstrap</code> method.</p>
 <div class="example-title">app/main.ts</div><code-example language="ts" format="">bootstrap(AppComponent, [
   ROUTER_PROVIDERS,
-  provide(LocationStrategy,
-         {useClass: HashLocationStrategy}),
+  { provide: LocationStrategy, useClass: HashLocationStrategy },
 
-  provide(XHRBackend, { useClass: InMemoryBackendService }), // in-mem server
-  provide(SEED_DATA,  { useClass: HeroData }) // in-mem server data
+  { provide: XHRBackend, useClass: InMemoryBackendService }, // in-mem server
+  { provide: SEED_DATA,  useClass: HeroData } // in-mem server data
 ]).catch((err: any) =&gt; console.error(err));
 </code-example><a id="injectable"></a><a id="nested-dependencies"></a><div class="l-main-section"></div><h2 id="-injectable-and-nested-service-dependencies"><em>@Injectable</em> and nested service dependencies</h2>
 <p>The consumer of an injected service does not know how to create that service.
@@ -474,7 +472,7 @@ But not every dependency can be satisfied by creating a new instance of a class.
 We need other ways to deliver dependency values and that means we need other ways to specify a provider.</p>
 <p>The <code>HeroOfTheMonthComponent</code> example demonstrates many of the alternatives and why we need them. </p>
 <figure class="image-display"><img src="/resources/images/cookbooks/dependency-injection/hero-of-month.png" alt="Hero of the month" width="300px"></figure><p>It&#39;s visually simple: a few properties and the output of a logger. The code behind it gives us plenty to talk about.</p>
-<div class="example-title">hero-of-the-month.component.ts</div><code-example language="ts" format="linenums">import { Component, Inject, provide } from &#39;@angular/core&#39;;
+<div class="example-title">hero-of-the-month.component.ts</div><code-example language="ts" format="linenums">import { Component, Inject } from &#39;@angular/core&#39;;
 
 import { DateLoggerService,
          MinimalLogger }     from &#39;./date-logger.service&#39;;
@@ -488,12 +486,12 @@ import { RUNNERS_UP,
   selector: &#39;hero-of-the-month&#39;,
   template: template,
   providers: [
-    provide(Hero,          {useValue:    someHero}),
-    provide(TITLE,         {useValue:   &#39;Hero of the Month&#39;}),
-    provide(HeroService,   {useClass:    HeroService}),
-    provide(LoggerService, {useClass:    DateLoggerService}),
-    provide(MinimalLogger, {useExisting: LoggerService}),
-    provide(RUNNERS_UP,    {useFactory:  runnersUpFactory(2), deps: [Hero, HeroService]})
+    { provide: Hero,          useValue:    someHero },
+    { provide: TITLE,         useValue:   &#39;Hero of the Month&#39; },
+    { provide: HeroService,   useClass:    HeroService },
+    { provide: LoggerService, useClass:    DateLoggerService },
+    { provide: MinimalLogger, useExisting: LoggerService },
+    { provide: RUNNERS_UP,    useFactory:  runnersUpFactory(2), deps: [Hero, HeroService] }
   ]
 })
 export class HeroOfTheMonthComponent {
@@ -509,10 +507,8 @@ export class HeroOfTheMonthComponent {
     logger.logInfo(&#39;starting up&#39;);
   }
 }
-</code-example><div class="l-main-section"></div><a id="provide"></a><h4 id="the-provide-function">The <em>provide</em> function</h4>
-<p>The imported Angular <code>provide</code> function creates an instance of 
-the Angular <a href="../api/core/Provider-class.html">Provider</a> class.</p>
-<p>The <code>provide</code> function takes a <em>token</em> and a <em>definition object</em>.
+</code-example><div class="l-main-section"></div><a id="provide"></a><h4 id="the-provide-object-literal">The <em>provide</em> object literal</h4>
+<p>The <code>provide</code> object literal takes a <em>token</em> and a <em>definition object</em>.
 The <em>token</em> is usually a class but <a href="#tokens">it doesn&#39;t have to be</a>.</p>
 <p>The <em>definition</em> object has one main property, (e.g. <code>useValue</code>) that indicates how the provider 
 should create or return the provided value.</p>
@@ -523,8 +519,8 @@ We often use a <em>value provider</em> in a unit test to replace a production se
 <p>The <code>HeroOfTheMonthComponent</code> example has two <em>value providers</em>.
 The first provides an instance of the <code>Hero</code> class; 
 the second specifies a literal string resource:</p>
-<code-example language="ts" format="">    provide(Hero,          {useValue:    someHero}),
-    provide(TITLE,         {useValue:   &#39;Hero of the Month&#39;}),
+<code-example language="ts" format="">    { provide: Hero,          useValue:    someHero },
+    { provide: TITLE,         useValue:   &#39;Hero of the Month&#39; },
 </code-example><p>The <code>Hero</code> provider token is a class which makes sense because the value is a <code>Hero</code>
 and the consumer of the injected hero would want the type information.</p>
 <p>The <code>TITLE</code> provider token is <em>not a class</em>.
@@ -541,8 +537,8 @@ The <code>someHero</code> variable in this example was set earlier in the file:<
 The alternative could implement a different strategy, extend the default class,
 or fake the behavior of the real class in a test case.</p>
 <p>We see two examples in the <code>HeroOfTheMonthComponent</code>:</p>
-<code-example language="ts" format="">provide(HeroService,   {useClass:    HeroService}),
-provide(LoggerService, {useClass:    DateLoggerService}),
+<code-example language="ts" format="">{ provide: HeroService,   useClass:    HeroService },
+{ provide: LoggerService, useClass:    DateLoggerService },
 </code-example><p>The first provider is the <em>de-sugared</em>, expanded form of the most typical case in which the
 class to be created (<code>HeroService</code>) is also the provider&#39;s injection token. 
 We wrote it in this long form to de-mystify the preferred short form.</p>
@@ -565,7 +561,7 @@ function stamp(msg: any) { return msg + &#39; at &#39; + new Date(); }
 <p>The <code>useExisting</code> provider maps one token to another. 
 In effect, the first token is an <strong><em>alias</em></strong> for the service associated with second token,
 creating <strong><em>two ways to access the same service object</em></strong>.</p>
-<code-example language="ts" format="">provide(MinimalLogger, {useExisting: LoggerService}),
+<code-example language="ts" format="">{ provide: MinimalLogger, useExisting: LoggerService },
 </code-example><p>Narrowing an API through an aliasing interface is <em>one</em> important use case for this technique.
 We&#39;re aliasing for that very purpose here.
 Imagine that the <code>LoggerService</code> had a large API (it&#39;s actually only three methods and a property).
@@ -582,7 +578,7 @@ The following image, which displays the logging date, confirms the point:</p>
 <figure class="image-display"><img src="/resources/images/cookbooks/dependency-injection/date-logger-entry.png" alt="DateLoggerService entry" width="300px"></figure><div class="l-main-section"></div><a id="usefactory"></a><h4 id="usefactory-the-factory-provider-">useFactory - the <em>factory provider</em></h4>
 <p>The <code>useFactory</code> provider creates a dependency object by calling a factory function
 as seen in this example.</p>
-<code-example language="ts" format="">provide(RUNNERS_UP,    {useFactory:  runnersUpFactory(2), deps: [Hero, HeroService]})
+<code-example language="ts" format="">{ provide: RUNNERS_UP,    useFactory:  runnersUpFactory(2), deps: [Hero, HeroService] }
 </code-example><p>Use this technique to <strong><em>create a dependency object</em></strong> 
 with a factory function whose inputs are some <strong><em>combination of injected services and local state</em></strong>.</p>
 <p>The <em>dependency object</em> doesn&#39;t have to be a class instance. It could be anything.
@@ -608,20 +604,7 @@ and Angular injects it into the <code>runnersUp</code> parameter of the <code>He
 takes <code>2</code> of them to be the runners-up, and returns their concatenated names.
 Look at the <a href="/resources/live-examples/cb-dependency-injection/ts/plnkr.html">live example</a>
 for the full source code.</p>
-</div><a id="object-literals"></a><div class="l-main-section"></div><h2 id="define-providers-with-object-literals">Define providers with object literals</h2>
-<p>In the previous section we learned to use the <code>provide</code> method to customize how dependencies are created. </p>
-<p>Instead of calling the <code>provide</code> function, we can configure providers with <em>object literals</em>. 
-It&#39;s a slightly more concise syntax and we don&#39;t have to import the <code>provide</code> function.</p>
-<p>Here&#39;s a set of providers that we saw earlier, re-written with object literals.</p>
-<code-example language="ts" format="">providers: [
-  {provide: Hero,          useValue:    someHero},
-  {provide: TITLE,         useValue:    &#39;Hero of the Month - Object Literals&#39;},
-  {provide: HeroService,   useClass:    HeroService},
-  {provide: LoggerService, useClass:    DateLoggerService},
-  {provide: MinimalLogger, useExisting: LoggerService},
-  {provide: RUNNERS_UP,    useFactory:  runnersUpFactory(2), deps: [Hero, HeroService]}
-]
-</code-example><a id="tokens"></a><div class="l-main-section"></div><h2 id="provider-token-alternatives-the-class-interface-and-opaquetoken-">Provider token alternatives: the <em>class-interface</em> and <em>OpaqueToken</em></h2>
+</div><a id="tokens"></a><div class="l-main-section"></div><h2 id="provider-token-alternatives-the-class-interface-and-opaquetoken-">Provider token alternatives: the <em>class-interface</em> and <em>OpaqueToken</em></h2>
 <p>Angular dependency injection is easiest when the provider <em>token</em> is a class
 that is also the type of the returned dependency object (what we usually call the <em>service</em>).</p>
 <p>But the token doesn&#39;t have to be a class and even when it is a class,
@@ -631,7 +614,7 @@ That&#39;s the subject of our next section. </p>
 <h3 id="class-interface">class-interface</h3>
 <p>In the previous <em>Hero of the Month</em> example, we used the <code>MinimalLogger</code> class
 as the token for a provider of a <code>LoggerService</code>.</p>
-<code-example language="ts" format="">provide(MinimalLogger, {useExisting: LoggerService}),
+<code-example language="ts" format="">{ provide: MinimalLogger, useExisting: LoggerService },
 </code-example><p>The <code>MinimalLogger</code> is an abstract class. </p>
 <code-example language="ts" format="">// class used as a restricting interface (hides other public members)
 export abstract class MinimalLogger {
@@ -677,8 +660,8 @@ another token that happens to have the same name.</p>
 <p>The <code>OpaqueToken</code> has these characteristics.
 We encountered them twice in the <em>Hero of the Month</em> example, 
 in the <em>title</em> value provider and in the <em>runnersUp</em> factory provider.</p>
-<code-example language="ts" format="">provide(TITLE,         {useValue:   &#39;Hero of the Month&#39;}),
-provide(RUNNERS_UP,    {useFactory:  runnersUpFactory(2), deps: [Hero, HeroService]})
+<code-example language="ts" format="">{ provide: TITLE,         useValue:   &#39;Hero of the Month&#39; },
+{ provide: RUNNERS_UP,    useFactory:  runnersUpFactory(2), deps: [Hero, HeroService] }
 </code-example><p>We created the <code>TITLE</code> token like this:</p>
 <code-example language="ts" format="">import { OpaqueToken } from &#39;@angular/core&#39;;
 
@@ -836,10 +819,10 @@ confirms that the <code>alex</code> parameter is null.
 <p>The parent must cooperate by providing an <em>alias</em> to itself in the name of a <em>class-interface</em> token. </p>
 <p>Recall that Angular always adds a component instance to its own injector; 
 that&#39;s why we could inject <em>Alex</em> into <em>Carol</em> <a href="#known-parent">earlier</a>.</p>
-<p>We write an <a href="#useexisting"><em>alias provider</em></a> &mdash; a <code>provide</code> function with a <code>useExisting</code> definition &mdash;
+<p>We write an <a href="#useexisting"><em>alias provider</em></a> &mdash; a <code>provide</code> object literal with a <code>useExisting</code> definition &mdash;
 that creates an <em>alternative</em> way to inject the same component instance
 and add that provider to the <code>providers</code> array of the <code>@Component</code> metadata for the <code>AlexComponent</code>:</p>
-<a id="alex-providers"></a><div class="example-title">parent-finder.component.ts (AlexComponent providers)</div><code-example language="ts" format="">providers: [ provide(Parent, { useExisting: forwardRef(() =&gt; AlexComponent) }) ],
+<a id="alex-providers"></a><div class="example-title">parent-finder.component.ts (AlexComponent providers)</div><code-example language="ts" format="">providers: [{ provide: Parent, useExisting: forwardRef(() =&gt; AlexComponent) }],
 </code-example><p><a href="#parent-token">Parent</a> is the provider&#39;s <em>class-interface</em> token. 
 The <a href="#forwardref"><em>forwardRef</em></a> breaks the circular reference we just created by having the <code>AlexComponent</code> refer to itself.</p>
 <p><em>Carol</em>, the third of <em>Alex</em>&#39;s child components, injects the parent into its <code>parent</code> parameter, the same way we&#39;ve done it before:</p>
@@ -869,7 +852,7 @@ That means he must both <em>inject</em> the <code>Parent</code> <em>class-interf
   selector:   &#39;barry&#39;,
   template:   templateB,
   directives: C_DIRECTIVES,
-  providers:  [ provide(Parent, { useExisting: forwardRef(() =&gt; BarryComponent) }) ]
+  providers:  [{ provide: Parent, useExisting: forwardRef(() =&gt; BarryComponent) }]
 })
 export class BarryComponent implements Parent {
   name = &#39;Barry&#39;;
@@ -909,11 +892,13 @@ It doesn&#39;t in this example <em>only</em> to demonstrate that the code will c
 </div><a id="provideparent"></a><h3 id="a-provideparent-helper-function">A <em>provideParent</em> helper function</h3>
 <p>Writing variations of the same parent <em>alias provider</em> gets old quickly, 
 especially this awful mouthful with a <a href="#forwardref"><em>forwardRef</em></a>:</p>
-<code-example language="ts" format="">providers: [ provide(Parent, { useExisting: forwardRef(() =&gt; AlexComponent) }) ],
+<code-example language="ts" format="">providers: [{ provide: Parent, useExisting: forwardRef(() =&gt; AlexComponent) }],
 </code-example><p>We can extract that logic into a helper function like this:</p>
 <code-example language="ts" format="">// Helper method to provide the current component instance in the name of a `parentType`.
 const provideParent =
-  (component: any) =&gt; provide(Parent, { useExisting: forwardRef(() =&gt; component) });
+  (component: any) =&gt; {
+    return { provide: Parent, useExisting: forwardRef(() =&gt; component) }
+  };
 </code-example><p>Now we can add a simpler, more meaningful parent provider to our components:</p>
 <code-example language="ts" format="">providers:  [ provideParent(AliceComponent) ]
 </code-example><p>We can do better. The current version of the helper function can only alias the <code>Parent</code> <em>class-interface</em>.
@@ -922,8 +907,9 @@ Our application might have a variety of parent types, each with its own <em>clas
 <code-example language="ts" format="">// Helper method to provide the current component instance in the name of a `parentType`.
 // The `parentType` defaults to `Parent` when omitting the second parameter.
 const provideParent =
-  (component: any, parentType?: any) =&gt;
-    provide(parentType || Parent, { useExisting: forwardRef(() =&gt; component) });
+  (component: any, parentType?: any) =&gt; {
+    return { provide: parentType || Parent, useExisting: forwardRef(() =&gt; component) }
+  };
 </code-example><p>And here&#39;s how we could use it with a different parent type:</p>
 <code-example language="ts" format="">providers:  [ provideParent(BethComponent, DifferentParent) ]
 </code-example><a id="forwardref"></a><div class="l-main-section"></div><h2 id="break-circularities-with-a-forward-class-reference-forwardref-">Break circularities with a forward class reference (<em>forwardRef</em>)</h2>
@@ -960,7 +946,7 @@ as does the <code>AlexComponent</code> in its <code>providers</code> array.
 The <code>providers</code> array is a property of the <code>@Component</code> decorator function which must
 appear <em>above</em> the class definition.</p>
 <p>Again we break the circularity with <code>forwardRef</code>:</p>
-<div class="example-title">parent-finder.component.ts (AlexComponent providers)</div><code-example language="ts" format="">providers: [ provide(Parent, { useExisting: forwardRef(() =&gt; AlexComponent) }) ],
+<div class="example-title">parent-finder.component.ts (AlexComponent providers)</div><code-example language="ts" format="">providers: [{ provide: Parent, useExisting: forwardRef(() =&gt; AlexComponent) }],
 </code-example></div></div></div></article><div class="main-footer"><nav class="background-blue-grey-900 grid-fluid"><div class="c3 main-footer-branding"><div class="logo-inverse-large"></div></div><div class="c3"><h3 class="text-headline">RESOURCES</h3><ul class="text-body"><!-- TODO: (ericjim) make a libraries page to showcase all angular 2 libraries--><!--li <a href="/libraries.html">Libraries</a>--><li><a href="/about/">About</a></li><li><a href="/resources/">Books & Training</a></li><li><a href="/resources/">Tools & Libraries</a></li><li><a href="/resources/">Community</a></li><li><a href="/presskit.html">Press Kit</a></li></ul></div><div class="c3"><h3 class="text-headline">HELP</h3><ul class="text-body"><li><a href="http://stackoverflow.com/questions/tagged/angular2">Stack Overflow</a></li><li><a href="https://gitter.im/angular/angular">Gitter</a></li><li><a href="https://groups.google.com/forum/#!forum/angular"> Google Group</a></li><li><a href="https://github.com/angular/angular/issues"> Report Issues</a></li><li><a class="footer-feedback" ng-click="appCtrl.openFeedback()" aria-label="Submit feedback on this page"> Site Feedback</a></li></ul></div><div class="c3"><h3 class="text-headline">COMMUNITY</h3><ul class="text-body"><li><a href="/events.html">Events</a></li><li><a href="http://www.meetup.com/topics/angularjs/">Meetups</a></li><li><a href="https://twitter.com/angularjs"> Twitter</a></li><li><a href="https://github.com/angular/angular"> GitHub</a></li><li><a href="/contribute.html"> Contribute</a></li></ul></div></nav><footer class="background-steel"><small class="text-caption">Powered by Google ©2010-2016. Code licensed under an <a href="/license" class="text-snow">MIT-style License</a>. Documentation licensed under <a class="text-snow" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small><a aria-label="View Style Guide" href="/docs/ts/latest/styleguide.html" title="Style Guide" md-button="md-button" class="styleguide-trigger text-snow"><span class="icon-favorite"></span></a></footer></div><!-- VENDORS --><script src="/resources/js/vendor/prettify.js"></script><script src="/resources/js/vendor/lang-basic.js"></script><script src="/resources/js/vendor/lang-dart.js"></script><script src="/resources/js/vendor/lodash.js"></script><script src="/resources/js/vendor/clipboard.min.js"></script><!-- Angular Material Dependencies --><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script><!-- Firebase -->
 <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
 <!-- AngularFire -->

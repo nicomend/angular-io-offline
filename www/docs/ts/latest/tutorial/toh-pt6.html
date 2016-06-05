@@ -117,7 +117,6 @@ a demo/development service, the <em>in-memory web api</em>.</p>
 So we&#39;ll slip the <em>in-memory web api</em> into the configuration <em>above</em> the <code>AppComponent</code>.</p>
 <p>Here is a version of <code>main</code> that performs this trick</p>
 <div class="example-title">app/main.ts (final)</div><code-example language="ts" format="">// Imports for loading &amp; configuring the in-memory web api
-import { provide }    from &#39;@angular/core&#39;;
 import { XHRBackend } from &#39;@angular/http&#39;;
 
 import { InMemoryBackendService, SEED_DATA } from &#39;angular2-in-memory-web-api&#39;;
@@ -131,8 +130,8 @@ import { AppComponent }   from &#39;./app.component&#39;;
 
 bootstrap(AppComponent, [
     HTTP_PROVIDERS,
-    provide(XHRBackend, { useClass: InMemoryBackendService }), // in-mem server
-    provide(SEED_DATA,  { useClass: InMemoryDataService })     // in-mem server data
+    { provide: XHRBackend, useClass: InMemoryBackendService }, // in-mem server
+    { provide: SEED_DATA, useClass: InMemoryDataService }      // in-mem server data
 ]);
 </code-example><p>We&#39;re replacing the default <code>XHRBackend</code>, the service that talks to the remote server,
 with the <em>in-memory web api</em> service after priming it with the following <code>in-memory-data.service.ts</code> file:</p>
@@ -213,7 +212,7 @@ We must anticipate http failures as they happen frequently for reasons beyond ou
 }
 </code-example><p>In this demo service we log the error to the console; we should do better in real life.</p>
 <p>We&#39;ve also decided to return a user friendly form of the error to
-to the caller in a rejected promise so that the caller can display a proper error message to the user.</p>
+the caller in a rejected promise so that the caller can display a proper error message to the user.</p>
 <h3 id="promises-are-promises">Promises are Promises</h3>
 <p>Although we made significant <em>internal</em> changes to <code>getHeroes()</code>, the public signature did not change.
 We still return a promise. We won&#39;t have to update any of the components that call <code>getHeroes()</code>.</p>
@@ -378,7 +377,7 @@ The original component was created to render existing data, but to add new data 
       .catch(error =&gt; this.error = error); // TODO: Display error message
 }
 </code-example><p>The same save method is used for both add and edit since <code>HeroService</code> will know when to call <code>post</code> vs <code>put</code> based on the state of the <code>Hero</code> object.</p>
-<p>After we save a hero, we redirect the browser back to the to the previous page using the <code>goBack()</code> method.</p>
+<p>After we save a hero, we redirect the browser back to the previous page using the <code>goBack()</code> method.</p>
 <div class="example-title">app/hero-detail.component.ts (goBack)</div><code-example language="ts" format="">goBack(savedHero: Hero = null) {
   this.close.emit(savedHero);
   if (this.navigated) { window.history.back(); }

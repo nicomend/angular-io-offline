@@ -1,10 +1,10 @@
-<html lang="en"><head></head><body><form id="mainForm" method="post" action="http://plnkr.co/edit/?p=preview" target="_self"><input type="hidden" name="files[app/app.component.ts]" value="import { Component, Inject, provide } from '@angular/core';
+<html lang="en"><head></head><body><form id="mainForm" method="post" action="http://plnkr.co/edit/?p=preview" target="_self"><input type="hidden" name="files[app/app.component.ts]" value="import { Component, Inject } from '@angular/core';
 
 import { CarComponent }      from './car/car.component';
 import { HeroesComponent }   from './heroes/heroes.component';
 
-import { APP_CONFIG,
-        Config, CONFIG }    from './app.config';
+import { APP_CONFIG, AppConfig,
+         HERO_DI_CONFIG }    from './app.config';
 import { Logger }            from './logger.service';
 
 import { User, UserService } from './user.service';
@@ -32,16 +32,15 @@ import { ProvidersComponent } from './providers.component';
   providers: [
     Logger,
     UserService,
-    provide(APP_CONFIG, {useValue: CONFIG})
+    { provide: APP_CONFIG, useValue: HERO_DI_CONFIG }
   ]
 })
 export class AppComponent {
   title:string;
 
   constructor(
-    @Inject(APP_CONFIG) config:Config,
+    @Inject(APP_CONFIG) config:AppConfig,
     private userService: UserService) {
-
     this.title = config.title;
   }
 
@@ -64,15 +63,16 @@ can be found in the LICENSE file at http://angular.io/license
 
 export let APP_CONFIG = new OpaqueToken('app.config');
 
-export interface Config {
+export interface AppConfig {
   apiEndpoint: string,
   title: string
 }
 
-export const CONFIG:Config = {
+export const HERO_DI_CONFIG: AppConfig = {
   apiEndpoint: 'api.heroes.com',
   title: 'Dependency Injection'
 };
+
 
 /*
 Copyright 2016 Google Inc. All Rights Reserved.
@@ -143,30 +143,26 @@ export class CarFactory {
 Copyright 2016 Google Inc. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[app/car/car-injector.ts]" value="import { ReflectiveInjector }         from '@angular/core';
+*/"><input type="hidden" name="files[app/car/car-injector.ts]" value="import { ReflectiveInjector } from '@angular/core';
 
 import { Car, Engine, Tires } from './car';
 import { Logger }             from '../logger.service';
 
 export function useInjector() {
-  var injector:ReflectiveInjector;
-
-/*
-  // Cannot 'new' an ReflectiveInjector like this!
-  var injector = new ReflectiveInjector([Car, Engine, Tires, Logger]);
-*/
-
-  injector = ReflectiveInjector.resolveAndCreate([Car, Engine, Tires, Logger]);
+  var injector: ReflectiveInjector;
+  /*
+  // Cannot instantiate an ReflectiveInjector like this!
+  var injector = new ReflectiveInjector([Car, Engine, Tires]);
+  */
+  injector = ReflectiveInjector.resolveAndCreate([Car, Engine, Tires]);
   var car = injector.get(Car);
   car.description = 'Injector';
 
+  injector = ReflectiveInjector.resolveAndCreate([Logger]);
   var logger = injector.get(Logger);
   logger.log('Injector car.drive() said: '+car.drive());
-
   return car;
 }
-
-
 
 
 /*
@@ -244,7 +240,7 @@ can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[app/car/car.ts]" value="import { Injectable } from '@angular/core';
 
 export class Engine {
-  public cylinders = 4; // default
+  public cylinders = 4;
 }
 
 export class Tires {
@@ -287,7 +283,8 @@ import { HeroService } from './hero.service';
 export class HeroListComponent {
   heroes: Hero[];
 
-  constructor(heroService: HeroService) {
+  constructor(heroService: HeroService)
+  {
     this.heroes = heroService.getHeroes();
   }
 }
@@ -297,9 +294,7 @@ export class HeroListComponent {
 Copyright 2016 Google Inc. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[app/heroes/hero.service.provider.ts]" value="import { provide }     from '@angular/core';
-
-import { HeroService } from './hero.service';
+*/"><input type="hidden" name="files[app/heroes/hero.service.provider.ts]" value="import { HeroService } from './hero.service';
 import { Logger }      from '../logger.service';
 import { UserService } from '../user.service';
 
@@ -308,10 +303,10 @@ let heroServiceFactory = (logger: Logger, userService: UserService) => {
 }
 
 export let heroServiceProvider =
-  provide(HeroService, {
+  {&nbsp;provide: HeroService,
     useFactory: heroServiceFactory,
     deps: [Logger, UserService]
-  });
+  };
 
 
 /*
@@ -379,16 +374,16 @@ can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[app/heroes/mock-heroes.ts]" value="import { Hero } from './hero';
 
 export var HEROES: Hero[] = [
-  { &quot;id&quot;: 11, isSecret: false, &quot;name&quot;: &quot;Mr. Nice&quot; },
-  { &quot;id&quot;: 12, isSecret: false, &quot;name&quot;: &quot;Narco&quot; },
-  { &quot;id&quot;: 13, isSecret: false, &quot;name&quot;: &quot;Bombasto&quot; },
-  { &quot;id&quot;: 14, isSecret: false, &quot;name&quot;: &quot;Celeritas&quot; },
-  { &quot;id&quot;: 15, isSecret: false, &quot;name&quot;: &quot;Magneta&quot; },
-  { &quot;id&quot;: 16, isSecret: false, &quot;name&quot;: &quot;RubberMan&quot; },
-  { &quot;id&quot;: 17, isSecret: false, &quot;name&quot;: &quot;Dynama&quot; },
-  { &quot;id&quot;: 18, isSecret: true,  &quot;name&quot;: &quot;Dr IQ&quot; },
-  { &quot;id&quot;: 19, isSecret: true,  &quot;name&quot;: &quot;Magma&quot; },
-  { &quot;id&quot;: 20, isSecret: true,  &quot;name&quot;: &quot;Tornado&quot; }
+  { id: 11, isSecret: false, name: &quot;Mr. Nice&quot; },
+  { id: 12, isSecret: false, name: &quot;Narco&quot; },
+  { id: 13, isSecret: false, name: &quot;Bombasto&quot; },
+  { id: 14, isSecret: false, name: &quot;Celeritas&quot; },
+  { id: 15, isSecret: false, name: &quot;Magneta&quot; },
+  { id: 16, isSecret: false, name: &quot;RubberMan&quot; },
+  { id: 17, isSecret: false, name: &quot;Dynama&quot; },
+  { id: 18, isSecret: true,  name: &quot;Dr IQ&quot; },
+  { id: 19, isSecret: true,  name: &quot;Magma&quot; },
+  { id: 20, isSecret: true,  name: &quot;Tornado&quot; }
 ];
 
 
@@ -399,6 +394,7 @@ can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[app/injector.component.ts]" value="import { Component, Injector }  from '@angular/core';
 
 import { Car, Engine, Tires }   from './car/car';
+import { Hero }                 from './heroes/hero';
 import { HeroService }          from './heroes/hero.service';
 import { heroServiceProvider }  from './heroes/hero.service.provider';
 import { Logger }               from './logger.service';
@@ -411,24 +407,19 @@ import { Logger }               from './logger.service';
   <div id=&quot;hero&quot;>{{hero.name}}</div>
   <div id=&quot;rodent&quot;>{{rodent}}</div>
   `,
-
-  providers: [Car, Engine, Tires,
-              heroServiceProvider, Logger]
+  providers: [Car, Engine, Tires, heroServiceProvider, Logger]
 })
 export class InjectorComponent {
   constructor(private injector: Injector) { }
 
-  car:Car = this.injector.get(Car);
+  car: Car = this.injector.get(Car);
 
-  heroService:HeroService = this.injector.get(HeroService);
-  hero = this.heroService.getHeroes()[0];
+  heroService: HeroService = this.injector.get(HeroService);
+  hero: Hero = this.heroService.getHeroes()[0];
 
   get rodent() {
-    let rous = this.injector.get(ROUS, null);
-    if (rous) {
-      throw new Error('Aaaargh!')
-    }
-    return &quot;R.O.U.S.'s? I don't think they exist!&quot;;
+    let rousDontExist = &quot;R.O.U.S.'s? I don't think they exist!&quot;;
+    return this.injector.get(ROUS, rousDontExist);
   }
 }
 
@@ -448,7 +439,8 @@ can be found in the LICENSE file at http://angular.io/license
 @Injectable()
 export class Logger {
   logs:string[] = []; // capture logs for testing
-  log(message: string){
+
+  log(message: string) {
     this.logs.push(message);
     console.log(message);
   }
@@ -473,11 +465,10 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[app/providers.component.ts]" value="/* tslint:disable:one-line:check-open-brace*/
 // Examples of provider arrays
-import { Component, Inject, Injectable,
-         provide, Provider }    from '@angular/core';
+import { Component, Inject, Injectable } from '@angular/core';
 
-import { APP_CONFIG,
-         Config, CONFIG }       from './app.config';
+import { APP_CONFIG, AppConfig,
+         HERO_DI_CONFIG }       from './app.config';
 
 import { HeroService }          from './heroes/hero.service';
 import { heroServiceProvider }  from './heroes/hero.service.provider';
@@ -490,8 +481,7 @@ let template = '{{log}}';
 @Component({
   selector: 'provider-1',
   template: template,
-  providers:
-    [Logger]
+  providers: [Logger]
 })
 export class ProviderComponent1 {
   log: string;
@@ -503,45 +493,15 @@ export class ProviderComponent1 {
 
 //////////////////////////////////////////
 @Component({
-  selector: 'provider-2',
-  template: template,
-  providers:
-    [new Provider(Logger, {useClass: Logger})]
-})
-export class ProviderComponent2 {
-  log: string;
-  constructor(logger: Logger) {
-    logger.log('Hello from logger provided with Provider class and useClass');
-    this.log = logger.logs[0];
-  }
-}
-
-//////////////////////////////////////////
-@Component({
-  selector: 'provider-3',
-  template: template,
-  providers:
-    [provide(Logger, {useClass: Logger})]
-})
-export class ProviderComponent3 {
-  log: string;
-  constructor(logger: Logger) {
-    logger.log('Hello from logger provided with useClass');
-    this.log = logger.logs[0];
-  }
-}
-
-//////////////////////////////////////////
-@Component({
   selector: 'provider-3a',
   template: template,
   providers:
-    [{provide: Logger, useClass: Logger}]
+    [{ provide: Logger, useClass: Logger }]
 })
 export class ProviderComponent3a {
   log: string;
   constructor(logger: Logger) {
-    logger.log('Hello from logger provided with {provide: Logger, useClass: Logger}');
+    logger.log('Hello from logger provided with { provide: Logger, useClass: Logger }');
     this.log = logger.logs[0];
   }
 }
@@ -553,7 +513,7 @@ class BetterLogger extends Logger {}
   selector: 'provider-4',
   template: template,
   providers:
-    [provide(Logger, {useClass: BetterLogger})]
+    [{ provide: Logger, useClass: BetterLogger }]
 })
 export class ProviderComponent4 {
   log: string;
@@ -565,15 +525,12 @@ export class ProviderComponent4 {
 
 //////////////////////////////////////////
 @Injectable()
-class EvenBetterLogger {
-  logs: string[] = [];
+class EvenBetterLogger extends Logger {
+  constructor(private userService: UserService) { super(); }
 
-  constructor(private userService: UserService) { }
-
-  log(message: string){
-    message = `Message to ${this.userService.user.name}: ${message}.`;
-    console.log(message);
-    this.logs.push(message);
+  log(message: string) {
+    let name = this.userService.user.name;
+    super.log(`Message to ${name}: ${message}`);
   }
 }
 
@@ -582,7 +539,7 @@ class EvenBetterLogger {
   template: template,
   providers:
     [ UserService,
-      provide(Logger, {useClass: EvenBetterLogger}) ]
+      { provide: Logger, useClass: EvenBetterLogger }]
 })
 export class ProviderComponent5 {
   log: string;
@@ -607,7 +564,7 @@ class OldLogger {
   providers:
     [ NewLogger,
       // Not aliased! Creates two instances of `NewLogger`
-      provide(OldLogger, {useClass: NewLogger}) ]
+      { provide: OldLogger, useClass: NewLogger}]
 })
 export class ProviderComponent6a {
   log: string;
@@ -628,7 +585,7 @@ export class ProviderComponent6a {
   providers:
     [ NewLogger,
       // Alias OldLogger w/ reference to NewLogger
-      provide(OldLogger, {useExisting: NewLogger}) ]
+      { provide: OldLogger, useExisting: NewLogger}]
 })
 export class ProviderComponent6b {
   log: string;
@@ -652,7 +609,7 @@ let silentLogger = {
   selector: 'provider-7',
   template: template,
   providers:
-    [provide(Logger, {useValue: silentLogger})]
+    [{ provide: Logger, useValue: silentLogger }]
 })
 export class ProviderComponent7 {
   log: string;
@@ -668,93 +625,55 @@ export class ProviderComponent7 {
   template: template,
   providers: [heroServiceProvider, Logger, UserService]
 })
-export class ProviderComponent8{
-  constructor(heroService: HeroService){ }
+export class ProviderComponent8 {
+  constructor(heroService: HeroService) { }
 
   // must be true else this component would have blown up at runtime
-  log = 'Hero service injected successfully';
+  log = 'Hero service injected successfully via heroServiceProvider';
 }
 
 /////////////////
 @Component({
-  selector: 'provider-9a',
+  selector: 'provider-9',
   template: template,
-  providers:
-    /*
-    // FAIL!  Can't use interface as provider token
-    [provide(Config, {useValue: CONFIG})]
-    */
-    // Use string as provider token
-    [provide('app.config', {useValue: CONFIG})]
+  /*
+   // FAIL!  Can't use interface as provider token
+   [{ provide: AppConfig, useValue: HERO_DI_CONFIG })]
+   */
+  providers: [{ provide: APP_CONFIG, useValue: HERO_DI_CONFIG }]
 })
-export class ProviderComponent9a {
+export class ProviderComponent9 {
   log: string;
   /*
-  // FAIL! Can't inject using the interface as the parameter type
-  constructor(private config: Config){ }
-  */
-
-  // @Inject(token) to inject the dependency
-  constructor(@Inject('app.config') private config: Config){ }
-
-  ngOnInit() {
-     this.log = '&quot;app.config&quot; Application title is ' + this.config.title;
-  }
-}
-
-@Component({
-  selector: 'provider-9b',
-  template: template,
-  providers: [provide(APP_CONFIG, {useValue: CONFIG})]
-})
-export class ProviderComponent9b {
-  log: string;
-  constructor(@Inject(APP_CONFIG) private config: Config){ }
+   // FAIL! Can't inject using the interface as the parameter type
+   constructor(private config: AppConfig){ }
+   */
+  constructor(@Inject(APP_CONFIG) private config: AppConfig) { }
 
   ngOnInit() {
      this.log = 'APP_CONFIG Application title is ' + this.config.title;
   }
 }
 //////////////////////////////////////////
-// Normal required logger
-@Component({
-  selector: 'provider-10a',
-  template: template,
-  providers: [Logger]
-})
-export class ProviderComponent10a {
-  log: string;
-  constructor(logger: Logger) {
-    logger.log('Hello from the required logger.');
-    this.log = logger.logs[0];
-  }
-}
+// Sample providers 1 to 7 illustrate a required logger dependency.
+// Optional logger, can be null
+import { Optional } from '@angular/core';
 
-// Optional logger
-import {Optional} from '@angular/core';
+let some_message: string = 'Hello from the injected logger';
 
 @Component({
-  selector: 'provider-10b',
+  selector: 'provider-10',
   template: template
 })
-export class ProviderComponent10b {
+export class ProviderComponent10 {
   log: string;
-  constructor(@Optional() private logger: Logger) {  }
+  constructor(@Optional() private logger: Logger) {
+    if (this.logger)
+      this.logger.log(some_message);
+  }
 
   ngOnInit() {
-    // No logger? Make one!
-    if (!this.logger) {
-      this.logger = {
-        log: (msg: string) => this.logger.logs.push(msg),
-        logs: []
-      };
-      this.logger.log('Optional logger was not available.');
-    }
-    else {
-      this.logger.log('Hello from the injected logger.');
-      this.log = this.logger.logs[0];
-    }
-    this.log = this.logger.logs[0];
+    this.log = this.logger ? this.logger.logs[0] : 'Optional logger was not available';
   }
 }
 
@@ -764,8 +683,6 @@ export class ProviderComponent10b {
   template: `
   <h2>Provider variations</h2>
   <div id=&quot;p1&quot;><provider-1></provider-1></div>
-  <div id=&quot;p2&quot;><provider-2></provider-2></div>
-  <div id=&quot;p3&quot;><provider-3></provider-3></div>
   <div id=&quot;p3a&quot;><provider-3a></provider-3a></div>
   <div id=&quot;p4&quot;><provider-4></provider-4></div>
   <div id=&quot;p5&quot;><provider-5></provider-5></div>
@@ -773,15 +690,11 @@ export class ProviderComponent10b {
   <div id=&quot;p6b&quot;><provider-6b></provider-6b></div>
   <div id=&quot;p7&quot;><provider-7></provider-7></div>
   <div id=&quot;p8&quot;><provider-8></provider-8></div>
-  <div id=&quot;p9a&quot;><provider-9a></provider-9a></div>
-  <div id=&quot;p9b&quot;><provider-9b></provider-9b></div>
-  <div id=&quot;p10a&quot;><provider-10a></provider-10a></div>
-  <div id=&quot;p10b&quot;><provider-10b></provider-10b></div>
+  <div id=&quot;p9&quot;><provider-9></provider-9></div>
+  <div id=&quot;p10&quot;><provider-10></provider-10></div>
   `,
   directives: [
     ProviderComponent1,
-    ProviderComponent2,
-    ProviderComponent3,
     ProviderComponent3a,
     ProviderComponent4,
     ProviderComponent5,
@@ -789,10 +702,8 @@ export class ProviderComponent10b {
     ProviderComponent6b,
     ProviderComponent7,
     ProviderComponent8,
-    ProviderComponent9a,
-    ProviderComponent9b,
-    ProviderComponent10a,
-    ProviderComponent10b,
+    ProviderComponent9,
+    ProviderComponent10,
   ],
 })
 export class ProvidersComponent { }
@@ -837,14 +748,14 @@ function runTests() {
 
 //////////////////////////////////
 // Fake Jasmine infrastructure
-var testName:string;
+var testName: string;
 var testResults: {pass:string; message:string};
 
 function expect(actual:any) {
   return {
     toEqual: function(expected:any){
       testResults = actual === expected?
-        {pass:'passed', message: `${testName}`} :
+        {pass:'passed', message: testName} :
         {pass:'failed', message: `${testName}; expected ${actual} to equal ${expected}.`};
     }
   }
@@ -862,25 +773,24 @@ Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[app/user.service.ts]" value="import {Injectable} from '@angular/core';
 
-@Injectable()
-export class UserService {
-  // Todo: get the user; don't 'new' it.
-  private _alice = new User('Alice', true);
-  private _bob = new User('Bob', false);
-
-  // initial user is Bob
-  user = this._bob;
-
-  // swaps users
-  getNewUser() {
-    return this.user = this.user === this._bob ? this._alice : this._bob;
-  }
-}
-
 export class User {
   constructor(
     public name:string,
     public isAuthorized:boolean = false) { }
+}
+
+// Todo: get the user; don't 'new' it.
+let alice = new User('Alice', true);
+let bob = new User('Bob', false);
+
+@Injectable()
+export class UserService {
+  user = bob;  // initial user is Bob
+
+  // swap users
+  getNewUser() {
+    return this.user = this.user === bob ? alice : bob;
+  }
 }
 
 

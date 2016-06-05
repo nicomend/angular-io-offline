@@ -162,7 +162,7 @@ solid advice in general!</p>
 up with a project structure with a large number of relatively small files. This is
 a much neater way to organize things than a small number of large files, but it
 doesn&#39;t work that well if you have to load all those files to the HTML page with
-<code>&lt;script&gt;</code> tags. Especially when you also have to maintain those tags in the correct
+&lt;script&gt; tags. Especially when you also have to maintain those tags in the correct
 order. That&#39;s why it&#39;s a good idea to start using a <em>module loader</em>.</p>
 <p>Using a module loader such as <a href="https://github.com/systemjs/systemjs">SystemJS</a>,
 <a href="http://webpack.github.io/">Webpack</a>, or <a href="http://browserify.org/">Browserify</a>
@@ -1250,7 +1250,7 @@ method. That&#39;s the same method that we used earlier for <code>HTTP_PROVIDERS
 version of the <code>Phone</code> Angular 2 service.</li>
 </ol>
 <p>Now that we are loading <code>phone.service.ts</code> through an import that is resolved
-by SystemJS, we should <strong>remove the <code>&lt;script&gt;</code> tag</strong> for the service from <code>index.html</code>.
+by SystemJS, we should <strong>remove the &lt;script&gt; tag</strong> for the service from <code>index.html</code>.
 This is something we&#39;ll do to all our components as we upgrade them. Simultaneously
 with the Angular 1 to 2 upgrade we&#39;re also migrating our code from scripts to modules.</p>
 <p>At this point we can switch our two components to use the new service
@@ -1429,7 +1429,7 @@ angular.module(&#39;phoneList&#39;)
 </code-example><p>The <code>&lt;angular.IDirectiveFactory&gt;</code> type annotation here is to let the TypeScript compiler
 know that the return value of the downgrade method call will be something that can be
 used as a directive factory.</p>
-<p>At this point, also remove the <code>&lt;script&gt;</code> tag for the phone list component from <code>index.html</code>.</p>
+<p>At this point, also remove the &lt;script&gt; tag for the phone list component from <code>index.html</code>.</p>
 <p>Now we can start looking at our other component, which is the one for
 the phone details. Set the contents of <code>phone-detail.component.ts</code> as follows:</p>
 <div class="example-title">app/phone-detail/phone-detail.component.ts</div><code-example language="ts" format="linenums">import { Component, Inject } from &#39;@angular/core&#39;;
@@ -1618,7 +1618,7 @@ angular.module(&#39;phoneDetail&#39;)
     &lt;angular.IDirectiveFactory&gt;
       upgradeAdapter.downgradeNg2Component(PhoneDetailComponent)
   );
-</code-example><p>We should now also remove the phone detail component <code>&lt;script&gt;</code> tag from <code>index.html</code>.</p>
+</code-example><p>We should now also remove the phone detail component &lt;script&gt; tag from <code>index.html</code>.</p>
 <p>There&#39;s one additional step we need to take, which is to upgrade the
 <code>checkmark</code> filter that the template is using. We need an Angular 2
 pipe instead of an Angular 1 filter.</p>
@@ -1638,7 +1638,7 @@ export class CheckmarkPipe implements PipeTransform {
 
 }
 </code-example><p>In the component we should now import and declare our newly created pipe (as well as
-remove the filter <code>&lt;script&gt;</code> tag from <code>index.html</code>):</p>
+remove the filter &lt;script&gt; tag from <code>index.html</code>):</p>
 <div class="example-title">app/phone-detail/phone-detail.component.ts</div><code-example language="ts" format="linenums">import { CheckmarkPipe } from &#39;../core/checkmark/checkmark.pipe&#39;;
 
 @Component({
@@ -1722,8 +1722,7 @@ export class PhoneDetailComponent{
 </code-example><p>With that, we&#39;re ready to switch the bootstrap method of the application from that
 of the <code>UpgradeAdapter</code> to the main Angular 2 <code>bootstrap</code>. Let&#39;s import it together
 with the router, the new app component, and everything else in <code>main.ts</code></p>
-<code-example language="ts" format="linenums">import { provide } from &#39;@angular/core&#39;;
-import {
+<code-example language="ts" format="linenums">import {
   LocationStrategy,
   HashLocationStrategy,
   APP_BASE_HREF
@@ -1743,8 +1742,8 @@ directives of the router:</p>
 <code-example language="ts" format="linenums">bootstrap(AppComponent, [
   HTTP_PROVIDERS,
   ROUTER_PROVIDERS,
-  provide(APP_BASE_HREF, {useValue: &#39;!&#39;}),
-  provide(LocationStrategy, {useClass: HashLocationStrategy}),
+  { provide: APP_BASE_HREF, useValue: &#39;!&#39; },
+  { provide: LocationStrategy, useClass: HashLocationStrategy },
   Phone
 ]);
 </code-example><p>We also configure a couple of things for the router here so that the application
@@ -1783,8 +1782,7 @@ do with removing code - which of course is every programmer&#39;s favorite task!
 <p>If you haven&#39;t already, remove all references to the <code>UpgradeAdapter</code> from <code>main.ts</code>.
 Also remove the Angular 1 bootstrap code.</p>
 <p>When you&#39;re done, this is what <code>main.ts</code> should look like:</p>
-<div class="example-title">app/main.ts</div><code-example language="ts" format="linenums">import { provide } from &#39;@angular/core&#39;;
-import {
+<div class="example-title">app/main.ts</div><code-example language="ts" format="linenums">import {
   LocationStrategy,
   HashLocationStrategy,
   APP_BASE_HREF
@@ -1798,8 +1796,8 @@ import { AppComponent } from &#39;./app.component&#39;;
 bootstrap(AppComponent, [
   HTTP_PROVIDERS,
   ROUTER_PROVIDERS,
-  provide(APP_BASE_HREF, {useValue: &#39;!&#39;}),
-  provide(LocationStrategy, {useClass: HashLocationStrategy}),
+  { provide: APP_BASE_HREF, useValue: &#39;!&#39; },
+  { provide: LocationStrategy, useClass: HashLocationStrategy },
   Phone
 ]);
 </code-example><p>You may also completely remove the following files. They are Angular 1
@@ -2067,8 +2065,7 @@ describe(&#39;CheckmarkPipe&#39;, function() {
 });
 </code-example><p>The unit test for the phone service is a bit more involved. We need to switch from the mocked-out
 Angular 1 <code>$httpBackend</code> to a mocked-out Angular 2 Http backend.</p>
-<div class="example-title">app/core/phone/phone.service.spec.ts</div><code-example language="ts" format="linenums">import { provide } from &#39;@angular/core&#39;;
-import {
+<div class="example-title">app/core/phone/phone.service.spec.ts</div><code-example language="ts" format="linenums">import {
   describe,
   beforeEach,
   beforeEachProviders,
@@ -2097,11 +2094,11 @@ describe(&#39;Phone&#39;, function() {
     Phone,
     MockBackend,
     BaseRequestOptions,
-    provide(Http, {
+    { provide: Http,
       useFactory: (backend: MockBackend, options: BaseRequestOptions) =&gt;
                     new Http(backend, options),
       deps: [MockBackend, BaseRequestOptions]
-    })
+    }
   ]);
 
   beforeEach(inject([MockBackend, Phone],
@@ -2126,8 +2123,7 @@ describe(&#39;Phone&#39;, function() {
 });
 </code-example><p>For the component specs we can mock out the <code>Phone</code> service itself, and have it provide
 canned phone data. We use Angular&#39;s component unit testing APIs for both components.</p>
-<div class="example-title">app/phone-detail/phone-detail.component.spec.ts</div><code-example language="ts" format="linenums">import { provide } from &#39;@angular/core&#39;;
-import { HTTP_PROVIDERS } from &#39;@angular/http&#39;;
+<div class="example-title">app/phone-detail/phone-detail.component.spec.ts</div><code-example language="ts" format="linenums">import { HTTP_PROVIDERS } from &#39;@angular/http&#39;;
 import { Observable } from &#39;rxjs/Rx&#39;;
 
 import {
@@ -2162,8 +2158,8 @@ class MockPhone extends Phone {
 describe(&#39;PhoneDetailComponent&#39;, () =&gt; {
 
   beforeEachProviders(() =&gt; [
-    provide(Phone, {useClass: MockPhone}),
-    provide(&#39;$routeParams&#39;, {useValue: {phoneId: &#39;xyz&#39;}}),
+    { provide: Phone, useClass: MockPhone },
+    { provide: &#39;$routeParams&#39;, useValue: {phoneId: &#39;xyz&#39;}},
     HTTP_PROVIDERS
   ]);
 
@@ -2178,8 +2174,7 @@ describe(&#39;PhoneDetailComponent&#39;, () =&gt; {
   }));
 
 });
-</code-example><div class="example-title">app/phone-list/phone-list.component.spec.ts</div><code-example language="ts" format="linenums">import { provide } from &#39;@angular/core&#39;;
-import { HTTP_PROVIDERS } from &#39;@angular/http&#39;;
+</code-example><div class="example-title">app/phone-list/phone-list.component.spec.ts</div><code-example language="ts" format="linenums">import { HTTP_PROVIDERS } from &#39;@angular/http&#39;;
 import { Observable } from &#39;rxjs/Rx&#39;;
 import {
   describe,
@@ -2211,7 +2206,7 @@ class MockPhone extends Phone {
 describe(&#39;PhoneList&#39;, () =&gt; {
 
   beforeEachProviders(() =&gt; [
-    provide(Phone, {useClass: MockPhone}),
+    { provide: Phone, useClass: MockPhone },
     HTTP_PROVIDERS
   ]);
 
@@ -2252,13 +2247,13 @@ instead of using the Angular 1 <code>$routeParams</code>.</p>
 /* . . . */
 
   beforeEachProviders(() =&gt; [
-    provide(Phone, {useClass: MockPhone}),
-    provide(RouteParams, {useValue: new RouteParams({phoneId: &#39;xyz&#39;})}),
+    { provide: Phone, useClass: MockPhone },
+    { provide: RouteParams, useValue: new RouteParams({phoneId: &#39;xyz&#39;})},
     HTTP_PROVIDERS
   ]);
 </code-example><p>And for the phone list component we need to set up a few things for the router itself so that
 the route link directive will work.</p>
-<div class="example-title">app/phone-list/phone-list.component.spec.ts</div><code-example language="ts" format="linenums">import { provide, ApplicationRef } from &#39;@angular/core&#39;;
+<div class="example-title">app/phone-list/phone-list.component.spec.ts</div><code-example language="ts" format="linenums">import { ApplicationRef } from &#39;@angular/core&#39;;
 import { LocationStrategy, HashLocationStrategy } from &#39;@angular/common&#39;;
 import { HTTP_PROVIDERS } from &#39;@angular/http&#39;;
 import {
@@ -2287,12 +2282,12 @@ import { Phone, PhoneData } from &#39;../core/phone/phone.service&#39;;
 /* . . . */
 
   beforeEachProviders(() =&gt; [
-    provide(Phone, {useClass: MockPhone}),
+    { provide: Phone, useClass: MockPhone},
     HTTP_PROVIDERS,
     ROUTER_PROVIDERS,
-    provide(ApplicationRef, {useClass: MockApplicationRef}),
-    provide(ROUTER_PRIMARY_COMPONENT, {useValue: AppComponent}),
-    provide(LocationStrategy, {useClass: MockLocationStrategy}),
+    { provide: ApplicationRef, useClass: MockApplicationRef },
+    { provide: ROUTER_PRIMARY_COMPONENT, useValue: AppComponent },
+    { provide: LocationStrategy, useClass: MockLocationStrategy},
   ]);
 </code-example><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--></div></div></div></article><div class="main-footer"><nav class="background-blue-grey-900 grid-fluid"><div class="c3 main-footer-branding"><div class="logo-inverse-large"></div></div><div class="c3"><h3 class="text-headline">RESOURCES</h3><ul class="text-body"><!-- TODO: (ericjim) make a libraries page to showcase all angular 2 libraries--><!--li <a href="/libraries.html">Libraries</a>--><li><a href="/about/">About</a></li><li><a href="/resources/">Books & Training</a></li><li><a href="/resources/">Tools & Libraries</a></li><li><a href="/resources/">Community</a></li><li><a href="/presskit.html">Press Kit</a></li></ul></div><div class="c3"><h3 class="text-headline">HELP</h3><ul class="text-body"><li><a href="http://stackoverflow.com/questions/tagged/angular2">Stack Overflow</a></li><li><a href="https://gitter.im/angular/angular">Gitter</a></li><li><a href="https://groups.google.com/forum/#!forum/angular"> Google Group</a></li><li><a href="https://github.com/angular/angular/issues"> Report Issues</a></li><li><a class="footer-feedback" ng-click="appCtrl.openFeedback()" aria-label="Submit feedback on this page"> Site Feedback</a></li></ul></div><div class="c3"><h3 class="text-headline">COMMUNITY</h3><ul class="text-body"><li><a href="/events.html">Events</a></li><li><a href="http://www.meetup.com/topics/angularjs/">Meetups</a></li><li><a href="https://twitter.com/angularjs"> Twitter</a></li><li><a href="https://github.com/angular/angular"> GitHub</a></li><li><a href="/contribute.html"> Contribute</a></li></ul></div></nav><footer class="background-steel"><small class="text-caption">Powered by Google ©2010-2016. Code licensed under an <a href="/license" class="text-snow">MIT-style License</a>. Documentation licensed under <a class="text-snow" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small><a aria-label="View Style Guide" href="/docs/ts/latest/styleguide.html" title="Style Guide" md-button="md-button" class="styleguide-trigger text-snow"><span class="icon-favorite"></span></a></footer></div><!-- VENDORS --><script src="/resources/js/vendor/prettify.js"></script><script src="/resources/js/vendor/lang-basic.js"></script><script src="/resources/js/vendor/lang-dart.js"></script><script src="/resources/js/vendor/lodash.js"></script><script src="/resources/js/vendor/clipboard.min.js"></script><!-- Angular Material Dependencies --><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script><!-- Firebase -->
 <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>

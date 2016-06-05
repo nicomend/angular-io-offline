@@ -78,9 +78,14 @@ we really can&#39;t build an Angular application without it.
 It&#39;s used so widely that almost everyone just calls it <em>DI</em>.</p>
 <p>In this chapter we&#39;ll learn what DI is and why we want it.
 Then we&#39;ll learn <a href="#angular-di">how to use it</a> in an Angular app.</p>
-<p>The complete source code for the example app in this chapter is
-<a href="https://github.com/angular/angular.io/tree/master/public/docs/_examples/dependency-injection/dart">in GitHub</a>.</p>
-<a id="why-di"></a><div class="l-main-section"></div><h2 id="why-dependency-injection-">Why dependency injection?</h2>
+<ul>
+<li><a href="#why-dependency-injection">Why dependency injection?</a></li>
+<li><a href="#angular-dependency-injection">Angular dependency injection</a></li>
+<li><a href="#injector-providers">Injector providers</a></li>
+<li><a href="#dependency-injection-tokens">Dependency injection tokens</a></li>
+<li><a href="#summary">Summary</a></li>
+</ul>
+<p>Run the <span><a href="http://angular-examples.github.io/dependency-injection" target="_blank">live example</a> (<a href="http://github.com/angular-examples/dependency-injection" target="_blank">view source</a>)</span>.</p><div id="why-di" class="l-main-section"></div><h2 id="why-dependency-injection-">Why dependency injection?</h2>
 <p>Let&#39;s start with the following code.</p>
 <div class="example-title">lib/car/car.dart (without DI)</div><code-example language="dart" format="linenums">class Car {
   Engine engine;
@@ -94,14 +99,15 @@ Then we&#39;ll learn <a href="#angular-di">how to use it</a> in an Angular app.<
 
   // Method using the engine and tires
   String drive() =&gt; &#39;$description car with &#39;
-      &#39;${engine.cylinders} cylinders and ${tires.make} tires.&#39;;
+    &#39;${engine.cylinders} cylinders and &#39;
+    &#39;${tires.make} tires.&#39;;
 }
 </code-example><p>Our <code>Car</code> creates everything it needs inside its constructor.
-What&#39;s the problem?</p>
-<p>The problem is that our <code>Car</code> class is brittle, inflexible, and hard to test.</p>
+What&#39;s the problem?
+The problem is that our <code>Car</code> class is brittle, inflexible, and hard to test.</p>
 <p>Our <code>Car</code> needs an engine and tires. Instead of asking for them,
-the <code>Car</code> constructor creates its own copies by &quot;new-ing&quot; them from
-the very specific classes, <code>Engine</code> and <code>Tires</code>.</p>
+the <code>Car</code> constructor instantiates its own copies from
+the very specific classes <code>Engine</code> and <code>Tires</code>.</p>
 <p>What if the <code>Engine</code> class evolves and its constructor requires a parameter?
 Our <code>Car</code> is broken and stays broken until we rewrite it along the lines of
 <code>engine = new Engine(theNewParameter)</code>.
@@ -128,8 +134,8 @@ if we can&#39;t swap in low-pressure tires during the test?</p>
 <p>We have no control over the car&#39;s hidden dependencies.
 When we can&#39;t control the dependencies, a class becomes difficult to test.</p>
 <p>How can we make <code>Car</code> more robust, flexible, and testable?</p>
-<p>That&#39;s super easy. We change our <code>Car</code> constructor to a version with DI:</p>
-<p><a id="ctor-injection"></a></p>
+<p><a id="ctor-injection"></a>
+That&#39;s super easy. We change our <code>Car</code> constructor to a version with DI:</p>
 <code-tabs><code-pane language="dart" name="lib/car/car.dart (excerpt with DI)" format=".">final Engine engine;
 final Tires tires;
 String description = &#39;DI&#39;;
@@ -146,9 +152,11 @@ Car() {
 </code-pane></code-tabs><p>See what happened? We moved the definition of the dependencies to the constructor.
 Our <code>Car</code> class no longer creates an engine or tires.
 It just consumes them.</p>
-<p>Now we create a car by passing the engine and tires to the constructor.</p>
+<div class="l-sub-section"><p>We also leveraged Dart&#39;s constructor syntax for declaring parameters and
+initializing properties simultaneously.</p>
+</div><p>Now we create a car by passing the engine and tires to the constructor.</p>
 <code-example language="dart" format="">// Simple car with 4 cylinders and Flintstone tires.
-var car = <span class="otl">new Car(new Engine(), new Tires());</span>
+new Car(new Engine(), new Tires())
 </code-example><p>How cool is that?
 The definition of the engine and tire dependencies are
 decoupled from the <code>Car</code> class itself.
@@ -157,14 +165,14 @@ conform to the general API requirements of an engine or tires.</p>
 <p>If someone extends the <code>Engine</code> class, that is not <code>Car</code>&#39;s problem.</p>
 <div class="l-sub-section"><p>The <em>consumer</em> of <code>Car</code> has the problem. The consumer must update the car creation code to
 something like this:</p>
-<code-example language="dart" format="">class Engine2 implements Engine {
-  final int cylinders;
-
-  Engine2(this.cylinders);
+<code-example language="dart" format="">class Engine2 extends Engine {
+  Engine2(cylinders) : super.withCylinders(cylinders);
 }
-// Super car with 12 cylinders and Flintstone tires.
-var bigCylinders = 12;
-var car = <span class="otl">new Car(new Engine2(bigCylinders), new Tires());</span>
+
+Car superCar() =&gt;
+  // Super car with 12 cylinders and Flintstone tires.
+  <span class="otl">new Car(new Engine2(12), new Tires())</span>
+  ..description = &#39;Super&#39;;
 </code-example><p>The critical point is this: <code>Car</code> itself did not have to change.
 We&#39;ll take care of the consumer&#39;s problem soon enough.</p>
 </div><p>The <code>Car</code> class is much easier to test because we are in complete control
@@ -172,15 +180,17 @@ of its dependencies.
 We can pass mocks to the constructor that do exactly what we want them to do
 during each test:</p>
 <code-example language="dart" format="">class MockEngine extends Engine {
-  final int cylinders = 8;
+  MockEngine() : super.withCylinders(8);
 }
 
 class MockTires extends Tires {
-  String make = &#39;YokoGoodStone&#39;;
+  MockTires() { make = &#39;YokoGoodStone&#39;; }
 }
 
-// Test car with 8 cylinders and YokoGoodStone tires.
-var car = <span class="otl">new Car(new MockEngine(), new MockTires());</span>
+Car testCar() =&gt;
+  // Test car with 8 cylinders and YokoGoodStone tires.
+  <span class="otl">new Car(new MockEngine(), new MockTires())</span>
+  ..description = &#39;Test&#39;;
 </code-example><p><strong>We just learned what dependency injection is</strong>.</p>
 <p>It&#39;s a coding pattern in which a class receives its dependencies from external
 sources rather than creating them itself.</p>
@@ -194,10 +204,9 @@ We need something that takes care of assembling these parts for us.</p>
 
 // BAD pattern!
 class CarFactory {
-  Car createCar() {
-    return new Car(createEngine(), createTires())
-      ..description = &#39;Factory&#39;;
-  }
+  Car createCar() =&gt;
+      new Car(createEngine(), createTires())
+        ..description = &#39;Factory&#39;;
 
   Engine createEngine() =&gt; new Engine();
   Tires createTires() =&gt; new Tires();
@@ -220,7 +229,7 @@ Both <code>Car</code> and consumer simply ask for what they need and the injecto
 <p>This is what a <strong>dependency injection framework</strong> is all about.</p>
 <p>Now that we know what dependency injection is and appreciate its benefits,
 let&#39;s see how it is implemented in Angular.</p>
-<a id="angular-di"></a><div class="l-main-section"></div><h2 id="angular-dependency-injection">Angular dependency injection</h2>
+<div id="angular-di" class="l-main-section"></div><h2 id="angular-dependency-injection">Angular dependency injection</h2>
 <p>Angular ships with its own dependency injection framework. This framework can also be used
 as a standalone module by other applications and frameworks.</p>
 <p>That sounds nice. What does it do for us when building components in Angular?
@@ -229,7 +238,7 @@ Let&#39;s see, one step at a time.</p>
 that we built in the <a href="../tutorial/">The Tour of Heroes</a>.</p>
 <code-tabs><code-pane language="dart" name="lib/heroes/heroes_component.dart" format="linenums">import &#39;package:angular2/core.dart&#39;;
 
-import &#39;hero_list_component.dart&#39;;
+import &#39;hero_service.dart&#39;;
 
 @Component(
     selector: &#39;my-heroes&#39;,
@@ -253,54 +262,29 @@ class HeroListComponent {
   final List&lt;Hero&gt; heroes = HEROES;
 }
 </code-pane><code-pane language="dart" name="lib/heroes/hero.dart" format="linenums">class Hero {
-  num id;
-  String name;
-  bool isSecret = false;
+  final int id;
+  final String name;
+  final bool isSecret;
+
+  Hero(this.id, this.name, [this.isSecret = false]);
 }
 </code-pane><code-pane language="dart" name="lib/heroes/mock_heroes.dart" format="linenums">import &#39;hero.dart&#39;;
 
-List&lt;Hero&gt; HEROES = [
-  new Hero()
-    ..id = 11
-    ..isSecret = false
-    ..name = &#39;Mr. Nice&#39;,
-  new Hero()
-    ..id = 12
-    ..isSecret = false
-    ..name = &#39;Narco&#39;,
-  new Hero()
-    ..id = 13
-    ..isSecret = false
-    ..name = &#39;Bombasto&#39;,
-  new Hero()
-    ..id = 14
-    ..isSecret = false
-    ..name = &#39;Celeritas&#39;,
-  new Hero()
-    ..id = 15
-    ..isSecret = false
-    ..name = &#39;Magneta&#39;,
-  new Hero()
-    ..id = 16
-    ..isSecret = false
-    ..name = &#39;RubberMan&#39;,
-  new Hero()
-    ..id = 17
-    ..isSecret = false
-    ..name = &#39;Dynama&#39;,
-  new Hero()
-    ..id = 18
-    ..isSecret = true
-    ..name = &#39;Dr IQ&#39;,
-  new Hero()
-    ..id = 19
-    ..isSecret = true
-    ..name = &#39;Magma&#39;,
-  new Hero()
-    ..id = 20
-    ..isSecret = true
-    ..name = &#39;Tornado&#39;
-];
+List&lt;Hero&gt; HEROES = &lt;Map&gt;[
+  {&#39;id&#39;: 11, &#39;isSecret&#39;: false, &#39;name&#39;: &#39;Mr. Nice&#39;},
+  {&#39;id&#39;: 12, &#39;isSecret&#39;: false, &#39;name&#39;: &#39;Narco&#39;},
+  {&#39;id&#39;: 13, &#39;isSecret&#39;: false, &#39;name&#39;: &#39;Bombasto&#39;},
+  {&#39;id&#39;: 14, &#39;isSecret&#39;: false, &#39;name&#39;: &#39;Celeritas&#39;},
+  {&#39;id&#39;: 15, &#39;isSecret&#39;: false, &#39;name&#39;: &#39;Magneta&#39;},
+  {&#39;id&#39;: 16, &#39;isSecret&#39;: false, &#39;name&#39;: &#39;RubberMan&#39;},
+  {&#39;id&#39;: 17, &#39;isSecret&#39;: false, &#39;name&#39;: &#39;Dynama&#39;},
+  {&#39;id&#39;: 18, &#39;isSecret&#39;: true, &#39;name&#39;: &#39;Dr IQ&#39;},
+  {&#39;id&#39;: 19, &#39;isSecret&#39;: true, &#39;name&#39;: &#39;Magma&#39;},
+  {&#39;id&#39;: 20, &#39;isSecret&#39;: true, &#39;name&#39;: &#39;Tornado&#39;}
+].map(_initHero).toList();
+
+Hero _initHero(Map heroProperties) =&gt; new Hero(
+    heroProperties[&#39;id&#39;], heroProperties[&#39;name&#39;], heroProperties[&#39;isSecret&#39;]);
 </code-pane></code-tabs><p>The <code>HeroesComponent</code> is the root component of the <em>Heroes</em> feature area.
 It governs all the child components of this area.
 Our stripped down version has only one child, <code>HeroListComponent</code>,
@@ -312,24 +296,32 @@ As soon as we try to test this component or want to get our heroes data from a r
 we&#39;ll have to change the implementation of <code>heroes</code> and
 fix every other use of the <code>HEROES</code> mock data.</p>
 <p>Let&#39;s make a service that hides how we get hero data.</p>
-<div class="example-title">lib/heroes/hero_service.dart</div><code-example language="dart" format="linenums">import &#39;hero.dart&#39;;
+<div class="l-sub-section"><p>Given that the service is a
+<a href="https://en.wikipedia.org/wiki/Separation_of_concerns">separate concern</a>,
+we suggest that you
+write the service code in its own file.</p>
+</div><div class="example-title">lib/heroes/hero_service.dart</div><code-example language="dart" format="linenums">import &#39;package:angular2/core.dart&#39;;
+
+import &#39;hero.dart&#39;;
 import &#39;mock_heroes.dart&#39;;
 
+@Injectable()
 class HeroService {
   List&lt;Hero&gt; getHeroes() =&gt; HEROES;
 }
 </code-example><p>Our <code>HeroService</code> exposes a <code>getHeroes</code> method that returns
 the same mock data as before, but none of its consumers need to know that.</p>
-<div class="l-sub-section"><p>We aren&#39;t even pretending this is a real service.
-If we were actually getting data from a remote server, the API would have to be asynchronous,
-returning a <code>Future</code>.
+<div class="l-sub-section"><p>Notice the <code>@Injectable()</code> annotation above the service class.
+We&#39;ll discuss its purpose <a href="#injectable">shortly</a>.</p>
+</div><div class="l-sub-section"><p>We aren&#39;t even pretending this is a real service.
+If we were actually getting data from a remote server, the API would have to be 
+asynchronous,  returning a <a href="https://api.dartlang.org/dart_async/Future.html">Future</a>.
 We&#39;d also have to rewrite the way components consume our service.
 This is important in general, but not to our current story.</p>
 </div><p>A service is nothing more than a class in Angular 2.
 It remains nothing more than a class until we register it with an Angular injector.</p>
-<h3 id="configuring-the-injector">Configuring the injector</h3>
-<p><a id="bootstrap"></a>
-We don&#39;t have to create an Angular injector.
+<div id="bootstrap"></div><h3 id="configuring-the-injector">Configuring the injector</h3>
+<p>We don&#39;t have to create an Angular injector.
 Angular creates an application-wide injector for us during the bootstrap process.</p>
 <div class="example-title">web/main.dart (excerpt)</div><code-example language="dart" format="">bootstrap(AppComponent);
 </code-example><p>We do have to configure the injector by registering the <strong>providers</strong>
@@ -337,7 +329,7 @@ that create the services our application requires.
 We&#39;ll explain what <a href="#providers">providers</a> are later in this chapter.
 Before we do, let&#39;s see an example of provider registration during bootstrapping:</p>
 <code-example language="dart" format="">bootstrap(AppComponent,
-         [HeroService]); // DISCOURAGED (but works)
+  [HeroService]); // DISCOURAGED (but works)
 </code-example><p>The injector now knows about our <code>HeroService</code>.
 An instance of our <code>HeroService</code> will be available for injection across our entire application.</p>
 <p>Of course we can&#39;t help wondering about that comment telling us not to do it this way.
@@ -349,7 +341,7 @@ Because the <code>HeroService</code> is used within the <em>Heroes</em> feature 
 and nowhere else &mdash; the ideal place to register it is in the top-level <code>HeroesComponent</code>.</p>
 <h3 id="registering-providers-in-a-component">Registering providers in a component</h3>
 <p>Here&#39;s a revised <code>HeroesComponent</code> that registers the <code>HeroService</code>.</p>
-<div class="example-title">lib/heroes/heroes_component.dart</div><code-example language="dart" format="linenums">import &#39;package:angular2/core.dart&#39;;
+<div class="example-title">lib/heroes/heroes_component.dart</div><code-example language="dart" format="">import &#39;package:angular2/core.dart&#39;;
 
 import &#39;hero_list_component.dart&#39;;
 import &#39;hero_service.dart&#39;;
@@ -359,21 +351,20 @@ import &#39;hero_service.dart&#39;;
     template: &#39;&#39;&#39;
       &lt;h2&gt;Heroes&lt;/h2&gt;
       &lt;hero-list&gt;&lt;/hero-list&gt;&#39;&#39;&#39;,
-    providers: const [HeroService],
+    <span class="otl">providers: const [HeroService]</span>,
     directives: const [HeroListComponent])
 class HeroesComponent {}
-</code-example><p>Look closely at the <code>providers</code> part of the <code>@Component</code> metadata:</p>
-<code-example language="dart" format="">providers: const [HeroService],
-</code-example><p>An instance of the <code>HeroService</code> is now available for injection in this <code>HeroesComponent</code>
+</code-example><p>Look closely at the <code>providers</code> part of the <code>@Component</code> metadata.
+An instance of the <code>HeroService</code> is now available for injection in this <code>HeroesComponent</code>
 and all of its child components.</p>
 <p>The <code>HeroesComponent</code> itself doesn&#39;t happen to need the <code>HeroService</code>.
 But its child <code>HeroListComponent</code> does, so we head there next.</p>
 <h3 id="preparing-the-herolistcomponent-for-injection">Preparing the HeroListComponent for injection</h3>
 <p>The <code>HeroListComponent</code> should get heroes from the injected <code>HeroService</code>.
-Per the dependency injection pattern, the component must ask for the service in its constructor, <a href="#ctor-injection">as we explained
-earlier</a>.
+Per the dependency injection pattern, the component must ask for the service in its 
+constructor, <a href="#ctor-injection">as we explained earlier</a>.
 It&#39;s a small change:</p>
-<code-tabs><code-pane language="dart" name="lib/heroes/hero_list_component (with DI)" format="linenums">import &#39;package:angular2/core.dart&#39;;
+<code-tabs><code-pane language="dart" name="lib/heroes/hero_list.component (with DI)" format="linenums">import &#39;package:angular2/core.dart&#39;;
 
 import &#39;hero.dart&#39;;
 import &#39;hero_service.dart&#39;;
@@ -390,7 +381,7 @@ class HeroListComponent {
   HeroListComponent(HeroService heroService)
       : heroes = heroService.getHeroes();
 }
-</code-pane><code-pane language="dart" name="lib/heroes/hero_list_component (without DI)" format="linenums">import &#39;package:angular2/core.dart&#39;;
+</code-pane><code-pane language="dart" name="lib/heroes/hero_list.component (without DI)" format="linenums">import &#39;package:angular2/core.dart&#39;;
 
 import &#39;hero.dart&#39;;
 import &#39;mock_heroes.dart&#39;;
@@ -404,12 +395,12 @@ import &#39;mock_heroes.dart&#39;;
 class HeroListComponent {
   final List&lt;Hero&gt; heroes = HEROES;
 }
-</code-pane></code-tabs><div class="l-sub-section"><h3 id="focus-on-the-constructor">Focus on the constructor</h3>
+</code-pane></code-tabs><div class="l-sub-section"><h4 id="focus-on-the-constructor">Focus on the constructor</h4>
 <p>Adding a parameter to the constructor isn&#39;t all that&#39;s happening here.</p>
 <code-example language="dart" format="">HeroListComponent(HeroService heroService)
     : heroes = heroService.getHeroes();
-</code-example><p>The constructor parameter has a type: <code>HeroService</code>.
-The <code>HeroListComponent</code> class is also annotated with <code>@Component</code>
+</code-example><p>Note that the constructor parameter has the type <code>HeroService</code>, and that
+the <code>HeroListComponent</code> class has an <code>@Component</code> annotation
 (scroll up to confirm that fact).
 Also recall that the parent component (<code>HeroesComponent</code>)
 has <code>providers</code> information for <code>HeroService</code>.</p>
@@ -417,14 +408,14 @@ has <code>providers</code> information for <code>HeroService</code>.</p>
 and the parent&#39;s <code>providers</code> information combine to tell the
 Angular injector to inject an instance of
 <code>HeroService</code> whenever it creates a new <code>HeroListComponent</code>.</p>
-</div><p><a id="di-metadata"></a></p>
-<h3 id="creating-the-injector-implicitly-">Creating the injector (implicitly)</h3>
-<p>When we introduced the idea of an injector above, we showed how to create
-an injector and use it to create a new <code>Car</code>.</p>
-<code-example language="dart" format="">  injector = ReflectiveInjector.resolveAndCreate([Car, Engine, Tires, Logger]);
+</div><div id="di-metadata"></div><h3 id="implicit-injector-creation">Implicit injector creation</h3>
+<p>When we introduced the idea of an injector above, we showed how to
+use it to create a new <code>Car</code>. Here we also show how such an injector
+would be explicitly created:</p>
+<code-example language="dart" format="">  injector = ReflectiveInjector.resolveAndCreate([Car, Engine, Tires]);
   var car = injector.get(Car);
 </code-example><p>We won&#39;t find code like that in the Tour of Heroes or any of our other samples.
-We <em>could</em> write <a href="#explicit-injector">code with an explicit injector</a> if we <em>had</em> to, but we rarely do.
+We <em>could</em> write code that <a href="#explicit-injector">explicitly creates an injector</a> if we <em>had</em> to, but we rarely do.
 Angular takes care of creating and calling injectors
 when it creates components for us &mdash; whether through HTML markup, as in <code>&lt;hero-list&gt;&lt;/hero-list&gt;</code>,
 or after navigating to a component with the <a href="./router.html">router</a>.
@@ -436,13 +427,25 @@ In our example, a single <code>HeroService</code> instance is shared among the
 <p>However, Angular DI is an hierarchical injection
 system, which means that nested injectors can create their own service instances.
 Learn more about that in the <a href="./hierarchical-dependency-injection.html">Hierarchical Injectors</a> chapter.</p>
-<!-- Skip the testing section, for now.--><!-- includeShared('{ts}', 'di-testing-component-1')--><!-- includeShared('{ts}', 'di-testing-component-2')--><h3 id="when-the-service-needs-a-service">When the service needs a service</h3>
+<h3 id="testing-the-component">Testing the component</h3>
+<p>We emphasized earlier that designing a class for dependency injection makes the class easier to test.
+Listing dependencies as constructor parameters may be all we need to test application parts effectively.</p>
+<p>For example, we can create a new <code>HeroListComponent</code> with a mock service that we can manipulate
+under test:</p>
+<code-example language="dart" format="">var expectedHeroes = [new Hero(0, &#39;A&#39;), new Hero(1, &#39;B&#39;)];
+var mockService = new MockHeroService(expectedHeroes);
+it(&#39;should have heroes when HeroListComponent created&#39;, () {
+  var hlc = new HeroListComponent(mockService);
+  expect(hlc.heroes.length).toEqual(expectedHeroes.length);
+});
+</code-example><div class="l-sub-section"><p>Learn more in <a href="../testing/index.html">Testing</a>.</p>
+</div><h3 id="when-the-service-needs-a-service">When the service needs a service</h3>
 <p>Our <code>HeroService</code> is very simple. It doesn&#39;t have any dependencies of its own.</p>
 <p>What if it had a dependency? What if it reported its activities through a logging service?
 We&#39;d apply the same <em>constructor injection</em> pattern,
 adding a constructor that takes a <code>Logger</code> parameter.</p>
 <p>Here is the revision compared to the original.</p>
-<code-tabs><code-pane language="dart" name="lib/heroes/hero_service (v.2)" format="linenums">import &#39;package:angular2/core.dart&#39;;
+<code-tabs><code-pane language="dart" name="lib/heroes/hero.service (v2)" format="linenums">import &#39;package:angular2/core.dart&#39;;
 
 import &#39;../logger_service.dart&#39;;
 import &#39;hero.dart&#39;;
@@ -453,143 +456,101 @@ class HeroService {
   final Logger _logger;
 
   HeroService(this._logger);
-
   List&lt;Hero&gt; getHeroes() {
     _logger.log(&#39;Getting heroes ...&#39;);
     return HEROES;
   }
 }
-</code-pane><code-pane language="dart" name="lib/heroes/hero_service (v.1)" format="linenums">import &#39;hero.dart&#39;;
+</code-pane><code-pane language="dart" name="lib/heroes/hero.service (v1)" format="linenums">import &#39;package:angular2/core.dart&#39;;
+
+import &#39;hero.dart&#39;;
 import &#39;mock_heroes.dart&#39;;
 
+@Injectable()
 class HeroService {
   List&lt;Hero&gt; getHeroes() =&gt; HEROES;
 }
-</code-pane></code-tabs><p>The constructor now asks for an injected instance of a <code>Logger</code> and stores it in a private property called <code>logger</code>.
+</code-pane></code-tabs><p>The constructor now asks for an injected instance of a <code>Logger</code> and stores it in a private property called <code>_logger</code>.
 We call that property within our <code>getHeroes</code> method when anyone asks for heroes.</p>
-<p><a id="injectable"></a></p>
-<h3 id="why-injectable-">Why @Injectable?</h3>
-<p>Notice the <code>@Injectable()</code> annotation above the service class.
-We haven&#39;t seen <code>@Injectable()</code> before.
-As it happens, we could have added it to our first version of <code>HeroService</code>.
-We didn&#39;t bother because we didn&#39;t need it then.</p>
-<p>We need it now... now that our service has an injected dependency.
-We need it because Angular requires constructor parameter metadata in order to inject a <code>Logger</code>. </p>
-<p>Forgetting the <code>@Injectable()</code> can cause a runtime error:</p>
-<code-example format="format" language="html">Cannot find reflection information on &lt;Type></code-example><div class="callout is-helpful"><header>Suggestion: add @Injectable() to every service class</header><p>We recommend adding <code>@Injectable()</code> to every service class, even those that don&#39;t have dependencies
-and, therefore, do not technically require it. Here&#39;s why:</p>
-<ul style="font-size:inherit"><li><b>Future proofing:</b> No need to remember <code>@Injectable()</code> when we add a dependency later.</li><li><b>Consistency:</b> All services follow the same rules, and we don't have to wonder why an annotation is missing.</li></ul><p>Although we recommend applying <code>@Injectable</code> to all service classes, do not feel bound by it.
-Some developers prefer to add it only where needed and that&#39;s a reasonable policy too.</p>
-</div><div class="l-sub-section"><p>The <code>HeroesComponent</code> has an injected dependency too. Why don&#39;t we add <code>@Injectable()</code> to the <code>HeroesComponent</code>?</p>
-<p>We <em>can</em> add it if we really want to. It isn&#39;t necessary because
-the <code>HeroesComponent</code> is already annotated with <code>@Component</code>. </p>
-</div><div class="callout is-critical"><header>Always include the parentheses</header><p>Always use <code>@Injectable()</code>, not just <code>@Injectable</code>.
+<h3 id="injectable">Why @Injectable()?</h3><p><strong><a href="https://angular.io/docs/ts/latest/api/core/index/InjectableMetadata-class.html">@Injectable()</a></strong> marks a class as available to an
+injector for instantiation. Generally speaking, an injector will report an
+error when trying to instantiate a class that is not marked as
+<code>@Injectable()</code>.</p>
+<p>Injectors are also responsible for instantiating components
+like <code>HeroesComponent</code>. Why haven&#39;t we marked <code>HeroesComponent</code> as
+<code>@Injectable()</code>?</p>
+<p>We <em>can</em> add it if we really want to. It isn&#39;t necessary because the
+<code>HeroesComponent</code> is already marked with <code>@Component</code>, and this
+annotation class (like <code>@Directive</code> and <code>@Pipe</code>, which we&#39;ll learn about later)
+is a subtype of <a href="https://angular.io/docs/ts/latest/api/core/index/InjectableMetadata-class.html">InjectableMetadata</a>.  It is in
+fact <code>InjectableMetadata</code> annotations that
+identify a class as a target for instantiation by an injector.</p>
+<div class="callout is-critical"><header>Always include the parentheses</header><p>Always write <code>@Injectable()</code>, not just <code>@Injectable</code>.
 A metadata annotation must be either a reference to a
 compile-time constant variable or a call to a constant
-constructor such as <code>Injectable()</code>.
-If we forget the parentheses, the analyzer will complain:
+constructor such as <code>Injectable()</code>.</p>
+<p>If we forget the parentheses, the analyzer will complain:
 &quot;Annotation creation must have arguments&quot;. If we try to run the
 app anyway, it won&#39;t work, and the console will say
 &quot;expression must be a compile-time constant&quot;.</p>
-</div><div class="l-main-section"></div><h2 id="creating-and-registering-a-logger-service">Creating and registering a logger service</h2>
+</div><div id="logger-service" class="l-main-section"></div><h2 id="creating-and-registering-a-logger-service">Creating and registering a logger service</h2>
 <p>We&#39;re injecting a logger into our <code>HeroService</code> in two steps:</p>
 <ol>
 <li>Create the logger service.</li>
 <li>Register it with the application.</li>
 </ol>
-<p>The logger service implementation is no big deal.</p>
-<div class="example-title">lib/logger_service</div><code-example language="dart" format="linenums">import &#39;package:angular2/core.dart&#39;;
+<p>Our logger service is quite simple:</p>
+<div class="example-title">lib/logger_service.dart</div><code-example language="dart" format="linenums">import &#39;package:angular2/core.dart&#39;;
 
 @Injectable()
 class Logger {
-  List&lt;String&gt; logs = [];
+  List&lt;String&gt; _logs = [];
+  List&lt;String&gt; get logs =&gt; _logs;
 
   void log(String message) {
-    logs.add(message);
+    _logs.add(message);
     print(message);
   }
 }
-</code-example><div class="l-sub-section"><h3 id="implementing-a-logger">Implementing a logger</h3>
-<p>Our examples use a simple logger.
-A real implementation would probably use the
+</code-example><div class="l-sub-section"><p>A real implementation would probably use the
 <a href="https://pub.dartlang.org/packages/logging">logging package</a>.</p>
 </div><p>We&#39;re likely to need the same logger service everywhere in our application,
-so we put it in the <code>lib/</code> folder, and
-we register it in the <code>providers</code> array of the metadata for our application root component, <code>AppComponent</code>.</p>
-<div class="example-title">lib/app_component.dart (excerpt)</div><code-example language="dart" format="">providers: const [Logger]
+so we put it in the project&#39;s <code>lib</code> folder, and
+we register it in the <code>providers</code> list of the metadata for our application root component, <code>AppComponent</code>.</p>
+<div class="example-title">lib/app_component.dart (excerpt) (providers-logger)</div><code-example language="dart" format="">providers: const [Logger]
 </code-example><p>If we forget to register the logger, Angular throws an exception when it first looks for the logger:</p>
-<code-example format="format" language="html">EXCEPTION: No provider for Logger! (HeroListComponent -> HeroService -> Logger)</code-example><p>That&#39;s Angular telling us that the dependency injector couldn&#39;t find the <em>provider</em> for the logger.
+<code-example format="nocode">EXCEPTION: No provider for Logger! (HeroListComponent -> HeroService -> Logger)
+</code-example><p>That&#39;s Angular telling us that the dependency injector couldn&#39;t find the <em>provider</em> for the logger.
 It needed that provider to create a <code>Logger</code> to inject into a new
 <code>HeroService</code>, which it needed to
 create and inject into a new <code>HeroListComponent</code>.</p>
-<p>The chain of creations started with the <code>Logger</code> provider. The <em>provider</em> is the subject of our next section.</p>
-<p>But wait!  What if the logger is optional?
-<a id="optional"></a></p>
-<h3 id="optional-dependencies">Optional dependencies</h3>
-<p>Our <code>HeroService</code> currently requires a <code>Logger</code>. What if we could get by without a logger?
-We&#39;d use it if we had it, ignore it if we didn&#39;t. We can do that.</p>
-<p>Just rewrite the constructor with the <code>@Optional()</code> annotation preceding the private <code>logger</code> parameter.
-That tells the injector that <code>logger</code> is optional.</p>
-<code-example language="dart" format="">final Logger _logger;
-String log;
-
-ProviderComponent10b(@Optional() Logger this._logger) {
-  // . . .
-}
-</code-example><p>Be prepared for a null logger. If we don&#39;t register one somewhere up the line,
-the injector will inject <code>null</code>. We have a method that logs.
-What can we do to avoid a null reference exception?</p>
-<p>We could substitute a <em>do-nothing</em> logger stub so that calling methods continue to work:</p>
-<code-example language="dart" format="">  final Logger _logger;
-  String log;
-
-  ProviderComponent10c(@Optional() Logger logger) :
-        _logger = logger ?? new DoNothingLogger() {
-    // . . .
-  }
-// . . .
-@Injectable()
-class DoNothingLogger extends Logger {
-  @override List&lt;String&gt; logs = [];
-  @override void log(String msg) =&gt; logs.add(msg);
-}
-</code-example><p>Obviously we&#39;d take a more sophisticated approach if the logger were optional
-in multiple locations.</p>
-<p>But enough about optional loggers. In our sample application, the <code>Logger</code> is required.
-We must register a <code>Logger</code> with the application injector using <em>providers</em>,
-as we learn in the next section.</p>
-<a id="providers"></a><div class="l-main-section"></div><h2 id="injector-providers">Injector providers</h2>
+<p>The chain of creations started with the <code>Logger</code> provider. <em>Providers</em> are the subject of our next section.</p>
+<div id="providers" class="l-main-section"></div><h2 id="injector-providers">Injector providers</h2>
 <p>A provider <em>provides</em> the concrete, runtime version of a dependency value.
 The injector relies on <strong>providers</strong> to create instances of the services
 that the injector injects into components and other services.</p>
 <p>We must register a service <em>provider</em> with the injector, or it won&#39;t know how to create the service.</p>
-<p>Earlier we registered the <code>Logger</code> service in the <code>providers</code> array of the metadata for the <code>AppComponent</code> like this:</p>
+<p>Earlier we registered the <code>Logger</code> service in the <code>providers</code> list of the metadata for the <code>AppComponent</code> like this:</p>
 <code-example language="dart" format="">providers: const [Logger]
-</code-example><p>The <code>providers</code> array appears to hold a service class.
-In reality it holds an instance of the <a href="../api/core/Provider-class.html">Provider</a> class that can create that service.</p>
-<p>There are many ways to <em>provide</em> something that implements <code>Logger</code>.
-The <code>Logger</code> class itself is an obvious and natural provider &mdash; it has the right shape and it&#39;s designed to be created.
+</code-example><p>There are many ways to <em>provide</em> something that implements <code>Logger</code>.
+The <code>Logger</code> class itself is an obvious and natural provider.
 But it&#39;s not the only way.</p>
 <p>We can configure the injector with alternative providers that can deliver  a <code>Logger</code>.
 We could provide a substitute class. 
 We could give it a provider that calls a logger factory function.
 Any of these approaches might be a good choice under the right circumstances.</p>
 <p>What matters is that the injector has a provider to go to when it needs a <code>Logger</code>.</p>
-<p><a id="provide"></a></p>
-<h3 id="the-provider-class">The <em>Provider</em> class</h3>
-<p>We wrote the <code>providers</code> array like this:</p>
-<code-example language="dart" format="">const [Logger]
-</code-example><p>This is actually a short-hand expression for a provider registration that creates a new instance of the
-<a href="../api/core/Provider-class.html">Provider</a> class.</p>
-<code-example language="dart" format="">const [const Provider(Logger, useClass: Logger)]
-</code-example><!-- includeShared('{ts}', 'providers-provide-3')--><!-- includeShared('{ts}', 'providers-provide-4-1')--><!-- Don't discuss provide function.--><p>We supply two arguments (or more) to the <code>Provider</code> constructor.</p>
+<div id="provide"></div><h3 id="the-provider-class-__andprovidefn-">The <em>Provider</em> class </h3>
+<p>We wrote the <code>providers</code> list like this:</p>
+<code-example language="dart" format="">providers: const [Logger]
+</code-example><p>This is actually a short-hand expression for a provider registration using the <em>provider</em> object literal.</p>
+<code-example language="dart" format="">BAD FILENAME: ../../../_fragments/dependency-injection/dart/lib/providers_component-providers-3a.dart.md   Current path: docs,dart,latest,guide,dependency-injection PathToDocs: ../../../</code-example><p>We supply two arguments (or more) to the <code>Provider</code> constructor.</p>
 <p>The first is the <a href="#token">token</a> that serves as the key for both locating a dependency value
 and registering the provider.</p>
-<p>The second is a named parameter, such as <code>useClass</code>,
-that we can think of as a <em>recipe</em> for creating the dependency value.
-There are many ways to create dependency values... and many ways to write a recipe.</p>
-<p><a id="class-provider"></a></p>
-<h3 id="alternative-class-providers">Alternative class providers</h3>
+<p>The second is a named parameter, such as <code>useClass</code>, 
+which we can think of as a <em>recipe</em> for creating the dependency value. 
+There are many ways to create dependency values ... and many ways to write a recipe.</p>
+<div id="class-provider"></div><h3 id="alternative-class-providers">Alternative class providers</h3>
 <p>Occasionally we&#39;ll ask a different class to provide the service.
 The following code tells the injector
 to return a <code>BetterLogger</code> when something asks for the <code>Logger</code>.</p>
@@ -598,26 +559,22 @@ to return a <code>BetterLogger</code> when something asks for the <code>Logger</
 For that reason, we can&#39;t call functions to get values
 to use within an annotation.
 Instead, we use constant literals or constant constructors.
-For example, a TypeScript program might use the
-function call <code>provide(Logger, {useClass: BetterLogger})</code>,
-which is equivalent to the TypeScript code
-<code>new Provider(Logger, {useClass: BetterLogger})</code>.
+For example, a TypeScript program will use the
+object literal <code>{ provide: Logger, useClass: BetterLogger }</code>.
 A Dart annotation would instead use the constant value <code>const Provider(Logger, useClass: BetterLogger)</code>.</p>
 </div><h3 id="class-provider-with-dependencies">Class provider with dependencies</h3>
 <p>Maybe an <code>EvenBetterLogger</code> could display the user name in the log message.
 This logger gets the user from the injected <code>UserService</code>,
 which happens also to be injected at the application level.</p>
-<code-example language="dart" format="linenums">@Injectable()
-class EvenBetterLogger implements Logger {
+<code-example language="dart" format="">@Injectable()
+class EvenBetterLogger extends Logger {
   final UserService _userService;
-  @override List&lt;String&gt; logs = [];
 
   EvenBetterLogger(this._userService);
 
   @override void log(String message) {
-    var msg = &#39;Message to ${_userService.user.name}: $message.&#39;;
-    print(msg);
-    logs.add(msg);
+    var name = _userService.user.name;
+    super.log(&#39;Message to $name: $message&#39;);
   }
 }
 </code-example><p>Configure it like we did <code>BetterLogger</code>.</p>
@@ -634,44 +591,46 @@ The <code>OldLogger</code> should be an alias for <code>NewLogger</code>.</p>
 <p>We certainly do not want two different <code>NewLogger</code> instances in our app.
 Unfortunately, that&#39;s what we get if we try to alias <code>OldLogger</code> to <code>NewLogger</code> with <code>useClass</code>.</p>
 <code-example language="dart" format="">const [NewLogger,
-    // Not aliased! Creates two instances of `NewLogger`
-    const Provider(OldLogger, useClass: NewLogger)]
-</code-example><p>The solution: Alias with the <code>useExisting</code> option.</p>
+  // Not aliased! Creates two instances of `NewLogger`
+  const Provider(OldLogger, useClass: NewLogger)]
+</code-example><p>The solution: alias with the <code>useExisting</code> option.</p>
 <code-example language="dart" format="">const [NewLogger,
-    // Alias OldLogger with reference to NewLogger
-    const Provider(OldLogger, <span class="otl">useExisting: NewLogger)</span>]
-</code-example><a id="value-provider"></a><h3 id="value-providers">Value providers</h3>
-<p>We can provide objects directly,
-instead of asking the injector to create an instance of a class,
-by specifying a <code>useValue</code> parameter to <code>Provider</code>.</p>
-<p>Because Dart annotations must be compile-time constants,
+  // Alias OldLogger with reference to NewLogger
+  const Provider(OldLogger, <span class="otl">useExisting: NewLogger</span>)]
+</code-example><div id="value-provider"></div><h3 id="value-providers">Value providers</h3>
+<p>Sometimes it&#39;s easier to provide a ready-made object rather than ask the injector to create it from a class.</p>
+<div class="callout is-helpful"><header>Dart difference: Constants in metadata</header><p>Because Dart annotations must be compile-time constants,
 <code>useValue</code> is often used with string or list literals.
 However, <code>useValue</code> works with any constant object.</p>
 <p>To create a class that can provide constant objects,
-make sure all its instance variables are <code>final</code>,
-and give it a <code>const</code> constructor:</p>
-<div class="example-title">lib/app_config.dart (excerpt)</div><code-example language="dart" format="">@Injectable()
-class AppConfig {
-  final apiEndpoint;
-  final String title;
+ensure all its instance variables are <code>final</code>,
+and give it a <code>const</code> constructor.</p>
+<p>Create a constant instance of the class by using <code>const</code> instead of <code>new</code>.</p>
+</div><code-example language="dart" format="">class SilentLogger implements Logger {
+  @override
+  final List&lt;String&gt; logs = const [&#39;Silent logger says &quot;Shhhhh!&quot;. Provided via &quot;useValue&quot;&#39;];
 
-  const AppConfig(this.apiEndpoint, this.title);
+  const SilentLogger();
+
+  @override
+  void log(String message) { }
 }
-</code-example><p>Create a constant instance of the class by using <code>const</code> instead of <code>new</code>:</p>
-<div class="example-title">lib/app_config.dart (excerpt)</div><code-example language="dart" format="">const config1 = const AppConfig(&#39;api.heroes.com&#39;, &#39;Dependency Injection&#39;);
-</code-example><p>Then specify the object using the <code>useValue</code> argument to <code>Provider</code>:</p>
-<code-example language="dart" format="">const [const Provider(AppConfig, <span class="otl">useValue: config1)</span>]
+
+const silentLogger = const SilentLogger();
+</code-example><p>Then we register a provider with the <code>useValue</code> option,
+which makes this object play the logger role.</p>
+<code-example language="dart" format="">const [const Provider(Logger, <span class="otl">useValue: silentLogger</span>)]
 </code-example><p>See more <code>useValue</code> examples in the
 <a href="#non-class-dependencies">Non-class dependencies</a> and
 <a href="#opaquetoken">OpaqueToken</a> sections.</p>
-<a id="factory-provider"></a><h3 id="factory-providers">Factory providers</h3>
+<div id="factory-provider"></div><h3 id="factory-providers">Factory providers</h3>
 <p>Sometimes we need to create the dependent value dynamically,
 based on information we won&#39;t have until the last possible moment.
 Maybe the information changes repeatedly in the course of the browser session.</p>
 <p>Suppose also that the injectable service has no independent access to the source of this information.</p>
 <p>This situation calls for a <strong>factory provider</strong>.</p>
 <p>Let&#39;s illustrate by adding a new business requirement:
-The HeroService must hide <em>secret</em> heroes from normal users.
+the HeroService must hide <em>secret</em> heroes from normal users.
 Only authorized users should see secret heroes.</p>
 <p>Like the <code>EvenBetterLogger</code>, the <code>HeroService</code> needs a fact about the user.
 It needs to know if the user is authorized to see secret heroes.
@@ -697,8 +656,7 @@ List&lt;Hero&gt; getHeroes() {
 </code-example><p>We can inject the <code>Logger</code>, but we can&#39;t inject the  boolean <code>isAuthorized</code>.
 We&#39;ll have to take over the creation of new instances of this <code>HeroService</code> with a factory provider.</p>
 <p>A factory provider needs a factory function:</p>
-<div class="example-title">lib/heroes/hero_service_provider.dart (excerpt)</div><code-example language="dart" format="">@Injectable()
-heroServiceFactory(Logger logger, UserService userService) =&gt;
+<div class="example-title">lib/heroes/hero_service_provider.dart (excerpt)</div><code-example language="dart" format="">HeroService heroServiceFactory(Logger logger, UserService userService) =&gt;
     new HeroService(logger, userService.user.isAuthorized);
 </code-example><p>Although the <code>HeroService</code> has no access to the <code>UserService</code>, our factory function does.</p>
 <p>We inject both the <code>Logger</code> and the <code>UserService</code> into the factory provider and let the injector pass them along to the factory function:</p>
@@ -707,16 +665,16 @@ heroServiceFactory(Logger logger, UserService userService) =&gt;
     deps: const [Logger, UserService]);
 </code-example><div class="l-sub-section"><p>The <code>useFactory</code> field tells Angular that the provider is a factory function
 whose implementation is the <code>heroServiceFactory</code>.</p>
-<p>The <code>deps</code> property is an array of <a href="#token">provider tokens</a>.
+<p>The <code>deps</code> property is a list of <a href="#token">provider tokens</a>.
 The <code>Logger</code> and <code>UserService</code> classes serve as tokens for their own class providers.
 The injector resolves these tokens and injects the corresponding services into the matching factory function parameters.</p>
 </div><p>Notice that we captured the factory provider in a constant, <code>heroServiceProvider</code>.
 This extra step makes the factory provider reusable.
 We can register our <code>HeroService</code> with this constant wherever we need it.</p>
 <p>In our sample, we need it only in the <code>HeroesComponent</code>,
-where it replaces the previous <code>HeroService</code> registration in the metadata <code>providers</code> array.
+where it replaces the previous <code>HeroService</code> registration in the metadata <code>providers</code> list.
 Here we see the new and the old implementation side-by-side:</p>
-<code-tabs><code-pane language="dart" name="lib/heroes/heroes_component (v.3)" format="linenums">import &#39;package:angular2/core.dart&#39;;
+<code-tabs><code-pane language="dart" name="lib/heroes/heroes.component (v3)" format="linenums">import &#39;package:angular2/core.dart&#39;;
 
 import &#39;hero_list_component.dart&#39;;
 import &#39;hero_service_provider.dart&#39;;
@@ -729,7 +687,7 @@ import &#39;hero_service_provider.dart&#39;;
     <span class="otl">providers: const [heroServiceProvider]</span>,
     directives: const [HeroListComponent])
 class HeroesComponent {}
-</code-pane><code-pane language="dart" name="lib/heroes/heroes_component (v.2)" format="linenums">import &#39;package:angular2/core.dart&#39;;
+</code-pane><code-pane language="dart" name="lib/heroes/heroes.component (v2)" format="linenums">import &#39;package:angular2/core.dart&#39;;
 
 import &#39;hero_list_component.dart&#39;;
 import &#39;hero_service.dart&#39;;
@@ -742,7 +700,7 @@ import &#39;hero_service.dart&#39;;
     <span class="otl">providers: const [HeroService]</span>,
     directives: const [HeroListComponent])
 class HeroesComponent {}
-</code-pane></code-tabs><a id="token"></a><div class="l-main-section"></div><h2 id="dependency-injection-tokens">Dependency injection tokens</h2>
+</code-pane></code-tabs><div id="token" class="l-main-section"></div><h2 id="dependency-injection-tokens">Dependency injection tokens</h2>
 <p>When we register a provider with an injector, we associate that provider with a dependency injection token.
 The injector maintains an internal <em>token-provider</em> map that it references when
 asked for a dependency. The token is the key to the map.</p>
@@ -754,41 +712,82 @@ Here we get a <code>HeroService</code> directly from the injector by supplying t
 We define a constructor parameter with the <code>HeroService</code> class type,
 and Angular knows to inject the
 service associated with that <code>HeroService</code> class token:</p>
-<!-- [PENDING: How about a better name than ProviderComponent8?]--><code-example language="dart" format="">ProviderComponent8(HeroService heroService);
+<code-example language="dart" format="">HeroListComponent(HeroService heroService)
 </code-example><p>This is especially convenient when we consider that most dependency values are provided by classes.</p>
+<h3 id="non-class-dependencies">Non-class dependencies</h3>
+<p>What if the dependency value isn't a class? Sometimes the thing we want to inject is a <span>string, list, map, or maybe a function.</span></p><p>Applications often define configuration objects with lots of small facts 
+(like the title of the application or the address of a web API endpoint). They can be 
+<b><a href="https://api.dartlang.org/stable/dart-core/Map-class.html">Map</a></b>
+literals&nbsp;such as this one:</p><div class="example-title">lib/app_config.dart (excerpt)</div><code-example language="dart" format="">const Map heroDiConfig = const &lt;String,String&gt;{
+  &#39;apiEndpoint&#39; : &#39;api.heroes.com&#39;,
+  &#39;title&#39; : &#39;Dependency Injection&#39;
+};
+</code-example><p>We&#39;d like to make this configuration object available for injection.
+We know we can register an object with a <a href="#value-provider">value provider</a>.</p>
+<p>But what should we use as the token? 
+While we <em>could</em> use <strong><a href="https://api.dartlang.org/stable/dart-core/Map-class.html">Map</a></strong>, we <em>should not</em> because (like
+<code>String</code>) <code>Map</code> is too general. Our app might depend on several maps, each
+for a different purpose.</p>
 <div class="callout is-helpful"><header>Dart difference: Interfaces are valid tokens</header><p>In TypeScript, interfaces don&#39;t work as provider tokens.
-Dart doesn&#39;t have this problem;
+Dart doesn&#39;t have this limitation;
 every class implicitly defines an interface,
-so interface names are just class names.</p>
-</div><!-- Is function injection useful? Should we show it?--><h3 id="non-class-dependencies">Non-class dependencies</h3>
-<p>What if the dependency value isn&#39;t a class?
-Sometimes the thing we want to inject is a string or list literal, or maybe a function.</p>
-<p>We know we can register an object with a <a href="#value-provider">value provider</a>.
-But what do we use for the token?</p>
-<a id="opaque-token"></a><h3>OpaqueToken</h3><p>The solution is to define and use an <code>OpaqueToken</code>.
-The definition looks like this:</p><code-example language="dart" format="">const loggerPrefix = const OpaqueToken(&#39;Logger prefix&#39;);
-</code-example><p>Now we can inject the  object into any constructor that needs it, with
-the help of an <code>@Inject</code>  that tells Angular how to find the  dependency value.</p>
-<code-example language="dart" format="">ConfigurableLogger(@Inject(loggerPrefix) this._prefix);
-</code-example><p>Here&#39;s an example of providing configuration information
-for an injected class. First define the class:</p>
-<code-example language="dart" format="">@Injectable()
-class ConfigurableLogger extends Logger {
-  final String _prefix;
+so interface names are just class names.
+<code>Map</code> is a <em>valid</em> token even though it&#39;s the name of an abstract class;
+it&#39;s just <em>unsuitable</em> as a token because it&#39;s too general.</p>
+</div><h3 id="opaquetoken">OpaqueToken</h3>
+<p>One solution to choosing a provider token for non-class dependencies is
+to define and use an <b>OpaqueToken</b>.
+The definition looks like this:</p>
+<code-example language="dart" format="">import &#39;package:angular2/core.dart&#39;;
 
-  ConfigurableLogger(@Inject(loggerPrefix) this._prefix);
-
-  @override
-  void log(String msg) {
-    super.log(&#39;$_prefix: $msg&#39;);
-  }
-}
-</code-example><p>Then inject that class and its configuration information:</p>
+const APP_CONFIG = const OpaqueToken(&#39;app.config&#39;);
+</code-example><p>We register the dependency provider using the <code>OpaqueToken</code> object:</p>
 <code-example language="dart" format="">providers: const [
-  const Provider(Logger, useClass: ConfigurableLogger),
-  const Provider(loggerPrefix, useValue: &#39;Testing&#39;)
-]
-</code-example><div class="l-main-section"></div><h2 id="summary">Summary</h2>
+  const Provider(APP_CONFIG, useValue: heroDiConfig)]
+</code-example><p>Now we can inject the configuration object into any constructor that needs it, with
+the help of an <code>@Inject</code> annotation:</p>
+<code-example language="dart" format="">AppComponent(@Inject(APP_CONFIG) Map config)
+    : title = config[&#39;title&#39;];
+</code-example><div class="l-sub-section"><p>Although the <code>Map</code> interface plays no role in dependency injection,
+it supports typing of the configuration object within the class.</p>
+</div><p>As an alternative to using a configuration <code>Map</code>, we can define
+a custom configuration class:</p>
+<div class="example-title">lib/app_config.dart (alternative config)</div><code-example language="dart" format="">class AppConfig {
+  String apiEndpoint;
+  String title;
+}
+
+AppConfig heroDiConfigFactory() =&gt; new AppConfig()
+  ..apiEndpoint = &#39;api.heroes.com&#39;
+  ..title = &#39;Dependency Injection&#39;;
+</code-example><p>Defining a configuration class has a few benefits. One key benefit
+is strong static checking: we&#39;ll be warned early if we misspell a property
+name or assign it a value of the wrong type.
+The Dart <a href="https://www.dartlang.org/docs/dart-up-and-running/ch02.html#cascade">cascade notation</a> (<code>..</code>) provides a convenient means of initializing
+a configuration object. </p>
+<p>If we use cascades, the configuration object can&#39;t be declared <code>const</code> and
+we can&#39;t use a <a href="#value-provider">value provider</a>. 
+A solution is to use a <a href="#factory-provider">factory provider</a>.
+We illustrate this next. We also show how to provide and inject the
+configuration object in our top-level <code>AppComponent</code>:</p>
+<div class="example-title">lib/app_component.dart (providers)</div><code-example language="dart" format="">providers: const [
+  Logger, UserService,
+  const Provider(APP_CONFIG, useFactory: heroDiConfigFactory)]
+</code-example><div class="example-title">lib/app_component.dart (ctor)</div><code-example language="dart" format="">AppComponent(@Inject(APP_CONFIG) AppConfig config, this._userService)
+    : title = config.title;
+</code-example><div id="optional"></div><h2 id="optional-dependencies">Optional dependencies</h2>
+<p>Our <code>HeroService</code> <em>requires</em> a <code>Logger</code>, but what if it could get by without
+a logger?
+We can tell Angular that the dependency is optional by annotating the 
+constructor argument with <code>@Optional()</code>:</p>
+<code-example language="dart" format="">HeroService(@Optional() this._logger) {
+  if (_logger != null)
+    _logger.log(someMessage);
+}
+</code-example><p>When using <code>@Optional()</code>, our code must be prepared for a null value. If we
+don&#39;t register a logger somewhere up the line, the injector will set the
+value of <code>logger</code> to null.</p>
+<div class="l-main-section"></div><h2 id="summary">Summary</h2>
 <p>We learned the basics of Angular dependency injection in this chapter.
 We can register various kinds of providers,
 and we know how to ask for an injected object (such as a service) by
@@ -797,9 +796,9 @@ adding a parameter to a constructor.</p>
 We can learn more about its advanced features, beginning with its support for
 nested injectors, in the
 <a href="hierarchical-dependency-injection.html">Hierarchical Dependency Injection</a> chapter.</p>
-<div class="l-main-section"></div><a id="explicit-injector"></a><h3 id="appendix-working-with-injectors-directly">Appendix: Working with injectors directly</h3>
-<p>We rarely work directly with an injector.
-Here&#39;s an <code>InjectorComponent</code> that does.</p>
+<div id="explicit-injector" class="l-main-section"></div><h2 id="appendix-working-with-injectors-directly">Appendix: Working with injectors directly</h2>
+<p>We rarely work directly with an injector, but
+here&#39;s an <code>InjectorComponent</code> that does.</p>
 <div class="example-title">lib/injector_component.dart</div><code-example language="dart" format="linenums">@Component(
     selector: &#39;my-injectors&#39;,
     template: &#39;&#39;&#39;
@@ -808,34 +807,23 @@ Here&#39;s an <code>InjectorComponent</code> that does.</p>
       &lt;div id=&quot;hero&quot;&gt;{{hero.name}}&lt;/div&gt;
       &lt;div id=&quot;rodent&quot;&gt;{{rodent}}&lt;/div&gt;&#39;&#39;&#39;,
     providers: const [
-      Car,
-      Engine,
-      Tires,
-      const Provider(HeroService, useFactory: heroServiceFactory),
-      Logger
-    ])
+      Car, Engine, Tires, heroServiceProvider, Logger])
 class InjectorComponent {
   final Injector _injector;
   Car car;
   HeroService heroService;
   Hero hero;
 
-  String get rodent {
-    try {
-      _injector.get(ROUS);
-    } on NoProviderError {
-      return &quot;R.O.U.S.&#39;s? I don&#39;t think they exist!&quot;;
-    }
-    throw new Exception(&#39;Aaaargh!&#39;);
-  }
-
   InjectorComponent(this._injector) {
     car = _injector.get(Car);
     heroService = _injector.get(HeroService);
     hero = heroService.getHeroes()[0];
   }
+
+  String get rodent =&gt;
+    _injector.get(ROUS, &quot;R.O.U.S.&#39;s? I don&#39;t think they exist!&quot;);
 }
-</code-example><p>The <code>Injector</code> is itself an injectable service.</p>
+</code-example><p>An <code>Injector</code> is itself an injectable service.</p>
 <p>In this example, Angular injects the component&#39;s own <code>Injector</code> into the component&#39;s constructor.
 The component then asks the injected injector for the services it wants.</p>
 <p>Note that the services themselves are not injected into the component.

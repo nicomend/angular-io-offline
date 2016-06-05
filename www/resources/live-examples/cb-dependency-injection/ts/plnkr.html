@@ -8,13 +8,10 @@ import { HeroesBaseComponent,
 import { HighlightDirective }          from './highlight.directive';
 import { ParentFinderComponent }       from './parent-finder.component';
 
-// Object Literal syntax
-import { HeroOfTheMonthLiteralsComponent } from './hero-of-the-month-literals.component';
-
 const DIRECTIVES = [
     HeroBiosComponent, HeroBiosAndContactsComponent,
     HeroesBaseComponent, SortedHeroesComponent,
-    HeroOfTheMonthComponent, HeroOfTheMonthLiteralsComponent,
+    HeroOfTheMonthComponent,
     HighlightDirective,
     ParentFinderComponent
 ];
@@ -232,72 +229,12 @@ export class HeroData {
 Copyright 2016 Google Inc. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/"><input type="hidden" name="files[app/hero-of-the-month-literals.component.ts]" value="/* tslint:disable:one-line:check-open-brace*/
-import { OpaqueToken } from '@angular/core';
-
-export const TITLE = new OpaqueToken('title');
-
-import { Component, Inject } from '@angular/core';
-
-import { DateLoggerService,
-         MinimalLogger }     from './date-logger.service';
-import { Hero }              from './hero';
-import { HeroService }       from './hero.service';
-import { LoggerService }     from './logger.service';
-import { RUNNERS_UP,
-         runnersUpFactory }  from './runners-up';
-
-const someHero = new Hero(42, 'Magma', 'Had a great month!', '555-555-5555');
-
-const template = `
-  <h3>{{title}}</h3>
-  <div>Winner: <strong>{{heroOfTheMonth.name}}</strong></div>
-  <div>Reason for award: <strong>{{heroOfTheMonth.description}}</strong></div>
-  <div>Runners-up: <strong id=&quot;rups2&quot;>{{runnersUp}}</strong></div>
-
-  <p>Logs:</p>
-  <div id=&quot;logs&quot;>
-    <div *ngFor=&quot;let log of logs&quot;>{{log}}</div>
-  </div>
-  `;
-
-@Component({
-  selector: 'hero-of-the-month-lit',
-  template: template,
-  providers: [
-    {provide: Hero,          useValue:    someHero},
-    {provide: TITLE,         useValue:    'Hero of the Month - Object Literals'},
-    {provide: HeroService,   useClass:    HeroService},
-    {provide: LoggerService, useClass:    DateLoggerService},
-    {provide: MinimalLogger, useExisting: LoggerService},
-    {provide: RUNNERS_UP,    useFactory:  runnersUpFactory(2), deps: [Hero, HeroService]}
-  ]
-})
-export class HeroOfTheMonthLiteralsComponent {
-  logs: string[] = [];
-
-  constructor(
-      logger: MinimalLogger,
-      public heroOfTheMonth: Hero,
-      @Inject(RUNNERS_UP) public runnersUp: string,
-      @Inject(TITLE) public title: string)
-  {
-    this.logs = logger.logs;
-    logger.logInfo('starting up');
-  }
-}
-
-
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[app/hero-of-the-month.component.ts]" value="/* tslint:disable:one-line:check-open-brace*/
 import { OpaqueToken } from '@angular/core';
 
 export const TITLE = new OpaqueToken('title');
 
-import { Component, Inject, provide } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 
 import { DateLoggerService,
          MinimalLogger }     from './date-logger.service';
@@ -325,12 +262,12 @@ const template = `
   selector: 'hero-of-the-month',
   template: template,
   providers: [
-    provide(Hero,          {useValue:    someHero}),
-    provide(TITLE,         {useValue:   'Hero of the Month'}),
-    provide(HeroService,   {useClass:    HeroService}),
-    provide(LoggerService, {useClass:    DateLoggerService}),
-    provide(MinimalLogger, {useExisting: LoggerService}),
-    provide(RUNNERS_UP,    {useFactory:  runnersUpFactory(2), deps: [Hero, HeroService]})
+    { provide: Hero,          useValue:    someHero },
+    { provide: TITLE,         useValue:   'Hero of the Month' },
+    { provide: HeroService,   useClass:    HeroService },
+    { provide: LoggerService, useClass:    DateLoggerService },
+    { provide: MinimalLogger, useExisting: LoggerService },
+    { provide: RUNNERS_UP,    useFactory:  runnersUpFactory(2), deps: [Hero, HeroService] }
   ]
 })
 export class HeroOfTheMonthComponent {
@@ -446,7 +383,6 @@ Copyright 2016 Google Inc. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
 */"><input type="hidden" name="files[app/main.ts]" value="import { bootstrap }        from '@angular/platform-browser-dynamic';
-import { provide }          from '@angular/core';
 import { XHRBackend }       from '@angular/http';
 import { ROUTER_PROVIDERS } from '@angular/router-deprecated';
 import { LocationStrategy,
@@ -460,11 +396,10 @@ import { AppComponent }     from './app.component';
 
 bootstrap(AppComponent, [
   ROUTER_PROVIDERS,
-  provide(LocationStrategy,
-         {useClass: HashLocationStrategy}),
+  { provide: LocationStrategy, useClass: HashLocationStrategy },
 
-  provide(XHRBackend, { useClass: InMemoryBackendService }), // in-mem server
-  provide(SEED_DATA,  { useClass: HeroData }) // in-mem server data
+  { provide: XHRBackend, useClass: InMemoryBackendService }, // in-mem server
+  { provide: SEED_DATA,  useClass: HeroData } // in-mem server data
 ]).catch((err: any) => console.error(err));
 
 
@@ -487,12 +422,15 @@ const DifferentParent = Parent;
 // Helper method to provide the current component instance in the name of a `parentType`.
 // The `parentType` defaults to `Parent` when omitting the second parameter.
 const provideParent =
-  (component: any, parentType?: any) =>
-    provide(parentType || Parent, { useExisting: forwardRef(() => component) });
+  (component: any, parentType?: any) => {
+    return {&nbsp;provide: parentType || Parent, useExisting: forwardRef(() => component) }
+  };
 
 // Simpler syntax version that always provides the component in the name of `Parent`.
 const provideTheParent =
-  (component: any) => provide(Parent, { useExisting: forwardRef(() => component) });
+  (component: any) => {
+    return { provide: Parent, useExisting: forwardRef(() => component) }
+  };
 
 
 ///////// C - Child //////////
@@ -556,7 +494,7 @@ const templateB = `
   selector:   'barry',
   template:   templateB,
   directives: C_DIRECTIVES,
-  providers:  [ provide(Parent, { useExisting: forwardRef(() => BarryComponent) }) ]
+  providers:  [{ provide: Parent, useExisting: forwardRef(() => BarryComponent) }]
 })
 export class BarryComponent implements Parent {
   name = 'Barry';
@@ -598,7 +536,7 @@ const B_DIRECTIVES = [ BarryComponent, BethComponent, BobComponent ];
       <craig></craig>
       <carol></carol>
     </div>`,
-  providers: [ provide(Parent, { useExisting: forwardRef(() => AlexComponent) }) ],
+  providers: [{ provide: Parent, useExisting: forwardRef(() => AlexComponent) }],
   directives: C_DIRECTIVES
 })
 // Todo: Add `... implements Parent` to class signature
@@ -977,10 +915,6 @@ can be found in the LICENSE file at http://angular.io/license
 
 <div class=&quot;di-component&quot;>
   <hero-of-the-month></hero-of-the-month>
-</div>
-
-<div class=&quot;di-component&quot;>
-  <hero-of-the-month-lit></hero-of-the-month-lit>
 </div>
 
 <div class=&quot;di-component&quot;>
