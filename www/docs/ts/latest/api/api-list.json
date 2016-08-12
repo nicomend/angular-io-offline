@@ -89,6 +89,17 @@
     },
   
     {
+      "title": "CommonModule",
+      "path": "common/index/CommonModule-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/common"
+    },
+  
+    {
       "title": "Control",
       "path": "common/index/Control-class.html",
       "docType": "class",
@@ -181,6 +192,17 @@
       "path": "common/index/DefaultValueAccessor-directive.html",
       "docType": "directive",
       "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/common"
+    },
+  
+    {
+      "title": "DeprecatedFormsModule",
+      "path": "common/index/DeprecatedFormsModule-class.html",
+      "docType": "class",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -551,8 +573,8 @@
     },
   
     {
-      "title": "NgSwitchDefault",
-      "path": "common/index/NgSwitchDefault-directive.html",
+      "title": "NgSwitchCase",
+      "path": "common/index/NgSwitchCase-directive.html",
       "docType": "directive",
       "stability": "experimental",
       "secure": "false",
@@ -562,8 +584,8 @@
     },
   
     {
-      "title": "NgSwitchWhen",
-      "path": "common/index/NgSwitchWhen-directive.html",
+      "title": "NgSwitchDefault",
+      "path": "common/index/NgSwitchDefault-directive.html",
       "docType": "directive",
       "stability": "experimental",
       "secure": "false",
@@ -697,7 +719,7 @@
       "title": "UrlChangeEvent",
       "path": "common/index/UrlChangeEvent-interface.html",
       "docType": "interface",
-      "stability": "stable",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -708,7 +730,7 @@
       "title": "UrlChangeListener",
       "path": "common/index/UrlChangeListener-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -719,7 +741,7 @@
       "title": "Validator",
       "path": "common/index/Validator-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -743,7 +765,7 @@
       "title": "MockLocationStrategy",
       "path": "common/testing/MockLocationStrategy-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -754,7 +776,7 @@
       "title": "SpyLocation",
       "path": "common/testing/SpyLocation-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -762,621 +784,34 @@
     }
   ],
 
-  "@angular/compiler" : [
-    {
-      "title": "AttrAst",
-      "path": "compiler/index/AttrAst-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "BoundDirectivePropertyAst",
-      "path": "compiler/index/BoundDirectivePropertyAst-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "BoundElementPropertyAst",
-      "path": "compiler/index/BoundElementPropertyAst-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "BoundEventAst",
-      "path": "compiler/index/BoundEventAst-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "BoundTextAst",
-      "path": "compiler/index/BoundTextAst-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "COMPILER_PROVIDERS",
-      "path": "compiler/index/COMPILER_PROVIDERS-let.html",
-      "docType": "let",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "CompileDiDependencyMetadata",
-      "path": "compiler/index/CompileDiDependencyMetadata-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "CompileDirectiveMetadata",
-      "path": "compiler/index/CompileDirectiveMetadata-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "CompileFactoryMetadata",
-      "path": "compiler/index/CompileFactoryMetadata-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "CompileIdentifierMetadata",
-      "path": "compiler/index/CompileIdentifierMetadata-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "CompileMetadataWithIdentifier",
-      "path": "compiler/index/CompileMetadataWithIdentifier-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "CompileMetadataWithType",
-      "path": "compiler/index/CompileMetadataWithType-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "CompilePipeMetadata",
-      "path": "compiler/index/CompilePipeMetadata-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "CompileProviderMetadata",
-      "path": "compiler/index/CompileProviderMetadata-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "CompileQueryMetadata",
-      "path": "compiler/index/CompileQueryMetadata-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "CompileTemplateMetadata",
-      "path": "compiler/index/CompileTemplateMetadata-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "CompileTokenMetadata",
-      "path": "compiler/index/CompileTokenMetadata-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "CompileTypeMetadata",
-      "path": "compiler/index/CompileTypeMetadata-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "CompilerConfig",
-      "path": "compiler/index/CompilerConfig-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "DEFAULT_PACKAGE_URL_PROVIDER",
-      "path": "compiler/index/DEFAULT_PACKAGE_URL_PROVIDER-var.html",
-      "docType": "var",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "DirectiveAst",
-      "path": "compiler/index/DirectiveAst-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "DirectiveResolver",
-      "path": "compiler/index/DirectiveResolver-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "ElementAst",
-      "path": "compiler/index/ElementAst-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "ElementSchemaRegistry",
-      "path": "compiler/index/ElementSchemaRegistry-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "EmbeddedTemplateAst",
-      "path": "compiler/index/EmbeddedTemplateAst-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "NgContentAst",
-      "path": "compiler/index/NgContentAst-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "NormalizedComponentWithViewDirectives",
-      "path": "compiler/index/NormalizedComponentWithViewDirectives-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "OfflineCompiler",
-      "path": "compiler/index/OfflineCompiler-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "PipeResolver",
-      "path": "compiler/index/PipeResolver-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "PropertyBindingType",
-      "path": "compiler/index/PropertyBindingType-enum.html",
-      "docType": "enum",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "ProviderAst",
-      "path": "compiler/index/ProviderAst-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "ProviderAstType",
-      "path": "compiler/index/ProviderAstType-enum.html",
-      "docType": "enum",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "ReferenceAst",
-      "path": "compiler/index/ReferenceAst-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "RenderTypes",
-      "path": "compiler/index/RenderTypes-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "RuntimeCompiler",
-      "path": "compiler/index/RuntimeCompiler-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "SourceModule",
-      "path": "compiler/index/SourceModule-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "TEMPLATE_TRANSFORMS",
-      "path": "compiler/index/TEMPLATE_TRANSFORMS-let.html",
-      "docType": "let",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "TemplateAst",
-      "path": "compiler/index/TemplateAst-interface.html",
-      "docType": "interface",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "TemplateAstVisitor",
-      "path": "compiler/index/TemplateAstVisitor-interface.html",
-      "docType": "interface",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "TextAst",
-      "path": "compiler/index/TextAst-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "UrlResolver",
-      "path": "compiler/index/UrlResolver-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "VariableAst",
-      "path": "compiler/index/VariableAst-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "ViewResolver",
-      "path": "compiler/index/ViewResolver-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "XHR",
-      "path": "compiler/index/XHR-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "createOfflineCompileUrlResolver",
-      "path": "compiler/index/createOfflineCompileUrlResolver-function.html",
-      "docType": "function",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    },
-  
-    {
-      "title": "templateVisitAll",
-      "path": "compiler/index/templateVisitAll-function.html",
-      "docType": "function",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler"
-    }
-  ],
-
-  "@angular/compiler/testing" : [
-    {
-      "title": "ComponentFixture",
-      "path": "compiler/testing/ComponentFixture-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler/testing"
-    },
-  
-    {
-      "title": "ComponentFixtureAutoDetect",
-      "path": "compiler/testing/ComponentFixtureAutoDetect-var.html",
-      "docType": "var",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler/testing"
-    },
-  
-    {
-      "title": "ComponentFixtureNoNgZone",
-      "path": "compiler/testing/ComponentFixtureNoNgZone-var.html",
-      "docType": "var",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler/testing"
-    },
-  
-    {
-      "title": "MockDirectiveResolver",
-      "path": "compiler/testing/MockDirectiveResolver-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler/testing"
-    },
-  
-    {
-      "title": "MockSchemaRegistry",
-      "path": "compiler/testing/MockSchemaRegistry-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler/testing"
-    },
-  
-    {
-      "title": "MockViewResolver",
-      "path": "compiler/testing/MockViewResolver-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler/testing"
-    },
-  
-    {
-      "title": "MockXHR",
-      "path": "compiler/testing/MockXHR-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler/testing"
-    },
-  
-    {
-      "title": "TestComponentBuilder",
-      "path": "compiler/testing/TestComponentBuilder-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler/testing"
-    },
-  
-    {
-      "title": "TestComponentRenderer",
-      "path": "compiler/testing/TestComponentRenderer-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/compiler/testing"
-    }
-  ],
-
   "@angular/core" : [
+    {
+      "title": "ANALYZE_FOR_ENTRY_COMPONENTS",
+      "path": "core/index/ANALYZE_FOR_ENTRY_COMPONENTS-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
     {
       "title": "APPLICATION_COMMON_PROVIDERS",
       "path": "core/index/APPLICATION_COMMON_PROVIDERS-let.html",
       "docType": "let",
-      "stability": "stable",
+      "stability": "deprecated",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "APP_BOOTSTRAP_LISTENER",
+      "path": "core/index/APP_BOOTSTRAP_LISTENER-let.html",
+      "docType": "let",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1409,7 +844,7 @@
       "title": "AUTO_STYLE",
       "path": "core/index/AUTO_STYLE-let.html",
       "docType": "let",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1475,7 +910,7 @@
       "title": "AnimationAnimateMetadata",
       "path": "core/index/AnimationAnimateMetadata-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1486,7 +921,7 @@
       "title": "AnimationEntryMetadata",
       "path": "core/index/AnimationEntryMetadata-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1497,7 +932,7 @@
       "title": "AnimationGroupMetadata",
       "path": "core/index/AnimationGroupMetadata-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1508,7 +943,7 @@
       "title": "AnimationKeyframesSequenceMetadata",
       "path": "core/index/AnimationKeyframesSequenceMetadata-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1519,7 +954,7 @@
       "title": "AnimationMetadata",
       "path": "core/index/AnimationMetadata-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1530,7 +965,7 @@
       "title": "AnimationPlayer",
       "path": "core/index/AnimationPlayer-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1541,7 +976,7 @@
       "title": "AnimationSequenceMetadata",
       "path": "core/index/AnimationSequenceMetadata-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1552,7 +987,7 @@
       "title": "AnimationStateDeclarationMetadata",
       "path": "core/index/AnimationStateDeclarationMetadata-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1563,7 +998,7 @@
       "title": "AnimationStateMetadata",
       "path": "core/index/AnimationStateMetadata-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1574,7 +1009,7 @@
       "title": "AnimationStateTransitionMetadata",
       "path": "core/index/AnimationStateTransitionMetadata-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1585,7 +1020,7 @@
       "title": "AnimationStyleMetadata",
       "path": "core/index/AnimationStyleMetadata-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1596,7 +1031,29 @@
       "title": "AnimationWithStepsMetadata",
       "path": "core/index/AnimationWithStepsMetadata-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "ApplicationInitStatus",
+      "path": "core/index/ApplicationInitStatus-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "ApplicationModule",
+      "path": "core/index/ApplicationModule-class.html",
+      "docType": "class",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1607,7 +1064,7 @@
       "title": "ApplicationRef",
       "path": "core/index/ApplicationRef-class.html",
       "docType": "class",
-      "stability": "stable",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1640,7 +1097,7 @@
       "title": "AttributeMetadataFactory",
       "path": "core/index/AttributeMetadataFactory-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1663,6 +1120,28 @@
       "path": "core/index/Binding-class.html",
       "docType": "class",
       "stability": "deprecated",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "COMPILER_OPTIONS",
+      "path": "core/index/COMPILER_OPTIONS-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "CUSTOM_ELEMENTS_SCHEMA",
+      "path": "core/index/CUSTOM_ELEMENTS_SCHEMA-let.html",
+      "docType": "let",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1706,7 +1185,7 @@
       "title": "ClassDefinition",
       "path": "core/index/ClassDefinition-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1718,6 +1197,39 @@
       "path": "core/index/CollectionChangeRecord-class.html",
       "docType": "class",
       "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "Compiler",
+      "path": "core/index/Compiler-class.html",
+      "docType": "class",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "CompilerFactory",
+      "path": "core/index/CompilerFactory-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "CompilerOptions",
+      "path": "core/index/CompilerOptions-type-alias.html",
+      "docType": "type-alias",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1739,7 +1251,7 @@
       "title": "ComponentDecorator",
       "path": "core/index/ComponentDecorator-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1750,7 +1262,18 @@
       "title": "ComponentFactory",
       "path": "core/index/ComponentFactory-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "ComponentFactoryResolver",
+      "path": "core/index/ComponentFactoryResolver-class.html",
+      "docType": "class",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1772,7 +1295,18 @@
       "title": "ComponentMetadataFactory",
       "path": "core/index/ComponentMetadataFactory-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "ComponentMetadataType",
+      "path": "core/index/ComponentMetadataType-interface.html",
+      "docType": "interface",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1794,7 +1328,18 @@
       "title": "ComponentResolver",
       "path": "core/index/ComponentResolver-class.html",
       "docType": "class",
-      "stability": "experimental",
+      "stability": "deprecated",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "ComponentStillLoadingError",
+      "path": "core/index/ComponentStillLoadingError-class.html",
+      "docType": "class",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1926,7 +1471,7 @@
       "title": "DirectiveDecorator",
       "path": "core/index/DirectiveDecorator-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1948,7 +1493,18 @@
       "title": "DirectiveMetadataFactory",
       "path": "core/index/DirectiveMetadataFactory-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "DirectiveMetadataType",
+      "path": "core/index/DirectiveMetadataType-interface.html",
+      "docType": "interface",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -1981,8 +1537,8 @@
       "title": "ElementRef",
       "path": "core/index/ElementRef-class.html",
       "docType": "class",
-      "stability": "",
-      "secure": "false",
+      "stability": "stable",
+      "secure": "Permitting direct access to the DOM can make your application more vulnerable toXSS attacks. Carefully review any use of `ElementRef` in your code. For more detail, see the[Security Guide](http://g.co/ng/security).",
       "howToUse": "",
       "whatItDoes": "Not Done",
       "barrel" : "@angular/core"
@@ -2036,7 +1592,7 @@
       "title": "ForwardRefFn",
       "path": "core/index/ForwardRefFn-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -2047,7 +1603,7 @@
       "title": "GetTestability",
       "path": "core/index/GetTestability-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -2300,7 +1856,7 @@
       "title": "IterableDifferFactory",
       "path": "core/index/IterableDifferFactory-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -2333,7 +1889,7 @@
       "title": "KeyValueDiffer",
       "path": "core/index/KeyValueDiffer-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -2344,7 +1900,7 @@
       "title": "KeyValueDifferFactory",
       "path": "core/index/KeyValueDifferFactory-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -2356,6 +1912,116 @@
       "path": "core/index/KeyValueDiffers-class.html",
       "docType": "class",
       "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "ModuleWithComponentFactories",
+      "path": "core/index/ModuleWithComponentFactories-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "ModuleWithProviders",
+      "path": "core/index/ModuleWithProviders-interface.html",
+      "docType": "interface",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "NgModule",
+      "path": "core/index/NgModule-decorator.html",
+      "docType": "decorator",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "NgModuleDecorator",
+      "path": "core/index/NgModuleDecorator-interface.html",
+      "docType": "interface",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "NgModuleFactory",
+      "path": "core/index/NgModuleFactory-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "NgModuleFactoryLoader",
+      "path": "core/index/NgModuleFactoryLoader-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "NgModuleMetadata",
+      "path": "core/index/NgModuleMetadata-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "NgModuleMetadataFactory",
+      "path": "core/index/NgModuleMetadataFactory-interface.html",
+      "docType": "interface",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "NgModuleMetadataType",
+      "path": "core/index/NgModuleMetadataType-interface.html",
+      "docType": "interface",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "NgModuleRef",
+      "path": "core/index/NgModuleRef-class.html",
+      "docType": "class",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -2387,6 +2053,17 @@
     {
       "title": "NoAnnotationError",
       "path": "core/index/NoAnnotationError-class.html",
+      "docType": "class",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "NoComponentFactoryError",
+      "path": "core/index/NoComponentFactoryError-class.html",
       "docType": "class",
       "stability": "stable",
       "secure": "false",
@@ -2542,7 +2219,7 @@
       "title": "PLATFORM_COMMON_PROVIDERS",
       "path": "core/index/PLATFORM_COMMON_PROVIDERS-let.html",
       "docType": "let",
-      "stability": "experimental",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -2553,7 +2230,7 @@
       "title": "PLATFORM_DIRECTIVES",
       "path": "core/index/PLATFORM_DIRECTIVES-let.html",
       "docType": "let",
-      "stability": "stable",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -2575,7 +2252,7 @@
       "title": "PLATFORM_PIPES",
       "path": "core/index/PLATFORM_PIPES-let.html",
       "docType": "let",
-      "stability": "stable",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -2616,10 +2293,21 @@
     },
   
     {
+      "title": "PipeMetadataType",
+      "path": "core/index/PipeMetadataType-interface.html",
+      "docType": "interface",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
       "title": "PipeTransform",
       "path": "core/index/PipeTransform-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -2630,7 +2318,7 @@
       "title": "PlatformRef",
       "path": "core/index/PlatformRef-class.html",
       "docType": "class",
-      "stability": "stable",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -2707,7 +2395,7 @@
       "title": "ReflectiveInjector",
       "path": "core/index/ReflectiveInjector-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -2773,7 +2461,7 @@
       "title": "ResolvedReflectiveProvider",
       "path": "core/index/ResolvedReflectiveProvider-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -2785,6 +2473,39 @@
       "path": "core/index/RootRenderer-class.html",
       "docType": "class",
       "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "SanitizationService",
+      "path": "core/index/SanitizationService-class.html",
+      "docType": "class",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "SchemaMetadata",
+      "path": "core/index/SchemaMetadata-interface.html",
+      "docType": "interface",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "SecurityContext",
+      "path": "core/index/SecurityContext-enum.html",
+      "docType": "enum",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -2880,8 +2601,30 @@
     },
   
     {
+      "title": "SystemJsCmpFactoryResolver",
+      "path": "core/index/SystemJsCmpFactoryResolver-class.html",
+      "docType": "class",
+      "stability": "deprecated",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
       "title": "SystemJsComponentResolver",
       "path": "core/index/SystemJsComponentResolver-class.html",
+      "docType": "class",
+      "stability": "deprecated",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "SystemJsNgModuleLoader",
+      "path": "core/index/SystemJsNgModuleLoader-class.html",
       "docType": "class",
       "stability": "experimental",
       "secure": "false",
@@ -2927,7 +2670,7 @@
       "title": "TrackByFn",
       "path": "core/index/TrackByFn-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -2938,7 +2681,7 @@
       "title": "Type",
       "path": "core/index/Type-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -2949,7 +2692,7 @@
       "title": "TypeDecorator",
       "path": "core/index/TypeDecorator-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3034,17 +2777,6 @@
     },
   
     {
-      "title": "ViewDecorator",
-      "path": "core/index/ViewDecorator-interface.html",
-      "docType": "interface",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core"
-    },
-  
-    {
       "title": "ViewEncapsulation",
       "path": "core/index/ViewEncapsulation-enum.html",
       "docType": "enum",
@@ -3059,18 +2791,7 @@
       "title": "ViewMetadata",
       "path": "core/index/ViewMetadata-class.html",
       "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core"
-    },
-  
-    {
-      "title": "ViewMetadataFactory",
-      "path": "core/index/ViewMetadataFactory-interface.html",
-      "docType": "interface",
-      "stability": "",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3136,7 +2857,7 @@
       "title": "WtfScopeFn",
       "path": "core/index/WtfScopeFn-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3147,7 +2868,7 @@
       "title": "animate",
       "path": "core/index/animate-function.html",
       "docType": "function",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3191,7 +2912,7 @@
       "title": "coreBootstrap",
       "path": "core/index/coreBootstrap-function.html",
       "docType": "function",
-      "stability": "experimental",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3202,18 +2923,7 @@
       "title": "coreLoadAndBootstrap",
       "path": "core/index/coreLoadAndBootstrap-function.html",
       "docType": "function",
-      "stability": "experimental",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core"
-    },
-  
-    {
-      "title": "createNgZone",
-      "path": "core/index/createNgZone-function.html",
-      "docType": "function",
-      "stability": "experimental",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3232,10 +2942,21 @@
     },
   
     {
+      "title": "createPlatformFactory",
+      "path": "core/index/createPlatformFactory-function.html",
+      "docType": "function",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
       "title": "disposePlatform",
       "path": "core/index/disposePlatform-function.html",
       "docType": "function",
-      "stability": "experimental",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3246,7 +2967,7 @@
       "title": "enableProdMode",
       "path": "core/index/enableProdMode-function.html",
       "docType": "function",
-      "stability": "stable",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3290,7 +3011,18 @@
       "title": "group",
       "path": "core/index/group-function.html",
       "docType": "function",
-      "stability": "",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "isDevMode",
+      "path": "core/index/isDevMode-function.html",
+      "docType": "function",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3301,7 +3033,29 @@
       "title": "keyframes",
       "path": "core/index/keyframes-function.html",
       "docType": "function",
-      "stability": "",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "lockRunMode",
+      "path": "core/index/lockRunMode-function.html",
+      "docType": "function",
+      "stability": "deprecated",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core"
+    },
+  
+    {
+      "title": "platformCore",
+      "path": "core/index/platformCore-let.html",
+      "docType": "let",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3334,7 +3088,7 @@
       "title": "sequence",
       "path": "core/index/sequence-function.html",
       "docType": "function",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3356,7 +3110,7 @@
       "title": "state",
       "path": "core/index/state-function.html",
       "docType": "function",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3367,7 +3121,7 @@
       "title": "style",
       "path": "core/index/style-function.html",
       "docType": "function",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3378,7 +3132,7 @@
       "title": "transition",
       "path": "core/index/transition-function.html",
       "docType": "function",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3389,7 +3143,7 @@
       "title": "trigger",
       "path": "core/index/trigger-function.html",
       "docType": "function",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3443,10 +3197,43 @@
 
   "@angular/core/testing" : [
     {
+      "title": "ComponentFixture",
+      "path": "core/testing/ComponentFixture-class.html",
+      "docType": "class",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core/testing"
+    },
+  
+    {
+      "title": "ComponentFixtureAutoDetect",
+      "path": "core/testing/ComponentFixtureAutoDetect-var.html",
+      "docType": "var",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core/testing"
+    },
+  
+    {
+      "title": "ComponentFixtureNoNgZone",
+      "path": "core/testing/ComponentFixtureNoNgZone-var.html",
+      "docType": "var",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core/testing"
+    },
+  
+    {
       "title": "InjectSetupWrapper",
       "path": "core/testing/InjectSetupWrapper-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3454,10 +3241,21 @@
     },
   
     {
-      "title": "Log",
-      "path": "core/testing/Log-class.html",
+      "title": "MetadataOverride",
+      "path": "core/testing/MetadataOverride-type-alias.html",
+      "docType": "type-alias",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core/testing"
+    },
+  
+    {
+      "title": "TestBed",
+      "path": "core/testing/TestBed-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3465,10 +3263,10 @@
     },
   
     {
-      "title": "MockApplicationRef",
-      "path": "core/testing/MockApplicationRef-class.html",
+      "title": "TestComponentBuilder",
+      "path": "core/testing/TestComponentBuilder-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3476,10 +3274,10 @@
     },
   
     {
-      "title": "MockNgZone",
-      "path": "core/testing/MockNgZone-class.html",
+      "title": "TestComponentRenderer",
+      "path": "core/testing/TestComponentRenderer-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3487,10 +3285,10 @@
     },
   
     {
-      "title": "TestInjector",
-      "path": "core/testing/TestInjector-class.html",
-      "docType": "class",
-      "stability": "",
+      "title": "TestModuleMetadata",
+      "path": "core/testing/TestModuleMetadata-type-alias.html",
+      "docType": "type-alias",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3498,10 +3296,21 @@
     },
   
     {
-      "title": "afterEach",
-      "path": "core/testing/afterEach-var.html",
+      "title": "___core_private_testing__",
+      "path": "core/testing/___core_private_testing__-var.html",
       "docType": "var",
       "stability": "",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core/testing"
+    },
+  
+    {
+      "title": "addProviders",
+      "path": "core/testing/addProviders-function.html",
+      "docType": "function",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3512,73 +3321,7 @@
       "title": "async",
       "path": "core/testing/async-function.html",
       "docType": "function",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core/testing"
-    },
-  
-    {
-      "title": "beforeEach",
-      "path": "core/testing/beforeEach-function.html",
-      "docType": "function",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core/testing"
-    },
-  
-    {
-      "title": "beforeEachProviders",
-      "path": "core/testing/beforeEachProviders-function.html",
-      "docType": "function",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core/testing"
-    },
-  
-    {
-      "title": "clearPendingTimers",
-      "path": "core/testing/clearPendingTimers-function.html",
-      "docType": "function",
-      "stability": "deprecated",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core/testing"
-    },
-  
-    {
-      "title": "containsRegexp",
-      "path": "core/testing/containsRegexp-function.html",
-      "docType": "function",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core/testing"
-    },
-  
-    {
-      "title": "ddescribe",
-      "path": "core/testing/ddescribe-var.html",
-      "docType": "var",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core/testing"
-    },
-  
-    {
-      "title": "describe",
-      "path": "core/testing/describe-var.html",
-      "docType": "var",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3589,18 +3332,7 @@
       "title": "discardPeriodicTasks",
       "path": "core/testing/discardPeriodicTasks-function.html",
       "docType": "function",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core/testing"
-    },
-  
-    {
-      "title": "expect",
-      "path": "core/testing/expect-var.html",
-      "docType": "var",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3611,29 +3343,7 @@
       "title": "fakeAsync",
       "path": "core/testing/fakeAsync-function.html",
       "docType": "function",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core/testing"
-    },
-  
-    {
-      "title": "fdescribe",
-      "path": "core/testing/fdescribe-var.html",
-      "docType": "var",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core/testing"
-    },
-  
-    {
-      "title": "fit",
-      "path": "core/testing/fit-function.html",
-      "docType": "function",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3644,7 +3354,7 @@
       "title": "flushMicrotasks",
       "path": "core/testing/flushMicrotasks-function.html",
       "docType": "function",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3652,32 +3362,10 @@
     },
   
     {
-      "title": "getTestInjector",
-      "path": "core/testing/getTestInjector-function.html",
+      "title": "getTestBed",
+      "path": "core/testing/getTestBed-function.html",
       "docType": "function",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core/testing"
-    },
-  
-    {
-      "title": "getTypeOf",
-      "path": "core/testing/getTypeOf-function.html",
-      "docType": "function",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core/testing"
-    },
-  
-    {
-      "title": "iit",
-      "path": "core/testing/iit-function.html",
-      "docType": "function",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3688,7 +3376,7 @@
       "title": "inject",
       "path": "core/testing/inject-function.html",
       "docType": "function",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3696,54 +3384,10 @@
     },
   
     {
-      "title": "injectAsync",
-      "path": "core/testing/injectAsync-function.html",
+      "title": "resetFakeAsyncZone",
+      "path": "core/testing/resetFakeAsyncZone-function.html",
       "docType": "function",
-      "stability": "deprecated",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core/testing"
-    },
-  
-    {
-      "title": "instantiateType",
-      "path": "core/testing/instantiateType-function.html",
-      "docType": "function",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core/testing"
-    },
-  
-    {
-      "title": "it",
-      "path": "core/testing/it-function.html",
-      "docType": "function",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core/testing"
-    },
-  
-    {
-      "title": "resetBaseTestProviders",
-      "path": "core/testing/resetBaseTestProviders-function.html",
-      "docType": "function",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/core/testing"
-    },
-  
-    {
-      "title": "setBaseTestProviders",
-      "path": "core/testing/setBaseTestProviders-function.html",
-      "docType": "function",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3754,7 +3398,18 @@
       "title": "tick",
       "path": "core/testing/tick-function.html",
       "docType": "function",
-      "stability": "",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/core/testing"
+    },
+  
+    {
+      "title": "withModule",
+      "path": "core/testing/withModule-function.html",
+      "docType": "function",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3765,33 +3420,497 @@
       "title": "withProviders",
       "path": "core/testing/withProviders-function.html",
       "docType": "function",
-      "stability": "",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
       "barrel" : "@angular/core/testing"
-    },
-  
+    }
+  ],
+
+  "@angular/forms" : [
     {
-      "title": "xdescribe",
-      "path": "core/testing/xdescribe-var.html",
-      "docType": "var",
-      "stability": "",
+      "title": "AbstractControl",
+      "path": "forms/index/AbstractControl-class.html",
+      "docType": "class",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
-      "barrel" : "@angular/core/testing"
+      "barrel" : "@angular/forms"
     },
   
     {
-      "title": "xit",
-      "path": "core/testing/xit-function.html",
+      "title": "AbstractControlDirective",
+      "path": "forms/index/AbstractControlDirective-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "AbstractFormGroupDirective",
+      "path": "forms/index/AbstractFormGroupDirective-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "AsyncValidatorFn",
+      "path": "forms/index/AsyncValidatorFn-interface.html",
+      "docType": "interface",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "CheckboxControlValueAccessor",
+      "path": "forms/index/CheckboxControlValueAccessor-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "ControlContainer",
+      "path": "forms/index/ControlContainer-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "ControlValueAccessor",
+      "path": "forms/index/ControlValueAccessor-interface.html",
+      "docType": "interface",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "DefaultValueAccessor",
+      "path": "forms/index/DefaultValueAccessor-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "FORM_DIRECTIVES",
+      "path": "forms/index/FORM_DIRECTIVES-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "FORM_PROVIDERS",
+      "path": "forms/index/FORM_PROVIDERS-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "Form",
+      "path": "forms/index/Form-interface.html",
+      "docType": "interface",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "FormArray",
+      "path": "forms/index/FormArray-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "FormArrayName",
+      "path": "forms/index/FormArrayName-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "FormBuilder",
+      "path": "forms/index/FormBuilder-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "FormControl",
+      "path": "forms/index/FormControl-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "FormControlDirective",
+      "path": "forms/index/FormControlDirective-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "FormControlName",
+      "path": "forms/index/FormControlName-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "FormGroup",
+      "path": "forms/index/FormGroup-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "FormGroupDirective",
+      "path": "forms/index/FormGroupDirective-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "FormGroupName",
+      "path": "forms/index/FormGroupName-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "FormsModule",
+      "path": "forms/index/FormsModule-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "MaxLengthValidator",
+      "path": "forms/index/MaxLengthValidator-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "MinLengthValidator",
+      "path": "forms/index/MinLengthValidator-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "NG_ASYNC_VALIDATORS",
+      "path": "forms/index/NG_ASYNC_VALIDATORS-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "NG_VALIDATORS",
+      "path": "forms/index/NG_VALIDATORS-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "NG_VALUE_ACCESSOR",
+      "path": "forms/index/NG_VALUE_ACCESSOR-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "NgControl",
+      "path": "forms/index/NgControl-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "NgControlStatus",
+      "path": "forms/index/NgControlStatus-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "NgForm",
+      "path": "forms/index/NgForm-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "NgModel",
+      "path": "forms/index/NgModel-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "NgModelGroup",
+      "path": "forms/index/NgModelGroup-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "NgSelectOption",
+      "path": "forms/index/NgSelectOption-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "PatternValidator",
+      "path": "forms/index/PatternValidator-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "REACTIVE_FORM_DIRECTIVES",
+      "path": "forms/index/REACTIVE_FORM_DIRECTIVES-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "REACTIVE_FORM_PROVIDERS",
+      "path": "forms/index/REACTIVE_FORM_PROVIDERS-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "ReactiveFormsModule",
+      "path": "forms/index/ReactiveFormsModule-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "RequiredValidator",
+      "path": "forms/index/RequiredValidator-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "SelectControlValueAccessor",
+      "path": "forms/index/SelectControlValueAccessor-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "SelectMultipleControlValueAccessor",
+      "path": "forms/index/SelectMultipleControlValueAccessor-directive.html",
+      "docType": "directive",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "Validator",
+      "path": "forms/index/Validator-interface.html",
+      "docType": "interface",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "ValidatorFn",
+      "path": "forms/index/ValidatorFn-interface.html",
+      "docType": "interface",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "Validators",
+      "path": "forms/index/Validators-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "disableDeprecatedForms",
+      "path": "forms/index/disableDeprecatedForms-function.html",
       "docType": "function",
-      "stability": "",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
-      "barrel" : "@angular/core/testing"
+      "barrel" : "@angular/forms"
+    },
+  
+    {
+      "title": "provideForms",
+      "path": "forms/index/provideForms-function.html",
+      "docType": "function",
+      "stability": "deprecated",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/forms"
     }
   ],
 
@@ -3800,7 +3919,7 @@
       "title": "BaseRequestOptions",
       "path": "http/index/BaseRequestOptions-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3811,7 +3930,7 @@
       "title": "BaseResponseOptions",
       "path": "http/index/BaseResponseOptions-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3822,7 +3941,7 @@
       "title": "BrowserXhr",
       "path": "http/index/BrowserXhr-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3833,7 +3952,7 @@
       "title": "Connection",
       "path": "http/index/Connection-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3844,7 +3963,7 @@
       "title": "ConnectionBackend",
       "path": "http/index/ConnectionBackend-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3855,7 +3974,7 @@
       "title": "CookieXSRFStrategy",
       "path": "http/index/CookieXSRFStrategy-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3877,7 +3996,7 @@
       "title": "HTTP_PROVIDERS",
       "path": "http/index/HTTP_PROVIDERS-let.html",
       "docType": "let",
-      "stability": "",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3888,7 +4007,7 @@
       "title": "Headers",
       "path": "http/index/Headers-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3899,7 +4018,18 @@
       "title": "Http",
       "path": "http/index/Http-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/http"
+    },
+  
+    {
+      "title": "HttpModule",
+      "path": "http/index/HttpModule-class.html",
+      "docType": "class",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3910,7 +4040,7 @@
       "title": "JSONPBackend",
       "path": "http/index/JSONPBackend-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3921,7 +4051,7 @@
       "title": "JSONPConnection",
       "path": "http/index/JSONPConnection-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3932,7 +4062,7 @@
       "title": "JSONP_PROVIDERS",
       "path": "http/index/JSONP_PROVIDERS-let.html",
       "docType": "let",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3954,7 +4084,29 @@
       "title": "Jsonp",
       "path": "http/index/Jsonp-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/http"
+    },
+  
+    {
+      "title": "JsonpModule",
+      "path": "http/index/JsonpModule-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/http"
+    },
+  
+    {
+      "title": "QueryEncoder",
+      "path": "http/index/QueryEncoder-class.html",
+      "docType": "class",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3965,7 +4117,7 @@
       "title": "ReadyState",
       "path": "http/index/ReadyState-enum.html",
       "docType": "enum",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3976,7 +4128,7 @@
       "title": "Request",
       "path": "http/index/Request-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3987,7 +4139,7 @@
       "title": "RequestMethod",
       "path": "http/index/RequestMethod-enum.html",
       "docType": "enum",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -3998,7 +4150,7 @@
       "title": "RequestOptions",
       "path": "http/index/RequestOptions-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4009,7 +4161,7 @@
       "title": "RequestOptionsArgs",
       "path": "http/index/RequestOptionsArgs-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4020,7 +4172,18 @@
       "title": "Response",
       "path": "http/index/Response-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/http"
+    },
+  
+    {
+      "title": "ResponseContentType",
+      "path": "http/index/ResponseContentType-enum.html",
+      "docType": "enum",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4031,7 +4194,7 @@
       "title": "ResponseOptions",
       "path": "http/index/ResponseOptions-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4042,7 +4205,7 @@
       "title": "ResponseOptionsArgs",
       "path": "http/index/ResponseOptionsArgs-type-alias.html",
       "docType": "type-alias",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4053,7 +4216,7 @@
       "title": "ResponseType",
       "path": "http/index/ResponseType-enum.html",
       "docType": "enum",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4064,7 +4227,7 @@
       "title": "URLSearchParams",
       "path": "http/index/URLSearchParams-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4075,7 +4238,7 @@
       "title": "XHRBackend",
       "path": "http/index/XHRBackend-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4086,7 +4249,7 @@
       "title": "XHRConnection",
       "path": "http/index/XHRConnection-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4097,7 +4260,29 @@
       "title": "XSRFStrategy",
       "path": "http/index/XSRFStrategy-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/http"
+    },
+  
+    {
+      "title": "_createDefaultCookieXSRFStrategy",
+      "path": "http/index/_createDefaultCookieXSRFStrategy-function.html",
+      "docType": "function",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/http"
+    },
+  
+    {
+      "title": "httpFactory",
+      "path": "http/index/httpFactory-function.html",
+      "docType": "function",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4110,7 +4295,7 @@
       "title": "MockBackend",
       "path": "http/testing/MockBackend-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4121,7 +4306,7 @@
       "title": "MockConnection",
       "path": "http/testing/MockConnection-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4131,10 +4316,10 @@
 
   "@angular/platform-browser" : [
     {
-      "title": "BROWSER_APP_COMPILER_PROVIDERS",
-      "path": "platform-browser/index/BROWSER_APP_COMPILER_PROVIDERS-let.html",
-      "docType": "let",
-      "stability": "",
+      "title": "AnimationDriver",
+      "path": "platform-browser/index/AnimationDriver-class.html",
+      "docType": "class",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4145,7 +4330,7 @@
       "title": "BROWSER_APP_PROVIDERS",
       "path": "platform-browser/index/BROWSER_APP_PROVIDERS-let.html",
       "docType": "let",
-      "stability": "",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4156,18 +4341,7 @@
       "title": "BROWSER_PLATFORM_PROVIDERS",
       "path": "platform-browser/index/BROWSER_PLATFORM_PROVIDERS-let.html",
       "docType": "let",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser"
-    },
-  
-    {
-      "title": "BROWSER_PROVIDERS",
-      "path": "platform-browser/index/BROWSER_PROVIDERS-let.html",
-      "docType": "let",
-      "stability": "",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4178,7 +4352,18 @@
       "title": "BROWSER_SANITIZATION_PROVIDERS",
       "path": "platform-browser/index/BROWSER_SANITIZATION_PROVIDERS-let.html",
       "docType": "let",
-      "stability": "",
+      "stability": "experimental",
+      "secure": "Replacing built-in sanitization providers exposes the application to XSS risks.Attacker-controlled data introduced by an unsanitized provider could expose yourapplication to XSS risks. For more detail, see the [Security Guide](http://g.co/ng/security).",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-browser"
+    },
+  
+    {
+      "title": "BrowserModule",
+      "path": "platform-browser/index/BrowserModule-class.html",
+      "docType": "class",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4189,7 +4374,7 @@
       "title": "BrowserPlatformLocation",
       "path": "platform-browser/index/BrowserPlatformLocation-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4200,18 +4385,7 @@
       "title": "By",
       "path": "platform-browser/index/By-class.html",
       "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser"
-    },
-  
-    {
-      "title": "CACHED_TEMPLATE_PROVIDER",
-      "path": "platform-browser/index/CACHED_TEMPLATE_PROVIDER-let.html",
-      "docType": "let",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4222,7 +4396,7 @@
       "title": "ClientMessageBroker",
       "path": "platform-browser/index/ClientMessageBroker-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4233,7 +4407,7 @@
       "title": "ClientMessageBrokerFactory",
       "path": "platform-browser/index/ClientMessageBrokerFactory-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4244,18 +4418,7 @@
       "title": "DOCUMENT",
       "path": "platform-browser/index/DOCUMENT-let.html",
       "docType": "let",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser"
-    },
-  
-    {
-      "title": "DomEventsPlugin",
-      "path": "platform-browser/index/DomEventsPlugin-class.html",
-      "docType": "class",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4266,19 +4429,8 @@
       "title": "DomSanitizationService",
       "path": "platform-browser/index/DomSanitizationService-class.html",
       "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser"
-    },
-  
-    {
-      "title": "ELEMENT_PROBE_PROVIDERS",
-      "path": "platform-browser/index/ELEMENT_PROBE_PROVIDERS-let.html",
-      "docType": "let",
-      "stability": "",
-      "secure": "false",
+      "stability": "stable",
+      "secure": "Calling any of the `bypassSecurityTrust...` APIs disables Angular's built-insanitization for the value passed in. Carefully check and audit all values and code paths goinginto this call. Make sure any user data is appropriately escaped for this security context.For more detail, see the [Security Guide](http://g.co/ng/security).",
       "howToUse": "",
       "whatItDoes": "Not Done",
       "barrel" : "@angular/platform-browser"
@@ -4288,7 +4440,7 @@
       "title": "EVENT_MANAGER_PLUGINS",
       "path": "platform-browser/index/EVENT_MANAGER_PLUGINS-let.html",
       "docType": "let",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4299,7 +4451,7 @@
       "title": "EventManager",
       "path": "platform-browser/index/EventManager-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4310,7 +4462,7 @@
       "title": "FnArg",
       "path": "platform-browser/index/FnArg-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4321,7 +4473,7 @@
       "title": "HAMMER_GESTURE_CONFIG",
       "path": "platform-browser/index/HAMMER_GESTURE_CONFIG-let.html",
       "docType": "let",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4332,18 +4484,7 @@
       "title": "HammerGestureConfig",
       "path": "platform-browser/index/HammerGestureConfig-class.html",
       "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser"
-    },
-  
-    {
-      "title": "KeyEventsPlugin",
-      "path": "platform-browser/index/KeyEventsPlugin-class.html",
-      "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4354,7 +4495,7 @@
       "title": "MessageBus",
       "path": "platform-browser/index/MessageBus-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4365,7 +4506,7 @@
       "title": "MessageBusSink",
       "path": "platform-browser/index/MessageBusSink-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4376,7 +4517,7 @@
       "title": "MessageBusSource",
       "path": "platform-browser/index/MessageBusSource-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4387,7 +4528,7 @@
       "title": "PRIMITIVE",
       "path": "platform-browser/index/PRIMITIVE-let.html",
       "docType": "let",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4398,7 +4539,7 @@
       "title": "ReceivedMessage",
       "path": "platform-browser/index/ReceivedMessage-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4409,7 +4550,7 @@
       "title": "SafeHtml",
       "path": "platform-browser/index/SafeHtml-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4420,7 +4561,7 @@
       "title": "SafeResourceUrl",
       "path": "platform-browser/index/SafeResourceUrl-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4431,7 +4572,7 @@
       "title": "SafeScript",
       "path": "platform-browser/index/SafeScript-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4442,7 +4583,7 @@
       "title": "SafeStyle",
       "path": "platform-browser/index/SafeStyle-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4453,18 +4594,7 @@
       "title": "SafeUrl",
       "path": "platform-browser/index/SafeUrl-interface.html",
       "docType": "interface",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser"
-    },
-  
-    {
-      "title": "SecurityContext",
-      "path": "platform-browser/index/SecurityContext-type-alias.html",
-      "docType": "type-alias",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4475,7 +4605,7 @@
       "title": "ServiceMessageBroker",
       "path": "platform-browser/index/ServiceMessageBroker-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4486,7 +4616,7 @@
       "title": "ServiceMessageBrokerFactory",
       "path": "platform-browser/index/ServiceMessageBrokerFactory-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4497,7 +4627,7 @@
       "title": "Title",
       "path": "platform-browser/index/Title-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4508,7 +4638,7 @@
       "title": "UiArguments",
       "path": "platform-browser/index/UiArguments-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4519,7 +4649,7 @@
       "title": "WORKER_APP_APPLICATION_PROVIDERS",
       "path": "platform-browser/index/WORKER_APP_APPLICATION_PROVIDERS-let.html",
       "docType": "let",
-      "stability": "",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4530,7 +4660,7 @@
       "title": "WORKER_APP_LOCATION_PROVIDERS",
       "path": "platform-browser/index/WORKER_APP_LOCATION_PROVIDERS-let.html",
       "docType": "let",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4541,51 +4671,7 @@
       "title": "WORKER_APP_PLATFORM_PROVIDERS",
       "path": "platform-browser/index/WORKER_APP_PLATFORM_PROVIDERS-let.html",
       "docType": "let",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser"
-    },
-  
-    {
-      "title": "WORKER_RENDER_APPLICATION_PROVIDERS",
-      "path": "platform-browser/index/WORKER_RENDER_APPLICATION_PROVIDERS-let.html",
-      "docType": "let",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser"
-    },
-  
-    {
-      "title": "WORKER_RENDER_LOCATION_PROVIDERS",
-      "path": "platform-browser/index/WORKER_RENDER_LOCATION_PROVIDERS-let.html",
-      "docType": "let",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser"
-    },
-  
-    {
-      "title": "WORKER_RENDER_PLATFORM_PROVIDERS",
-      "path": "platform-browser/index/WORKER_RENDER_PLATFORM_PROVIDERS-let.html",
-      "docType": "let",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser"
-    },
-  
-    {
-      "title": "WORKER_RENDER_STARTABLE_MESSAGING_SERVICE",
-      "path": "platform-browser/index/WORKER_RENDER_STARTABLE_MESSAGING_SERVICE-let.html",
-      "docType": "let",
-      "stability": "",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4596,7 +4682,51 @@
       "title": "WORKER_SCRIPT",
       "path": "platform-browser/index/WORKER_SCRIPT-let.html",
       "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-browser"
+    },
+  
+    {
+      "title": "WORKER_UI_APPLICATION_PROVIDERS",
+      "path": "platform-browser/index/WORKER_UI_APPLICATION_PROVIDERS-let.html",
+      "docType": "let",
+      "stability": "deprecated",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-browser"
+    },
+  
+    {
+      "title": "WORKER_UI_LOCATION_PROVIDERS",
+      "path": "platform-browser/index/WORKER_UI_LOCATION_PROVIDERS-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-browser"
+    },
+  
+    {
+      "title": "WORKER_UI_PLATFORM_PROVIDERS",
+      "path": "platform-browser/index/WORKER_UI_PLATFORM_PROVIDERS-let.html",
+      "docType": "let",
       "stability": "",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-browser"
+    },
+  
+    {
+      "title": "WORKER_UI_STARTABLE_MESSAGING_SERVICE",
+      "path": "platform-browser/index/WORKER_UI_STARTABLE_MESSAGING_SERVICE-let.html",
+      "docType": "let",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4607,7 +4737,7 @@
       "title": "WebWorkerInstance",
       "path": "platform-browser/index/WebWorkerInstance-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4615,10 +4745,10 @@
     },
   
     {
-      "title": "bootstrap",
-      "path": "platform-browser/index/bootstrap-function.html",
-      "docType": "function",
-      "stability": "",
+      "title": "WorkerAppModule",
+      "path": "platform-browser/index/WorkerAppModule-class.html",
+      "docType": "class",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4626,21 +4756,10 @@
     },
   
     {
-      "title": "bootstrapApp",
-      "path": "platform-browser/index/bootstrapApp-function.html",
-      "docType": "function",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser"
-    },
-  
-    {
-      "title": "bootstrapRender",
-      "path": "platform-browser/index/bootstrapRender-function.html",
-      "docType": "function",
-      "stability": "",
+      "title": "_WORKER_UI_PLATFORM_PROVIDERS",
+      "path": "platform-browser/index/_WORKER_UI_PLATFORM_PROVIDERS-let.html",
+      "docType": "let",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4649,9 +4768,9 @@
   
     {
       "title": "browserPlatform",
-      "path": "platform-browser/index/browserPlatform-function.html",
-      "docType": "function",
-      "stability": "",
+      "path": "platform-browser/index/browserPlatform-let.html",
+      "docType": "let",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4662,7 +4781,7 @@
       "title": "disableDebugTools",
       "path": "platform-browser/index/disableDebugTools-function.html",
       "docType": "function",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4673,7 +4792,7 @@
       "title": "enableDebugTools",
       "path": "platform-browser/index/enableDebugTools-function.html",
       "docType": "function",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4681,10 +4800,32 @@
     },
   
     {
-      "title": "initializeGenericWorkerRenderer",
-      "path": "platform-browser/index/initializeGenericWorkerRenderer-function.html",
-      "docType": "function",
-      "stability": "",
+      "title": "platformBrowser",
+      "path": "platform-browser/index/platformBrowser-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-browser"
+    },
+  
+    {
+      "title": "platformWorkerApp",
+      "path": "platform-browser/index/platformWorkerApp-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-browser"
+    },
+  
+    {
+      "title": "platformWorkerUi",
+      "path": "platform-browser/index/platformWorkerUi-let.html",
+      "docType": "let",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4693,9 +4834,9 @@
   
     {
       "title": "workerAppPlatform",
-      "path": "platform-browser/index/workerAppPlatform-function.html",
-      "docType": "function",
-      "stability": "",
+      "path": "platform-browser/index/workerAppPlatform-let.html",
+      "docType": "let",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4703,10 +4844,10 @@
     },
   
     {
-      "title": "workerRenderPlatform",
-      "path": "platform-browser/index/workerRenderPlatform-function.html",
-      "docType": "function",
-      "stability": "",
+      "title": "workerUiPlatform",
+      "path": "platform-browser/index/workerUiPlatform-let.html",
+      "docType": "let",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4716,32 +4857,10 @@
 
   "@angular/platform-browser/testing" : [
     {
-      "title": "ADDITIONAL_TEST_BROWSER_PROVIDERS",
-      "path": "platform-browser/testing/ADDITIONAL_TEST_BROWSER_PROVIDERS-let.html",
-      "docType": "let",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser/testing"
-    },
-  
-    {
-      "title": "ADDITIONAL_TEST_BROWSER_STATIC_PROVIDERS",
-      "path": "platform-browser/testing/ADDITIONAL_TEST_BROWSER_STATIC_PROVIDERS-let.html",
-      "docType": "let",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser/testing"
-    },
-  
-    {
-      "title": "BrowserDetection",
-      "path": "platform-browser/testing/BrowserDetection-class.html",
+      "title": "BrowserTestingModule",
+      "path": "platform-browser/testing/BrowserTestingModule-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4749,131 +4868,10 @@
     },
   
     {
-      "title": "DOMTestComponentRenderer",
-      "path": "platform-browser/testing/DOMTestComponentRenderer-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser/testing"
-    },
-  
-    {
-      "title": "NgMatchers",
-      "path": "platform-browser/testing/NgMatchers-interface.html",
-      "docType": "interface",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser/testing"
-    },
-  
-    {
-      "title": "TEST_BROWSER_APPLICATION_PROVIDERS",
-      "path": "platform-browser/testing/TEST_BROWSER_APPLICATION_PROVIDERS-let.html",
+      "title": "platformBrowserTesting",
+      "path": "platform-browser/testing/platformBrowserTesting-let.html",
       "docType": "let",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser/testing"
-    },
-  
-    {
-      "title": "TEST_BROWSER_PLATFORM_PROVIDERS",
-      "path": "platform-browser/testing/TEST_BROWSER_PLATFORM_PROVIDERS-let.html",
-      "docType": "let",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser/testing"
-    },
-  
-    {
-      "title": "TEST_BROWSER_STATIC_APPLICATION_PROVIDERS",
-      "path": "platform-browser/testing/TEST_BROWSER_STATIC_APPLICATION_PROVIDERS-let.html",
-      "docType": "let",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser/testing"
-    },
-  
-    {
-      "title": "TEST_BROWSER_STATIC_PLATFORM_PROVIDERS",
-      "path": "platform-browser/testing/TEST_BROWSER_STATIC_PLATFORM_PROVIDERS-let.html",
-      "docType": "let",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser/testing"
-    },
-  
-    {
-      "title": "browserDetection",
-      "path": "platform-browser/testing/browserDetection-var.html",
-      "docType": "var",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser/testing"
-    },
-  
-    {
-      "title": "dispatchEvent",
-      "path": "platform-browser/testing/dispatchEvent-function.html",
-      "docType": "function",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser/testing"
-    },
-  
-    {
-      "title": "el",
-      "path": "platform-browser/testing/el-function.html",
-      "docType": "function",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser/testing"
-    },
-  
-    {
-      "title": "expect",
-      "path": "platform-browser/testing/expect-var.html",
-      "docType": "var",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser/testing"
-    },
-  
-    {
-      "title": "normalizeCSS",
-      "path": "platform-browser/testing/normalizeCSS-function.html",
-      "docType": "function",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/platform-browser/testing"
-    },
-  
-    {
-      "title": "stringifyElement",
-      "path": "platform-browser/testing/stringifyElement-function.html",
-      "docType": "function",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4883,10 +4881,98 @@
 
   "@angular/platform-browser-dynamic" : [
     {
-      "title": "BROWSER_APP_DYNAMIC_PROVIDERS",
-      "path": "platform-browser-dynamic/index/BROWSER_APP_DYNAMIC_PROVIDERS-let.html",
+      "title": "BROWSER_APP_COMPILER_PROVIDERS",
+      "path": "platform-browser-dynamic/index/BROWSER_APP_COMPILER_PROVIDERS-let.html",
       "docType": "let",
-      "stability": "",
+      "stability": "deprecated",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-browser-dynamic"
+    },
+  
+    {
+      "title": "CACHED_TEMPLATE_PROVIDER",
+      "path": "platform-browser-dynamic/index/CACHED_TEMPLATE_PROVIDER-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-browser-dynamic"
+    },
+  
+    {
+      "title": "bootstrap",
+      "path": "platform-browser-dynamic/index/bootstrap-function.html",
+      "docType": "function",
+      "stability": "deprecated",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-browser-dynamic"
+    },
+  
+    {
+      "title": "bootstrapWorkerApp",
+      "path": "platform-browser-dynamic/index/bootstrapWorkerApp-function.html",
+      "docType": "function",
+      "stability": "deprecated",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-browser-dynamic"
+    },
+  
+    {
+      "title": "bootstrapWorkerUi",
+      "path": "platform-browser-dynamic/index/bootstrapWorkerUi-function.html",
+      "docType": "function",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-browser-dynamic"
+    },
+  
+    {
+      "title": "browserDynamicPlatform",
+      "path": "platform-browser-dynamic/index/browserDynamicPlatform-let.html",
+      "docType": "let",
+      "stability": "deprecated",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-browser-dynamic"
+    },
+  
+    {
+      "title": "platformBrowserDynamic",
+      "path": "platform-browser-dynamic/index/platformBrowserDynamic-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-browser-dynamic"
+    },
+  
+    {
+      "title": "platformWorkerAppDynamic",
+      "path": "platform-browser-dynamic/index/platformWorkerAppDynamic-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-browser-dynamic"
+    },
+  
+    {
+      "title": "workerAppDynamicPlatform",
+      "path": "platform-browser-dynamic/index/workerAppDynamicPlatform-let.html",
+      "docType": "let",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4894,12 +4980,91 @@
     }
   ],
 
+  "@angular/platform-browser-dynamic/testing" : [
+    {
+      "title": "BrowserDynamicTestingModule",
+      "path": "platform-browser-dynamic/testing/BrowserDynamicTestingModule-class.html",
+      "docType": "class",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-browser-dynamic/testing"
+    },
+  
+    {
+      "title": "platformBrowserDynamicTesting",
+      "path": "platform-browser-dynamic/testing/platformBrowserDynamicTesting-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-browser-dynamic/testing"
+    }
+  ],
+
   "@angular/platform-server" : [
     {
-      "title": "Parse5DomAdapter",
-      "path": "platform-server/index/Parse5DomAdapter-class.html",
-      "docType": "class",
-      "stability": "",
+      "title": "SERVER_PLATFORM_PROVIDERS",
+      "path": "platform-server/index/SERVER_PLATFORM_PROVIDERS-let.html",
+      "docType": "let",
+      "stability": "deprecated",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-server"
+    },
+  
+    {
+      "title": "platformDynamicServer",
+      "path": "platform-server/index/platformDynamicServer-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-server"
+    },
+  
+    {
+      "title": "platformServer",
+      "path": "platform-server/index/platformServer-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-server"
+    },
+  
+    {
+      "title": "serverBootstrap",
+      "path": "platform-server/index/serverBootstrap-function.html",
+      "docType": "function",
+      "stability": "deprecated",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-server"
+    },
+  
+    {
+      "title": "serverDynamicPlatform",
+      "path": "platform-server/index/serverDynamicPlatform-let.html",
+      "docType": "let",
+      "stability": "deprecated",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/platform-server"
+    },
+  
+    {
+      "title": "serverPlatform",
+      "path": "platform-server/index/serverPlatform-let.html",
+      "docType": "let",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4909,10 +5074,10 @@
 
   "@angular/platform-server/testing" : [
     {
-      "title": "TEST_SERVER_APPLICATION_PROVIDERS",
-      "path": "platform-server/testing/TEST_SERVER_APPLICATION_PROVIDERS-let.html",
-      "docType": "let",
-      "stability": "",
+      "title": "ServerTestingModule",
+      "path": "platform-server/testing/ServerTestingModule-class.html",
+      "docType": "class",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4920,10 +5085,10 @@
     },
   
     {
-      "title": "TEST_SERVER_PLATFORM_PROVIDERS",
-      "path": "platform-server/testing/TEST_SERVER_PLATFORM_PROVIDERS-let.html",
+      "title": "platformServerTesting",
+      "path": "platform-server/testing/platformServerTesting-let.html",
       "docType": "let",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4933,10 +5098,54 @@
 
   "@angular/router" : [
     {
+      "title": "ActivatedRoute",
+      "path": "router/index/ActivatedRoute-interface.html",
+      "docType": "interface",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "ActivatedRouteSnapshot",
+      "path": "router/index/ActivatedRouteSnapshot-interface.html",
+      "docType": "interface",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "CanActivate",
+      "path": "router/index/CanActivate-interface.html",
+      "docType": "interface",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "CanActivateChild",
+      "path": "router/index/CanActivateChild-interface.html",
+      "docType": "interface",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
       "title": "CanDeactivate",
       "path": "router/index/CanDeactivate-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4944,21 +5153,131 @@
     },
   
     {
-      "title": "DefaultRouterUrlSerializer",
-      "path": "router/index/DefaultRouterUrlSerializer-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/router"
-    },
-  
-    {
-      "title": "OnActivate",
-      "path": "router/index/OnActivate-interface.html",
+      "title": "CanLoad",
+      "path": "router/index/CanLoad-interface.html",
       "docType": "interface",
-      "stability": "",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "Data",
+      "path": "router/index/Data-type-alias.html",
+      "docType": "type-alias",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "DefaultUrlSerializer",
+      "path": "router/index/DefaultUrlSerializer-class.html",
+      "docType": "class",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "Event",
+      "path": "router/index/Event-type-alias.html",
+      "docType": "type-alias",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "ExtraOptions",
+      "path": "router/index/ExtraOptions-interface.html",
+      "docType": "interface",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "NavigationCancel",
+      "path": "router/index/NavigationCancel-class.html",
+      "docType": "class",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "NavigationEnd",
+      "path": "router/index/NavigationEnd-class.html",
+      "docType": "class",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "NavigationError",
+      "path": "router/index/NavigationError-class.html",
+      "docType": "class",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "NavigationExtras",
+      "path": "router/index/NavigationExtras-interface.html",
+      "docType": "interface",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "NavigationStart",
+      "path": "router/index/NavigationStart-class.html",
+      "docType": "class",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "PRIMARY_OUTLET",
+      "path": "router/index/PRIMARY_OUTLET-let.html",
+      "docType": "let",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "Params",
+      "path": "router/index/Params-type-alias.html",
+      "docType": "type-alias",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4969,7 +5288,7 @@
       "title": "ROUTER_DIRECTIVES",
       "path": "router/index/ROUTER_DIRECTIVES-let.html",
       "docType": "let",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4977,10 +5296,21 @@
     },
   
     {
-      "title": "ROUTER_PROVIDERS",
-      "path": "router/index/ROUTER_PROVIDERS-let.html",
-      "docType": "let",
-      "stability": "",
+      "title": "Resolve",
+      "path": "router/index/Resolve-interface.html",
+      "docType": "interface",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "ResolveData",
+      "path": "router/index/ResolveData-type-alias.html",
+      "docType": "type-alias",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -4989,31 +5319,9 @@
   
     {
       "title": "Route",
-      "path": "router/index/Route-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/router"
-    },
-  
-    {
-      "title": "RouteSegment",
-      "path": "router/index/RouteSegment-class.html",
-      "docType": "class",
-      "stability": "",
-      "secure": "false",
-      "howToUse": "",
-      "whatItDoes": "Not Done",
-      "barrel" : "@angular/router"
-    },
-  
-    {
-      "title": "RouteTree",
-      "path": "router/index/RouteTree-class.html",
-      "docType": "class",
-      "stability": "",
+      "path": "router/index/Route-interface.html",
+      "docType": "interface",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -5022,9 +5330,20 @@
   
     {
       "title": "Router",
-      "path": "router/index/Router-interface.html",
-      "docType": "interface",
-      "stability": "",
+      "path": "router/index/Router-class.html",
+      "docType": "class",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "RouterConfig",
+      "path": "router/index/RouterConfig-type-alias.html",
+      "docType": "type-alias",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -5035,7 +5354,40 @@
       "title": "RouterLink",
       "path": "router/index/RouterLink-directive.html",
       "docType": "directive",
-      "stability": "",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "RouterLinkActive",
+      "path": "router/index/RouterLinkActive-directive.html",
+      "docType": "directive",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "RouterLinkWithHref",
+      "path": "router/index/RouterLinkWithHref-directive.html",
+      "docType": "directive",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "RouterModule",
+      "path": "router/index/RouterModule-class.html",
+      "docType": "class",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -5046,7 +5398,7 @@
       "title": "RouterOutlet",
       "path": "router/index/RouterOutlet-directive.html",
       "docType": "directive",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -5057,7 +5409,7 @@
       "title": "RouterOutletMap",
       "path": "router/index/RouterOutletMap-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -5065,10 +5417,21 @@
     },
   
     {
-      "title": "RouterUrlSerializer",
-      "path": "router/index/RouterUrlSerializer-class.html",
-      "docType": "class",
-      "stability": "",
+      "title": "RouterState",
+      "path": "router/index/RouterState-interface.html",
+      "docType": "interface",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "RouterStateSnapshot",
+      "path": "router/index/RouterStateSnapshot-interface.html",
+      "docType": "interface",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -5077,9 +5440,9 @@
   
     {
       "title": "Routes",
-      "path": "router/index/Routes-decorator.html",
-      "docType": "decorator",
-      "stability": "",
+      "path": "router/index/Routes-type-alias.html",
+      "docType": "type-alias",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -5087,10 +5450,10 @@
     },
   
     {
-      "title": "Tree",
-      "path": "router/index/Tree-class.html",
+      "title": "RoutesRecognized",
+      "path": "router/index/RoutesRecognized-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "stable",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -5101,7 +5464,18 @@
       "title": "UrlSegment",
       "path": "router/index/UrlSegment-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "UrlSerializer",
+      "path": "router/index/UrlSerializer-class.html",
+      "docType": "class",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -5110,9 +5484,42 @@
   
     {
       "title": "UrlTree",
-      "path": "router/index/UrlTree-class.html",
-      "docType": "class",
-      "stability": "",
+      "path": "router/index/UrlTree-interface.html",
+      "docType": "interface",
+      "stability": "stable",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "provideRouter",
+      "path": "router/index/provideRouter-function.html",
+      "docType": "function",
+      "stability": "experimental",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "provideRouterConfig",
+      "path": "router/index/provideRouterConfig-function.html",
+      "docType": "function",
+      "stability": "deprecated",
+      "secure": "false",
+      "howToUse": "",
+      "whatItDoes": "Not Done",
+      "barrel" : "@angular/router"
+    },
+  
+    {
+      "title": "provideRoutes",
+      "path": "router/index/provideRoutes-function.html",
+      "docType": "function",
+      "stability": "deprecated",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -5424,7 +5831,7 @@
       "title": "UpgradeAdapter",
       "path": "upgrade/index/UpgradeAdapter-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",
@@ -5435,7 +5842,7 @@
       "title": "UpgradeAdapterRef",
       "path": "upgrade/index/UpgradeAdapterRef-class.html",
       "docType": "class",
-      "stability": "",
+      "stability": "experimental",
       "secure": "false",
       "howToUse": "",
       "whatItDoes": "Not Done",

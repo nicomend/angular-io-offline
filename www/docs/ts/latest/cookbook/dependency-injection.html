@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" ng-app="angularIOApp" itemscope itemtype="http://schema.org/Framework"><head><title>Dependency Injection - ts</title><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Angular is a development platform for building mobile and desktop web applications"/><meta name="keywords" content="Angular, AngularJS, AngularDart, Javscript, Dart, Framework, JavaScript MVC, Google"/><meta name="robots" content="all"/><meta name="referrer" content="origin"/><meta name="viewport" id="viewport" content="width=device-width, initial-scale=1"/><meta property="og:title" content="Angular 2"/><meta property="og:image" content="/resources/images/logos/standard/shield-large.png"/><meta property="og:image:type" content="image/png"/><meta property="og:image:width" content="184"/><meta property="og:image:height" content="200"/><meta property="og:description" content="Angular is a development platform for building mobile and desktop web applications"/><meta itemprop="name" content="Angular 2"/><meta itemprop="description" content="Angular is a development platform for building mobile and desktop web applications"/><meta itemprop="image" content="https://angular.io/resources/images/logos/standard/shield-large.png"/><link rel="icon" type="image/x-icon" href="/resources/images/icons/favicon.ico"/><link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css"/><link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,400italic,700" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/><link rel="stylesheet" href="/resources/css/vendor/icomoon/style.css"/><link rel="stylesheet" href="/resources/css/vendor/animate.css"/><link rel="stylesheet" href="/resources/css/main.css"/><!-- MOBILE ICONS -->
+<!DOCTYPE html><html lang="en" ng-app="angularIOApp" itemscope itemtype="http://schema.org/Framework"><!-- template: public/docs/_layout--><head><title>Dependency Injection - ts</title><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Angular is a development platform for building mobile and desktop web applications"/><meta name="keywords" content="Angular, AngularJS, AngularDart, Javscript, Dart, Framework, JavaScript MVC, Google"/><meta name="robots" content="all"/><meta name="referrer" content="origin"/><meta name="viewport" id="viewport" content="width=device-width, initial-scale=1"/><meta property="og:title" content="Angular 2"/><meta property="og:image" content="/resources/images/logos/standard/shield-large.png"/><meta property="og:image:type" content="image/png"/><meta property="og:image:width" content="184"/><meta property="og:image:height" content="200"/><meta property="og:description" content="Angular is a development platform for building mobile and desktop web applications"/><meta itemprop="name" content="Angular 2"/><meta itemprop="description" content="Angular is a development platform for building mobile and desktop web applications"/><meta itemprop="image" content="https://angular.io/resources/images/logos/standard/shield-large.png"/><link rel="icon" type="image/x-icon" href="/resources/images/icons/favicon.ico"/><link rel="stylesheet" href="/ajax/libs/angular_material/1.0.0/angular-material.min.css"/><link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,400italic,700" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/><link rel="stylesheet" href="/resources/css/vendor/icomoon/style.css"/><link rel="stylesheet" href="/resources/css/vendor/animate.css"/><link rel="stylesheet" href="/resources/css/main.css"/><!-- MOBILE ICONS -->
 <link rel="apple-touch-icon" sizes="57x57" href="/resources/images/favicons/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/resources/images/favicons/apple-touch-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/resources/images/favicons/apple-touch-icon-72x72.png">
@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="/resources/images/favicons/favicon-96x96.png" sizes="96x96">
 <link rel="icon" type="image/png" href="/resources/images/favicons/android-chrome-192x192.png" sizes="192x192">
 <link rel="icon" type="image/png" href="/resources/images/favicons/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/resources/images/favicons/manifest.json"></head><body ng-controller="AppCtrl as appCtrl" class="l-offset-nav l-offset-side-nav"><md-toolbar scroll-y-offset-element="scroll-y-offset-element" class="main-nav background-regal l-pinned-top l-layer-5"><nav><h1><a href="/" md-button>Angular <sup>by Google</sup></a></h1><button aria-label="View Menu" ng-click="appCtrl.toggleMainMenu($event)" md-button="md-button" class="main-nav-button main-nav-mobile-trigger l-right">Site Menu <span class="icon icon-arrow-drop-down"></span></button><ul ng-class="appCtrl.showMainNav ? 'is-visible' : ''"><li class="l-left"><a class="main-nav-button" href="/features.html" md-button>Features</a></li><li class="l-left"><a class="main-nav-button" href="/docs/ts/latest/" md-button>Docs</a></li><li class="l-left"><a class="main-nav-button" href="/events.html" md-button>Events</a></li><li class="l-left"><a class="main-nav-button" href="/news.html" md-button>News</a></li><li class="l-right"><a class="main-nav-button" href="/docs/ts/latest/quickstart.html" md-button>Get Started</a></li></ul></nav></md-toolbar><!-- Include this file ONLY when current.path[2] is defined--><nav class="side-nav l-pinned-left l-layer-4 l-offset-nav"><!-- SEARCH BAR--><header class="side-nav-search st-input-wrapper"><form class="st-input-inner"><label for="search-io" class="is-hidden">Search Docs</label><input type="search" id="search-io" placeholder="SEARCH DOCS..."/></form><button aria-label="View Docs Menu" ng-click="appCtrl.toggleDocsMenu($event)" md-button="md-button" class="mobile-trigger button">Docs <span class="icon icon-arrow-drop-down"></span></button></header><div ng-class="appCtrl.showDocsNav ? 'is-visible' : ''" class="side-nav-secondary"><div class="nav-blocks"><a href="/docs/ts/latest/quickstart.html" title="Get up and running with Angular 2" class="nav-title ">Quickstart</a></div><div class="nav-blocks"><a href="/docs/ts/latest/tutorial/" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in TypeScript." class="nav-title ">Tutorial<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-ordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in TypeScript.">1. Introduction</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt1.html" title="We build a simple hero editor">2. The Hero Editor</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt2.html" title="We build a master/detail page with a list of heroes">3. Master/Detail</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt3.html" title="We refactor the master/detail view into separate components">4. Multiple Components</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt4.html" title="We create a reusable service to manage our hero data calls">5. Services</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt5.html" title="We add the Angular Component Router and learn to navigate among the views">6. Routing</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt6.html" title="We convert our service and components to use Http">7. Http</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/ts/latest/guide/" title="How to read and use this documentation" class="nav-title ">Basics<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-ordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/ts/latest/guide/" title="How to read and use this documentation">1. Overview</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/architecture.html" title="The basic building blocks of Angular 2 applications">2. Architecture</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/displaying-data.html" title="Interpolation and other forms of property binding help us show app data in the UI.">3. Displaying Data</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/user-input.html" title="User input triggers DOM events. We listen to those events with event bindings that funnel updated values back into our components and models.">4. User Input</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/forms.html" title="A form creates a cohesive, effective, and compelling data entry experience. An Angular form coordinates a set of data-bound user controls, tracks changes, validates input, and presents errors.">5. Forms</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/dependency-injection.html" title="Angular's dependency injection system creates and delivers dependent services &quot;just-in-time&quot;.">6. Dependency Injection</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/template-syntax.html" title="Learn how to write templates that display data and consume user events with the help of data binding.">7. Template Syntax</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/cheatsheet.html" title="A quick guide to Angular syntax.">8. Angular Cheat Sheet</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/style-guide.html" title="Write Angular 2 with style.">9. Style Guide</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/glossary.html" title="Brief definitions of the most important words in the Angular 2 vocabulary">10. Glossary</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/ts/latest/guide/attribute-directives.html" title="Attribute directives attach behavior to elements." class="nav-title ">Developer Guide<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-unordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/ts/latest/guide/attribute-directives.html" title="Attribute directives attach behavior to elements.">Attribute Directives</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/component-styles.html" title="Learn how to apply CSS styles to components.">Component Styles</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/hierarchical-dependency-injection.html" title="Angular's hierarchical dependency injection system supports nested injectors in parallel with the component tree.">Hierarchical Injectors</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/server-communication.html" title="Talk to a remote server with an HTTP Client.">HTTP Client</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/lifecycle-hooks.html" title="Angular calls lifecycle hook methods on directives and components as it creates, changes, and destroys them.">Lifecycle Hooks</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/npm-packages.html" title="Details of the recommended npm packages and the different kinds of package dependencies">Npm Packages</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/pipes.html" title="Pipes transform displayed values within a template.">Pipes</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/router-deprecated.html" title="The deprecated Beta Router.">Router (Deprecated Beta)</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/structural-directives.html" title="Angular has a powerful template engine that lets us easily manipulate the DOM structure of our elements.">Structural Directives</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/testing.html" title="Techniques and practices for testing an Angular 2 app">Testing</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/typescript-configuration.html" title="TypeScript configuration for Angular 2 developers">TypeScript Configuration</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/upgrade.html" title="Angular 1 applications can be incrementally upgraded to Angular 2.">Upgrading from 1.x</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/webpack.html" title="Create your Angular 2 applications with a Webpack based tooling">Webpack: an introduction</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/ts/latest/cookbook/" title="A collection of recipes for common Angular application scenarios" class="nav-title is-nav-title-selected">Cookbook<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-unordered-lists"><ul><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/" title="A collection of recipes for common Angular application scenarios">Overview</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/a1-a2-quick-reference.html" title="Learn how Angular 1 concepts and techniques map to Angular 2">Angular 1 to 2 Quick Ref</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/component-communication.html" title="Share information between different directives and components">Component Interaction</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/component-relative-paths.html" title="Use relative URLs for component templates and styles.">Component-relative Paths</a></li><li class="nav-list-item is-selected"><a href="/docs/ts/latest/cookbook/dependency-injection.html" title="Techniques for Dependency Injection">Dependency Injection</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/dynamic-form.html" title="Render dynamic forms with NgFormModel">Dynamic Form</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/set-document-title.html" title="Setting the document or window title using the Title service.">Set the Document Title</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/ts-to-js.html" title="Convert Angular 2 TypeScript examples into ES5 JavaScript">TypeScript to JavaScript</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/ts/latest/api/" title="API Preview" class="nav-title ">API Reference</a></div></div></nav><script>// Could put in appCtrl but only needed here and clear here
+<link rel="manifest" href="/resources/images/favicons/manifest.json"></head><body ng-controller="AppCtrl as appCtrl" class="l-offset-nav l-offset-side-nav"><md-toolbar scroll-y-offset-element="scroll-y-offset-element" class="main-nav background-regal l-pinned-top l-layer-5"><nav><h1><a href="/" md-button>Angular <sup>by Google</sup></a></h1><button aria-label="View Menu" ng-click="appCtrl.toggleMainMenu($event)" md-button="md-button" class="main-nav-button main-nav-mobile-trigger l-right">Site Menu <span class="icon icon-arrow-drop-down"></span></button><ul ng-class="appCtrl.showMainNav ? 'is-visible' : ''"><li class="l-left"><a class="main-nav-button" href="/features.html" md-button>Features</a></li><li class="l-left"><a class="main-nav-button" href="/docs/ts/latest/" md-button>Docs</a></li><li class="l-left"><a class="main-nav-button" href="/events.html" md-button>Events</a></li><li class="l-left"><a class="main-nav-button" href="/news.html" md-button>News</a></li><li class="l-right"><a class="main-nav-button" href="/docs/ts/latest/quickstart.html" md-button>Get Started</a></li></ul></nav></md-toolbar><!-- Include this file ONLY when current.path[2] is defined--><nav class="side-nav l-pinned-left l-layer-4 l-offset-nav"><!-- SEARCH BAR--><header class="side-nav-search st-input-wrapper"><form class="st-input-inner"><label for="search-io" class="is-hidden">Search Docs</label><input type="search" id="search-io" placeholder="SEARCH DOCS..."/></form><button aria-label="View Docs Menu" ng-click="appCtrl.toggleDocsMenu($event)" md-button="md-button" class="mobile-trigger button">Docs <span class="icon icon-arrow-drop-down"></span></button></header><div ng-class="appCtrl.showDocsNav ? 'is-visible' : ''" class="side-nav-secondary"><div class="nav-blocks"><a href="/docs/ts/latest/quickstart.html" title="Get up and running with Angular 2" class="nav-title ">Quickstart</a></div><div class="nav-blocks"><a href="/docs/ts/latest/tutorial/" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in TypeScript." class="nav-title ">Tutorial<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-ordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in TypeScript.">1. Introduction</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt1.html" title="We build a simple hero editor">2. The Hero Editor</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt2.html" title="We build a master/detail page with a list of heroes">3. Master/Detail</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt3.html" title="We refactor the master/detail view into separate components">4. Multiple Components</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt4.html" title="We create a reusable service to manage our hero data calls">5. Services</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt5.html" title="We add the Angular Component Router and learn to navigate among the views">6. Routing</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt6.html" title="We convert our service and components to use Http">7. Http</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/ts/latest/guide/" title="How to read and use this documentation" class="nav-title ">Basics<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-ordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/ts/latest/guide/" title="How to read and use this documentation">1. Overview</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/architecture.html" title="The basic building blocks of Angular 2 applications">2. Architecture</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/displaying-data.html" title="Interpolation and other forms of property binding help us show app data in the UI.">3. Displaying Data</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/user-input.html" title="User input triggers DOM events. We listen to those events with event bindings that funnel updated values back into our components and models.">4. User Input</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/forms.html" title="A form creates a cohesive, effective, and compelling data entry experience. An Angular form coordinates a set of data-bound user controls, tracks changes, validates input, and presents errors.">5. Forms</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/dependency-injection.html" title="Angular's dependency injection system creates and delivers dependent services &quot;just-in-time&quot;.">6. Dependency Injection</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/template-syntax.html" title="Learn how to write templates that display data and consume user events with the help of data binding.">7. Template Syntax</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/cheatsheet.html" title="A quick guide to Angular syntax.">8. Angular Cheat Sheet</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/style-guide.html" title="Write Angular 2 with style.">9. Style Guide</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/glossary.html" title="Brief definitions of the most important words in the Angular 2 vocabulary">10. Glossary</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/ts/latest/guide/ngmodule.html" title="Define application modules with @NgModule" class="nav-title ">Developer Guide<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-unordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/ts/latest/guide/ngmodule.html" title="Define application modules with @NgModule">Angular Modules (NgModule)</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/animations.html" title="A guide to Angular's animation system.">Animations</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/attribute-directives.html" title="Attribute directives attach behavior to elements.">Attribute Directives</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/component-styles.html" title="Learn how to apply CSS styles to components.">Component Styles</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/hierarchical-dependency-injection.html" title="Angular's hierarchical dependency injection system supports nested injectors in parallel with the component tree.">Hierarchical Injectors</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/server-communication.html" title="Talk to a remote server with an HTTP Client.">HTTP Client</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/lifecycle-hooks.html" title="Angular calls lifecycle hook methods on directives and components as it creates, changes, and destroys them.">Lifecycle Hooks</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/npm-packages.html" title="Details of the recommended npm packages and the different kinds of package dependencies">Npm Packages</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/pipes.html" title="Pipes transform displayed values within a template.">Pipes</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/router.html" title="Discover the basics of screen navigation with the Angular 2 Component Router.">Routing &amp; Navigation</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/security.html" title="Developing for content security in Angular applications">Security</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/structural-directives.html" title="Angular has a powerful template engine that lets us easily manipulate the DOM structure of our elements.">Structural Directives</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/testing.html" title="Techniques and practices for testing an Angular 2 app">Testing</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/typescript-configuration.html" title="TypeScript configuration for Angular 2 developers">TypeScript Configuration</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/upgrade.html" title="Angular 1 applications can be incrementally upgraded to Angular 2.">Upgrading from 1.x</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/webpack.html" title="Create your Angular 2 applications with a Webpack based tooling">Webpack: an introduction</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/ts/latest/cookbook/" title="A collection of recipes for common Angular application scenarios" class="nav-title is-nav-title-selected">Cookbook<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-unordered-lists"><ul><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/" title="A collection of recipes for common Angular application scenarios">Overview</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/a1-a2-quick-reference.html" title="Learn how Angular 1 concepts and techniques map to Angular 2">Angular 1 to 2 Quick Ref</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/component-communication.html" title="Share information between different directives and components">Component Interaction</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/component-relative-paths.html" title="Use relative URLs for component templates and styles.">Component-relative Paths</a></li><li class="nav-list-item is-selected"><a href="/docs/ts/latest/cookbook/dependency-injection.html" title="Techniques for Dependency Injection">Dependency Injection</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/dynamic-form.html" title="Render dynamic forms with FormGroup">Dynamic Forms</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/rc4-to-rc5.html" title="Migrate your RC4 app to RC5 in minutes.">RC4 to RC5 Migration</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/set-document-title.html" title="Setting the document or window title using the Title service.">Set the Document Title</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/ts-to-js.html" title="Convert Angular 2 TypeScript examples into ES5 JavaScript">TypeScript to JavaScript</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/visual-studio-2015.html" title="Use Visual Studio 2015 with the QuickStart files">Visual Studio 2015 QuickStart</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/ts/latest/api/" title="API Preview" class="nav-title ">API Reference</a></div></div></nav><script>// Could put in appCtrl but only needed here and clear here
 (function scrollToSelectedLink() {
   var sideNav = document.getElementsByClassName('side-nav')[0];
   var link = sideNav.getElementsByClassName('is-selected')[0];
@@ -21,7 +21,7 @@
     sideNav.scrollTop = link.offsetTop - (window.innerHeight/2);
     //alert("offsetTop: " + link.offsetTop + " side-nav top is " + sideNav.scrollTop);
   }
-})()</script><!-- Refer to jade.template.html and addJadeDataDocsProcessor to figure out where the context of this jade file originates--><!-- renamer :: String -> String--><!-- Renames `Let` and `Var` into `Const`--><header class="hero background-sky"><div class="inner-header"><h1 class="hero-title text-display-1 ">Dependency Injection</h1><span class="badges"></span></div><!-- Replace _ underscores with . dots --><!-- VERSION TREE CREATOR MIXIN --><!-- BUTTON TITLE GENERATION  --><!-- DROPDOWN BUTTON --><nav class="dropdown"><button aria-label="Select a version of Angular" md-button="md-button" ng-click="appCtrl.toggleVersionMenu($event)" class="dropdown-button">Angular 2 for TypeScript  <span class="icon icon-arrow-drop-down"></span></button><div ng-click="appCtrl.toggleVersionMenu($event)" ng-show="appCtrl.showMenu" class="overlay ng-hide"></div><!-- DROPDOWN MENU --><div ng-class="appCtrl.showMenu ? 'is-visible' : ''" class="dropdown-menu"><ul><li><a href="/docs/ts/latest/cookbook/dependency-injection.html" md-button>Angular 2 for TypeScript </a></li></ul><ul><li><a href="/docs/js/latest/cookbook/dependency-injection.html" md-button>Angular 2 for JavaScript </a></li></ul><ul><li><a href="/docs/dart/latest/cookbook/dependency-injection.html" md-button>Angular 2 for Dart </a></li></ul></div></nav></header><div class="banner"><p class="text-body">Techniques for Dependency Injection</p></div><article class="l-content-small grid-fluid docs-content"><div class="c10"><div class="showcase"><div class="showcase-content"><script>function why(id, backTo) {
+})()</script><!-- template: public/_includes/_hero--><header style="" class="hero background-sky"><div class="inner-header"><h1 class="hero-title text-display-1 ">Dependency Injection</h1><span class="badges"></span></div><!-- Replace _ underscores with . dots --><!-- VERSION TREE CREATOR MIXIN --><!-- BUTTON TITLE GENERATION  --><!-- DROPDOWN BUTTON --><nav class="dropdown"><button aria-label="Select a version of Angular" md-button="md-button" ng-click="appCtrl.toggleVersionMenu($event)" class="dropdown-button">Angular 2 for TypeScript  <span class="icon icon-arrow-drop-down"></span></button><div ng-click="appCtrl.toggleVersionMenu($event)" ng-show="appCtrl.showMenu" class="overlay ng-hide"></div><!-- DROPDOWN MENU --><div ng-class="appCtrl.showMenu ? 'is-visible' : ''" class="dropdown-menu"><ul><li><a href="/docs/ts/latest/cookbook/dependency-injection.html" md-button>Angular 2 for TypeScript </a></li></ul><ul><li><a href="/docs/js/latest/cookbook/dependency-injection.html" md-button>Angular 2 for JavaScript </a></li></ul><ul><li><a href="/docs/dart/latest/cookbook/dependency-injection.html" md-button>Angular 2 for Dart </a></li></ul></div></nav></header><div class="banner"><p class="text-body">Techniques for Dependency Injection</p></div><article class="l-content-small grid-fluid docs-content"><div class="c10"><div class="showcase"><div class="showcase-content"><script>function why(id, backTo) {
   var id = "#"+id;
   var el = document.querySelector(id);
   el.hidden=el.hidden=!el.hidden;
@@ -105,27 +105,14 @@ In this cookbook we will explore many of the features of Dependency Injection (D
 <li><a href="#provideparent">A <em>provideParent</em> helper function</a></li>
 </ul>
 <p><a href="#forwardref">Break circularities with a forward class reference (<em>forwardRef</em>)</a></p>
-<p><strong>See the <a href="/resources/live-examples/cb-dependency-injection/ts/plnkr.html">live example</a></strong>
+<p><strong>See the <live-example name="cb-dependency-injection"></live-example></strong>
 of the code supporting this cookbook.        </p>
 <div class="l-main-section"></div><a id="app-wide-dependencies"></a><h2 id="application-wide-dependencies">Application-wide dependencies</h2>
 <p>Register providers for dependencies used throughout the application in the root application component, <code>AppComponent</code>.</p>
 <p>In the following example, we import and register several services 
 (the <code>LoggerService</code>, <code>UserContext</code>, and the <code>UserService</code>)
 in the <code>@Component</code> metadata <code>providers</code> array.</p>
-<div class="example-title">app/app.component.ts (excerpt)</div><code-example language="ts" format="">import { LoggerService }      from &#39;./logger.service&#39;;
-import { UserContextService } from &#39;./user-context.service&#39;;
-import { UserService }        from &#39;./user.service&#39;;
-
-@Component({
-  selector: &#39;my-app&#39;,
-  templateUrl: &#39;app/app.component.html&#39;,
-  directives: DIRECTIVES,
-  providers: [LoggerService, UserContextService, UserService]
-})
-export class AppComponent {
-/* . . . */
-}
-</code-example><p>All of these services are implemented as classes. 
+<div class="example-title">app/app.component.ts (excerpt)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/app.component-import-services.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>All of these services are implemented as classes. 
 Service classes can act as their own providers which is why listing them in the <code>providers</code> array
 is all the registration we need.</p>
 <div class="l-sub-section"><p>A <em>provider</em> is something that can create or deliver a service.
@@ -133,13 +120,8 @@ Angular creates a service instance from a class provider by &quot;new-ing&quot; 
 Learn more about providers <a href="#providers">below</a>.</p>
 </div><p>Now that we&#39;ve registered these services, 
 Angular can inject them into the constructor of <em>any</em> component or service, <em>anywhere</em> in the application.</p>
-<div class="example-title">app/hero-bios.component.ts (component constructor injection)</div><code-example language="ts" format="">constructor(logger: LoggerService) {
-  logger.logInfo(&#39;Creating HeroBiosComponent&#39;);
-}
-</code-example><div class="example-title">app/user-context.service.ts (service constructor injection)</div><code-example language="ts" format="">constructor(private userService:UserService, private loggerService:LoggerService){
-}
-</code-example><a id="external-module-configuration"></a><div class="l-main-section"></div><h2 id="external-module-configuration">External module configuration</h2>
-<p>We can register <em>certain</em> module providers when bootstrapping rather than in the root application component. </p>
+<div class="example-title">app/hero-bios.component.ts (component constructor injection)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-bios.component-ctor.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><div class="example-title">app/user-context.service.ts (service constructor injection)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/user-context.service-ctor.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><a id="external-module-configuration"></a><div class="l-main-section"></div><h2 id="external-module-configuration">External module configuration</h2>
+<p>We can register <em>certain</em> module providers in the <code>NgModule</code> rather than in the root application component. </p>
 <p>We&#39;d do this when we expect to select or configure external modules that support our application
 but (a) aren&#39;t conceptually part of the application and (b) that we could change later without
 altering the essential logic of the application.</p>
@@ -150,16 +132,9 @@ The choice of location strategy doesn&#39;t matter to the application itself.</p
 allow http calls to a remote server (that might not yet exist). 
 We&#39;ll switch to the real backend in production. 
 The application shouldn&#39;t know or care one way or the other.</p>
-<p>See both examples in the following <code>main.ts</code>
-where we list their service providers in an array in the second parameter of the <code>bootstrap</code> method.</p>
-<div class="example-title">app/main.ts</div><code-example language="ts" format="">bootstrap(AppComponent, [
-  ROUTER_PROVIDERS,
-  { provide: LocationStrategy, useClass: HashLocationStrategy },
-
-  { provide: XHRBackend, useClass: InMemoryBackendService }, // in-mem server
-  { provide: SEED_DATA,  useClass: HeroData } // in-mem server data
-]).catch((err: any) =&gt; console.error(err));
-</code-example><a id="injectable"></a><a id="nested-dependencies"></a><div class="l-main-section"></div><h2 id="-injectable-and-nested-service-dependencies"><em>@Injectable</em> and nested service dependencies</h2>
+<p>See both examples in the following <code>app.module.ts</code>
+where we list their service providers in the <code>providers</code> array of the <code>NgModule</code> (AppModule).</p>
+<div class="example-title">app/app.module.ts</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/app.module-bootstrap.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><a id="injectable"></a><a id="nested-dependencies"></a><div class="l-main-section"></div><h2 id="-injectable-and-nested-service-dependencies"><em>@Injectable</em> and nested service dependencies</h2>
 <p>The consumer of an injected service does not know how to create that service.
 It shouldn&#39;t care.
 It&#39;s the dependency injection&#39;s job to create and cache that service.</p>
@@ -167,18 +142,9 @@ It&#39;s the dependency injection&#39;s job to create and cache that service.</p
 Resolving these nested dependencies in the correct order is also the framework&#39;s job.
 At each step, the consumer of dependencies simply declares what it requires in its constructor and the framework takes over.</p>
 <p>For example, we inject both the <code>LoggerService</code> and the <code>UserContext</code> in the <code>AppComponent</code>. </p>
-<div class="example-title">app/app.component.ts</div><code-example language="ts" format="">constructor(logger: LoggerService, public userContext: UserContextService) {
-  userContext.loadUser(this.userId);
-  logger.logInfo(&#39;AppComponent initialized&#39;);
-}
-</code-example><p>The <code>UserContext</code> in turn has dependencies on both the <code>LoggerService</code> (again) and 
+<div class="example-title">app/app.component.ts</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/app.component-ctor.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>The <code>UserContext</code> in turn has dependencies on both the <code>LoggerService</code> (again) and 
 a <code>UserService</code> that gathers information about a particular user.</p>
-<div class="example-title">user-context.service.ts (injection)</div><code-example language="ts" format="">@Injectable()
-export class UserContextService {
-  constructor(private userService:UserService, private loggerService:LoggerService){
-  }
-}
-</code-example><p>When Angular creates an<code>AppComponent</code>, the dependency injection framework creates an instance of the <code>LoggerService</code> and 
+<div class="example-title">user-context.service.ts (injection)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/user-context.service-injectables.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>When Angular creates an<code>AppComponent</code>, the dependency injection framework creates an instance of the <code>LoggerService</code> and 
 starts to create the <code>UserContextService</code>.
 The <code>UserContextService</code> needs the <code>LoggerService</code>, which the framework already has, and the <code>UserService</code>, which it has yet to create. 
 The <code>UserService</code> has no dependencies so the dependency injection framework can just <code>new</code> one into existence.</p>
@@ -187,10 +153,7 @@ The author simply declared what was needed in the constructor (<code>LoggerServi
 <p>Once all the dependencies are in place, the <code>AppComponent</code> displays the user information:</p>
 <figure class="image-display"><img src="/resources/images/cookbooks/dependency-injection/logged-in-user.png" alt="Logged In User"></figure><h3 id="-injectable-"><em>@Injectable()</em></h3>
 <p>Notice the <code>@Injectable()</code>decorator on the <code>UserContextService</code> class. </p>
-<div class="example-title">user-context.service.ts (@Injectable)</div><code-example language="ts" format="">@Injectable()
-export class UserContextService {
-}
-</code-example><p>That decorator makes it possible for Angular to identify the types of its two dependencies, <code>LoggerService</code> and <code>UserService</code>.</p>
+<div class="example-title">user-context.service.ts (@Injectable)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/user-context.service-injectable.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>That decorator makes it possible for Angular to identify the types of its two dependencies, <code>LoggerService</code> and <code>UserService</code>.</p>
 <p>Technically, the <code>@Injectable()</code>decorator is only <em>required</em> for a service class that has <em>its own dependencies</em>.
 The <code>LoggerService</code> doesn&#39;t depend on anything. The logger would work if we omitted <code>@Injectable()</code>
 and the generated code would be slightly smaller. </p>
@@ -215,15 +178,7 @@ Sometimes we want to restrict service availability to a particular region of the
 <p>We can limit the scope of an injected service to a <em>branch</em> of the application hierarchy
 by providing that service <em>at the sub-root component for that branch</em>.
 Here we provide the <code>HeroService</code> to the <code>HeroesBaseComponent</code> by listing it in the <code>providers</code> array:</p>
-<div class="example-title">app/sorted-heroes.component.ts (HeroesBaseComponent excerpt)</div><code-example language="ts" format="linenums">@Component({
-  selector: &#39;unsorted-heroes&#39;,
-  template: `&lt;div *ngFor=&quot;let hero of heroes&quot;&gt;{{hero.name}}&lt;/div&gt;`,
-  providers: [HeroService]
-})
-export class HeroesBaseComponent implements OnInit {
-  constructor(private heroService: HeroService) { }
-}
-</code-example><p>When Angular creates the <code>HeroesBaseComponent</code>, it also creates a new instance of <code>HeroService</code> 
+<div class="example-title">app/sorted-heroes.component.ts (HeroesBaseComponent excerpt)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/sorted-heroes.component-injection.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>When Angular creates the <code>HeroesBaseComponent</code>, it also creates a new instance of <code>HeroService</code> 
 that is visible only to the component and its children (if any).</p>
 <p>We could also provide the <code>HeroService</code> to a <em>different</em> component elsewhere in the application. 
 That would result in a <em>different</em> instance of the service, living in a <em>different</em> injector.</p>
@@ -241,59 +196,17 @@ Each service has its own work-state, isolated from the service-and-state of a di
 We call this <em>sandboxing</em> because each service and component instance has its own sandbox to play in.</p>
 <p><a id="hero-bios-component"></a>
 Imagine a <code>HeroBiosComponent</code> that presents three instances of the <code>HeroBioComponent</code>. </p>
-<div class="example-title">ap/hero-bios.component.ts</div><code-example language="ts" format="linenums">@Component({
-  selector:&#39;hero-bios&#39;,
-  template:`
-    &lt;hero-bio [heroId]=&quot;1&quot;&gt;&lt;/hero-bio&gt;
-    &lt;hero-bio [heroId]=&quot;2&quot;&gt;&lt;/hero-bio&gt;
-    &lt;hero-bio [heroId]=&quot;3&quot;&gt;&lt;/hero-bio&gt;`,
-  directives:[HeroBioComponent],
-  providers: [HeroService]
-})
-export class HeroBiosComponent{
-}
-</code-example><p>Each <code>HeroBioComponent</code> can edit a single hero&#39;s biography. 
+<div class="example-title">ap/hero-bios.component.ts</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-bios.component-simple.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>Each <code>HeroBioComponent</code> can edit a single hero&#39;s biography. 
 A <code>HeroBioComponent</code> relies on a <code>HeroCacheService</code> to fetch, cache, and perform other persistence operations on that hero.</p>
-<div class="example-title">app/hero-cache.service.ts</div><code-example language="ts" format="linenums">@Injectable()
-export class HeroCacheService {
-  hero:Hero;
-  constructor(private heroService:HeroService){}
-
-  fetchCachedHero(id:number){
-    if (!this.hero) {
-      this.hero = this.heroService.getHeroById(id);
-    }
-    return this.hero
-  }
-}
-</code-example><p>Clearly the three instances of the <code>HeroBioComponent</code> can&#39;t share the same <code>HeroCacheService</code>. 
+<div class="example-title">app/hero-cache.service.ts</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-cache.service-service.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>Clearly the three instances of the <code>HeroBioComponent</code> can&#39;t share the same <code>HeroCacheService</code>. 
 They&#39;d be competing with each other to determine which hero to cache.</p>
 <p>Each <code>HeroBioComponent</code> gets its <em>own</em> <code>HeroCacheService</code> instance 
 by listing the <code>HeroCacheService</code> in its metadata <code>providers</code> array.</p>
-<div class="example-title">app/hero-bio.component.ts</div><code-example language="ts" format="linenums">@Component({
-  selector:&#39;hero-bio&#39;,
-  template:`
-    &lt;h4&gt;{{hero.name}}&lt;/h4&gt;
-    &lt;ng-content&gt;&lt;/ng-content&gt;
-    &lt;textarea cols=&quot;25&quot; [(ngModel)]=&quot;hero.description&quot;&gt;&lt;/textarea&gt;`,
-  providers: [HeroCacheService]
-})
-
-export class HeroBioComponent implements OnInit  {
-
-  @Input() heroId:number;
-
-  constructor(private heroCache:HeroCacheService) { }
-
-  ngOnInit() { this.heroCache.fetchCachedHero(this.heroId); }
-
-  get hero() { return this.heroCache.hero; }
-}
-</code-example><p>The parent <code>HeroBiosComponent</code> binds a value to the <code>heroId</code>.
+<div class="example-title">app/hero-bio.component.ts</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-bio.component-component.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>The parent <code>HeroBiosComponent</code> binds a value to the <code>heroId</code>.
 The <code>ngOnInit</code> pass that <code>id</code> to the service which fetches and caches the hero. 
 The getter for the <code>hero</code> property pulls the cached hero from the service.
 And the template displays this data-bound property.</p>
-<p>Find this example in <a href="/resources/live-examples/cb-dependency-injection/ts/plnkr.html">live code</a>
+<p>Find this example in <live-example name="cb-dependency-injection">live code</live-example>
 and confirm that the three <code>HeroBioComponent</code> instances have their own cached hero data. </p>
 <figure class="image-display"><img src="/resources/images/cookbooks/dependency-injection/hero-bios.png" alt="Bios"></figure><a id="optional"></a><a id="qualify-dependency-lookup"></a><div class="l-main-section"></div><h2 id="qualify-dependency-lookup-with-optional-and-host-">Qualify dependency lookup with <em>@Optional</em> and <em>@Host</em></h2>
 <p>We learned that dependencies can be registered at any level in the component hierarchy. </p>
@@ -311,69 +224,14 @@ But when this component is projected into a <em>parent</em> component, that pare
 We look at this second, more interesting case in our next example.</p>
 <h3 id="demonstration">Demonstration</h3>
 <p>The <code>HeroBiosAndContactsComponent</code> is a revision of the <code>HeroBiosComponent</code> that we looked at <a href="#hero-bios-component">above</a>.</p>
-<div class="example-title">app/hero-bios.component.ts (HeroBiosAndContactsComponent)</div><code-example language="ts" format="linenums">@Component({
-  selector:&#39;hero-bios-and-contacts&#39;,
-  template:`
-    &lt;hero-bio [heroId]=&quot;1&quot;&gt; &lt;hero-contact&gt;&lt;/hero-contact&gt; &lt;/hero-bio&gt;
-    &lt;hero-bio [heroId]=&quot;2&quot;&gt; &lt;hero-contact&gt;&lt;/hero-contact&gt; &lt;/hero-bio&gt;
-    &lt;hero-bio [heroId]=&quot;3&quot;&gt; &lt;hero-contact&gt;&lt;/hero-contact&gt; &lt;/hero-bio&gt;`,
-  directives:[HeroBioComponent, HeroContactComponent],
-  providers: [HeroService]
-})
-export class HeroBiosAndContactsComponent{
-  constructor(logger: LoggerService) {
-    logger.logInfo(&#39;Creating HeroBiosAndContactsComponent&#39;);
-  }
-}
-</code-example><p>Focus on the template:</p>
-<code-example language="ts" format="">template:`
-  &lt;hero-bio [heroId]=&quot;1&quot;&gt; &lt;hero-contact&gt;&lt;/hero-contact&gt; &lt;/hero-bio&gt;
-  &lt;hero-bio [heroId]=&quot;2&quot;&gt; &lt;hero-contact&gt;&lt;/hero-contact&gt; &lt;/hero-bio&gt;
-  &lt;hero-bio [heroId]=&quot;3&quot;&gt; &lt;hero-contact&gt;&lt;/hero-contact&gt; &lt;/hero-bio&gt;`,
-</code-example><p>We&#39;ve inserted a <code>&lt;hero-contact&gt;</code> element between the <code>&lt;hero-bio&gt;</code> tags.
+<div class="example-title">app/hero-bios.component.ts (HeroBiosAndContactsComponent)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-bios.component-hero-bios-and-contacts.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>Focus on the template:</p>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-bios.component-template.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>We&#39;ve inserted a <code>&lt;hero-contact&gt;</code> element between the <code>&lt;hero-bio&gt;</code> tags.
 Angular <em>projects</em> (<em>transcludes</em>) the corresponding <code>HeroContactComponent</code> into the <code>HeroBioComponent</code> view, 
 placing it in the <code>&lt;ng-content&gt;</code> slot of the <code>HeroBioComponent</code> template:</p>
-<div class="example-title">app/hero-bio.component.ts (template)</div><code-example language="ts" format="">template:`
-  &lt;h4&gt;{{hero.name}}&lt;/h4&gt;
-  &lt;ng-content&gt;&lt;/ng-content&gt;
-  &lt;textarea cols=&quot;25&quot; [(ngModel)]=&quot;hero.description&quot;&gt;&lt;/textarea&gt;`,
-</code-example><p>It looks like this, with the hero&#39;s telephone number from <code>HeroContactComponent</code> projected above the hero description:</p>
+<div class="example-title">app/hero-bio.component.ts (template)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-bio.component-template.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>It looks like this, with the hero&#39;s telephone number from <code>HeroContactComponent</code> projected above the hero description:</p>
 <figure class="image-display"><img src="/resources/images/cookbooks/dependency-injection/hero-bio-and-content.png" alt="bio and contact"></figure><p>Here&#39;s the <code>HeroContactComponent</code> which demonstrates the qualifying decorators that we&#39;re talking about in this section:</p>
-<div class="example-title">app/hero-contact.component.ts</div><code-example language="ts" format="linenums">@Component({
-  selector:&#39;hero-contact&#39;,
-  template:`
-  &lt;div&gt;Phone #: {{phoneNumber}}
-  &lt;span *ngIf=&quot;hasLogger&quot;&gt;!!!&lt;/span&gt;&lt;/div&gt;`
-})
-export class HeroContactComponent {
-
-  hasLogger = false;
-
-  constructor(
-      @Host() // limit to the host component&#39;s instance of the HeroCacheService
-      private heroCache: HeroCacheService,
-
-      @Host()     // limit search for logger; hides the application-wide logger
-      @Optional() // ok if the logger doesn&#39;t exist
-      private loggerService: LoggerService
-  ) {
-    if (loggerService) {
-      this.hasLogger = true;
-      loggerService.logInfo(&#39;HeroContactComponent can log!&#39;);
-    }
-  }
-
-  get phoneNumber() { return this.heroCache.hero.phone; }
-
-}
-</code-example><p>Focus on the constructor parameters</p>
-<div class="example-title">app/hero-contact.component.ts</div><code-example language="ts" format="">@Host() // limit to the host component&#39;s instance of the HeroCacheService
-private heroCache: HeroCacheService,
-
-@Host()     // limit search for logger; hides the application-wide logger
-@Optional() // ok if the logger doesn&#39;t exist
-private loggerService: LoggerService
-</code-example><p>The <code>@Host()</code> function decorating the  <code>heroCache</code> property ensures that 
+<div class="example-title">app/hero-contact.component.ts</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-contact.component-component.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>Focus on the constructor parameters</p>
+<div class="example-title">app/hero-contact.component.ts</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-contact.component-ctor-params.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>The <code>@Host()</code> function decorating the  <code>heroCache</code> property ensures that 
 we get a reference to the cache service from the parent <code>HeroBioComponent</code>.
 Angular throws if the parent lacks that service, even if a component higher in the component tree happens to have that service.</p>
 <p>A second <code>@Host()</code> function decorates the <code>loggerService</code> property.
@@ -396,46 +254,14 @@ Although we strive to avoid it, many visual effects and 3rd party tools (such as
 require DOM access. </p>
 <p>To illustrate, we&#39;ve written a simplified version of the <code>HighlightDirective</code> from 
 the <a href="../guide/attribute-directives.html">Attribute Directives</a> chapter.</p>
-<div class="example-title">app/highlight.directive.ts</div><code-example language="ts" format="linenums">import { Directive, ElementRef, Input } from &#39;@angular/core&#39;;
-
-@Directive({
-  selector: &#39;[myHighlight]&#39;,
-  host: {
-    &#39;(mouseenter)&#39;: &#39;onMouseEnter()&#39;,
-    &#39;(mouseleave)&#39;: &#39;onMouseLeave()&#39;
-  }
-})
-export class HighlightDirective {
-
-  @Input(&#39;myHighlight&#39;) highlightColor: string;
-
-  private el: HTMLElement;
-
-  constructor(el: ElementRef) {
-    this.el = el.nativeElement;
-  }
-
-  onMouseEnter() { this.highlight(this.highlightColor || &#39;cyan&#39;); }
-  onMouseLeave() { this.highlight(null); }
-
-  private highlight(color: string) {
-    this.el.style.backgroundColor = color;
-  }
-}
-</code-example><p>The directive sets the background to a highlight color when the user mouses over the
+<div class="example-title">app/highlight.directive.ts</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/highlight.directive.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>The directive sets the background to a highlight color when the user mouses over the
 DOM element to which it is applied.</p>
 <p>Angular set the constructor&#39;s <code>el</code> parameter to the injected <code>ElementRef</code> which is 
 a wrapper around that DOM element. 
 Its <code>nativeElement</code> property exposes the DOM element for the directive to manipulate.</p>
 <p>The sample code applies the directive&#39;s <code>myHighlight</code> attribute to two <code>&lt;div&gt;</code> tags, 
 first without a value (yielding the default color) and then with an assigned color value.</p>
-<div class="example-title">app/app.component.html (highlight)</div><code-example language="html" format="">&lt;div id=&quot;highlight&quot;  class=&quot;di-component&quot;  myHighlight&gt;
-  &lt;h3&gt;Hero Bios and Contacts&lt;/h3&gt;
-  &lt;div myHighlight=&quot;yellow&quot;&gt;
-    &lt;hero-bios-and-contacts&gt;&lt;/hero-bios-and-contacts&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code-example><p>The following image shows the effect of mousing over the <code>&lt;hero-bios-and-contacts&gt;</code> tag.</p>
+<div class="example-title">app/app.component.html (highlight)</div><code-example language="html" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/app.component-highlight.html.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>The following image shows the effect of mousing over the <code>&lt;hero-bios-and-contacts&gt;</code> tag.</p>
 <figure class="image-display"><img src="/resources/images/cookbooks/dependency-injection/highlight.png" alt="Highlighted bios"></figure>
 <a id="providers"></a><div class="l-main-section"></div><h2 id="define-dependencies-with-providers">Define dependencies with providers</h2>
 <p>In this section we learn to write providers that deliver dependent services.</p>
@@ -445,10 +271,7 @@ first without a value (yielding the default color) and then with an assigned col
 The parameter type serves as the injector lookup <em>token</em>. 
 Angular passes this token to the injector and assigns the result to the parameter.
 Here&#39;s a typical example:</p>
-<div class="example-title">app/hero-bios.component.ts (component constructor injection)</div><code-example language="ts" format="">constructor(logger: LoggerService) {
-  logger.logInfo(&#39;Creating HeroBiosComponent&#39;);
-}
-</code-example><p>Angular asks the injector for the service associated with the <code>LoggerService</code> and
+<div class="example-title">app/hero-bios.component.ts (component constructor injection)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-bios.component-ctor.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>Angular asks the injector for the service associated with the <code>LoggerService</code> and
 and assigns the returned value to the <code>logger</code> parameter.</p>
 <p>Where did the injector get that value?
 It may already have that value in its internal container. 
@@ -462,52 +285,15 @@ If the search is futile, the injector throws an error ... unless the request was
 Angular initializes the injectors it creates with some providers it cares about.
 We have to register our <em>own</em> application providers manually, 
 usually in the <code>providers</code> array of the <code>Component</code> or <code>Directive</code> metadata:</p>
-<div class="example-title">app/app.component.ts (providers)</div><code-example language="ts" format="">providers: [LoggerService, UserContextService, UserService]
-</code-example><h3 id="defining-providers">Defining providers</h3>
+<div class="example-title">app/app.component.ts (providers)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/app.component-providers.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><h3 id="defining-providers">Defining providers</h3>
 <p>The simple class provider is the most typical by far.
 We mention the class in the <code>providers</code> array and we&#39;re done.</p>
-<div class="example-title">app/hero-bios.component.ts (class provider)</div><code-example language="ts" format="">providers: [HeroService]
-</code-example><p>It&#39;s that simple because the most common injected service is an instance of a class.
+<div class="example-title">app/hero-bios.component.ts (class provider)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-bios.component-class-provider.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>It&#39;s that simple because the most common injected service is an instance of a class.
 But not every dependency can be satisfied by creating a new instance of a class.
 We need other ways to deliver dependency values and that means we need other ways to specify a provider.</p>
 <p>The <code>HeroOfTheMonthComponent</code> example demonstrates many of the alternatives and why we need them. </p>
 <figure class="image-display"><img src="/resources/images/cookbooks/dependency-injection/hero-of-month.png" alt="Hero of the month" width="300px"></figure><p>It&#39;s visually simple: a few properties and the output of a logger. The code behind it gives us plenty to talk about.</p>
-<div class="example-title">hero-of-the-month.component.ts</div><code-example language="ts" format="linenums">import { Component, Inject } from &#39;@angular/core&#39;;
-
-import { DateLoggerService,
-         MinimalLogger }     from &#39;./date-logger.service&#39;;
-import { Hero }              from &#39;./hero&#39;;
-import { HeroService }       from &#39;./hero.service&#39;;
-import { LoggerService }     from &#39;./logger.service&#39;;
-import { RUNNERS_UP,
-         runnersUpFactory }  from &#39;./runners-up&#39;;
-
-@Component({
-  selector: &#39;hero-of-the-month&#39;,
-  template: template,
-  providers: [
-    { provide: Hero,          useValue:    someHero },
-    { provide: TITLE,         useValue:   &#39;Hero of the Month&#39; },
-    { provide: HeroService,   useClass:    HeroService },
-    { provide: LoggerService, useClass:    DateLoggerService },
-    { provide: MinimalLogger, useExisting: LoggerService },
-    { provide: RUNNERS_UP,    useFactory:  runnersUpFactory(2), deps: [Hero, HeroService] }
-  ]
-})
-export class HeroOfTheMonthComponent {
-  logs: string[] = [];
-
-  constructor(
-      logger: MinimalLogger,
-      public heroOfTheMonth: Hero,
-      @Inject(RUNNERS_UP) public runnersUp: string,
-      @Inject(TITLE) public title: string)
-  {
-    this.logs = logger.logs;
-    logger.logInfo(&#39;starting up&#39;);
-  }
-}
-</code-example><div class="l-main-section"></div><a id="provide"></a><h4 id="the-provide-object-literal">The <em>provide</em> object literal</h4>
+<div class="example-title">hero-of-the-month.component.ts</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-of-the-month.component-hero-of-the-month.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><div class="l-main-section"></div><a id="provide"></a><h4 id="the-provide-object-literal">The <em>provide</em> object literal</h4>
 <p>The <code>provide</code> object literal takes a <em>token</em> and a <em>definition object</em>.
 The <em>token</em> is usually a class but <a href="#tokens">it doesn&#39;t have to be</a>.</p>
 <p>The <em>definition</em> object has one main property, (e.g. <code>useValue</code>) that indicates how the provider 
@@ -519,9 +305,7 @@ We often use a <em>value provider</em> in a unit test to replace a production se
 <p>The <code>HeroOfTheMonthComponent</code> example has two <em>value providers</em>.
 The first provides an instance of the <code>Hero</code> class; 
 the second specifies a literal string resource:</p>
-<code-example language="ts" format="">    { provide: Hero,          useValue:    someHero },
-    { provide: TITLE,         useValue:   &#39;Hero of the Month&#39; },
-</code-example><p>The <code>Hero</code> provider token is a class which makes sense because the value is a <code>Hero</code>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-of-the-month.component-use-value.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>The <code>Hero</code> provider token is a class which makes sense because the value is a <code>Hero</code>
 and the consumer of the injected hero would want the type information.</p>
 <p>The <code>TITLE</code> provider token is <em>not a class</em>.
 It&#39;s a special kind of provider lookup key called an <a href="#opaquetoken">OpaqueToken</a>.
@@ -529,17 +313,14 @@ We often use an <code>OpaqueToken</code> when the dependency is a simple value l
 <p>The value of a <em>value provider</em> must be defined <em>now</em>. We can&#39;t create the value later. 
 Obviously the title string literal is immediately available. 
 The <code>someHero</code> variable in this example was set earlier in the file:</p>
-<code-example language="ts" format="">const someHero = new Hero(42, &#39;Magma&#39;, &#39;Had a great month!&#39;, &#39;555-555-5555&#39;);
-</code-example><p>The other providers create their values <em>lazily</em> when they&#39;re needed for injection.</p>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-of-the-month.component-some-hero.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>The other providers create their values <em>lazily</em> when they&#39;re needed for injection.</p>
 <div class="l-main-section"></div><a id="useclass"></a><h4 id="useclass-the-class-provider-">useClass - the <em>class provider</em></h4>
 <p>The <code>useClass</code> provider creates and returns new instance of the specified class.</p>
 <p>Use this technique to <strong><em>substitute an alternative implementation</em></strong> for a common or default class.
 The alternative could implement a different strategy, extend the default class,
 or fake the behavior of the real class in a test case.</p>
 <p>We see two examples in the <code>HeroOfTheMonthComponent</code>:</p>
-<code-example language="ts" format="">{ provide: HeroService,   useClass:    HeroService },
-{ provide: LoggerService, useClass:    DateLoggerService },
-</code-example><p>The first provider is the <em>de-sugared</em>, expanded form of the most typical case in which the
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-of-the-month.component-use-class.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>The first provider is the <em>de-sugared</em>, expanded form of the most typical case in which the
 class to be created (<code>HeroService</code>) is also the provider&#39;s injection token. 
 We wrote it in this long form to de-mystify the preferred short form.</p>
 <p>The second provider substitutes the <code>DateLoggerService</code> for the <code>LoggerService</code>.
@@ -548,38 +329,22 @@ When <em>this component</em> requests the <code>LoggerService</code>, it receive
 <div class="l-sub-section"><p>This component and its tree of child components receive the <code>DateLoggerService</code> instance.
 Components outside the tree continue to receive the original <code>LoggerService</code> instance.</p>
 </div><p>The <code>DateLoggerService</code> inherits from <code>LoggerService</code>; it appends the current date/time to each message:  </p>
-<div class="example-title">app/date-logger.service.ts</div><code-example language="ts" format="">@Injectable()
-export class DateLoggerService extends LoggerService implements MinimalLogger
-{
-  logInfo(msg: any)  { super.logInfo(stamp(msg)); }
-  logDebug(msg: any) { super.logInfo(stamp(msg)); }
-  logError(msg: any) { super.logError(stamp(msg)); }
-}
-
-function stamp(msg: any) { return msg + &#39; at &#39; + new Date(); }
-</code-example><div class="l-main-section"></div><a id="useexisting"></a><h4 id="useexisting-the-alias-provider-">useExisting - the <em>alias provider</em></h4>
+<div class="example-title">app/date-logger.service.ts</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/date-logger.service-date-logger-service.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><div class="l-main-section"></div><a id="useexisting"></a><h4 id="useexisting-the-alias-provider-">useExisting - the <em>alias provider</em></h4>
 <p>The <code>useExisting</code> provider maps one token to another. 
 In effect, the first token is an <strong><em>alias</em></strong> for the service associated with second token,
 creating <strong><em>two ways to access the same service object</em></strong>.</p>
-<code-example language="ts" format="">{ provide: MinimalLogger, useExisting: LoggerService },
-</code-example><p>Narrowing an API through an aliasing interface is <em>one</em> important use case for this technique.
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-of-the-month.component-use-existing.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>Narrowing an API through an aliasing interface is <em>one</em> important use case for this technique.
 We&#39;re aliasing for that very purpose here.
 Imagine that the <code>LoggerService</code> had a large API (it&#39;s actually only three methods and a property).
 We want to shrink that API surface to just the two members exposed by the <code>MinimalLogger</code> <a href="#class-interface"><em>class-interface</em></a>:</p>
-<div class="example-title">app/date-logger.service.ts (MinimalLogger)</div><code-example language="ts" format="">// class used as a restricting interface (hides other public members)
-export abstract class MinimalLogger {
-  logInfo: (msg: string) =&gt; void;
-  logs: string[];
-}
-</code-example><p>The constructor&#39;s <code>logger</code> parameter is typed as <code>MinimalLogger</code> so only its two members are visible in TypeScript:</p>
+<div class="example-title">app/date-logger.service.ts (MinimalLogger)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/date-logger.service-minimal-logger.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>The constructor&#39;s <code>logger</code> parameter is typed as <code>MinimalLogger</code> so only its two members are visible in TypeScript:</p>
 <figure class="image-display"><img src="/resources/images/cookbooks/dependency-injection/minimal-logger-intellisense.png" alt="MinimalLogger restricted API"></figure><p>Angular actually sets the <code>logger</code> parameter to the injector&#39;s full version of the <code>LoggerService</code> 
 which happens to be the <code>DateLoggerService</code> thanks to the override provider registered previously via <code>useClass</code>.
 The following image, which displays the logging date, confirms the point:</p>
 <figure class="image-display"><img src="/resources/images/cookbooks/dependency-injection/date-logger-entry.png" alt="DateLoggerService entry" width="300px"></figure><div class="l-main-section"></div><a id="usefactory"></a><h4 id="usefactory-the-factory-provider-">useFactory - the <em>factory provider</em></h4>
 <p>The <code>useFactory</code> provider creates a dependency object by calling a factory function
 as seen in this example.</p>
-<code-example language="ts" format="">{ provide: RUNNERS_UP,    useFactory:  runnersUpFactory(2), deps: [Hero, HeroService] }
-</code-example><p>Use this technique to <strong><em>create a dependency object</em></strong> 
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-of-the-month.component-use-factory.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>Use this technique to <strong><em>create a dependency object</em></strong> 
 with a factory function whose inputs are some <strong><em>combination of injected services and local state</em></strong>.</p>
 <p>The <em>dependency object</em> doesn&#39;t have to be a class instance. It could be anything.
 In this example, the <em>dependency object</em> is a string of the names of the runners-up
@@ -588,12 +353,7 @@ to the &quot;Hero of the Month&quot; contest.</p>
 We execute <code>runnersUpFactory</code> immediately with <code>2</code>. </p>
 <p>The <code>runnersUpFactory</code> itself isn&#39;t the provider factory function.
 The true provider factory function is the function that <code>runnersUpFactory</code> returns.</p>
-<div class="example-title">runners-up.ts (excerpt)</div><code-example language="ts" format="">export function runnersUpFactory(take: number) {
-  return (winner: Hero, heroService: HeroService): string =&gt; {
-    /* ... */
-  };
-};
-</code-example><p>That returned function takes a winning <code>Hero</code> and a <code>HeroService</code> as arguments.</p>
+<div class="example-title">runners-up.ts (excerpt)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/runners-up-factory-synopsis.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>That returned function takes a winning <code>Hero</code> and a <code>HeroService</code> as arguments.</p>
 <p>Angular supplies these arguments from injected values identified by 
 the two <em>tokens</em> in the <code>deps</code> array. 
 The two <code>deps</code> values are <em>tokens</em> that the injector uses
@@ -602,7 +362,7 @@ to provide these factory function dependencies.</p>
 and Angular injects it into the <code>runnersUp</code> parameter of the <code>HeroOfTheMonthComponent</code>.</p>
 <div class="l-sub-section"><p>The function retrieves candidate heroes from the <code>HeroService</code>, 
 takes <code>2</code> of them to be the runners-up, and returns their concatenated names.
-Look at the <a href="/resources/live-examples/cb-dependency-injection/ts/plnkr.html">live example</a>
+Look at the <live-example name="cb-dependency-injection"></live-example>
 for the full source code.</p>
 </div><a id="tokens"></a><div class="l-main-section"></div><h2 id="provider-token-alternatives-the-class-interface-and-opaquetoken-">Provider token alternatives: the <em>class-interface</em> and <em>OpaqueToken</em></h2>
 <p>Angular dependency injection is easiest when the provider <em>token</em> is a class
@@ -614,19 +374,12 @@ That&#39;s the subject of our next section. </p>
 <h3 id="class-interface">class-interface</h3>
 <p>In the previous <em>Hero of the Month</em> example, we used the <code>MinimalLogger</code> class
 as the token for a provider of a <code>LoggerService</code>.</p>
-<code-example language="ts" format="">{ provide: MinimalLogger, useExisting: LoggerService },
-</code-example><p>The <code>MinimalLogger</code> is an abstract class. </p>
-<code-example language="ts" format="">// class used as a restricting interface (hides other public members)
-export abstract class MinimalLogger {
-  logInfo: (msg: string) =&gt; void;
-  logs: string[];
-}
-</code-example><p>We usually inherit from an abstract class.
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-of-the-month.component-use-existing.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>The <code>MinimalLogger</code> is an abstract class. </p>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/date-logger.service-minimal-logger.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>We usually inherit from an abstract class.
 But <code>LoggerService</code> doesn&#39;t inherit from <code>MinimalLogger</code>. <em>No class</em> inherits from it.
 Instead, we use it like an interface.</p>
 <p>Look again at the declaration for <code>DateLoggerService</code></p>
-<code-example language="ts" format="">export class DateLoggerService extends LoggerService implements MinimalLogger
-</code-example><p><code>DateLoggerService</code> inherits (extends) from <code>LoggerService</code>, not <code>MinimalLogger</code>.
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/date-logger.service-date-logger-service-signature.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p><code>DateLoggerService</code> inherits (extends) from <code>LoggerService</code>, not <code>MinimalLogger</code>.
 The <code>DateLoggerService</code> <em>implements</em> <code>MinimalLogger</code> as if <code>MinimalLogger</code> were an <em>interface</em>.</p>
 <p>We call a class used in this way a <strong><em>class-interface</em></strong>.
 The key benefit of a <em>class-interface</em> is that we can get the strong-typing of an interface
@@ -644,12 +397,7 @@ a function, an object, a string ... a class.</p>
 <p>Using a class as an interface gives us the characteristics of an interface in a JavaScript object.</p>
 <p>The minimize memory cost, the class should have <em>no implementation</em>. 
 The <code>MinimalLogger</code> transpiles to this unoptimized, pre-minified JavaScript:</p>
-<code-example language="ts" format="">var MinimalLogger = (function () {
-  function MinimalLogger() {}
-  return MinimalLogger;
-}());
-exports(&quot;MinimalLogger&quot;, MinimalLogger);
-</code-example><p>It never grows larger no matter how many members we add <em>as long as they are typed but not implemented</em>.</p>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/date-logger.service-minimal-logger-transpiled.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>It never grows larger no matter how many members we add <em>as long as they are typed but not implemented</em>.</p>
 </div><a id="opaque-token"></a><h3 id="opaquetoken">OpaqueToken</h3>
 <p>Dependency objects can be simple values like dates, numbers and strings or 
 shapeless objects like arrays and functions.</p>
@@ -660,13 +408,8 @@ another token that happens to have the same name.</p>
 <p>The <code>OpaqueToken</code> has these characteristics.
 We encountered them twice in the <em>Hero of the Month</em> example, 
 in the <em>title</em> value provider and in the <em>runnersUp</em> factory provider.</p>
-<code-example language="ts" format="">{ provide: TITLE,         useValue:   &#39;Hero of the Month&#39; },
-{ provide: RUNNERS_UP,    useFactory:  runnersUpFactory(2), deps: [Hero, HeroService] }
-</code-example><p>We created the <code>TITLE</code> token like this:</p>
-<code-example language="ts" format="">import { OpaqueToken } from &#39;@angular/core&#39;;
-
-export const TITLE = new OpaqueToken(&#39;title&#39;);
-</code-example><a id="di-inheritance"></a><div class="l-main-section"></div><h2 id="inject-into-a-derived-class">Inject into a derived class</h2>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-of-the-month.component-provide-opaque-token.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>We created the <code>TITLE</code> token like this:</p>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/hero-of-the-month.component-opaque-token.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><a id="di-inheritance"></a><div class="l-main-section"></div><h2 id="inject-into-a-derived-class">Inject into a derived class</h2>
 <p>We must take care when writing a component that inherits from another component.
 If the base component has injected dependencies, 
 we must re-provide and re-inject them in the derived class
@@ -676,26 +419,7 @@ to display a <em>sorted</em> list of heroes.</p>
 <figure class="image-display"><img src="/resources/images/cookbooks/dependency-injection/sorted-heroes.png" alt="Sorted Heroes"></figure><p>The <code>HeroesBaseComponent</code> could stand on its own.
 It demands its own instance of the <code>HeroService</code> to get heroes
 and displays them in the order they arrive from the database.</p>
-<div class="example-title">app/sorted-heroes.component.ts (HeroesBaseComponent)</div><code-example language="ts" format="linenums">@Component({
-  selector: &#39;unsorted-heroes&#39;,
-  template: `&lt;div *ngFor=&quot;let hero of heroes&quot;&gt;{{hero.name}}&lt;/div&gt;`,
-  providers: [HeroService]
-})
-export class HeroesBaseComponent implements OnInit {
-  constructor(private heroService: HeroService) { }
-
-  heroes: Array&lt;Hero&gt;;
-
-  ngOnInit() {
-    this.heroes = this.heroService.getAllHeroes();
-    this.afterGetHeroes();
-  }
-
-  // Post-process heroes in derived class override.
-  protected afterGetHeroes() {}
-
-}
-</code-example><div class="l-sub-section"><p>We strongly prefer simple constructors. They should do little more than initialize variables.
+<div class="example-title">app/sorted-heroes.component.ts (HeroesBaseComponent)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/sorted-heroes.component-heroes-base.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><div class="l-sub-section"><p>We strongly prefer simple constructors. They should do little more than initialize variables.
 This rule makes the component safe to construct under test without fear that it will do something dramatic like talk to the server.
 That&#39;s why we call the <code>HeroService</code> from within the <code>ngOnInit</code> rather than the constructor.</p>
 <p>We explain the mysterious <code>afterGetHeroes</code> below.</p>
@@ -707,24 +431,7 @@ The <code>SortedHeroesComponent</code> lets the base class fetch the heroes.
 <p>Unfortunately, Angular cannot inject the <code>HeroService</code> directly into the base class.
 We must provide the <code>HeroService</code> again for <em>this</em> component, 
 then pass it down to the base class inside the constructor.</p>
-<div class="example-title">app/sorted-heroes.component.ts (SortedHeroesComponent)</div><code-example language="ts" format="linenums">@Component({
-  selector: &#39;sorted-heroes&#39;,
-  template: `&lt;div *ngFor=&quot;let hero of heroes&quot;&gt;{{hero.name}}&lt;/div&gt;`,
-  providers: [HeroService]
-})
-export class SortedHeroesComponent extends HeroesBaseComponent {
-  constructor(heroService: HeroService) {
-    super(heroService);
-  }
-
-  protected afterGetHeroes() {
-    this.heroes = this.heroes.sort((h1, h2) =&gt; {
-      return h1.name &lt; h2.name ? -1 :
-            (h1.name &gt; h2.name ? 1 : 0);
-    });
-  }
-}
-</code-example><p>Now take note of the <code>afterGetHeroes</code> method. 
+<div class="example-title">app/sorted-heroes.component.ts (SortedHeroesComponent)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/sorted-heroes.component-sorted-heroes.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>Now take note of the <code>afterGetHeroes</code> method. 
 Our first instinct was to create an <code>ngOnInit</code> method in <code>SortedHeroesComponent</code> and do the sorting there.
 But Angular calls the <em>derived</em> class&#39;s <code>ngOnInit</code> <em>before</em> calling the base class&#39;s <code>ngOnInit</code> 
 so we&#39;d be sorting the heroes array <em>before they arrived</em>. That produces a nasty error.</p>
@@ -748,36 +455,10 @@ we can use Angular dependency injection to reach a parent component.</p>
 <h3 id="find-a-parent-component-of-known-type">Find a parent component of known type</h3>
 <p>We use standard class injection to acquire a parent component whose type we know.</p>
 <p>In the following example, the parent <code>AlexComponent</code> has several children including a <code>CathyComponent</code>:</p>
-<a id="alex"></a><div class="example-title">parent-finder.component.ts (AlexComponent v.1)</div><code-example language="ts" format="">@Component({
-  selector: &#39;alex&#39;,
-  template: `
-    &lt;div class=&quot;a&quot;&gt;
-      &lt;h3&gt;{{name}}&lt;/h3&gt;
-      &lt;cathy&gt;&lt;/cathy&gt;
-      &lt;craig&gt;&lt;/craig&gt;
-      &lt;carol&gt;&lt;/carol&gt;
-    &lt;/div&gt;`,
-  directives: C_DIRECTIVES
-})
-export class AlexComponent extends Base
-{
-  name= &#39;Alex&#39;;
-}
-</code-example><p><em>Cathy</em> reports whether or not she has access to <em>Alex</em>
+<a id="alex"></a><div class="example-title">parent-finder.component.ts (AlexComponent v.1)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-alex-1.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p><em>Cathy</em> reports whether or not she has access to <em>Alex</em>
 after injecting an <code>AlexComponent</code> into her constructor:</p>
-<div class="example-title">parent-finder.component.ts (CathyComponent)</div><code-example language="ts" format="">@Component({
-  selector: &#39;cathy&#39;,
-  template: `
-  &lt;div class=&quot;c&quot;&gt;
-    &lt;h3&gt;Cathy&lt;/h3&gt;
-    {{alex ? &#39;Found&#39; : &#39;Did not find&#39;}} Alex via the component class.&lt;br&gt;
-  &lt;/div&gt;`
-})
-export class CathyComponent {
-  constructor( @Optional() public alex: AlexComponent ) { }
-}
-</code-example><p>We added the <a href="#optional">@Optional</a> qualifier for safety but
-the <a href="/resources/live-examples/cb-dependency-injection/ts/plnkr.html">live example</a>
+<div class="example-title">parent-finder.component.ts (CathyComponent)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-cathy.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>We added the <a href="#optional">@Optional</a> qualifier for safety but
+the <live-example name="cb-dependency-injection"></live-example>
 confirms that the <code>alex</code> parameter is set.</p>
 <p><a id="base-parent"></a></p>
 <h3 id="cannot-find-a-parent-by-its-base-class">Cannot find a parent by its base class</h3>
@@ -796,21 +477,9 @@ which doesn&#39;t support interfaces. There&#39;s no artifact we could look for.
 We are asking <em>can a component inject its parent via the parent&#39;s base class</em>?</p>
 <p>The sample&#39;s <code>CraigComponent</code> explores this question. <a href="#alex">Looking back</a> 
 we see that the <code>Alex</code> component <em>extends</em> (<em>inherits</em>) from a class named <code>Base</code>.</p>
-<div class="example-title">parent-finder.component.ts (Alex class signature)</div><code-example language="ts" format="">export class AlexComponent extends Base
-</code-example><p>The <code>CraigComponent</code> tries to inject <code>Base</code> into its <code>alex</code> constructor parameter and reports if it succeeded.</p>
-<div class="example-title">parent-finder.component.ts (CraigComponent)</div><code-example language="ts" format="">@Component({
-  selector: &#39;craig&#39;,
-  template: `
-  &lt;div class=&quot;c&quot;&gt;
-    &lt;h3&gt;Craig&lt;/h3&gt;
-    {{alex ? &#39;Found&#39; : &#39;Did not find&#39;}} Alex via the base class.
-  &lt;/div&gt;`
-})
-export class CraigComponent {
-  constructor( @Optional() public alex: Base ) { }
-}
-</code-example><p>Unfortunately, this does not work. 
-The <a href="/resources/live-examples/cb-dependency-injection/ts/plnkr.html">live example</a>
+<div class="example-title">parent-finder.component.ts (Alex class signature)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-alex-class-signature.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>The <code>CraigComponent</code> tries to inject <code>Base</code> into its <code>alex</code> constructor parameter and reports if it succeeded.</p>
+<div class="example-title">parent-finder.component.ts (CraigComponent)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-craig.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>Unfortunately, this does not work. 
+The <live-example name="cb-dependency-injection"></live-example>
 confirms that the <code>alex</code> parameter is null.
 <em>We cannot inject a parent by its base class.</em></p>
 <p><a id="class-interface-parent"></a></p>
@@ -822,15 +491,10 @@ that&#39;s why we could inject <em>Alex</em> into <em>Carol</em> <a href="#known
 <p>We write an <a href="#useexisting"><em>alias provider</em></a> &mdash; a <code>provide</code> object literal with a <code>useExisting</code> definition &mdash;
 that creates an <em>alternative</em> way to inject the same component instance
 and add that provider to the <code>providers</code> array of the <code>@Component</code> metadata for the <code>AlexComponent</code>:</p>
-<a id="alex-providers"></a><div class="example-title">parent-finder.component.ts (AlexComponent providers)</div><code-example language="ts" format="">providers: [{ provide: Parent, useExisting: forwardRef(() =&gt; AlexComponent) }],
-</code-example><p><a href="#parent-token">Parent</a> is the provider&#39;s <em>class-interface</em> token. 
+<a id="alex-providers"></a><div class="example-title">parent-finder.component.ts (AlexComponent providers)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-alex-providers.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p><a href="#parent-token">Parent</a> is the provider&#39;s <em>class-interface</em> token. 
 The <a href="#forwardref"><em>forwardRef</em></a> breaks the circular reference we just created by having the <code>AlexComponent</code> refer to itself.</p>
 <p><em>Carol</em>, the third of <em>Alex</em>&#39;s child components, injects the parent into its <code>parent</code> parameter, the same way we&#39;ve done it before:</p>
-<div class="example-title">parent-finder.component.ts (CarolComponent class)</div><code-example language="ts" format="">export class CarolComponent {
-  name= &#39;Carol&#39;;
-  constructor( @Optional() public parent: Parent ) { }
-}
-</code-example><p>Here&#39;s <em>Alex</em> and family in action:</p>
+<div class="example-title">parent-finder.component.ts (CarolComponent class)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-carol-class.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>Here&#39;s <em>Alex</em> and family in action:</p>
 <figure class="image-display"><img src="/resources/images/cookbooks/dependency-injection/alex.png" alt="Alex in action"></figure><a id="parent-tree"></a><h3 id="find-the-parent-in-a-tree-of-parents">Find the parent in a tree of parents</h3>
 <p>Imagine one branch of a component hierarchy: <em>Alice</em> -&gt; <em>Barry</em> -&gt; <em>Carol</em>. 
 Both <em>Alice</em> and <em>Barry</em> implement the <code>Parent</code> <em>class-interface</em>.</p>
@@ -838,32 +502,10 @@ Both <em>Alice</em> and <em>Barry</em> implement the <code>Parent</code> <em>cla
 That means he must both <em>inject</em> the <code>Parent</code> <em>class-interface</em> to get <em>Alice</em> and
 <em>provide</em> a <code>Parent</code> to satisfy <em>Carol</em>.</p>
 <p>Here&#39;s <em>Barry</em>:</p>
-<div class="example-title">parent-finder.component.ts (BarryComponent)</div><code-example language="ts" format="">const templateB = `
-  &lt;div class=&quot;b&quot;&gt;
-    &lt;div&gt;
-      &lt;h3&gt;{{name}}&lt;/h3&gt;
-      &lt;p&gt;My parent is {{parent?.name}}&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;carol&gt;&lt;/carol&gt;
-    &lt;chris&gt;&lt;/chris&gt;
-  &lt;/div&gt;`;
-
-@Component({
-  selector:   &#39;barry&#39;,
-  template:   templateB,
-  directives: C_DIRECTIVES,
-  providers:  [{ provide: Parent, useExisting: forwardRef(() =&gt; BarryComponent) }]
-})
-export class BarryComponent implements Parent {
-  name = &#39;Barry&#39;;
-  constructor( @SkipSelf() @Optional() public parent: Parent ) { }
-}
-</code-example><p><em>Barry</em>&#39;s <code>providers</code> array looks just like <a href="#alex-providers"><em>Alex</em>&#39;s</a>.
+<div class="example-title">parent-finder.component.ts (BarryComponent)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-barry.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p><em>Barry</em>&#39;s <code>providers</code> array looks just like <a href="#alex-providers"><em>Alex</em>&#39;s</a>.
 If we&#39;re going to keep writing <a href="#useexisting"><em>alias providers</em></a> like this we should create a <a href="#provideparent">helper function</a>.</p>
 <p>For now, focus on <em>Barry</em>&#39;s constructor:</p>
-<code-tabs><code-pane language="ts" name="Barry's constructor" format=".">constructor( @SkipSelf() @Optional() public parent: Parent ) { }
-</code-pane><code-pane language="ts" name="Carol's constructor" format=".">constructor( @Optional() public parent: Parent ) { }
-</code-pane></code-tabs><p>It&#39;s identical to <em>Carol</em>&#39;s constructor except for the additional <code>@SkipSelf</code> decorator.</p>
+<code-tabs><code-pane language="ts" name="Barry's constructor" format=".">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-barry-ctor.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-pane><code-pane language="ts" name="Carol's constructor" format=".">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-carol-ctor.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-pane></code-tabs><p>It&#39;s identical to <em>Carol</em>&#39;s constructor except for the additional <code>@SkipSelf</code> decorator.</p>
 <p><code>@SkipSelf</code> is essential for two reasons:</p>
 <ol>
 <li><p>It tell the injector to start its search for a <code>Parent</code> dependency in a component <em>above</em> itself,
@@ -877,42 +519,25 @@ which <em>is</em> what parent means.</p>
 <figure class="image-display"><img src="/resources/images/cookbooks/dependency-injection/alice.png" alt="Alice in action"></figure><a id="parent-token"></a><h3 id="the-parent-class-interface">The <em>Parent</em> class-interface</h3>
 <p>We <a href="#class-interface">learned earlier</a> that a <em>class-interface</em> is an abstract class used as an interface rather than as a base class.</p>
 <p>Our example defines a <code>Parent</code> <em>class-interface</em> .</p>
-<div class="example-title">parent-finder.component.ts (Parent class-interface)</div><code-example language="ts" format="">export abstract class Parent { name: string; }
-</code-example><p>The <code>Parent</code> <em>class-interface</em> defines a <code>name</code> property with a type declaration but <em>no implementation</em>., 
+<div class="example-title">parent-finder.component.ts (Parent class-interface)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-parent.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>The <code>Parent</code> <em>class-interface</em> defines a <code>name</code> property with a type declaration but <em>no implementation</em>., 
 The <code>name</code> property is the only member of a parent component that a child component can call.
 Such a narrowing interface helps decouple the child component class from its parent components.</p>
 <p>A component that could serve as a parent <em>should</em> implement the <em>class-interface</em> as the <code>AliceComponent</code> does:</p>
-<div class="example-title">parent-finder.component.ts (AliceComponent class signature)</div><code-example language="ts" format="">export class AliceComponent implements Parent
-</code-example><p>Doing so adds clarity to the code.  But it&#39;s not technically necessary. 
+<div class="example-title">parent-finder.component.ts (AliceComponent class signature)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-alice-class-signature.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>Doing so adds clarity to the code.  But it&#39;s not technically necessary. 
 Although the <code>AlexComponent</code> has a <code>name</code> property (as required by its <code>Base</code> class) 
 its class signature doesn&#39;t mention <code>Parent</code>:</p>
-<div class="example-title">parent-finder.component.ts (AlexComponent class signature)</div><code-example language="ts" format="">export class AlexComponent extends Base
-</code-example><div class="l-sub-section"><p>The <code>AlexComponent</code> <em>should</em> implement <code>Parent</code> as a matter of proper style. 
+<div class="example-title">parent-finder.component.ts (AlexComponent class signature)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-alex-class-signature.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><div class="l-sub-section"><p>The <code>AlexComponent</code> <em>should</em> implement <code>Parent</code> as a matter of proper style. 
 It doesn&#39;t in this example <em>only</em> to demonstrate that the code will compile and run without the interface </p>
 </div><a id="provideparent"></a><h3 id="a-provideparent-helper-function">A <em>provideParent</em> helper function</h3>
 <p>Writing variations of the same parent <em>alias provider</em> gets old quickly, 
 especially this awful mouthful with a <a href="#forwardref"><em>forwardRef</em></a>:</p>
-<code-example language="ts" format="">providers: [{ provide: Parent, useExisting: forwardRef(() =&gt; AlexComponent) }],
-</code-example><p>We can extract that logic into a helper function like this:</p>
-<code-example language="ts" format="">// Helper method to provide the current component instance in the name of a `parentType`.
-const provideParent =
-  (component: any) =&gt; {
-    return { provide: Parent, useExisting: forwardRef(() =&gt; component) }
-  };
-</code-example><p>Now we can add a simpler, more meaningful parent provider to our components:</p>
-<code-example language="ts" format="">providers:  [ provideParent(AliceComponent) ]
-</code-example><p>We can do better. The current version of the helper function can only alias the <code>Parent</code> <em>class-interface</em>.
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-alex-providers.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>We can extract that logic into a helper function like this:</p>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-provide-the-parent.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>Now we can add a simpler, more meaningful parent provider to our components:</p>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-alice-providers.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>We can do better. The current version of the helper function can only alias the <code>Parent</code> <em>class-interface</em>.
 Our application might have a variety of parent types, each with its own <em>class-interface</em> token.</p>
 <p>Here&#39;s a revised version that defaults to <code>parent</code> but also accepts an optional second parameter for a different parent <em>class-interface</em>.</p>
-<code-example language="ts" format="">// Helper method to provide the current component instance in the name of a `parentType`.
-// The `parentType` defaults to `Parent` when omitting the second parameter.
-const provideParent =
-  (component: any, parentType?: any) =&gt; {
-    return { provide: parentType || Parent, useExisting: forwardRef(() =&gt; component) }
-  };
-</code-example><p>And here&#39;s how we could use it with a different parent type:</p>
-<code-example language="ts" format="">providers:  [ provideParent(BethComponent, DifferentParent) ]
-</code-example><a id="forwardref"></a><div class="l-main-section"></div><h2 id="break-circularities-with-a-forward-class-reference-forwardref-">Break circularities with a forward class reference (<em>forwardRef</em>)</h2>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-provide-parent.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><p>And here&#39;s how we could use it with a different parent type:</p>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-beth-providers.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example><a id="forwardref"></a><div class="l-main-section"></div><h2 id="break-circularities-with-a-forward-class-reference-forwardref-">Break circularities with a forward class reference (<em>forwardRef</em>)</h2>
 <p>The order of class declaration matters in TypeScript.
 We can&#39;t refer directly to a class until it&#39;s been defined.</p>
 <p>This isn&#39;t usually a problem, especially if we adhere to the recommended <em>one class per file</em> rule.
@@ -921,37 +546,16 @@ We&#39;re in a bind when class &#39;A refers to class &#39;B&#39; and &#39;B&#39
 One of them has to be defined first. </p>
 <p>The Angular <code>forwardRef</code> function creates an <em>indirect</em> reference that Angular can resolve later.</p>
 <p>The <em>Parent Finder</em> sample is full of circular class references that are impossible to break.</p>
-<p>In the <a href="#known-parent"><em>Alex/Cathy</em> example</a> above:</p>
-<ul>
-<li><p>the <code>AlexComponent</code> lists the <code>CathyComponent</code> in its component metadata <code>directives</code> array
-so it can display <em>Cathy</em> in its template.</p>
-</li>
-<li><p>the <code>CathyComponent</code> constructor injects the parent <code>AlexComponent</code> which means that the <code>alex</code> parameter
-of its constructor has the <code>AlexComponent</code> type.</p>
-</li>
-</ul>
-<p><em>Alex</em> refers to <em>Cathy</em> and <em>Cathy</em> refers to <em>Alex</em>. We&#39;re stuck. We must define one of them first. </p>
-<p>We defined <em>Alex</em> first and built its <code>C_DIRECTIVES</code> array with a forward reference to <em>Cathy</em>: </p>
-<div class="example-title">parent-finder.component.ts (C_DIRECTIVES)</div><code-example language="ts" format="">const C_DIRECTIVES = [
-  CarolComponent, ChrisComponent, CraigComponent,
-  forwardRef(() =&gt; CathyComponent)
-];
-</code-example><div class="l-sub-section"><p>Defining <em>Alex</em> and <em>Cathy</em> in separate files won&#39;t help. 
-<em>Alex</em> would have to import <em>Cathy</em> and <em>Cathy</em> would have to import <em>Alex</em>.</p>
-<p>We <em>had</em> to define <em>Alex</em> first because, 
-while we can add <code>forwardRef(CathyComponent)</code> to <em>Alex</em>&#39;s <code>directives</code> array,
-we can&#39;t write <code>public alex: forwardRef(AlexComponent))</code> in <em>Cathy</em>&#39;s constructor. </p>
-</div><p>We face a similar dilemma when a class makes <em>a reference to itself</em>
+<p>We face this dilemma when a class makes <em>a reference to itself</em>
 as does the <code>AlexComponent</code> in its <code>providers</code> array. 
 The <code>providers</code> array is a property of the <code>@Component</code> decorator function which must
 appear <em>above</em> the class definition.</p>
-<p>Again we break the circularity with <code>forwardRef</code>:</p>
-<div class="example-title">parent-finder.component.ts (AlexComponent providers)</div><code-example language="ts" format="">providers: [{ provide: Parent, useExisting: forwardRef(() =&gt; AlexComponent) }],
-</code-example></div></div></div></article><div class="main-footer"><nav class="background-blue-grey-900 grid-fluid"><div class="c3 main-footer-branding"><div class="logo-inverse-large"></div></div><div class="c3"><h3 class="text-headline">RESOURCES</h3><ul class="text-body"><!-- TODO: (ericjim) make a libraries page to showcase all angular 2 libraries--><!--li <a href="/libraries.html">Libraries</a>--><li><a href="/about/">About</a></li><li><a href="/resources/">Books & Training</a></li><li><a href="/resources/">Tools & Libraries</a></li><li><a href="/resources/">Community</a></li><li><a href="/presskit.html">Press Kit</a></li></ul></div><div class="c3"><h3 class="text-headline">HELP</h3><ul class="text-body"><li><a href="http://stackoverflow.com/questions/tagged/angular2">Stack Overflow</a></li><li><a href="https://gitter.im/angular/angular">Gitter</a></li><li><a href="https://groups.google.com/forum/#!forum/angular"> Google Group</a></li><li><a href="https://github.com/angular/angular/issues"> Report Issues</a></li><li><a class="footer-feedback" ng-click="appCtrl.openFeedback()" aria-label="Submit feedback on this page"> Site Feedback</a></li></ul></div><div class="c3"><h3 class="text-headline">COMMUNITY</h3><ul class="text-body"><li><a href="/events.html">Events</a></li><li><a href="http://www.meetup.com/topics/angularjs/">Meetups</a></li><li><a href="https://twitter.com/angularjs"> Twitter</a></li><li><a href="https://github.com/angular/angular"> GitHub</a></li><li><a href="/contribute.html"> Contribute</a></li></ul></div></nav><footer class="background-steel"><small class="text-caption">Powered by Google ©2010-2016. Code licensed under an <a href="/license" class="text-snow">MIT-style License</a>. Documentation licensed under <a class="text-snow" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small><a aria-label="View Style Guide" href="/docs/ts/latest/styleguide.html" title="Style Guide" md-button="md-button" class="styleguide-trigger text-snow"><span class="icon-favorite"></span></a></footer></div><!-- VENDORS --><script src="/resources/js/vendor/prettify.js"></script><script src="/resources/js/vendor/lang-basic.js"></script><script src="/resources/js/vendor/lang-dart.js"></script><script src="/resources/js/vendor/lodash.js"></script><script src="/resources/js/vendor/clipboard.min.js"></script><!-- Angular Material Dependencies --><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script><!-- Firebase -->
-<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<p>We break the circularity with <code>forwardRef</code>:</p>
+<div class="example-title">parent-finder.component.ts (AlexComponent providers)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/cb-dependency-injection/ts/app/parent-finder.component-alex-providers.ts.md   Current path: docs,ts,latest,cookbook,dependency-injection PathToDocs: ../../../</code-example></div></div></div></article><div class="main-footer"><nav class="background-blue-grey-900 grid-fluid"><div class="c3 main-footer-branding"><div class="logo-inverse-large"></div></div><div class="c2"><h3 class="text-headline">RESOURCES</h3><ul class="text-body"><!-- TODO: (ericjim) make a libraries page to showcase all angular 2 libraries--><!--li <a href="/libraries.html">Libraries</a>--><li><a href="/about/">About</a></li><li><a href="/resources/">Books & Training</a></li><li><a href="/resources/">Tools & Libraries</a></li><li><a href="/resources/">Community</a></li><li><a href="/presskit.html">Press Kit</a></li></ul></div><div class="c2"><h3 class="text-headline">HELP</h3><ul class="text-body"><li><a href="http://stackoverflow.com/questions/tagged/angular2">Stack Overflow</a></li><li><a href="https://gitter.im/angular/angular">Gitter</a></li><li><a href="https://groups.google.com/forum/#!forum/angular"> Google Group</a></li><li><a href="https://github.com/angular/angular/issues"> Report Issues</a></li><li><a class="footer-feedback" ng-click="appCtrl.openFeedback()" aria-label="Submit feedback on this page"> Site Feedback</a></li></ul></div><div class="c2"><h3 class="text-headline">COMMUNITY</h3><ul class="text-body"><li><a href="/events.html">Events</a></li><li><a href="http://www.meetup.com/topics/angularjs/">Meetups</a></li><li><a href="https://twitter.com/angularjs"> Twitter</a></li><li><a href="https://github.com/angular/angular"> GitHub</a></li><li><a href="/contribute.html"> Contribute</a></li></ul></div><div class="c2"><h3 class="text-headline">LANGUAGES</h3><ul class="text-body"><li><a href="https://angular.cn/">中文版</a></li></ul></div></nav><footer class="background-steel"><small class="text-caption">Powered by Google ©2010-2016. Code licensed under an <a href="/license" class="text-snow">MIT-style License</a>. Documentation licensed under <a class="text-snow" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small><a aria-label="View Style Guide" href="/docs/ts/latest/styleguide.html" title="Style Guide" md-button="md-button" class="styleguide-trigger text-snow"><span class="icon-favorite"></span></a></footer></div><!-- VENDORS --><script src="/resources/js/vendor/prettify.js"></script><script src="/resources/js/vendor/lang-basic.js"></script><script src="/resources/js/vendor/lang-dart.js"></script><script src="/resources/js/vendor/lodash.js"></script><script src="/resources/js/vendor/clipboard.min.js"></script><!-- Angular Material Dependencies --><script src="/ajax/libs/angularjs/1.4.8/angular.min.js"></script><script src="/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script><script src="/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script><script src="/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script><!-- Firebase -->
+<script src="/js/client/2.2.4/firebase.js"></script>
 <!-- AngularFire -->
-<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
-<!-- Angular.io Site JS --><script src="/resources/js/site.js"></script><script src="/resources/js/controllers/app-controller.js"></script><script src="/resources/js/controllers/resources-controller.js"></script><script src="/resources/js/directives/cheatsheet.js"></script><script src="/resources/js/directives/api-list.js"></script><script src="/resources/js/directives/bio.js"></script><script src="/resources/js/directives/bold.js"></script><script src="/resources/js/directives/code.js"></script><script src="/resources/js/directives/copy.js"></script><script src="/resources/js/directives/code-tabs.js"></script><script src="/resources/js/directives/code-pane.js"></script><script src="/resources/js/directives/code-example.js"></script><script src="/resources/js/directives/scroll-y-offset-element.js"></script><!-- GA --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+<script src="/libs/angularfire/1.2.0/angularfire.min.js"></script>
+<!-- Angular.io Site JS --><script src="/resources/js/site.js"></script><script src="/resources/js/util.js"></script><script src="/resources/js/controllers/app-controller.js"></script><script src="/resources/js/controllers/resources-controller.js"></script><script src="/resources/js/directives/cheatsheet.js"></script><script src="/resources/js/directives/api-list.js"></script><script src="/resources/js/directives/bio.js"></script><script src="/resources/js/directives/bold.js"></script><script src="/resources/js/directives/code.js"></script><script src="/resources/js/directives/copy.js"></script><script src="/resources/js/directives/code-tabs.js"></script><script src="/resources/js/directives/code-pane.js"></script><script src="/resources/js/directives/code-example.js"></script><script src="/resources/js/directives/if-docs.js"></script><script src="/resources/js/directives/live-example.js"></script><script src="/resources/js/directives/ngio-ex-path.js"></script><script src="/resources/js/directives/scroll-y-offset-element.js"></script><!-- GA --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" ng-app="angularIOApp" itemscope itemtype="http://schema.org/Framework"><head><title>Http - ts</title><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Angular is a development platform for building mobile and desktop web applications"/><meta name="keywords" content="Angular, AngularJS, AngularDart, Javscript, Dart, Framework, JavaScript MVC, Google"/><meta name="robots" content="all"/><meta name="referrer" content="origin"/><meta name="viewport" id="viewport" content="width=device-width, initial-scale=1"/><meta property="og:title" content="Angular 2"/><meta property="og:image" content="/resources/images/logos/standard/shield-large.png"/><meta property="og:image:type" content="image/png"/><meta property="og:image:width" content="184"/><meta property="og:image:height" content="200"/><meta property="og:description" content="Angular is a development platform for building mobile and desktop web applications"/><meta itemprop="name" content="Angular 2"/><meta itemprop="description" content="Angular is a development platform for building mobile and desktop web applications"/><meta itemprop="image" content="https://angular.io/resources/images/logos/standard/shield-large.png"/><link rel="icon" type="image/x-icon" href="/resources/images/icons/favicon.ico"/><link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css"/><link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,400italic,700" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/><link rel="stylesheet" href="/resources/css/vendor/icomoon/style.css"/><link rel="stylesheet" href="/resources/css/vendor/animate.css"/><link rel="stylesheet" href="/resources/css/main.css"/><!-- MOBILE ICONS -->
+<!DOCTYPE html><html lang="en" ng-app="angularIOApp" itemscope itemtype="http://schema.org/Framework"><!-- template: public/docs/_layout--><head><title>Http - ts</title><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Angular is a development platform for building mobile and desktop web applications"/><meta name="keywords" content="Angular, AngularJS, AngularDart, Javscript, Dart, Framework, JavaScript MVC, Google"/><meta name="robots" content="all"/><meta name="referrer" content="origin"/><meta name="viewport" id="viewport" content="width=device-width, initial-scale=1"/><meta property="og:title" content="Angular 2"/><meta property="og:image" content="/resources/images/logos/standard/shield-large.png"/><meta property="og:image:type" content="image/png"/><meta property="og:image:width" content="184"/><meta property="og:image:height" content="200"/><meta property="og:description" content="Angular is a development platform for building mobile and desktop web applications"/><meta itemprop="name" content="Angular 2"/><meta itemprop="description" content="Angular is a development platform for building mobile and desktop web applications"/><meta itemprop="image" content="https://angular.io/resources/images/logos/standard/shield-large.png"/><link rel="icon" type="image/x-icon" href="/resources/images/icons/favicon.ico"/><link rel="stylesheet" href="/ajax/libs/angular_material/1.0.0/angular-material.min.css"/><link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,400italic,700" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/><link rel="stylesheet" href="/resources/css/vendor/icomoon/style.css"/><link rel="stylesheet" href="/resources/css/vendor/animate.css"/><link rel="stylesheet" href="/resources/css/main.css"/><!-- MOBILE ICONS -->
 <link rel="apple-touch-icon" sizes="57x57" href="/resources/images/favicons/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/resources/images/favicons/apple-touch-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/resources/images/favicons/apple-touch-icon-72x72.png">
@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="/resources/images/favicons/favicon-96x96.png" sizes="96x96">
 <link rel="icon" type="image/png" href="/resources/images/favicons/android-chrome-192x192.png" sizes="192x192">
 <link rel="icon" type="image/png" href="/resources/images/favicons/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/resources/images/favicons/manifest.json"></head><body ng-controller="AppCtrl as appCtrl" class="l-offset-nav l-offset-side-nav"><md-toolbar scroll-y-offset-element="scroll-y-offset-element" class="main-nav background-regal l-pinned-top l-layer-5"><nav><h1><a href="/" md-button>Angular <sup>by Google</sup></a></h1><button aria-label="View Menu" ng-click="appCtrl.toggleMainMenu($event)" md-button="md-button" class="main-nav-button main-nav-mobile-trigger l-right">Site Menu <span class="icon icon-arrow-drop-down"></span></button><ul ng-class="appCtrl.showMainNav ? 'is-visible' : ''"><li class="l-left"><a class="main-nav-button" href="/features.html" md-button>Features</a></li><li class="l-left"><a class="main-nav-button" href="/docs/ts/latest/" md-button>Docs</a></li><li class="l-left"><a class="main-nav-button" href="/events.html" md-button>Events</a></li><li class="l-left"><a class="main-nav-button" href="/news.html" md-button>News</a></li><li class="l-right"><a class="main-nav-button" href="/docs/ts/latest/quickstart.html" md-button>Get Started</a></li></ul></nav></md-toolbar><!-- Include this file ONLY when current.path[2] is defined--><nav class="side-nav l-pinned-left l-layer-4 l-offset-nav"><!-- SEARCH BAR--><header class="side-nav-search st-input-wrapper"><form class="st-input-inner"><label for="search-io" class="is-hidden">Search Docs</label><input type="search" id="search-io" placeholder="SEARCH DOCS..."/></form><button aria-label="View Docs Menu" ng-click="appCtrl.toggleDocsMenu($event)" md-button="md-button" class="mobile-trigger button">Docs <span class="icon icon-arrow-drop-down"></span></button></header><div ng-class="appCtrl.showDocsNav ? 'is-visible' : ''" class="side-nav-secondary"><div class="nav-blocks"><a href="/docs/ts/latest/quickstart.html" title="Get up and running with Angular 2" class="nav-title ">Quickstart</a></div><div class="nav-blocks"><a href="/docs/ts/latest/tutorial/" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in TypeScript." class="nav-title is-nav-title-selected">Tutorial<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-ordered-lists"><ul><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in TypeScript.">1. Introduction</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt1.html" title="We build a simple hero editor">2. The Hero Editor</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt2.html" title="We build a master/detail page with a list of heroes">3. Master/Detail</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt3.html" title="We refactor the master/detail view into separate components">4. Multiple Components</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt4.html" title="We create a reusable service to manage our hero data calls">5. Services</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt5.html" title="We add the Angular Component Router and learn to navigate among the views">6. Routing</a></li><li class="nav-list-item is-selected"><a href="/docs/ts/latest/tutorial/toh-pt6.html" title="We convert our service and components to use Http">7. Http</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/ts/latest/guide/" title="How to read and use this documentation" class="nav-title ">Basics<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-ordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/ts/latest/guide/" title="How to read and use this documentation">1. Overview</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/architecture.html" title="The basic building blocks of Angular 2 applications">2. Architecture</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/displaying-data.html" title="Interpolation and other forms of property binding help us show app data in the UI.">3. Displaying Data</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/user-input.html" title="User input triggers DOM events. We listen to those events with event bindings that funnel updated values back into our components and models.">4. User Input</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/forms.html" title="A form creates a cohesive, effective, and compelling data entry experience. An Angular form coordinates a set of data-bound user controls, tracks changes, validates input, and presents errors.">5. Forms</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/dependency-injection.html" title="Angular's dependency injection system creates and delivers dependent services &quot;just-in-time&quot;.">6. Dependency Injection</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/template-syntax.html" title="Learn how to write templates that display data and consume user events with the help of data binding.">7. Template Syntax</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/cheatsheet.html" title="A quick guide to Angular syntax.">8. Angular Cheat Sheet</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/style-guide.html" title="Write Angular 2 with style.">9. Style Guide</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/glossary.html" title="Brief definitions of the most important words in the Angular 2 vocabulary">10. Glossary</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/ts/latest/guide/attribute-directives.html" title="Attribute directives attach behavior to elements." class="nav-title ">Developer Guide<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-unordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/ts/latest/guide/attribute-directives.html" title="Attribute directives attach behavior to elements.">Attribute Directives</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/component-styles.html" title="Learn how to apply CSS styles to components.">Component Styles</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/hierarchical-dependency-injection.html" title="Angular's hierarchical dependency injection system supports nested injectors in parallel with the component tree.">Hierarchical Injectors</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/server-communication.html" title="Talk to a remote server with an HTTP Client.">HTTP Client</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/lifecycle-hooks.html" title="Angular calls lifecycle hook methods on directives and components as it creates, changes, and destroys them.">Lifecycle Hooks</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/npm-packages.html" title="Details of the recommended npm packages and the different kinds of package dependencies">Npm Packages</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/pipes.html" title="Pipes transform displayed values within a template.">Pipes</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/router-deprecated.html" title="The deprecated Beta Router.">Router (Deprecated Beta)</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/structural-directives.html" title="Angular has a powerful template engine that lets us easily manipulate the DOM structure of our elements.">Structural Directives</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/testing.html" title="Techniques and practices for testing an Angular 2 app">Testing</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/typescript-configuration.html" title="TypeScript configuration for Angular 2 developers">TypeScript Configuration</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/upgrade.html" title="Angular 1 applications can be incrementally upgraded to Angular 2.">Upgrading from 1.x</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/webpack.html" title="Create your Angular 2 applications with a Webpack based tooling">Webpack: an introduction</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/ts/latest/cookbook/" title="A collection of recipes for common Angular application scenarios" class="nav-title ">Cookbook<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-unordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/" title="A collection of recipes for common Angular application scenarios">Overview</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/a1-a2-quick-reference.html" title="Learn how Angular 1 concepts and techniques map to Angular 2">Angular 1 to 2 Quick Ref</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/component-communication.html" title="Share information between different directives and components">Component Interaction</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/component-relative-paths.html" title="Use relative URLs for component templates and styles.">Component-relative Paths</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/dependency-injection.html" title="Techniques for Dependency Injection">Dependency Injection</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/dynamic-form.html" title="Render dynamic forms with NgFormModel">Dynamic Form</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/set-document-title.html" title="Setting the document or window title using the Title service.">Set the Document Title</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/ts-to-js.html" title="Convert Angular 2 TypeScript examples into ES5 JavaScript">TypeScript to JavaScript</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/ts/latest/api/" title="API Preview" class="nav-title ">API Reference</a></div></div></nav><script>// Could put in appCtrl but only needed here and clear here
+<link rel="manifest" href="/resources/images/favicons/manifest.json"></head><body ng-controller="AppCtrl as appCtrl" class="l-offset-nav l-offset-side-nav"><md-toolbar scroll-y-offset-element="scroll-y-offset-element" class="main-nav background-regal l-pinned-top l-layer-5"><nav><h1><a href="/" md-button>Angular <sup>by Google</sup></a></h1><button aria-label="View Menu" ng-click="appCtrl.toggleMainMenu($event)" md-button="md-button" class="main-nav-button main-nav-mobile-trigger l-right">Site Menu <span class="icon icon-arrow-drop-down"></span></button><ul ng-class="appCtrl.showMainNav ? 'is-visible' : ''"><li class="l-left"><a class="main-nav-button" href="/features.html" md-button>Features</a></li><li class="l-left"><a class="main-nav-button" href="/docs/ts/latest/" md-button>Docs</a></li><li class="l-left"><a class="main-nav-button" href="/events.html" md-button>Events</a></li><li class="l-left"><a class="main-nav-button" href="/news.html" md-button>News</a></li><li class="l-right"><a class="main-nav-button" href="/docs/ts/latest/quickstart.html" md-button>Get Started</a></li></ul></nav></md-toolbar><!-- Include this file ONLY when current.path[2] is defined--><nav class="side-nav l-pinned-left l-layer-4 l-offset-nav"><!-- SEARCH BAR--><header class="side-nav-search st-input-wrapper"><form class="st-input-inner"><label for="search-io" class="is-hidden">Search Docs</label><input type="search" id="search-io" placeholder="SEARCH DOCS..."/></form><button aria-label="View Docs Menu" ng-click="appCtrl.toggleDocsMenu($event)" md-button="md-button" class="mobile-trigger button">Docs <span class="icon icon-arrow-drop-down"></span></button></header><div ng-class="appCtrl.showDocsNav ? 'is-visible' : ''" class="side-nav-secondary"><div class="nav-blocks"><a href="/docs/ts/latest/quickstart.html" title="Get up and running with Angular 2" class="nav-title ">Quickstart</a></div><div class="nav-blocks"><a href="/docs/ts/latest/tutorial/" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in TypeScript." class="nav-title is-nav-title-selected">Tutorial<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-ordered-lists"><ul><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in TypeScript.">1. Introduction</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt1.html" title="We build a simple hero editor">2. The Hero Editor</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt2.html" title="We build a master/detail page with a list of heroes">3. Master/Detail</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt3.html" title="We refactor the master/detail view into separate components">4. Multiple Components</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt4.html" title="We create a reusable service to manage our hero data calls">5. Services</a></li><li class="nav-list-item "><a href="/docs/ts/latest/tutorial/toh-pt5.html" title="We add the Angular Component Router and learn to navigate among the views">6. Routing</a></li><li class="nav-list-item is-selected"><a href="/docs/ts/latest/tutorial/toh-pt6.html" title="We convert our service and components to use Http">7. Http</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/ts/latest/guide/" title="How to read and use this documentation" class="nav-title ">Basics<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-ordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/ts/latest/guide/" title="How to read and use this documentation">1. Overview</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/architecture.html" title="The basic building blocks of Angular 2 applications">2. Architecture</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/displaying-data.html" title="Interpolation and other forms of property binding help us show app data in the UI.">3. Displaying Data</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/user-input.html" title="User input triggers DOM events. We listen to those events with event bindings that funnel updated values back into our components and models.">4. User Input</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/forms.html" title="A form creates a cohesive, effective, and compelling data entry experience. An Angular form coordinates a set of data-bound user controls, tracks changes, validates input, and presents errors.">5. Forms</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/dependency-injection.html" title="Angular's dependency injection system creates and delivers dependent services &quot;just-in-time&quot;.">6. Dependency Injection</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/template-syntax.html" title="Learn how to write templates that display data and consume user events with the help of data binding.">7. Template Syntax</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/cheatsheet.html" title="A quick guide to Angular syntax.">8. Angular Cheat Sheet</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/style-guide.html" title="Write Angular 2 with style.">9. Style Guide</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/glossary.html" title="Brief definitions of the most important words in the Angular 2 vocabulary">10. Glossary</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/ts/latest/guide/ngmodule.html" title="Define application modules with @NgModule" class="nav-title ">Developer Guide<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-unordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/ts/latest/guide/ngmodule.html" title="Define application modules with @NgModule">Angular Modules (NgModule)</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/animations.html" title="A guide to Angular's animation system.">Animations</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/attribute-directives.html" title="Attribute directives attach behavior to elements.">Attribute Directives</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/component-styles.html" title="Learn how to apply CSS styles to components.">Component Styles</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/hierarchical-dependency-injection.html" title="Angular's hierarchical dependency injection system supports nested injectors in parallel with the component tree.">Hierarchical Injectors</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/server-communication.html" title="Talk to a remote server with an HTTP Client.">HTTP Client</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/lifecycle-hooks.html" title="Angular calls lifecycle hook methods on directives and components as it creates, changes, and destroys them.">Lifecycle Hooks</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/npm-packages.html" title="Details of the recommended npm packages and the different kinds of package dependencies">Npm Packages</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/pipes.html" title="Pipes transform displayed values within a template.">Pipes</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/router.html" title="Discover the basics of screen navigation with the Angular 2 Component Router.">Routing &amp; Navigation</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/security.html" title="Developing for content security in Angular applications">Security</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/structural-directives.html" title="Angular has a powerful template engine that lets us easily manipulate the DOM structure of our elements.">Structural Directives</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/testing.html" title="Techniques and practices for testing an Angular 2 app">Testing</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/typescript-configuration.html" title="TypeScript configuration for Angular 2 developers">TypeScript Configuration</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/upgrade.html" title="Angular 1 applications can be incrementally upgraded to Angular 2.">Upgrading from 1.x</a></li><li class="nav-list-item "><a href="/docs/ts/latest/guide/webpack.html" title="Create your Angular 2 applications with a Webpack based tooling">Webpack: an introduction</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/ts/latest/cookbook/" title="A collection of recipes for common Angular application scenarios" class="nav-title ">Cookbook<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-unordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/" title="A collection of recipes for common Angular application scenarios">Overview</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/a1-a2-quick-reference.html" title="Learn how Angular 1 concepts and techniques map to Angular 2">Angular 1 to 2 Quick Ref</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/component-communication.html" title="Share information between different directives and components">Component Interaction</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/component-relative-paths.html" title="Use relative URLs for component templates and styles.">Component-relative Paths</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/dependency-injection.html" title="Techniques for Dependency Injection">Dependency Injection</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/dynamic-form.html" title="Render dynamic forms with FormGroup">Dynamic Forms</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/rc4-to-rc5.html" title="Migrate your RC4 app to RC5 in minutes.">RC4 to RC5 Migration</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/set-document-title.html" title="Setting the document or window title using the Title service.">Set the Document Title</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/ts-to-js.html" title="Convert Angular 2 TypeScript examples into ES5 JavaScript">TypeScript to JavaScript</a></li><li class="nav-list-item "><a href="/docs/ts/latest/cookbook/visual-studio-2015.html" title="Use Visual Studio 2015 with the QuickStart files">Visual Studio 2015 QuickStart</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/ts/latest/api/" title="API Preview" class="nav-title ">API Reference</a></div></div></nav><script>// Could put in appCtrl but only needed here and clear here
 (function scrollToSelectedLink() {
   var sideNav = document.getElementsByClassName('side-nav')[0];
   var link = sideNav.getElementsByClassName('is-selected')[0];
@@ -21,7 +21,7 @@
     sideNav.scrollTop = link.offsetTop - (window.innerHeight/2);
     //alert("offsetTop: " + link.offsetTop + " side-nav top is " + sideNav.scrollTop);
   }
-})()</script><!-- Refer to jade.template.html and addJadeDataDocsProcessor to figure out where the context of this jade file originates--><!-- renamer :: String -> String--><!-- Renames `Let` and `Var` into `Const`--><header class="hero background-sky"><div class="inner-header"><h1 class="hero-title text-display-1 ">Http</h1><span class="badges"></span></div><!-- Replace _ underscores with . dots --><!-- VERSION TREE CREATOR MIXIN --><!-- BUTTON TITLE GENERATION  --><!-- DROPDOWN BUTTON --><nav class="dropdown"><button aria-label="Select a version of Angular" md-button="md-button" ng-click="appCtrl.toggleVersionMenu($event)" class="dropdown-button">Angular 2 for TypeScript  <span class="icon icon-arrow-drop-down"></span></button><div ng-click="appCtrl.toggleVersionMenu($event)" ng-show="appCtrl.showMenu" class="overlay ng-hide"></div><!-- DROPDOWN MENU --><div ng-class="appCtrl.showMenu ? 'is-visible' : ''" class="dropdown-menu"><ul><li><a href="/docs/ts/latest/tutorial/toh-pt6.html" md-button>Angular 2 for TypeScript </a></li></ul><ul><li><a href="/docs/js/latest/tutorial/toh-pt6.html" md-button>Angular 2 for JavaScript </a></li></ul><ul><li><a href="/docs/dart/latest/tutorial/toh-pt6.html" md-button>Angular 2 for Dart </a></li></ul></div></nav></header><div class="banner"><p class="text-body">We convert our service and components to use Http</p></div><article class="l-content-small grid-fluid docs-content"><div class="c10"><div class="showcase"><div class="showcase-content"><script>function why(id, backTo) {
+})()</script><!-- template: public/_includes/_hero--><header style="" class="hero background-sky"><div class="inner-header"><h1 class="hero-title text-display-1 ">Http</h1><span class="badges"></span></div><!-- Replace _ underscores with . dots --><!-- VERSION TREE CREATOR MIXIN --><!-- BUTTON TITLE GENERATION  --><!-- DROPDOWN BUTTON --><nav class="dropdown"><button aria-label="Select a version of Angular" md-button="md-button" ng-click="appCtrl.toggleVersionMenu($event)" class="dropdown-button">Angular 2 for TypeScript  <span class="icon icon-arrow-drop-down"></span></button><div ng-click="appCtrl.toggleVersionMenu($event)" ng-show="appCtrl.showMenu" class="overlay ng-hide"></div><!-- DROPDOWN MENU --><div ng-class="appCtrl.showMenu ? 'is-visible' : ''" class="dropdown-menu"><ul><li><a href="/docs/ts/latest/tutorial/toh-pt6.html" md-button>Angular 2 for TypeScript </a></li></ul><ul><li><a href="/docs/js/latest/tutorial/toh-pt6.html" md-button>Angular 2 for JavaScript </a></li></ul><ul><li><a href="/docs/dart/latest/tutorial/toh-pt6.html" md-button>Angular 2 for Dart </a></li></ul></div></nav></header><div class="banner"><p class="text-body">We convert our service and components to use Http</p></div><article class="l-content-small grid-fluid docs-content"><div class="c10"><div class="showcase"><div class="showcase-content"><script>function why(id, backTo) {
   var id = "#"+id;
   var el = document.querySelector(id);
   el.hidden=el.hidden=!el.hidden;
@@ -76,642 +76,251 @@
 <p>Our stakeholders appreciate our progress.
 Now they want to get the hero data from a server, let users add, edit, and delete heroes,
 and save these changes back to the server.</p>
-<p>In this chapter we teach our application to make the corresponding http calls to a remote server&#39;s web api.</p>
-<p><a href="/resources/live-examples/toh-6/ts/plnkr.html">Run the live example</a>.</p>
+<p>In this chapter we teach our application to make the corresponding HTTP calls to a remote server&#39;s web API.</p>
+<p>Run the <live-example></live-example> for this part.</p>
 <div class="l-main-section"></div><h2 id="where-we-left-off">Where We Left Off</h2>
 <p>In the <a href="toh-pt5.html">previous chapter</a>, we learned to navigate between the dashboard and the fixed heroes list, editing a selected hero along the way.
 That&#39;s our starting point for this chapter.</p>
 <h3 id="keep-the-app-transpiling-and-running">Keep the app transpiling and running</h3>
 <p>Open a terminal/console window and enter the following command to
 start the TypeScript compiler, start the server, and watch for changes:</p>
-<code-example format="." language="bash">npm start
+<code-example language="bash">npm start
 </code-example><p>The application runs and updates automatically as we continue to build the Tour of Heroes.</p>
-<div class="l-main-section"></div><h2 id="prepare-for-http">Prepare for Http</h2>
-<p> <code>Http</code> is <strong><em>not</em></strong> a core Angular module.
- It&#39;s Angular&#39;s optional approach to web access and it exists as a separate add-on module called <code>@angular/http</code>,
- shipped in a separate script file as part of the Angular npm package.</p>
-<p> Fortunately we&#39;re ready to import from <code>@angular/http</code> because <code>systemjs.config</code> configured <em>SystemJS</em> to load that library when we need it.</p>
-<h3 id="register-provide-http-services">Register (provide) <em>http</em> services</h3>
+<div id="http-providers" class="l-main-section"></div><h1>Providing HTTP Services</h1><p><code>Http</code> is <strong><em>not</em></strong> a core Angular module.
+It&#39;s Angular&#39;s optional approach to web access and it exists as a separate add-on module called <code>@angular/http</code>,
+shipped in a separate script file as part of the Angular npm package.</p>
+<p>Fortunately we&#39;re ready to import from <code>@angular/http</code> because <code>systemjs.config</code> configured <em>SystemJS</em> to load that library when we need it.</p>
+<h3 id="register-provide-http-services">Register (provide) <em>HTTP</em> services</h3>
 <p>Our app will depend upon the Angular <code>http</code> service which itself depends upon other supporting services.
-The <code>HTTP_PROVIDERS</code> array from <code>@angular/http</code> library holds providers for the complete set of http services.</p>
-<p>We should be able to access these services from anywhere in the application.
-So we register them in the <code>bootstrap</code> method of <code>main.ts</code> where we
-launch the application and its root <code>AppComponent</code>.</p>
-<div class="example-title">app/main.ts (v1)</div><code-example language="ts" format="">import { bootstrap }      from &#39;@angular/platform-browser-dynamic&#39;;
-import { HTTP_PROVIDERS } from &#39;@angular/http&#39;;
-
-import { AppComponent }   from &#39;./app.component&#39;;
-
-bootstrap(AppComponent, [ HTTP_PROVIDERS ]);
-</code-example><p>Notice that we supply the <code>HTTP_PROVIDERS</code> in an array as the second parameter to the <code>bootstrap</code> method.
-This has the same effect the <code>providers</code> array in <code>@Component</code> metadata.</p>
-<div class="l-main-section"></div><h2 id="simulating-the-web-api">Simulating the web api</h2>
-<p>We generally recommend registering application-wide services in the root <code>AppComponent</code> <em>providers</em>.
-Here we&#39;re registering in <code>main</code> for a special reason.</p>
+The <code>HttpModule</code> from <code>@angular/http</code> library holds providers for the complete set of http services.</p>
+<p>We should be able to access <code>Http</code> services from anywhere in the application.
+So we register them in the <code>imports</code> array of <span ngio-ex>app.module.ts</span> where we
+bootstrap the application and its root <code>AppComponent</code>.</p>
+<div class="example-title">app.module.ts (v.1)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/app.module.2.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>Notice that we supply <code>HttpModule</code> as part of the <em>imports</em> array in root NgModule <code>AppModule</code>.</p>
+<div class="l-main-section"></div><h2 id="simulating-the-web-api">Simulating the web API</h2>
+<p>We recommend registering application-wide services in the root <code>NgModule</code> <em>providers</em>.</p>
 <p>Our application is in the early stages of development and far from ready for production.
 We don&#39;t even have a web server that can handle requests for heroes.
 Until we do, <em>we&#39;ll have to fake it</em>.</p>
-<p>We&#39;re going to <em>trick</em> the http client into fetching and saving data from
-a demo/development service, the <em>in-memory web api</em>.</p>
-<p>The application itself doesn&#39;t need to know and shouldn&#39;t know about this.
-So we&#39;ll slip the <em>in-memory web api</em> into the configuration <em>above</em> the <code>AppComponent</code>.</p>
-<p>Here is a version of <code>main</code> that performs this trick</p>
-<div class="example-title">app/main.ts (final)</div><code-example language="ts" format="">// Imports for loading &amp; configuring the in-memory web api
-import { XHRBackend } from &#39;@angular/http&#39;;
-
-import { InMemoryBackendService, SEED_DATA } from &#39;angular2-in-memory-web-api&#39;;
-import { InMemoryDataService }               from &#39;./in-memory-data.service&#39;;
-
-// The usual bootstrapping imports
-import { bootstrap }      from &#39;@angular/platform-browser-dynamic&#39;;
-import { HTTP_PROVIDERS } from &#39;@angular/http&#39;;
-
-import { AppComponent }   from &#39;./app.component&#39;;
-
-bootstrap(AppComponent, [
-    HTTP_PROVIDERS,
-    { provide: XHRBackend, useClass: InMemoryBackendService }, // in-mem server
-    { provide: SEED_DATA, useClass: InMemoryDataService }      // in-mem server data
-]);
-</code-example><p>We&#39;re replacing the default <code>XHRBackend</code>, the service that talks to the remote server,
-with the <em>in-memory web api</em> service after priming it with the following <code>in-memory-data.service.ts</code> file:</p>
-<div class="example-title">app/in-memory-data.service.ts</div><code-example language="ts" format="">export class InMemoryDataService {
-  createDb() {
-    let heroes = [
-      {id: 11, name: &#39;Mr. Nice&#39;},
-      {id: 12, name: &#39;Narco&#39;},
-      {id: 13, name: &#39;Bombasto&#39;},
-      {id: 14, name: &#39;Celeritas&#39;},
-      {id: 15, name: &#39;Magneta&#39;},
-      {id: 16, name: &#39;RubberMan&#39;},
-      {id: 17, name: &#39;Dynama&#39;},
-      {id: 18, name: &#39;Dr IQ&#39;},
-      {id: 19, name: &#39;Magma&#39;},
-      {id: 20, name: &#39;Tornado&#39;}
-    ];
-    return {heroes};
-  }
-}
-</code-example><p>This file replaces the <code>mock-heroes.ts</code> which is now safe to delete.</p>
-<div class="alert is-helpful"><p>This chaper is an introduction to the Angular http client.
+<p>We&#39;re going to <em>trick</em> the HTTP client into fetching and saving data from
+a mock service, the <em>in-memory web API</em>.</p>
+<p>Here is a version of <code>app.module.ts</code> that performs this trick</p>
+<div class="example-title">app.module.ts (final)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/app.module.1.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>We&#39;re replacing the default <code>XHRBackend</code>, the service that talks to the remote server,
+with the in-memory web API service after priming it as follows:</p>
+<div class="example-title">app/in-memory-data.service.ts</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/in-memory-data.service-init.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>This file replaces the <code>mock-heroes.ts</code> which is now safe to delete.</p><div class="alert is-helpful"><p>This chapter is an introduction to the Angular HTTP library.
 Please don&#39;t be distracted by the details of this backend substitution. Just follow along with the example.</p>
-<p>Learn more later about the <em>in-memory web api</em> in the <a href="../guide/server-communication.html#!#in-mem-web-api">Http chapter</a>.
-Remember, the <em>in-memory web api</em> is only useful in the early stages of development and for demonstrations such as this Tour of Heroes.
-Skip it when you have a real web api server.</p>
-</div><div class="l-main-section"></div><h2 id="heroes-and-http">Heroes and Http</h2>
+<p>Learn more later about the in-memory web API in the <a href="../guide/server-communication.html#!#in-mem-web-api">HTTP client chapter</a>.
+Remember, the in-memory web API is only useful in the early stages of development and for demonstrations such as this Tour of Heroes.
+Skip it when you have a real web API server.</p>
+</div><div class="l-main-section"></div><h2 id="heroes-and-http">Heroes and HTTP</h2>
 <p>Look at our current <code>HeroService</code> implementation</p>
-<div class="example-title">app/hero.service.ts (getHeroes - old)</div><code-example language="ts" format="">getHeroes() {
-  return Promise.resolve(HEROES);
-}
-</code-example><p>We returned a promise resolved with mock heroes.
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-4/ts/app/hero.service-get-heroes.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>We returned a Promise resolved with mock heroes.
 It may have seemed like overkill at the time, but we were anticipating the
-day when we fetched heroes with an http client and we knew that would have to be an asynchronous operation.</p>
-<p>That day has arrived! Let&#39;s convert <code>getHeroes()</code> to use Angular&#39;s <code>Http</code> client:</p>
-<div class="example-title">app/hero.service.ts (getHeroes using Http)</div><code-example language="ts" format="">  getHeroes(): Promise&lt;Hero[]&gt; {
-    return this.http.get(this.heroesUrl)
-               .toPromise()
-               .then(response =&gt; response.json().data)
-               .catch(this.handleError);
-  }
-</code-example><h3 id="http-promise">Http Promise</h3>
-<p>We&#39;re still returning a promise but we&#39;re creating it differently.</p>
+day when we fetched heroes with an HTTP client and we knew that would have to be an asynchronous operation.</p>
+<p>That day has arrived! Let&#39;s convert <code>getHeroes()</code> to use HTTP:</p>
+<div class="example-title">app/hero.service.ts (new constructor and revised getHeroes)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero.service-getHeroes.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><h3 id="http-_promise-">HTTP Promise</h3>
+<p>We&#39;re still returning a Promise but we&#39;re creating it differently.</p>
 <p>The Angular <code>http.get</code> returns an RxJS <code>Observable</code>.
 <em>Observables</em> are a powerful way to manage asynchronous data flows.
-We&#39;ll learn about <code>Observables</code> <em>later</em>.</p>
-<p>For <em>now</em> we get back on familiar ground by immediately converting that <code>Observable</code> to a <code>Promise</code> using the <code>toPromise</code> operator.</p>
-<code-example language="ts" format="">.toPromise()
-</code-example><p>Unfortunately, the Angular <code>Observable</code> doesn&#39;t have a <code>toPromise</code> operator ... not out of the box.
+We&#39;ll learn about <a href="#observables">Observables</a> later in this chapter.</p>
+<p>For <em>now</em> we get back on familiar ground by immediately by
+converting that <code>Observable</code> to a <code>Promise</code> using the <code>toPromise</code> operator.</p>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero.service-to-promise.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>Unfortunately, the Angular <code>Observable</code> doesn&#39;t have a <code>toPromise</code> operator ... not out of the box.
 The Angular <code>Observable</code> is a bare-bones implementation.</p>
 <p>There are scores of operators like <code>toPromise</code> that extend <code>Observable</code> with useful capabilities.
 If we want those capabilities, we have to add the operators ourselves.
 That&#39;s as easy as importing them from the RxJS library like this:</p>
-<code-example language="ts" format="">import &#39;rxjs/add/operator/toPromise&#39;;
-</code-example><h3 id="extracting-the-data-in-the-then-callback">Extracting the data in the <em>then</em> callback</h3>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero.service-rxjs.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><h3 id="extracting-the-data-in-the-then-callback">Extracting the data in the <em>then</em> callback</h3>
 <p>In the <em>promise</em>&#39;s <code>then</code> callback we call the <code>json</code> method of the http <code>Response</code> to extract the
 data within the response.</p>
-<code-example language="ts" format="">.then(response =&gt; response.json().data)
-</code-example><p>That object returned by <code>json</code> has a single <code>data</code> property.
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero.service-to-data.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>That response JSON has a single <code>data</code> property.
 The <code>data</code> property holds the array of <em>heroes</em> that the caller really wants.
-So we grab that array and return it as the resolved promise value.</p>
+So we grab that array and return it as the resolved Promise value.</p>
 <div class="alert is-important"><p>Pay close attention to the shape of the data returned by the server.
-This particular <em>in-memory web api</em> example happens to return an object with a <code>data</code> property.
-Your api might return something else.</p>
-<p>Adjust the code to match <em>your web api</em>.</p>
-</div><p>The caller is unaware of these machinations. It receives a promise of <em>heroes</em> just as it did before.
-It has no idea that we fetched the heroes from the server.
-It knows nothing of the twists and turns required to turn the http response into heroes.
+This particular <em>in-memory web API</em> example happens to return an object with a <code>data</code> property.
+Your API might return something else.</p>
+<p>Adjust the code to match <em>your web API</em>.</p>
+</div><p>The caller is unaware of these machinations. It receives a Promise of <em>heroes</em> just as it did before.
+It has no idea that we fetched the heroes from the (mock) server.
+It knows nothing of the twists and turns required to convert the HTTP response into heroes.
 Such is the beauty and purpose of delegating data access to a service like this <code>HeroService</code>.</p>
 <h3 id="error-handling">Error Handling</h3>
-<p>At the end of <code>getHeroes</code> we <code>catch</code> server failures and pass them to an error handler:</p>
-<code-example language="ts" format="">.catch(this.handleError);
-</code-example><p>This is a critical step!
-We must anticipate http failures as they happen frequently for reasons beyond our control.</p>
-<div class="example-title">app/hero.service.ts (Error handler)</div><code-example language="ts" format="">private handleError(error: any) {
-  console.error(&#39;An error occurred&#39;, error);
-  return Promise.reject(error.message || error);
-}
-</code-example><p>In this demo service we log the error to the console; we should do better in real life.</p>
+<p>At the end of <code>getHeroes()</code> we <code>catch</code> server failures and pass them to an error handler:</p>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero.service-catch.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>This is a critical step!
+We must anticipate HTTP failures as they happen frequently for reasons beyond our control.</p>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero.service-handleError.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>In this demo service we log the error to the console; we should do better in real life.</p>
 <p>We&#39;ve also decided to return a user friendly form of the error to
 the caller in a rejected promise so that the caller can display a proper error message to the user.</p>
-<h3 id="promises-are-promises">Promises are Promises</h3>
+<h3 id="-_promise-s-are-_promise-s">Promises are Promises</h3>
 <p>Although we made significant <em>internal</em> changes to <code>getHeroes()</code>, the public signature did not change.
-We still return a promise. We won&#39;t have to update any of the components that call <code>getHeroes()</code>.</p>
+We still return a Promise. We won&#39;t have to update any of the components that call <code>getHeroes()</code>.</p>
 <div class="l-main-section"></div><h2 id="add-edit-delete">Add, Edit, Delete</h2>
-<p>Our stakeholders are incredibly pleased with the added flexibility from the api integration, but it doesn&#39;t stop there. Next we want to add the capability to add, edit and delete heroes.</p>
-<p>We&#39;ll complete <code>HeroService</code> by creating <code>post</code>, <code>put</code> and <code>delete</code> http calls to meet our new requirements.</p>
+<p>Our stakeholders are incredibly pleased with the added flexibility from the API integration, but it doesn&#39;t stop there. Next we want to add the capability to add, edit and delete heroes.</p>
+<p>We&#39;ll complete <code>HeroService</code> by creating <code>post</code>, <code>put</code> and <code>delete</code> methods to meet our new requirements.</p>
 <h3 id="post">Post</h3>
-<p>We are using <code>post</code> to add new heroes. Post requests require a little bit more setup than Get requests, but the format is as follows:</p>
-<div class="example-title">app/hero.service.ts (post hero)</div><code-example language="ts" format="">// Add new Hero
-private post(hero: Hero): Promise&lt;Hero&gt; {
-  let headers = new Headers({
-    &#39;Content-Type&#39;: &#39;application/json&#39;});
-
-  return this.http
-             .post(this.heroesUrl, JSON.stringify(hero), {headers: headers})
-             .toPromise()
-             .then(res =&gt; res.json().data)
-             .catch(this.handleError);
-}
-</code-example><p>Now we create a header and set the content type to <code>application/json</code>. We&#39;ll call <code>JSON.stringify</code> before we post to convert the hero object to a string.</p>
+<p>We will be using <code>post</code> to add new heroes. Post requests require a little bit more setup than Get requests:</p>
+<div class="example-title">app/hero.service.ts (post)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero.service-post.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>For Post requests we create a header and set the content type to <code>application/json</code>. We&#39;ll call <code>JSON.stringify</code> before we post to convert the hero object to a string.</p>
 <h3 id="put">Put</h3>
-<p><code>put</code> is used to edit a specific hero, but the structure is very similar to a <code>post</code> request. The only difference is that we have to change the url slightly by appending the id of the hero we want to edit.</p>
-<div class="example-title">app/hero.service.ts (put hero)</div><code-example language="ts" format="">// Update existing Hero
-private put(hero: Hero) {
-  let headers = new Headers();
-  headers.append(&#39;Content-Type&#39;, &#39;application/json&#39;);
-
-  let url = `${this.heroesUrl}/${hero.id}`;
-
-  return this.http
-             .put(url, JSON.stringify(hero), {headers: headers})
-             .toPromise()
-             .then(() =&gt; hero)
-             .catch(this.handleError);
-}
-</code-example><h3 id="delete">Delete</h3>
-<p><code>delete</code> is used to delete heroes and the format is identical to <code>put</code> except for the function name.</p>
-<div class="example-title">app/hero.service.ts (delete hero)</div><code-example language="ts" format="">delete(hero: Hero) {
-  let headers = new Headers();
-  headers.append(&#39;Content-Type&#39;, &#39;application/json&#39;);
-
-  let url = `${this.heroesUrl}/${hero.id}`;
-
-  return this.http
-             .delete(url, headers)
-             .toPromise()
-             .catch(this.handleError);
-}
-</code-example><p>We add a <code>catch</code> to handle our errors for all three cases.</p>
+<p>Put will be used to update an individual hero. Its structure is very similar to Post requests. The only difference is that we have to change the URL slightly by appending the id of the hero we want to update.</p>
+<div class="example-title">app/hero.service.ts (put)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero.service-put.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><h3 id="delete">Delete</h3>
+<p>Delete will be used to delete heroes and its format is like <code>put</code> except for the function name.</p>
+<div class="example-title">app/hero.service.ts (delete)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero.service-delete.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>We add a <code>catch</code> to handle errors for all three methods.</p>
 <h3 id="save">Save</h3>
-<p>We combine the call to the private <code>post</code> and <code>put</code> methods in a single <code>save</code> method. This simplifies the public api and makes the integration with <code>HeroDetailComponent</code> easier. <code>HeroService</code> determines which method to call based on the state of the <code>hero</code> object. If the hero already has an id we know it&#39;s an edit. Otherwise we know it&#39;s an add.</p>
-<div class="example-title">app/hero.service.ts (save hero)</div><code-example language="ts" format="">save(hero: Hero): Promise&lt;Hero&gt;  {
-  if (hero.id) {
-    return this.put(hero);
-  }
-  return this.post(hero);
-}
-</code-example><p>After these additions our <code>HeroService</code> looks like this:</p>
-<div class="example-title">app/hero.service.ts</div><code-example language="ts" format="">import { Injectable }    from &#39;@angular/core&#39;;
-import { Headers, Http } from &#39;@angular/http&#39;;
-
-import &#39;rxjs/add/operator/toPromise&#39;;
-
-import { Hero } from &#39;./hero&#39;;
-
-@Injectable()
-export class HeroService {
-
-  private heroesUrl = &#39;app/heroes&#39;;  // URL to web api
-
-  constructor(private http: Http) { }
-
-  getHeroes(): Promise&lt;Hero[]&gt; {
-    return this.http.get(this.heroesUrl)
-               .toPromise()
-               .then(response =&gt; response.json().data)
-               .catch(this.handleError);
-  }
-
-  getHero(id: number) {
-    return this.getHeroes()
-               .then(heroes =&gt; heroes.filter(hero =&gt; hero.id === id)[0]);
-  }
-
-  save(hero: Hero): Promise&lt;Hero&gt;  {
-    if (hero.id) {
-      return this.put(hero);
-    }
-    return this.post(hero);
-  }
-
-  delete(hero: Hero) {
-    let headers = new Headers();
-    headers.append(&#39;Content-Type&#39;, &#39;application/json&#39;);
-
-    let url = `${this.heroesUrl}/${hero.id}`;
-
-    return this.http
-               .delete(url, headers)
-               .toPromise()
-               .catch(this.handleError);
-  }
-
-  // Add new Hero
-  private post(hero: Hero): Promise&lt;Hero&gt; {
-    let headers = new Headers({
-      &#39;Content-Type&#39;: &#39;application/json&#39;});
-
-    return this.http
-               .post(this.heroesUrl, JSON.stringify(hero), {headers: headers})
-               .toPromise()
-               .then(res =&gt; res.json().data)
-               .catch(this.handleError);
-  }
-
-  // Update existing Hero
-  private put(hero: Hero) {
-    let headers = new Headers();
-    headers.append(&#39;Content-Type&#39;, &#39;application/json&#39;);
-
-    let url = `${this.heroesUrl}/${hero.id}`;
-
-    return this.http
-               .put(url, JSON.stringify(hero), {headers: headers})
-               .toPromise()
-               .then(() =&gt; hero)
-               .catch(this.handleError);
-  }
-
-  private handleError(error: any) {
-    console.error(&#39;An error occurred&#39;, error);
-    return Promise.reject(error.message || error);
-  }
-}
-</code-example><div class="l-main-section"></div><h2 id="updating-components">Updating Components</h2>
+<p>We combine the call to the private <code>post</code> and <code>put</code> methods in a single <code>save</code> method. This simplifies the public API and makes the integration with <code>HeroDetailComponent</code> easier. <code>HeroService</code> determines which method to call based on the state of the <code>hero</code> object. If the hero already has an id we know it&#39;s an edit. Otherwise we know it&#39;s an add.</p>
+<div class="example-title">app/hero.service.ts (save)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero.service-save.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>After these additions our <code>HeroService</code> looks like this:</p>
+<div class="example-title">app/hero.service.ts</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero.service.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><div class="l-main-section"></div><h2 id="updating-components">Updating Components</h2>
 <p>Loading heroes using <code>Http</code> required no changes outside of <code>HeroService</code>, but we added a few new features as well.
 In the following section we will update our components to use our new methods to add, edit and delete heroes.</p>
-<h3 id="add-edit-in-the-herodetailcomponent-">Add/Edit in the <em>HeroDetailComponent</em></h3>
-<p>We already have <code>HeroDetailComponent</code> for viewing details about a specific hero. 
-Add and Edit are natural extensions of the detail view, so we are able to reuse <code>HeroDetailComponent</code> with a few tweaks. 
-The original component was created to render existing data, but to add new data we have to initialize the <code>hero</code> property to an empty <code>Hero</code> object.</p>
-<div class="example-title">app/hero-detail.component.ts (ngOnInit)</div><code-example language="ts" format="">ngOnInit() {
-  if (this.routeParams.get(&#39;id&#39;) !== null) {
-    let id = +this.routeParams.get(&#39;id&#39;);
-    this.navigated = true;
-    this.heroService.getHero(id)
-        .then(hero =&gt; this.hero = hero);
-  } else {
-    this.navigated = false;
-    this.hero = new Hero();
-  }
-}
-</code-example><p>In order to differentiate between add and edit we are adding a check to see if an id is passed in the url. If the id is absent we bind <code>HeroDetailComponent</code> to an empty <code>Hero</code> object. In either case, any edits made through the UI will be bound back to the same <code>hero</code> property.</p>
-<p>The next step is to add a save method to <code>HeroDetailComponent</code> and call the corresponding save method in <code>HeroesService</code>.</p>
-<div class="example-title">app/hero-detail.component.ts (save)</div><code-example language="ts" format="">save() {
-  this.heroService
-      .save(this.hero)
-      .then(hero =&gt; {
-        this.hero = hero; // saved hero, w/ id if new
-        this.goBack(hero);
-      })
-      .catch(error =&gt; this.error = error); // TODO: Display error message
-}
-</code-example><p>The same save method is used for both add and edit since <code>HeroService</code> will know when to call <code>post</code> vs <code>put</code> based on the state of the <code>Hero</code> object.</p>
+<p>Before we can add those methods, we need to initialize some variables with their respective imports.</p>
+<div class="example-title">app/hero-detail.component.ts (excerpt)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero-detail.component-variables-imports.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><h3 id="add-edit-in-the-herodetailcomponent-">Add/Edit in the <em>HeroDetailComponent</em></h3>
+<p>We already have <code>HeroDetailComponent</code> for viewing details about a specific hero.
+Add and Edit are natural extensions of the detail view, so we are able to reuse <code>HeroDetailComponent</code> with a few tweaks.</p>
+<p>The original component was created to render existing data, but to add new data we have to initialize the <code>hero</code> property to an empty <code>Hero</code> object.</p>
+<div class="example-title">app/hero-detail.component.ts (ngOnInit)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero-detail.component-ngOnInit.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>In order to differentiate between add and edit we are adding a check to see if an id is passed in the URL. If the id is absent we bind <code>HeroDetailComponent</code> to an empty <code>Hero</code> object. In either case, any edits made through the UI will be bound back to the same <code>hero</code> property.</p>
+<p>Add a save method to <code>HeroDetailComponent</code> and call the corresponding save method in <code>HeroesService</code>.</p>
+<div class="example-title">app/hero-detail.component.ts (save)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero-detail.component-save.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>The same save method is used for both add and edit since <code>HeroService</code> will know when to call <code>post</code> vs <code>put</code> based on the state of the <code>Hero</code> object.</p>
 <p>After we save a hero, we redirect the browser back to the previous page using the <code>goBack()</code> method.</p>
-<div class="example-title">app/hero-detail.component.ts (goBack)</div><code-example language="ts" format="">goBack(savedHero: Hero = null) {
-  this.close.emit(savedHero);
-  if (this.navigated) { window.history.back(); }
-}
-</code-example><p>Here we call <code>emit</code> to notify that we just added or modified a hero. <code>HeroesComponent</code> is listening for this notification and will automatically refresh the list of heroes to include our recent updates.</p>
+<div class="example-title">app/hero-detail.component.ts (goBack)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero-detail.component-goBack.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>Here we call <code>emit</code> to notify that we just added or modified a hero. <code>HeroesComponent</code> is listening for this notification and will automatically refresh the list of heroes to include our recent updates.</p>
 <div class="l-sub-section"><p>The <code>emit</code> &quot;handshake&quot; between <code>HeroDetailComponent</code> and <code>HeroesComponent</code> is an example of component to component communication. This is a topic for another day, but we have detailed information in our <a href="/docs/ts/latest/cookbook/component-communication.html#!#child-to-parent">Component Interaction Cookbook</a></p>
-</div><p>Here is <code>HeroDetailComponent</code> with its new save button.</p>
-<figure class="image-display"><img src="/resources/images/devguide/toh/hero-details-save-button.png" alt="Hero Details With Save Button"></figure><h3 id="add-delete-in-the-heroescomponent-">Add/Delete in the <em>HeroesComponent</em></h3>
-<p>The user can <em>add</em> a new hero by clicking a button and entering a name.</p>
+</div><p>Here is <code>HeroDetailComponent</code> with its new save button and the corresponding HTML.</p>
+<figure class="image-display"><img src="/resources/images/devguide/toh/hero-details-save-button.png" alt="Hero Details With Save Button"></figure><div class="example-title">app/hero-detail.component.html (save)</div><code-example language="html" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero-detail.component-save.html.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><h3 id="add-delete-in-the-heroescomponent-">Add/Delete in the <em>HeroesComponent</em></h3>
+<p>We&#39;ll be reporting propagated HTTP errors, let&#39;s start by adding the following
+field to the <code>HeroesComponent</code> class:</p>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/heroes.component-error.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>The user can <em>add</em> a new hero by clicking a button and entering a name.</p>
 <p>When the user clicks the <em>Add New Hero</em> button, we display the <code>HeroDetailComponent</code>.
 We aren&#39;t navigating to the component so it won&#39;t receive a hero <code>id</code>;
-As we noted above, that is the component&#39;s cue to create and present an empty hero.</p>
-<p>Add the following HTML to the <code>heroes.component.html</code>, just below the hero list (the <code>*ngFor</code>).</p>
-<div class="example-title">app/heroes.component.html (add)</div><code-example language="html" format="">&lt;button (click)=&quot;addHero()&quot;&gt;Add New Hero&lt;/button&gt;
-&lt;div *ngIf=&quot;addingHero&quot;&gt;
-  &lt;my-hero-detail (close)=&quot;close($event)&quot;&gt;&lt;/my-hero-detail&gt;
-&lt;/div&gt;
-</code-example><p>The user can <em>delete</em> an existing hero by clicking a delete button next to the hero&#39;s name.</p>
-<p>Add the following HTML to the <code>heroes.component.html</code> right after the name in the repeated <code>&lt;li&gt;</code> tag:</p>
-<div class="example-title">app/heroes.component.html (delete)</div><code-example language="html" format="">&lt;button class=&quot;delete-button&quot; (click)=&quot;delete(hero, $event)&quot;&gt;Delete&lt;/button&gt;
-</code-example><p>Now let&#39;s fix-up the <code>HeroesComponent</code> to support the <em>add</em> and <em>delete</em> actions in the template.
+as we noted above, that is the component&#39;s cue to create and present an empty hero.</p>
+<p>Add the following to the heroes component HTML, just below the hero list (<code>&lt;ul class=&quot;heroes&quot;&gt;...&lt;/ul&gt;</code>).</p>
+<div class="example-title">app/heroes.component.html (add-and-error)</div><code-example language="html" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/heroes.component-add-and-error.html.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>The first line will display an error message if there is any. The remaining HTML is for adding heroes.</p>
+<p>The user can <em>delete</em> an existing hero by clicking a delete button next to the hero&#39;s name.
+Add the following to the heroes component HTML right after the hero name in the repeated <code>&lt;li&gt;</code> tag:</p>
+<div class="example-title">app/heroes.component.html (delete)</div><code-example language="html" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/heroes.component-delete.html.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>Add the following to the bottom of the <code>HeroesComponent</code> CSS file:</p>
+<div class="example-title">app/heroes.component.css (additions)</div><code-example language="css" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/heroes.component-additions.css.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>Now let&#39;s fix-up the <code>HeroesComponent</code> to support the <em>add</em> and <em>delete</em> actions used in the template.
 Let&#39;s start with <em>add</em>.</p>
-<p>We&#39;re using the <code>HeroDetailComponent</code> to capture the new hero information.
-We have to tell Angular about that by importing the <code>HeroDetailComponent</code> and referencing it in the component metadata <code>directives</code> array.</p>
-<div class="example-title">app/heroes.component.ts (HeroDetailComponent)</div><code-example language="ts" format="">import { HeroDetailComponent } from &#39;./hero-detail.component&#39;;
-
-@Component({
-  selector: &#39;my-heroes&#39;,
-  templateUrl: &#39;app/heroes.component.html&#39;,
-  styleUrls:  [&#39;app/heroes.component.css&#39;],
-  directives: [HeroDetailComponent]
-})
-</code-example><div class="l-sub-section"><p>These are the same lines that we removed in the previous <a href="toh-pt5.html">Routing</a> chapter.
-We didn&#39;t know at the time that we&#39;d need the <em>HeroDetailComponent</em> again. So we tidied up.</p>
-<p>Now we <em>must</em> put these lines back. If we don&#39;t, Angular will ignore the <code>&lt;my-hero-detail&gt;</code>
-tag and pushing the <em>Add New Hero</em> button will have no visible effect.</p>
-</div><p>Next we implement the click handler for the <em>Add New Hero</em> button.</p>
-<div class="example-title">app/heroes.component.ts (add)</div><code-example language="ts" format="">addHero() {
-  this.addingHero = true;
-  this.selectedHero = null;
-}
-
-close(savedHero: Hero) {
-  this.addingHero = false;
-  if (savedHero) { this.getHeroes(); }
-}
-</code-example><p>The <code>HeroDetailComponent</code> does most of the work. All we do is toggle an <code>*ngIf</code> flag that
-swaps it into the DOM when were add a hero and remove it from the DOM when the user is done.</p>
+<p>Implement the click handler for the <em>Add New Hero</em> button.</p>
+<div class="example-title">app/heroes.component.ts (addHero)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/heroes.component-addHero.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>The <code>HeroDetailComponent</code> does most of the work. All we do is toggle an <code>*ngIf</code> flag that
+swaps it into the DOM when we add a hero and removes it from the DOM when the user is done.</p>
 <p>The <em>delete</em> logic is a bit trickier.</p>
-<div class="example-title">app/heroes.component.ts (delete)</div><code-example language="ts" format="">delete(hero: Hero, event: any) {
-  event.stopPropagation();
-  this.heroService
-      .delete(hero)
-      .then(res =&gt; {
-        this.heroes = this.heroes.filter(h =&gt; h !== hero);
-        if (this.selectedHero === hero) { this.selectedHero = null; }
-      })
-      .catch(error =&gt; this.error = error); // TODO: Display error message
-}
-</code-example><p>Of course we delegate the persistence of hero deletion to the <code>HeroService</code>.
+<div class="example-title">app/heroes.component.ts (deleteHero)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/heroes.component-deleteHero.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>Of course we delegate the persistence of hero deletion to the <code>HeroService</code>.
 But the component is still responsible for updating the display.
 So the <em>delete</em> method removes the deleted hero from the list.</p>
 <h3 id="let-s-see-it">Let&#39;s see it</h3>
 <p>Here are the fruits of labor in action:</p>
-<figure class="image-display"><img src="/resources/images/devguide/toh/toh-http.anim.gif" alt="Heroes List Editting w/ HTTP"></figure><h3 id="review-the-app-structure">Review the App Structure</h3>
-<p>Let’s verify that we have the following structure after all of our good refactoring in this chapter:</p>
-<div class="filetree"><div class="file">angular2-tour-of-heroes</div><div class="children"></div><div class="file">app</div><div class="children"><div class="file">app.component.ts</div><div class="file">app.component.css</div><div class="file">dashboard.component.css</div><div class="file">dashboard.component.html</div><div class="file">dashboard.component.ts</div><div class="file">hero.ts</div><div class="file">hero-detail.component.css</div><div class="file">hero-detail.component.html</div><div class="file">hero-detail.component.ts</div><div class="file">hero.service.ts</div><div class="file">heroes.component.css</div><div class="file">heroes.component.html</div><div class="file">heroes.component.ts</div><div class="file">main.ts</div><div class="file">hero-data.service.ts</div></div><div class="file">node_modules ...</div><div class="file">typings ...</div><div class="file">index.html</div><div class="file">package.json</div><div class="file">styles.css</div><div class="file">sample.css</div><div class="file">systemjs.config.json</div><div class="file">tsconfig.json</div><div class="file">typings.json</div></div><div class="l-main-section"></div><h2 id="home-stretch">Home Stretch</h2>
+<figure class="image-display"><img src="/resources/images/devguide/toh/toh-http.anim.gif" alt="Heroes List Editing w/ HTTP"></figure><h2 id="-_observable-s">Observables</h2>
+<p>Each <code>Http</code> method  returns an <code>Observable</code> of HTTP <code>Response</code> objects.</p>
+<p>Our <code>HeroService</code> converts that <code>Observable</code> into a <code>Promise</code> and returns the promise to the caller.
+In this section we learn to return the <code>Observable</code> directly and discuss when and why that might be
+a good thing to do.</p>
+<h3 id="background">Background</h3>
+<p>An <em>observable</em> is a stream of events that we can process with array-like operators.</p>
+<p>Angular core has basic support for observables. We developers augment that support with
+operators and extensions from the <a href="http://reactivex.io/rxjs/">RxJS Observables</a> library.
+We&#39;ll see how shortly.</p>
+<p>Recall that our <code>HeroService</code> quickly chained the <code>toPromise</code> operator to the <code>Observable</code> result of <code>http.get</code>.
+That operator converted the <code>Observable</code> into a <code>Promise</code> and we passed that promise back to the caller.</p>
+<p>Converting to a promise is often a good choice. We typically ask <code>http</code> to fetch a single chunk of data.
+When we receive the data, we&#39;re done.
+A single result in the form of a promise is easy for the calling component to consume
+and it helps that promises are widely understood by JavaScript programmers.</p>
+<p>But requests aren&#39;t always &quot;one and done&quot;. We may start one request,
+then cancel it, and make a different request before the server has responded to the first request.
+Such a <em>request-cancel-new-request</em> sequence is difficult to implement with <em>Promises</em>.
+It&#39;s easy with <em>Observables</em> as we&#39;ll see.</p>
+<h3 id="search-by-name">Search-by-name</h3>
+<p>We&#39;re going to add a <em>hero search</em> feature to the Tour of Heroes.
+As the user types a name into a search box, we&#39;ll make repeated HTTP requests for heroes filtered by that name.</p>
+<p>We start by creating <code>HeroSearchService</code> that sends search queries to our server&#39;s web api.</p>
+<div class="example-title">app/hero-search.service.ts</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero-search.service.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>The <code>http.get()</code> call in <code>HeroSearchService</code> is similar to the one
+in the <code>HeroService</code>, although the URL now has a query string.
+<span if-docs="ts">Another notable difference: we no longer call <code>toPromise</code>,
+we simply return the <em>observable</em> instead.</span></p>
+<h3 id="herosearchcomponent">HeroSearchComponent</h3>
+<p>Let&#39;s create a new <code>HeroSearchComponent</code> that calls this new <code>HeroSearchService</code>.</p>
+<p>The component template is simple &mdash; just a text box and a list of matching search results.</p>
+<div class="example-title">app/hero-search.component.html</div><code-example language="html" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero-search.component.html.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>We&#39;ll also want to add styles for the new component.</p>
+<div class="example-title">app/hero-search.component.css</div><code-example language="css" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero-search.component.css.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>As the user types in the search box, a <em>keyup</em> event binding calls the component&#39;s <code>search</code> method with the new search box value.</p>
+<p>The <code>*ngFor</code> repeats <em>hero</em> objects from the component&#39;s <code>heroes</code> property. No surprise there.</p>
+<p>But, as we&#39;ll soon see, the <code>heroes</code> property is now an <em>Observable</em> of hero arrays, rather than just a hero array.
+The <code>*ngFor</code> can&#39;t do anything with an <code>Observable</code> until we flow it through the <code>async</code> pipe (<code>AsyncPipe</code>).
+The <code>async</code> pipe subscribes to the <code>Observable</code> and produces the array of heroes to <code>*ngFor</code>.</p>
+<p>Time to create the <code>HeroSearchComponent</code> class and metadata.</p>
+<div class="example-title">app/hero-search.component.ts</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero-search.component.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><h4 id="search-terms">Search terms</h4>
+<p>Let&#39;s focus on the <code>searchTerms</code>:</p>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero-search.component-searchTerms.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>A <code>Subject</code> is a producer of an <em>observable</em> event stream;
+<code>searchTerms</code> produces an <code>Observable</code> of strings, the filter criteria for the name search.</p>
+<p>Each call to <code>search</code> puts a new string into this subject&#39;s <em>observable</em> stream by calling <code>next</code>.</p>
+<p><a id="ngoninit"></a></p>
+<h4 id="initialize-the-_-heroes-_-property-_-ngoninit-_-">Initialize the <em><strong>heroes</strong></em> property (<em><strong>ngOnInit</strong></em>)</h4>
+<p><span if-docs="ts">A <code>Subject</code> is also an <code>Observable</code>.</span>
+We&#39;re going to turn the stream
+of search terms into a stream of <code>Hero</code> arrays and assign the result to the <code>heroes</code> property.</p>
+<code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero-search.component-search.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>If we passed every user keystroke directly to the <code>HeroSearchService</code>, we&#39;d unleash a storm of HTTP requests.
+Bad idea. We don&#39;t want to tax our server resources and burn through our cellular network data plan.</p>
+<p>Fortunately, we can chain <code>Observable</code> operators to the string <code>Observable</code> that reduce the request flow.
+We&#39;ll make fewer calls to the <code>HeroSearchService</code> and still get timely results. Here&#39;s how:</p>
+<ul>
+<li><p><code>debounceTime(300)</code> waits until the flow of new string events pauses for 300 milliseconds
+before passing along the latest string. We&#39;ll never make requests more frequently than 300ms.</p>
+</li>
+<li><p><code>distinctUntilChanged</code> ensures that we only send a request if the filter text changed.
+There&#39;s no point in repeating a request for the same search term.</p>
+</li>
+<li><p><code>switchMap</code> calls our search service for each search term that makes it through the <code>debounce</code> and <code>distinctUntilChanged</code> gauntlet.
+It cancels and discards previous search observables, returning only the latest search service observable.</p>
+</li>
+</ul>
+<div class="l-sub-section"><p>The <a href="https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/operators/flatmaplatest.md">switchMap operator</a>
+(formerly known as &quot;flatMapLatest&quot;) is very clever.</p>
+<p>Every qualifying key event can trigger an http call.
+Even with a 300ms pause between requests, we could have multiple http requests in flight
+and they may not return in the order sent.</p>
+<p><code>switchMap</code> preserves the original request order while returning
+ only the observable from the most recent http call.
+Results from prior calls are canceled and discarded.</p>
+<p>We also short-circuit the http call and return an observable containing an empty array
+if the search text is empty.</p>
+<p>Note that <em>canceling</em> the <code>HeroSearchService</code> observable won&#39;t actually abort a pending http request
+until the service supports that feature, a topic for another day.
+We are content for now to discard unwanted results.</p>
+</div><ul>
+<li><code>catch</code> intercepts a failed observable.
+Our simple example prints the error to the console; a real life application should do better.
+Then we return an observable containing an empty array to clear the search result.</li>
+</ul>
+<h3 id="import-rxjs-operators">Import RxJS operators</h3>
+<p>The RxJS operators are not available in Angular&#39;s base <code>Observable</code> implementation.
+We have to extend  <code>Observable</code> by <em>importing</em> them.</p>
+<p>We could extend <code>Observable</code> with just the operators we need here by
+including the pertinent <code>import</code> statements at the top of this file.</p>
+<div class="l-sub-section"><p>Many authorities say we should do just that.</p>
+</div><p>We take a different approach in this example.
+We combine all of the RxJS <code>Observable</code> extensions that <em>our entire app</em> requires into a single RxJS imports file.</p>
+<div class="example-title">app/rxjs-extensions.ts</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/rxjs-extensions.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>We load them all at once by importing <code>rxjs-extensions</code> in <code>AppComponent</code>.</p>
+<div class="example-title">app/app.component.ts (rxjs-extensions)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/app.component-rxjs-extensions.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><h3 id="add-the-search-component-to-the-dashboard">Add the search component to the dashboard</h3>
+<p>We add the hero search HTML element to the bottom of the <code>DashboardComponent</code> template.</p>
+<div class="example-title">app/dashboard.component.html</div><code-example language="html" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/dashboard.component.html.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>And finally, we import the <code>HeroSearchComponent</code> and add it to the <code>declarations</code> array in
+<code>app.module.ts</code>.</p>
+<div class="example-title">app/app.module.ts (hero-search-declaration)</div><code-example language="ts" format="">BAD FILENAME: ../../../_fragments/toh-6/ts/app/app.module.2-hero-search-declaration.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-example><p>Run the app again, go to the <em>Dashboard</em>, and enter some text in the search box.
+At some point it might look like this.</p>
+<figure class="image-display"><img src="/resources/images/devguide/toh/toh-hero-search.png" alt="Hero Search Component"></figure><div class="l-main-section"></div><h2 id="application-structure-and-code">Application structure and code</h2>
+<p>Review the sample source code in the <live-example></live-example> for this chapter.
+Verify that we have the following structure:</p>
+<div class="filetree"><div class="file">angular2-tour-of-heroes</div><div class="children"><div class="file">app</div><div class="children"><div class="file">app.component.ts</div><div class="file">app.component.css</div><div class="file">app.module.ts</div><div class="file">app.routing.ts</div><div class="file">dashboard.component.css</div><div class="file">dashboard.component.html</div><div class="file">dashboard.component.ts</div><div class="file">hero.ts</div><div class="file">hero-detail.component.css</div><div class="file">hero-detail.component.html</div><div class="file">hero-detail.component.ts</div><div class="file">hero-search.component.html (new)</div><div class="file">hero-search.component.css (new)</div><div class="file">hero-search.component.ts (new)</div><div class="file">hero-search.service.ts (new)</div><div class="file">rxjs-operators.ts</div><div class="file">hero.service.ts</div><div class="file">heroes.component.css</div><div class="file">heroes.component.html</div><div class="file">heroes.component.ts</div><div class="file">main.ts</div><div class="file">in-memory-data.service.ts (new)</div></div><div class="file">node_modules ...</div><div class="file">typings ...</div><div class="file">index.html</div><div class="file">package.json</div><div class="file">styles.css</div><div class="file">systemjs.config.json</div><div class="file">tsconfig.json</div><div class="file">typings.json</div></div></div><div class="l-main-section"></div><h2 id="home-stretch">Home Stretch</h2>
 <p>We are at the end of our journey for now, but we have accomplished a lot.</p>
 <ul>
-<li>We added the necessary dependencies to use Http in our application.</li>
-<li>We refactored HeroService to load heroes from an api.</li>
-<li>We extended HeroService to support post, put and delete calls.</li>
+<li>We added the necessary dependencies to use HTTP in our application.</li>
+<li>We refactored <code>HeroService</code> to load heroes from a web API.</li>
+<li>We extended <code>HeroService</code> to support post, put and delete methods.</li>
 <li>We updated our components to allow adding, editing and deleting of heroes.</li>
-<li>We configured an in-memory web api.</li>
+<li>We configured an in-memory web API.</li>
+<li>We learned how to use Observables.</li>
 </ul>
-<p>Below is a summary of the files we changed.</p>
-<code-tabs><code-pane language="ts" name="app.comp...ts" format="linenums">import { Component } from &#39;@angular/core&#39;;
-import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from &#39;@angular/router-deprecated&#39;;
-
-import { DashboardComponent }  from &#39;./dashboard.component&#39;;
-import { HeroesComponent }     from &#39;./heroes.component&#39;;
-import { HeroDetailComponent } from &#39;./hero-detail.component&#39;;
-import { HeroService }         from &#39;./hero.service&#39;;
-
-@Component({
-  selector: &#39;my-app&#39;,
-
-  template: `
-    &lt;h1&gt;{{title}}&lt;/h1&gt;
-    &lt;nav&gt;
-      &lt;a [routerLink]=&quot;[&#39;Dashboard&#39;]&quot;&gt;Dashboard&lt;/a&gt;
-      &lt;a [routerLink]=&quot;[&#39;Heroes&#39;]&quot;&gt;Heroes&lt;/a&gt;
-    &lt;/nav&gt;
-    &lt;router-outlet&gt;&lt;/router-outlet&gt;
-  `,
-  styleUrls: [&#39;app/app.component.css&#39;],
-  directives: [ROUTER_DIRECTIVES],
-  providers: [
-    ROUTER_PROVIDERS,
-    HeroService,
-  ]
-})
-@RouteConfig([
-  { path: &#39;/dashboard&#39;,  name: &#39;Dashboard&#39;,  component: DashboardComponent, useAsDefault: true },
-  { path: &#39;/detail/:id&#39;, name: &#39;HeroDetail&#39;, component: HeroDetailComponent },
-  { path: &#39;/heroes&#39;,     name: &#39;Heroes&#39;,     component: HeroesComponent }
-])
-export class AppComponent {
-  title = &#39;Tour of Heroes&#39;;
-}
-</code-pane><code-pane language="ts" name="heroes.comp...ts" format="linenums">import { Component, OnInit } from &#39;@angular/core&#39;;
-import { Router }            from &#39;@angular/router-deprecated&#39;;
-
-import { Hero }                from &#39;./hero&#39;;
-import { HeroService }         from &#39;./hero.service&#39;;
-import { HeroDetailComponent } from &#39;./hero-detail.component&#39;;
-
-@Component({
-  selector: &#39;my-heroes&#39;,
-  templateUrl: &#39;app/heroes.component.html&#39;,
-  styleUrls:  [&#39;app/heroes.component.css&#39;],
-  directives: [HeroDetailComponent]
-})
-export class HeroesComponent implements OnInit {
-  heroes: Hero[];
-  selectedHero: Hero;
-  addingHero = false;
-  error: any;
-
-  constructor(
-    private router: Router,
-    private heroService: HeroService) { }
-
-  getHeroes() {
-    this.heroService
-        .getHeroes()
-        .then(heroes =&gt; this.heroes = heroes)
-        .catch(error =&gt; this.error = error); // TODO: Display error message
-  }
-
-  addHero() {
-    this.addingHero = true;
-    this.selectedHero = null;
-  }
-
-  close(savedHero: Hero) {
-    this.addingHero = false;
-    if (savedHero) { this.getHeroes(); }
-  }
-
-  delete(hero: Hero, event: any) {
-    event.stopPropagation();
-    this.heroService
-        .delete(hero)
-        .then(res =&gt; {
-          this.heroes = this.heroes.filter(h =&gt; h !== hero);
-          if (this.selectedHero === hero) { this.selectedHero = null; }
-        })
-        .catch(error =&gt; this.error = error); // TODO: Display error message
-  }
-
-  ngOnInit() {
-    this.getHeroes();
-  }
-
-  onSelect(hero: Hero) {
-    this.selectedHero = hero;
-    this.addingHero = false;
-  }
-
-  gotoDetail() {
-    this.router.navigate([&#39;HeroDetail&#39;, { id: this.selectedHero.id }]);
-  }
-}
-</code-pane><code-pane language="html" name="heroes.comp...html" format="linenums">&lt;h2&gt;My Heroes&lt;/h2&gt;
-&lt;ul class=&quot;heroes&quot;&gt;
-  &lt;li *ngFor=&quot;let hero of heroes&quot; (click)=&quot;onSelect(hero)&quot; [class.selected]=&quot;hero === selectedHero&quot;&gt;
-    &lt;span class=&quot;hero-element&quot;&gt;
-      &lt;span class=&quot;badge&quot;&gt;{{hero.id}}&lt;/span&gt; {{hero.name}}
-    &lt;/span&gt;
-    &lt;button class=&quot;delete-button&quot; (click)=&quot;delete(hero, $event)&quot;&gt;Delete&lt;/button&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;button (click)=&quot;addHero()&quot;&gt;Add New Hero&lt;/button&gt;
-&lt;div *ngIf=&quot;addingHero&quot;&gt;
-  &lt;my-hero-detail (close)=&quot;close($event)&quot;&gt;&lt;/my-hero-detail&gt;
-&lt;/div&gt;
-
-&lt;div *ngIf=&quot;selectedHero&quot;&gt;
-  &lt;h2&gt;
-    {{selectedHero.name | uppercase}} is my hero
-  &lt;/h2&gt;
-  &lt;button (click)=&quot;gotoDetail()&quot;&gt;View Details&lt;/button&gt;
-&lt;/div&gt;
-</code-pane><code-pane language="ts" name="hero-detail.comp...ts" format="linenums">import { Component, EventEmitter, Input, OnInit, Output } from &#39;@angular/core&#39;;
-import { RouteParams } from &#39;@angular/router-deprecated&#39;;
-
-import { Hero }        from &#39;./hero&#39;;
-import { HeroService } from &#39;./hero.service&#39;;
-
-@Component({
-  selector: &#39;my-hero-detail&#39;,
-  templateUrl: &#39;app/hero-detail.component.html&#39;,
-  styleUrls: [&#39;app/hero-detail.component.css&#39;]
-})
-export class HeroDetailComponent implements OnInit {
-  @Input() hero: Hero;
-  @Output() close = new EventEmitter();
-  error: any;
-  navigated = false; // true if navigated here
-
-  constructor(
-    private heroService: HeroService,
-    private routeParams: RouteParams) {
-  }
-
-  ngOnInit() {
-    if (this.routeParams.get(&#39;id&#39;) !== null) {
-      let id = +this.routeParams.get(&#39;id&#39;);
-      this.navigated = true;
-      this.heroService.getHero(id)
-          .then(hero =&gt; this.hero = hero);
-    } else {
-      this.navigated = false;
-      this.hero = new Hero();
-    }
-  }
-  save() {
-    this.heroService
-        .save(this.hero)
-        .then(hero =&gt; {
-          this.hero = hero; // saved hero, w/ id if new
-          this.goBack(hero);
-        })
-        .catch(error =&gt; this.error = error); // TODO: Display error message
-  }
-  goBack(savedHero: Hero = null) {
-    this.close.emit(savedHero);
-    if (this.navigated) { window.history.back(); }
-  }
-}
-</code-pane><code-pane language="html" name="hero-detail.comp...html" format="linenums">&lt;div *ngIf=&quot;hero&quot;&gt;
-  &lt;h2&gt;{{hero.name}} details!&lt;/h2&gt;
-  &lt;div&gt;
-    &lt;label&gt;id: &lt;/label&gt;{{hero.id}}&lt;/div&gt;
-  &lt;div&gt;
-    &lt;label&gt;name: &lt;/label&gt;
-    &lt;input [(ngModel)]=&quot;hero.name&quot; placeholder=&quot;name&quot; /&gt;
-   &lt;/div&gt;
-  &lt;button (click)=&quot;goBack()&quot;&gt;Back&lt;/button&gt;
-  &lt;button (click)=&quot;save()&quot;&gt;Save&lt;/button&gt;
-&lt;/div&gt;
-</code-pane><code-pane language="ts" name="hero.service.ts" format="linenums">import { Injectable }    from &#39;@angular/core&#39;;
-import { Headers, Http } from &#39;@angular/http&#39;;
-
-import &#39;rxjs/add/operator/toPromise&#39;;
-
-import { Hero } from &#39;./hero&#39;;
-
-@Injectable()
-export class HeroService {
-
-  private heroesUrl = &#39;app/heroes&#39;;  // URL to web api
-
-  constructor(private http: Http) { }
-
-  getHeroes(): Promise&lt;Hero[]&gt; {
-    return this.http.get(this.heroesUrl)
-               .toPromise()
-               .then(response =&gt; response.json().data)
-               .catch(this.handleError);
-  }
-
-  getHero(id: number) {
-    return this.getHeroes()
-               .then(heroes =&gt; heroes.filter(hero =&gt; hero.id === id)[0]);
-  }
-
-  save(hero: Hero): Promise&lt;Hero&gt;  {
-    if (hero.id) {
-      return this.put(hero);
-    }
-    return this.post(hero);
-  }
-
-  delete(hero: Hero) {
-    let headers = new Headers();
-    headers.append(&#39;Content-Type&#39;, &#39;application/json&#39;);
-
-    let url = `${this.heroesUrl}/${hero.id}`;
-
-    return this.http
-               .delete(url, headers)
-               .toPromise()
-               .catch(this.handleError);
-  }
-
-  // Add new Hero
-  private post(hero: Hero): Promise&lt;Hero&gt; {
-    let headers = new Headers({
-      &#39;Content-Type&#39;: &#39;application/json&#39;});
-
-    return this.http
-               .post(this.heroesUrl, JSON.stringify(hero), {headers: headers})
-               .toPromise()
-               .then(res =&gt; res.json().data)
-               .catch(this.handleError);
-  }
-
-  // Update existing Hero
-  private put(hero: Hero) {
-    let headers = new Headers();
-    headers.append(&#39;Content-Type&#39;, &#39;application/json&#39;);
-
-    let url = `${this.heroesUrl}/${hero.id}`;
-
-    return this.http
-               .put(url, JSON.stringify(hero), {headers: headers})
-               .toPromise()
-               .then(() =&gt; hero)
-               .catch(this.handleError);
-  }
-
-  private handleError(error: any) {
-    console.error(&#39;An error occurred&#39;, error);
-    return Promise.reject(error.message || error);
-  }
-}
-</code-pane></code-tabs><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--></div></div></div></article><div class="main-footer"><nav class="background-blue-grey-900 grid-fluid"><div class="c3 main-footer-branding"><div class="logo-inverse-large"></div></div><div class="c3"><h3 class="text-headline">RESOURCES</h3><ul class="text-body"><!-- TODO: (ericjim) make a libraries page to showcase all angular 2 libraries--><!--li <a href="/libraries.html">Libraries</a>--><li><a href="/about/">About</a></li><li><a href="/resources/">Books & Training</a></li><li><a href="/resources/">Tools & Libraries</a></li><li><a href="/resources/">Community</a></li><li><a href="/presskit.html">Press Kit</a></li></ul></div><div class="c3"><h3 class="text-headline">HELP</h3><ul class="text-body"><li><a href="http://stackoverflow.com/questions/tagged/angular2">Stack Overflow</a></li><li><a href="https://gitter.im/angular/angular">Gitter</a></li><li><a href="https://groups.google.com/forum/#!forum/angular"> Google Group</a></li><li><a href="https://github.com/angular/angular/issues"> Report Issues</a></li><li><a class="footer-feedback" ng-click="appCtrl.openFeedback()" aria-label="Submit feedback on this page"> Site Feedback</a></li></ul></div><div class="c3"><h3 class="text-headline">COMMUNITY</h3><ul class="text-body"><li><a href="/events.html">Events</a></li><li><a href="http://www.meetup.com/topics/angularjs/">Meetups</a></li><li><a href="https://twitter.com/angularjs"> Twitter</a></li><li><a href="https://github.com/angular/angular"> GitHub</a></li><li><a href="/contribute.html"> Contribute</a></li></ul></div></nav><footer class="background-steel"><small class="text-caption">Powered by Google ©2010-2016. Code licensed under an <a href="/license" class="text-snow">MIT-style License</a>. Documentation licensed under <a class="text-snow" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small><a aria-label="View Style Guide" href="/docs/ts/latest/styleguide.html" title="Style Guide" md-button="md-button" class="styleguide-trigger text-snow"><span class="icon-favorite"></span></a></footer></div><!-- VENDORS --><script src="/resources/js/vendor/prettify.js"></script><script src="/resources/js/vendor/lang-basic.js"></script><script src="/resources/js/vendor/lang-dart.js"></script><script src="/resources/js/vendor/lodash.js"></script><script src="/resources/js/vendor/clipboard.min.js"></script><!-- Angular Material Dependencies --><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script><!-- Firebase -->
-<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<p>Here are the files we added or changed in this chapter.</p>
+<code-tabs><code-pane language="ts" name="app.comp...ts" format="linenums">BAD FILENAME: ../../../_fragments/toh-6/ts/app/app.component.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-pane><code-pane language="ts" name="app.mod...ts" format="linenums">BAD FILENAME: ../../../_fragments/toh-6/ts/app/app.module.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-pane><code-pane language="ts" name="heroes.comp...ts" format="linenums">BAD FILENAME: ../../../_fragments/toh-6/ts/app/heroes.component.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-pane><code-pane language="html" name="heroes.comp...html" format="linenums">BAD FILENAME: ../../../_fragments/toh-6/ts/app/heroes.component.html.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-pane><code-pane language="css" name="heroes.comp...css" format="linenums">BAD FILENAME: ../../../_fragments/toh-6/ts/app/heroes.component.css.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-pane><code-pane language="ts" name="hero-detail.comp...ts" format="linenums">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero-detail.component.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-pane><code-pane language="html" name="hero-detail.comp...html" format="linenums">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero-detail.component.html.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-pane><code-pane language="ts" name="hero.service.ts" format="linenums">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero.service.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-pane><code-pane language="ts" name="in-memory-data.service.ts" format="linenums">BAD FILENAME: ../../../_fragments/toh-6/ts/app/in-memory-data.service.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-pane></code-tabs><code-tabs><code-pane language="ts" name="hero-search.service.ts" format="linenums">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero-search.service.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-pane><code-pane language="ts" name="hero-search.component.ts" format="linenums">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero-search.component.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-pane><code-pane language="html" name="hero-search.service.html" format="linenums">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero-search.component.html.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-pane><code-pane language="css" name="hero-search.component.css" format="linenums">BAD FILENAME: ../../../_fragments/toh-6/ts/app/hero-search.component.css.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-pane><code-pane language="ts" name="hero-search.component.css" format="linenums">BAD FILENAME: ../../../_fragments/toh-6/ts/app/rxjs-operators.ts.md   Current path: docs,ts,latest,tutorial,toh-pt6 PathToDocs: ../../../</code-pane></code-tabs><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--><!-- CHECK IF CURRENT PAGE IS SET, THEN SET NEXT PAGE--><!-- SET CURRENT PAGE FLAG WHEN YOU PASS IT--></div></div></div></article><div class="main-footer"><nav class="background-blue-grey-900 grid-fluid"><div class="c3 main-footer-branding"><div class="logo-inverse-large"></div></div><div class="c2"><h3 class="text-headline">RESOURCES</h3><ul class="text-body"><!-- TODO: (ericjim) make a libraries page to showcase all angular 2 libraries--><!--li <a href="/libraries.html">Libraries</a>--><li><a href="/about/">About</a></li><li><a href="/resources/">Books & Training</a></li><li><a href="/resources/">Tools & Libraries</a></li><li><a href="/resources/">Community</a></li><li><a href="/presskit.html">Press Kit</a></li></ul></div><div class="c2"><h3 class="text-headline">HELP</h3><ul class="text-body"><li><a href="http://stackoverflow.com/questions/tagged/angular2">Stack Overflow</a></li><li><a href="https://gitter.im/angular/angular">Gitter</a></li><li><a href="https://groups.google.com/forum/#!forum/angular"> Google Group</a></li><li><a href="https://github.com/angular/angular/issues"> Report Issues</a></li><li><a class="footer-feedback" ng-click="appCtrl.openFeedback()" aria-label="Submit feedback on this page"> Site Feedback</a></li></ul></div><div class="c2"><h3 class="text-headline">COMMUNITY</h3><ul class="text-body"><li><a href="/events.html">Events</a></li><li><a href="http://www.meetup.com/topics/angularjs/">Meetups</a></li><li><a href="https://twitter.com/angularjs"> Twitter</a></li><li><a href="https://github.com/angular/angular"> GitHub</a></li><li><a href="/contribute.html"> Contribute</a></li></ul></div><div class="c2"><h3 class="text-headline">LANGUAGES</h3><ul class="text-body"><li><a href="https://angular.cn/">中文版</a></li></ul></div></nav><footer class="background-steel"><small class="text-caption">Powered by Google ©2010-2016. Code licensed under an <a href="/license" class="text-snow">MIT-style License</a>. Documentation licensed under <a class="text-snow" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small><a aria-label="View Style Guide" href="/docs/ts/latest/styleguide.html" title="Style Guide" md-button="md-button" class="styleguide-trigger text-snow"><span class="icon-favorite"></span></a></footer></div><!-- VENDORS --><script src="/resources/js/vendor/prettify.js"></script><script src="/resources/js/vendor/lang-basic.js"></script><script src="/resources/js/vendor/lang-dart.js"></script><script src="/resources/js/vendor/lodash.js"></script><script src="/resources/js/vendor/clipboard.min.js"></script><!-- Angular Material Dependencies --><script src="/ajax/libs/angularjs/1.4.8/angular.min.js"></script><script src="/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script><script src="/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script><script src="/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script><!-- Firebase -->
+<script src="/js/client/2.2.4/firebase.js"></script>
 <!-- AngularFire -->
-<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
-<!-- Angular.io Site JS --><script src="/resources/js/site.js"></script><script src="/resources/js/controllers/app-controller.js"></script><script src="/resources/js/controllers/resources-controller.js"></script><script src="/resources/js/directives/cheatsheet.js"></script><script src="/resources/js/directives/api-list.js"></script><script src="/resources/js/directives/bio.js"></script><script src="/resources/js/directives/bold.js"></script><script src="/resources/js/directives/code.js"></script><script src="/resources/js/directives/copy.js"></script><script src="/resources/js/directives/code-tabs.js"></script><script src="/resources/js/directives/code-pane.js"></script><script src="/resources/js/directives/code-example.js"></script><script src="/resources/js/directives/scroll-y-offset-element.js"></script><!-- GA --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+<script src="/libs/angularfire/1.2.0/angularfire.min.js"></script>
+<!-- Angular.io Site JS --><script src="/resources/js/site.js"></script><script src="/resources/js/util.js"></script><script src="/resources/js/controllers/app-controller.js"></script><script src="/resources/js/controllers/resources-controller.js"></script><script src="/resources/js/directives/cheatsheet.js"></script><script src="/resources/js/directives/api-list.js"></script><script src="/resources/js/directives/bio.js"></script><script src="/resources/js/directives/bold.js"></script><script src="/resources/js/directives/code.js"></script><script src="/resources/js/directives/copy.js"></script><script src="/resources/js/directives/code-tabs.js"></script><script src="/resources/js/directives/code-pane.js"></script><script src="/resources/js/directives/code-example.js"></script><script src="/resources/js/directives/if-docs.js"></script><script src="/resources/js/directives/live-example.js"></script><script src="/resources/js/directives/ngio-ex-path.js"></script><script src="/resources/js/directives/scroll-y-offset-element.js"></script><!-- GA --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" ng-app="angularIOApp" itemscope itemtype="http://schema.org/Framework"><head><title>5 Min Quickstart - dart</title><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Get up and running with Angular 2"/><meta name="keywords" content="Angular, AngularJS, AngularDart, Javscript, Dart, Framework, JavaScript MVC, Google"/><meta name="robots" content="all"/><meta name="referrer" content="origin"/><meta name="viewport" id="viewport" content="width=device-width, initial-scale=1"/><meta property="og:title" content="Angular 2"/><meta property="og:image" content="/resources/images/logos/standard/shield-large.png"/><meta property="og:image:type" content="image/png"/><meta property="og:image:width" content="184"/><meta property="og:image:height" content="200"/><meta property="og:description" content="Get up and running with Angular 2"/><meta itemprop="name" content="Angular 2"/><meta itemprop="description" content="Get up and running with Angular 2"/><meta itemprop="image" content="https://angular.io/resources/images/logos/standard/shield-large.png"/><link rel="icon" type="image/x-icon" href="/resources/images/icons/favicon.ico"/><link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css"/><link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,400italic,700" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/><link rel="stylesheet" href="/resources/css/vendor/icomoon/style.css"/><link rel="stylesheet" href="/resources/css/vendor/animate.css"/><link rel="stylesheet" href="/resources/css/main.css"/><!-- MOBILE ICONS -->
+<!DOCTYPE html><html lang="en" ng-app="angularIOApp" itemscope itemtype="http://schema.org/Framework"><!-- template: public/docs/_layout--><head><title>5 Min Quickstart - dart</title><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Get up and running with Angular 2"/><meta name="keywords" content="Angular, AngularJS, AngularDart, Javscript, Dart, Framework, JavaScript MVC, Google"/><meta name="robots" content="all"/><meta name="referrer" content="origin"/><meta name="viewport" id="viewport" content="width=device-width, initial-scale=1"/><meta property="og:title" content="Angular 2"/><meta property="og:image" content="/resources/images/logos/standard/shield-large.png"/><meta property="og:image:type" content="image/png"/><meta property="og:image:width" content="184"/><meta property="og:image:height" content="200"/><meta property="og:description" content="Get up and running with Angular 2"/><meta itemprop="name" content="Angular 2"/><meta itemprop="description" content="Get up and running with Angular 2"/><meta itemprop="image" content="https://angular.io/resources/images/logos/standard/shield-large.png"/><link rel="icon" type="image/x-icon" href="/resources/images/icons/favicon.ico"/><link rel="stylesheet" href="/ajax/libs/angular_material/1.0.0/angular-material.min.css"/><link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,400italic,700" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/><link rel="stylesheet" href="/resources/css/vendor/icomoon/style.css"/><link rel="stylesheet" href="/resources/css/vendor/animate.css"/><link rel="stylesheet" href="/resources/css/main.css"/><!-- MOBILE ICONS -->
 <link rel="apple-touch-icon" sizes="57x57" href="/resources/images/favicons/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/resources/images/favicons/apple-touch-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/resources/images/favicons/apple-touch-icon-72x72.png">
@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="/resources/images/favicons/favicon-96x96.png" sizes="96x96">
 <link rel="icon" type="image/png" href="/resources/images/favicons/android-chrome-192x192.png" sizes="192x192">
 <link rel="icon" type="image/png" href="/resources/images/favicons/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/resources/images/favicons/manifest.json"></head><body ng-controller="AppCtrl as appCtrl" class="l-offset-nav l-offset-side-nav"><md-toolbar scroll-y-offset-element="scroll-y-offset-element" class="main-nav background-regal l-pinned-top l-layer-5"><nav><h1><a href="/" md-button>Angular <sup>by Google</sup></a></h1><button aria-label="View Menu" ng-click="appCtrl.toggleMainMenu($event)" md-button="md-button" class="main-nav-button main-nav-mobile-trigger l-right">Site Menu <span class="icon icon-arrow-drop-down"></span></button><ul ng-class="appCtrl.showMainNav ? 'is-visible' : ''"><li class="l-left"><a class="main-nav-button" href="/features.html" md-button>Features</a></li><li class="l-left"><a class="main-nav-button" href="/docs/ts/latest/" md-button>Docs</a></li><li class="l-left"><a class="main-nav-button" href="/events.html" md-button>Events</a></li><li class="l-left"><a class="main-nav-button" href="/news.html" md-button>News</a></li><li class="l-right"><a class="main-nav-button" href="/docs/ts/latest/quickstart.html" md-button>Get Started</a></li></ul></nav></md-toolbar><!-- Include this file ONLY when current.path[2] is defined--><nav class="side-nav l-pinned-left l-layer-4 l-offset-nav"><!-- SEARCH BAR--><header class="side-nav-search st-input-wrapper"><form class="st-input-inner"><label for="search-io" class="is-hidden">Search Docs</label><input type="search" id="search-io" placeholder="SEARCH DOCS..."/></form><button aria-label="View Docs Menu" ng-click="appCtrl.toggleDocsMenu($event)" md-button="md-button" class="mobile-trigger button">Docs <span class="icon icon-arrow-drop-down"></span></button></header><div ng-class="appCtrl.showDocsNav ? 'is-visible' : ''" class="side-nav-secondary"><div class="nav-blocks"><a href="/docs/dart/latest/quickstart.html" title="Get up and running with Angular 2" class="nav-title is-nav-title-selected">Quickstart</a></div><div class="nav-blocks"><a href="/docs/dart/latest/tutorial/" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in Dart." class="nav-title ">Tutorial<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-ordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/dart/latest/tutorial/" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in Dart.">1. Introduction</a></li><li class="nav-list-item "><a href="/docs/dart/latest/tutorial/toh-pt1.html" title="We build a simple hero editor">2. The Hero Editor</a></li><li class="nav-list-item "><a href="/docs/dart/latest/tutorial/toh-pt2.html" title="We build a master/detail page with a list of heroes">3. Master/Detail</a></li><li class="nav-list-item "><a href="/docs/dart/latest/tutorial/toh-pt3.html" title="We refactor the master/detail view into separate components">4. Multiple Components</a></li><li class="nav-list-item "><a href="/docs/dart/latest/tutorial/toh-pt4.html" title="We create a reusable service to manage our hero data calls">5. Services</a></li><li class="nav-list-item "><a href="/docs/dart/latest/tutorial/toh-pt5.html" title="We add the Angular Component Router and learn to navigate among the views">6. Routing</a></li><li class="nav-list-item "><a href="/docs/dart/latest/tutorial/toh-pt6.html" title="We convert our service and components to use Http">7. Http</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/dart/latest/guide/" title="How to read and use this documentation" class="nav-title ">Basics<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-ordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/dart/latest/guide/" title="How to read and use this documentation">1. Overview</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/architecture.html" title="The basic building blocks of Angular 2 applications">2. Architecture</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/displaying-data.html" title="Interpolation and other forms of property binding help us show app data in the UI.">3. Displaying Data</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/user-input.html" title="User input triggers DOM events. We listen to those events with event bindings that funnel updated values back into our components and models.">4. User Input</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/forms.html" title="A form creates a cohesive, effective, and compelling data entry experience. An Angular form coordinates a set of data-bound user controls, tracks changes, validates input, and presents errors.">5. Forms</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/dependency-injection.html" title="Angular's dependency injection system creates and delivers dependent services &quot;just-in-time&quot;.">6. Dependency Injection</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/template-syntax.html" title="Learn how to write templates that display data and consume user events with the help of data binding.">7. Template Syntax</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/cheatsheet.html" title="A quick guide to Angular syntax.">8. Angular Cheat Sheet</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/style-guide.html" title="Write Angular 2 with style.">9. Style Guide</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/glossary.html" title="Brief definitions of the most important words in the Angular 2 vocabulary">10. Glossary</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/dart/latest/guide/attribute-directives.html" title="Attribute directives attach behavior to elements." class="nav-title ">Developer Guide<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-unordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/dart/latest/guide/attribute-directives.html" title="Attribute directives attach behavior to elements.">Attribute Directives</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/component-styles.html" title="Learn how to apply CSS styles to components.">Component Styles</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/hierarchical-dependency-injection.html" title="Angular's hierarchical dependency injection system supports nested injectors in parallel with the component tree.">Hierarchical Injectors</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/server-communication.html" title="Talk to a remote server with an HTTP Client.">HTTP Client</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/lifecycle-hooks.html" title="Angular calls lifecycle hook methods on directives and components as it creates, changes, and destroys them.">Lifecycle Hooks</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/pipes.html" title="Pipes transform displayed values within a template.">Pipes</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/router-deprecated.html" title="The deprecated Beta Router.">Router (Deprecated Beta)</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/structural-directives.html" title="Angular has a powerful template engine that lets us easily manipulate the DOM structure of our elements.">Structural Directives</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/dart/latest/cookbook/" title="A collection of recipes for common Angular application scenarios" class="nav-title ">Cookbook<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-unordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/dart/latest/cookbook/" title="A collection of recipes for common Angular application scenarios">Overview</a></li><li class="nav-list-item "><a href="/docs/dart/latest/cookbook/component-communication.html" title="Share information between different directives and components">Component Interaction</a></li><li class="nav-list-item "><a href="/docs/dart/latest/cookbook/set-document-title.html" title="Setting the document or window title using the Title service.">Set the Document Title</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/dart/latest/api/" title="API Preview" class="nav-title ">API Reference</a></div></div></nav><script>// Could put in appCtrl but only needed here and clear here
+<link rel="manifest" href="/resources/images/favicons/manifest.json"></head><body ng-controller="AppCtrl as appCtrl" class="l-offset-nav l-offset-side-nav"><md-toolbar scroll-y-offset-element="scroll-y-offset-element" class="main-nav background-regal l-pinned-top l-layer-5"><nav><h1><a href="/" md-button>Angular <sup>by Google</sup></a></h1><button aria-label="View Menu" ng-click="appCtrl.toggleMainMenu($event)" md-button="md-button" class="main-nav-button main-nav-mobile-trigger l-right">Site Menu <span class="icon icon-arrow-drop-down"></span></button><ul ng-class="appCtrl.showMainNav ? 'is-visible' : ''"><li class="l-left"><a class="main-nav-button" href="/features.html" md-button>Features</a></li><li class="l-left"><a class="main-nav-button" href="/docs/ts/latest/" md-button>Docs</a></li><li class="l-left"><a class="main-nav-button" href="/events.html" md-button>Events</a></li><li class="l-left"><a class="main-nav-button" href="/news.html" md-button>News</a></li><li class="l-right"><a class="main-nav-button" href="/docs/ts/latest/quickstart.html" md-button>Get Started</a></li></ul></nav></md-toolbar><!-- Include this file ONLY when current.path[2] is defined--><nav class="side-nav l-pinned-left l-layer-4 l-offset-nav"><!-- SEARCH BAR--><header class="side-nav-search st-input-wrapper"><form class="st-input-inner"><label for="search-io" class="is-hidden">Search Docs</label><input type="search" id="search-io" placeholder="SEARCH DOCS..."/></form><button aria-label="View Docs Menu" ng-click="appCtrl.toggleDocsMenu($event)" md-button="md-button" class="mobile-trigger button">Docs <span class="icon icon-arrow-drop-down"></span></button></header><div ng-class="appCtrl.showDocsNav ? 'is-visible' : ''" class="side-nav-secondary"><div class="nav-blocks"><a href="/docs/dart/latest/quickstart.html" title="Get up and running with Angular 2" class="nav-title is-nav-title-selected">Quickstart</a></div><div class="nav-blocks"><a href="/docs/dart/latest/tutorial/" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in Dart." class="nav-title ">Tutorial<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-ordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/dart/latest/tutorial/" title="The Tour of Heroes tutorial takes us through the steps of creating an Angular application in Dart.">1. Introduction</a></li><li class="nav-list-item "><a href="/docs/dart/latest/tutorial/toh-pt1.html" title="We build a simple hero editor">2. The Hero Editor</a></li><li class="nav-list-item "><a href="/docs/dart/latest/tutorial/toh-pt2.html" title="We build a master/detail page with a list of heroes">3. Master/Detail</a></li><li class="nav-list-item "><a href="/docs/dart/latest/tutorial/toh-pt3.html" title="We refactor the master/detail view into separate components">4. Multiple Components</a></li><li class="nav-list-item "><a href="/docs/dart/latest/tutorial/toh-pt4.html" title="We create a reusable service to manage our hero data calls">5. Services</a></li><li class="nav-list-item "><a href="/docs/dart/latest/tutorial/toh-pt5.html" title="We add the Angular Component Router and learn to navigate among the views">6. Routing</a></li><li class="nav-list-item "><a href="/docs/dart/latest/tutorial/toh-pt6.html" title="We convert our service and components to use Http">7. Http</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/dart/latest/guide/" title="How to read and use this documentation" class="nav-title ">Basics<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-ordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/dart/latest/guide/" title="How to read and use this documentation">1. Overview</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/architecture.html" title="The basic building blocks of Angular 2 applications">2. Architecture</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/displaying-data.html" title="Interpolation and other forms of property binding help us show app data in the UI.">3. Displaying Data</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/user-input.html" title="User input triggers DOM events. We listen to those events with event bindings that funnel updated values back into our components and models.">4. User Input</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/forms.html" title="A form creates a cohesive, effective, and compelling data entry experience. An Angular form coordinates a set of data-bound user controls, tracks changes, validates input, and presents errors.">5. Forms</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/dependency-injection.html" title="Angular's dependency injection system creates and delivers dependent services &quot;just-in-time&quot;.">6. Dependency Injection</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/template-syntax.html" title="Learn how to write templates that display data and consume user events with the help of data binding.">7. Template Syntax</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/cheatsheet.html" title="A quick guide to Angular syntax.">8. Angular Cheat Sheet</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/style-guide.html" title="Write Angular 2 with style.">9. Style Guide</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/glossary.html" title="Brief definitions of the most important words in the Angular 2 vocabulary">10. Glossary</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/dart/latest/guide/attribute-directives.html" title="Attribute directives attach behavior to elements." class="nav-title ">Developer Guide<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-unordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/dart/latest/guide/attribute-directives.html" title="Attribute directives attach behavior to elements.">Attribute Directives</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/component-styles.html" title="Learn how to apply CSS styles to components.">Component Styles</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/hierarchical-dependency-injection.html" title="Angular's hierarchical dependency injection system supports nested injectors in parallel with the component tree.">Hierarchical Injectors</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/server-communication.html" title="Talk to a remote server with an HTTP Client.">HTTP Client</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/lifecycle-hooks.html" title="Angular calls lifecycle hook methods on directives and components as it creates, changes, and destroys them.">Lifecycle Hooks</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/pipes.html" title="Pipes transform displayed values within a template.">Pipes</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/router.html" title="Discover the basics of screen navigation with the Angular 2 Component Router.">Routing &amp; Navigation</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/security.html" title="Developing for content security in Angular applications">Security</a></li><li class="nav-list-item "><a href="/docs/dart/latest/guide/structural-directives.html" title="Angular has a powerful template engine that lets us easily manipulate the DOM structure of our elements.">Structural Directives</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/dart/latest/cookbook/" title="A collection of recipes for common Angular application scenarios" class="nav-title ">Cookbook<img src="/resources/images/icons/ic_keyboard_arrow_down_black_24px.svg" class="inline-arrow-down-svg"/></a><div class="nav-unordered-lists is-hidden"><ul><li class="nav-list-item "><a href="/docs/dart/latest/cookbook/" title="A collection of recipes for common Angular application scenarios">Overview</a></li><li class="nav-list-item "><a href="/docs/dart/latest/cookbook/component-communication.html" title="Share information between different directives and components">Component Interaction</a></li><li class="nav-list-item "><a href="/docs/dart/latest/cookbook/set-document-title.html" title="Setting the document or window title using the Title service.">Set the Document Title</a></li></ul></div></div><div class="nav-blocks"><a href="/docs/dart/latest/api/" title="API Preview" class="nav-title ">API Reference</a></div></div></nav><script>// Could put in appCtrl but only needed here and clear here
 (function scrollToSelectedLink() {
   var sideNav = document.getElementsByClassName('side-nav')[0];
   var link = sideNav.getElementsByClassName('is-selected')[0];
@@ -21,7 +21,7 @@
     sideNav.scrollTop = link.offsetTop - (window.innerHeight/2);
     //alert("offsetTop: " + link.offsetTop + " side-nav top is " + sideNav.scrollTop);
   }
-})()</script><!-- Refer to jade.template.html and addJadeDataDocsProcessor to figure out where the context of this jade file originates--><!-- renamer :: String -> String--><!-- Renames `Let` and `Var` into `Const`--><header class="hero background-sky"><div class="inner-header"><h1 class="hero-title text-display-1 ">5 Min Quickstart</h1><span class="badges"></span></div><!-- Replace _ underscores with . dots --><!-- VERSION TREE CREATOR MIXIN --><!-- BUTTON TITLE GENERATION  --><!-- DROPDOWN BUTTON --><nav class="dropdown"><button aria-label="Select a version of Angular" md-button="md-button" ng-click="appCtrl.toggleVersionMenu($event)" class="dropdown-button">Angular 2 for Dart  <span class="icon icon-arrow-drop-down"></span></button><div ng-click="appCtrl.toggleVersionMenu($event)" ng-show="appCtrl.showMenu" class="overlay ng-hide"></div><!-- DROPDOWN MENU --><div ng-class="appCtrl.showMenu ? 'is-visible' : ''" class="dropdown-menu"><ul><li><a href="/docs/ts/latest/quickstart.html" md-button>Angular 2 for TypeScript </a></li></ul><ul><li><a href="/docs/js/latest/quickstart.html" md-button>Angular 2 for JavaScript </a></li></ul><ul><li><a href="/docs/dart/latest/quickstart.html" md-button>Angular 2 for Dart </a></li></ul></div></nav></header><article class="l-content-small grid-fluid docs-content"><div class="c10"><div class="showcase"><div class="showcase-content"><script>function why(id, backTo) {
+})()</script><!-- template: public/_includes/_hero--><header style="" class="hero background-sky"><div class="inner-header"><h1 class="hero-title text-display-1 ">5 Min Quickstart</h1><span class="badges"></span></div><!-- Replace _ underscores with . dots --><!-- VERSION TREE CREATOR MIXIN --><!-- BUTTON TITLE GENERATION  --><!-- DROPDOWN BUTTON --><nav class="dropdown"><button aria-label="Select a version of Angular" md-button="md-button" ng-click="appCtrl.toggleVersionMenu($event)" class="dropdown-button">Angular 2 for Dart  <span class="icon icon-arrow-drop-down"></span></button><div ng-click="appCtrl.toggleVersionMenu($event)" ng-show="appCtrl.showMenu" class="overlay ng-hide"></div><!-- DROPDOWN MENU --><div ng-class="appCtrl.showMenu ? 'is-visible' : ''" class="dropdown-menu"><ul><li><a href="/docs/ts/latest/quickstart.html" md-button>Angular 2 for TypeScript </a></li></ul><ul><li><a href="/docs/js/latest/quickstart.html" md-button>Angular 2 for JavaScript </a></li></ul><ul><li><a href="/docs/dart/latest/quickstart.html" md-button>Angular 2 for Dart </a></li></ul></div></nav></header><article class="l-content-small grid-fluid docs-content"><div class="c10"><div class="showcase"><div class="showcase-content"><script>function why(id, backTo) {
   var id = "#"+id;
   var el = document.querySelector(id);
   el.hidden=el.hidden=!el.hidden;
@@ -79,74 +79,68 @@ that also can be the foundation for real world applications.</p>
 <div class="callout is-helpful"><header>Don't want Dart?</header><p>Although we're getting started in Dart, you can also write Angular 2 apps
 in TypeScript and JavaScript.
 Just select either of those languages from the combo-box in the banner.
-</p></div><h1>Try it!</h1><p>Try the <span><a href="http://angular-examples.github.io/quickstart" target="_blank">live example</a> (<a href="http://github.com/angular-examples/quickstart" target="_blank">view source</a>)</span> which loads the sample app&nbsp;and displays the simple message:</p><figure class="image-display"><img src="/resources/images/devguide/quickstart/my-first-app.png" alt="Output of QuickStart app"></figure><h1>Build this app!</h1><ul>
+</p></div><h1 id="try-it-">Try it!</h1>
+<p>Try the <live-example></live-example> which loads the sample app
+<span if-docs="ts">
+  in <a href="http://plnkr.co/" title="Plunker" target="_blank">plunker</a>
+</span>
+and displays the simple message:</p>
+<figure class="image-display"><img src="/resources/images/devguide/quickstart/my-first-app.png" alt="Output of QuickStart app"></figure><h1 id="build-this-app-">Build this app!</h1>
+<ul>
 <li><a href="#prereq">Prerequisite</a>: Install the Dart SDK</li>
 <li><a href="#create-and-configure">Step 1</a>: Create the app’s project folder and
 define package dependencies and special project setup</li>
-<li><a href="#root-component">Step 2</a>: Create the app’s Angular root component</li>
-<li><a href="#main">Step 3</a>: Add <code>main.dart</code>, identifying the root component to Angular</li>
+<li><a href="#root-component">Step 2</a>: Create the app’s Angular root component</li><li if-docs="ts"><a href="#ngmodule">Step 3</a>: Create an Angular Module</li>
+<li><a href="#main">Step 3</a>: Add <span ngio-ex>main.ts</span>, identifying the root component to Angular</li>
 <li><a href="#index">Step 4</a>: Add <code>index.html</code>, the web page that hosts the application</li>
 <li><a href="#build-and-run">Step 5</a>: Build and run the app</li>
 <li><a href="#make-some-changes">Make some changes to the app</a></li>
 <li><a href="#wrap-up">Wrap up</a></li>
 </ul>
-<div class="l-main-section"></div><h2 id="prereq">Prerequisite: the Dart SDK</h2><p>Install the <strong><a href="https://www.dartlang.org/downloads/">Dart SDK</a></strong>,
+<div id="prereq" class="l-main-section"></div><h2>Prerequisite: the Dart SDK</h2><p>Install the <strong><a href="https://www.dartlang.org/downloads/">Dart SDK</a></strong>,
 if not already on your machine, and any tools you like to use with Dart.
-The Dart SDK includes tools such as <strong><a href="https://www.dartlang.org/tools/pub">pub</a></strong>, the Dart package manager.
+The Dart SDK includes tools such as <strong><a href="https://www.dartlang.org/tools/pub/">pub</a></strong>, the Dart package manager.
 If you don&#39;t have a favorite Dart editor already, try
 <a href="https://confluence.jetbrains.com/display/WI/Getting+started+with+Dart">WebStorm</a>, which comes with a Dart plugin.
-You can also download <a href="https://www.dartlang.org/tools">Dart plugins for other IDEs and editors</a>.</p>
-<!-- exclude this section from Dart--><div class="l-main-section"></div><button type="button" onclick="verbose(false)" class="verbose off md-primary md-button md-ink-ripple">Hide explanations</button><button type="button" onclick="verbose(true)" class="verbose on md-primary md-button md-ink-ripple">View explanations</button><div class="l-verbose-section"><p><em>Explanations</em> describe the concepts and reasons behind the instructions.
+You can also download <a href="https://www.dartlang.org/tools/">Dart plugins for other IDEs and editors</a>.</p>
+<div class="l-main-section"></div><div class="callout is-helpful"><header>Download the source</header><p>Instead of following each step of these instructions, we can
+<a href="https://github.com/angular-examples/quickstart">download the QuickStart source</a>
+from GitHub and follow its brief instructions.</p>
+</div><div class="l-main-section"></div><button type="button" onclick="verbose(false)" class="verbose off md-primary md-button md-ink-ripple">Hide explanations</button><button type="button" onclick="verbose(true)" class="verbose on md-primary md-button md-ink-ripple">View explanations</button><div class="l-verbose-section"><p><em>Explanations</em> describe the concepts and reasons behind the instructions.
 Explanations have a thin border on the left like <em>this</em> block of text.</p>
 <p>Click <em>Hide Explanations</em> to show only the instructions.
 Click <em>View Explanations</em> to see everything again.</p>
 </div><div class="l-sub-section"><p>We&#39;ll see many code blocks as we build the QuickStart app. They&#39;re all easy to copy and paste:</p>
 <code-example format="nocode">Click the glyph on the right to copy code snippets to the clipboard  ==>
-</code-example></div><div class="l-main-section"></div><h2 id="create-and-configure">Step 1: Create and configure the project</h2><p>In this step we:</p>
+</code-example></div><div id="create-and-configure" class="l-main-section"></div><h2 id="step-1-create-and-configure-the-project">Step 1: Create and configure the project</h2>
+<p>In this step we:</p>
 <ul>
 <li><a href="#create-the-project-folder">(a) Create the project folder</a></li>
 <li><a href="#add-config-files">(b) Add pubspec.yaml</a></li>
 <li><a href="#install-packages">(c) Get packages</a></li>
 </ul>
-<h3>(a) Create the project folder</h3><code-example language="sh">mkdir angular2-quickstart
-cd    angular2-quickstart
+<h3 id="-a-create-the-project-folder">(a) Create the project folder</h3>
+<code-example language="sh">mkdir angular2_quickstart
+cd    angular2_quickstart
 </code-example><h3 id="add-config-files">(b) Add pubspec.yaml</h3><p>In the project folder just created, create a file named
 <strong><a href="https://www.dartlang.org/tools/pub/pubspec.html">pubspec.yaml</a></strong> with the code below.
 This pubspec must specify the <strong>angular2</strong> and <strong>browser</strong>
 packages as dependencies, as well as the <code>angular2</code> transformer.
 It can also specify other packages and transformers for the app to use,
 such as <a href="https://pub.dartlang.org/packages/dart_to_js_script_rewriter">dart_to_js_script_rewriter</a>.
-Angular 2 is still changing, so provide an exact version: <strong>2.0.0-beta.17</strong>.</p>
-<div class="example-title">pubspec.yaml</div><code-example language="yaml" format="linenums">name: angular2_getting_started
-description: QuickStart
-version: 0.0.1
-environment:
-  sdk: &#39;&gt;=1.13.0 &lt;2.0.0&#39;
-dependencies:
-  angular2: 2.0.0-beta.17
-  browser: ^0.10.0
-  dart_to_js_script_rewriter: ^1.0.1
-transformers:
-- angular2:
-    entry_points: web/main.dart
-- dart_to_js_script_rewriter
-</code-example><h3 id="install-packages">(c) Get packages</h3><p>From the project folder, run <code>pub get</code> to install the angular2 and browser
+Angular 2 is still changing, so provide an exact version: <strong>2.0.0-beta.18</strong>.</p>
+<div class="example-title">pubspec.yaml</div><code-example language="yaml" format="">BAD FILENAME: ../../_fragments/quickstart/dart/pubspec.yaml.md   Current path: docs,dart,latest,quickstart PathToDocs: ../../</code-example><h3 id="install-packages">(c) Get packages</h3><p>From the project folder, run <code>pub get</code> to install the angular2 and browser
 packages (along with the packages they depend on).</p>
 <code-example language="sh">&gt; <span class="blk">pub get</span>
 Resolving dependencies...
 </code-example><p><strong>We&#39;re all set.</strong> Let&#39;s write some code.</p>
-<div class="l-main-section"></div><h2 id="root-component">Step 2: Our first Angular component</h2><p>Let&#39;s create a folder to hold our application and add a super-simple Angular component.</p>
+<div id="root-component" class="l-main-section"></div><h2 id="step-2-our-first-angular-component">Step 2: Our first Angular component</h2>
+<p>Let&#39;s create a folder to hold our application and add a super-simple Angular component.</p>
 <p><strong>Create a lib subfolder</strong> off the project root directory:</p>
 <code-example>mkdir lib
 </code-example><a id="app-component"></a><p><b>Create the component file</b>
 <code>lib/app_component.dart</code> (in this newly created directory) with the following content:
-</p><div class="example-title">lib/app_component.dart</div><code-example language="dart" format="linenums">import &#39;package:angular2/core.dart&#39;;
-
-@Component(
-    selector: &#39;my-app&#39;,
-    template: &#39;&lt;h1&gt;My First Angular 2 App&lt;/h1&gt;&#39;)
-class AppComponent {}
-</code-example><div class="l-verbose-section"><h3 id="appcomponent-is-the-root-of-the-application">AppComponent is the root of the application</h3>
+</p><div class="example-title">lib/app_component.dart</div><code-example language="dart" format="">BAD FILENAME: ../../_fragments/quickstart/dart/lib/app_component.dart.md   Current path: docs,dart,latest,quickstart PathToDocs: ../../</code-example><div class="l-verbose-section"><h3 id="appcomponent-is-the-root-of-the-application">AppComponent is the root of the application</h3>
 <p>Every Angular app has at least one <strong>root component</strong>, conventionally named <code>AppComponent</code>,
 that hosts the client user experience.
 Components are the basic building blocks of Angular applications.
@@ -168,14 +162,10 @@ each made up of several, related features that we&#39;ll use to build our applic
 <p>When we need something from a module or library, we import it.
 Here we import the Angular 2 core so that our component code can have access to
 the <code>@Component</code> annotation.</p>
-<div class="example-title">lib/app_component.dart (import)</div><code-example language="dart" format="">import &#39;package:angular2/core.dart&#39;;
-</code-example><h3 id="component-decorator">@Component annotation</h3><p><code>@Component</code> is an <em>annotation</em> that allows us to associate <em>metadata</em> with the
+<div class="example-title">lib/app_component.dart (import)</div><code-example language="dart" format="">BAD FILENAME: ../../_fragments/quickstart/dart/lib/app_component-import.dart.md   Current path: docs,dart,latest,quickstart PathToDocs: ../../</code-example><h3 id="component-decorator">@Component annotation</h3><p><code>@Component</code> is an <em>annotation</em> that allows us to associate <em>metadata</em> with the
 component class.
 The metadata tells Angular how to create and use this component.</p>
-<div class="example-title">lib/app_component.dart (metadata)</div><code-example language="dart" format="">@Component(
-    selector: &#39;my-app&#39;,
-    template: &#39;&lt;h1&gt;My First Angular 2 App&lt;/h1&gt;&#39;)
-</code-example><p>The call to the <code>@Component</code> constructor has two
+<div class="example-title">lib/app_component.dart (metadata)</div><code-example language="dart" format="">BAD FILENAME: ../../_fragments/quickstart/dart/lib/app_component-metadata.dart.md   Current path: docs,dart,latest,quickstart PathToDocs: ../../</code-example><p>The call to the <code>@Component</code> constructor has two
 named parameters, <code>selector</code> and <code>template</code>.</p>
 <p>The <strong>selector</strong> specifies a simple CSS selector for an HTML element that represents the component.</p>
 <blockquote>
@@ -194,27 +184,19 @@ In this way an Angular application becomes a tree of components.</p>
 </blockquote>
 <h3 id="component-class">Component class</h3>
 <p>At the bottom of the file is an empty, do-nothing class named <code>AppComponent</code>.</p>
-<div class="example-title">lib/app_component.dart (class)</div><code-example language="dart" format="">class AppComponent {}
-</code-example><p>When we&#39;re ready to build a substantive application,
+<div class="example-title">lib/app_component.dart (class)</div><code-example language="dart" format="">BAD FILENAME: ../../_fragments/quickstart/dart/lib/app_component-class.dart.md   Current path: docs,dart,latest,quickstart PathToDocs: ../../</code-example><p>When we&#39;re ready to build a substantive application,
 we can expand this class with properties and application logic.
 Our <code>AppComponent</code> class is empty because we don&#39;t need it to do anything in this QuickStart.</p>
 </div><div class="l-main-section"></div><h2 id="main">Step 3: Add <code>main.dart</code></h2><p>Now we need something to tell Angular to load the root component.
-Create:</p><ul><li>a <b>folder named <code>web</code></b></li><li>a <b>file named <code>web/main.dart</code></b> with the following content:</li></ul><div class="example-title">web/main.dart</div><code-example language="dart" format="linenums">import &#39;package:angular2/platform/browser.dart&#39;;
-
-import &#39;package:angular2_getting_started/app_component.dart&#39;;
-
-void main() {
-  bootstrap(AppComponent);
-}
-</code-example><div class="l-verbose-section"><p>We import the two things we need to launch the application:</p>
+Create:</p><ul><li>a <b>folder named <code>web</code></b></li><li>a <b>file named <code>web/main.dart</code></b> with the following content:</li></ul><div class="example-title">web/main.dart</div><code-example language="dart" format="">BAD FILENAME: ../../_fragments/quickstart/dart/web/main.dart.md   Current path: docs,dart,latest,quickstart PathToDocs: ../../</code-example><div class="l-verbose-section"><p>We import the two things we need to launch the application:</p>
 <ol>
 <li>Angular&#39;s browser <code>bootstrap</code> function</li>
 <li>The application root component, <code>AppComponent</code>.</li>
 </ol>
 <p>Then we call <code>bootstrap</code> with <code>AppComponent</code>.</p>
 <h3 id="bootstrapping-is-platform-specific">Bootstrapping is platform-specific</h3>
-<p>Notice that we import the <code>bootstrap</code> function from <code>package:angular2/platform/browser.dart</code>,
-not <code>package:angular2/core.dart</code>.
+<p>Notice that we import the <code>bootstrap</code> function 
+from <code>angular2/platform/browser.dart</code>, not <code>angular2/core.dart</code>.
 Bootstrapping isn&#39;t core because there isn&#39;t a single way to bootstrap the app.
 True, most applications that run in a browser call the bootstrap function from
 this library.</p>
@@ -224,56 +206,34 @@ We might wish to render the first page of our application on the server
 to improve launch performance or facilitate
 <a href="http://www.google.com/webmasters/docs/search-engine-optimization-starter-guide.pdf">SEO</a>.
 These targets require a different kind of bootstrap function that we&#39;d import from a different library.</p>
-<h3 id="why-create-separate-main-_docsfor-and-app-component-files-">Why create separate <em>main.dart</em> and app component files?</h3>
-<p>Both <code>main.dart</code> and the app component files are tiny.
+<h3 id="why-create-separate-span-ngio-ex-main-ts-span-span-if-docs-ts-app-module-span-and-app-component-files-">Why create separate <em><span ngio-ex>main.ts</span></em><span if-docs="ts">, app module</span> and app component files?</h3>
+<p>Then <span ngio-ex>main.ts</span><span if-docs="ts">, app module</span>
+and the app component files are tiny.
 This is just a QuickStart.
-We could have merged these two files into one
-and spared ourselves some complexity.</p>
+We could have merged these files into one and spared ourselves some complexity.</p>
 <p>We&#39;d rather demonstrate the proper way to structure an Angular application.
-App bootstrapping is a separate concern from presenting a view.
+App bootstrapping is a separate concern from<span if-docs="ts"> creating a module or</span>
+presenting a view.
 Mixing concerns creates difficulties down the road.
 We might launch the <code>AppComponent</code> in multiple environments with different bootstrappers.
 Testing the component is much easier if it doesn&#39;t also try to run the entire application.
 Let&#39;s make the small extra effort to do it <em>the right way</em>.</p>
 </div><div class="l-main-section"></div><h2 id="index">Step 4: Add <code>index.html</code></h2><p>In the <em>web</em> folder
 create an <code>index.html</code> file and paste the following lines into it:</p>
-<div class="example-title">web/index.html</div><code-example language="html" format="linenums">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Getting Started&lt;/title&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
-
-    &lt;script async src=&quot;main.dart&quot; type=&quot;application/dart&quot;&gt;&lt;/script&gt;
-    &lt;script async src=&quot;packages/browser/dart.js&quot;&gt;&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;my-app&gt;Loading...&lt;/my-app&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code-example><div class="l-verbose-section"><p>The <code>index.html</code> file defines the web page that hosts the application.</p>
-<a id="my-app"></a><p>When Angular calls the <code>bootstrap</code> function in <code>main.dart</code>, it reads the <code>AppComponent</code>
-metadata, finds the <code>my-app</code> selector, locates an element tag named <code>my-app</code>,
+<div class="example-title">web/index.html</div><code-example language="html" format="">BAD FILENAME: ../../_fragments/quickstart/dart/web/index.html.md   Current path: docs,dart,latest,quickstart PathToDocs: ../../</code-example><div class="l-verbose-section"><p>The <code>index.html</code> file defines the web page that hosts the application.</p>
+<a id="my-app"></a><p>When Angular calls the <code>bootstrap</code> function in <span ngio-ex>main.ts</span>,
+it reads the <code>AppComponent</code> metadata<span if-docs="ts">, sees that 
+<code>AppComponent</code> is the bootstrap component</span>,
+finds the <code>my-app</code> selector, locates an element tag named <code>my-app</code>,
 and renders our application&#39;s view between those tags.</p>
 </div><h3 id="add-some-style">Add some style</h3>
 <p>Styles aren&#39;t essential but they&#39;re nice, and <code>index.html</code> assumes we have
 a stylesheet called <code>styles.css</code>.</p>
-<p>Create a <code>styles.css</code> file in the <em>web</em> folder and start styling, perhaps with the minimal
-styles shown below. For the full set of master styles used by the documentation samples,
+<p>Create a <code>styles.css</code> file in the <em>web</em> folder and start styling,
+perhaps with the minimal styles shown below.</p>
+<div class="example-title">web/styles.css (excerpt)</div><code-example language="css" format="">BAD FILENAME: ../../_fragments/quickstart/dart/web/styles-quickstart.css.md   Current path: docs,dart,latest,quickstart PathToDocs: ../../</code-example><div class="callout is-helpful"><p>For the full set of master styles used by the documentation samples,
 see <a href="https://github.com/angular/angular.io/blob/master/public/docs/_examples/styles.css">styles.css</a>.</p>
-<div class="example-title">web/styles.css (excerpt)</div><code-example language="css" format="">h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
-}
-body {
-  margin: 2em;
-}
-
-/*
-* See https://github.com/angular/angular.io/blob/master/public/docs/_examples/styles.css
-* for the full set of master styles used by the documentation samples
-*/
-</code-example><div class="l-main-section"></div><h2 id="build-and-run">Step 5: Build and run the app!</h2><p>We have a few options for running our app.
+</div><div id="build-and-run" class="l-main-section"></div><h2>Step 5: Build and run the app!</h2><p>We have a few options for running our app.
 One is to launch a local HTTP server
 and then view the app in
 <a href="https://www.dartlang.org/tools/dartium/">Dartium</a>.
@@ -288,33 +248,21 @@ any changed assets.</p><p>Once the app is running, the browser window should sho
 <div class="alert is-important"><p>If you don&#39;t see <strong>My First Angular 2 App</strong>, make sure you&#39;ve entered all the code correctly,
 in the <a href="#wrap-up">proper folders</a>,
 and run <code>pub get</code>.</p>
-</div><div class="l-verbose-section"><h3 id="section-angular-run-app">Building the app (generating JavaScript)</h3><p>Before deploying the app, we need to generate JavaScript files.
+</div><div id="section-angular-run-app" class="l-verbose-section"><h3 id="building-the-app-generating-javascript-">Building the app (generating JavaScript)</h3>
+<p>Before deploying the app, we need to generate JavaScript files.
 The <code>pub build</code> command makes that easy.</p>
 <code-example language="sh">&gt; <span class="blk">pub build</span>
 Loading source assets...
 </code-example><p>The generated JavaScript appears, along with supporting files,
-under a directory named <code>build</code>.
-</p><h4 id="angular_transformer">Using the Angular transformer</h4><p>When generating JavaScript for an Angular app,
+under a directory named <code>build</code>.</p>
+<div id="angular_transformer"></div><h4>Using the Angular transformer</h4><p>When generating JavaScript for an Angular app,
 be sure to use the Angular transformer.
 It analyzes the Dart code,
 converting reflection-using code to static code
 that Dart's build tools can compile to faster, smaller JavaScript.
 The highlighted lines in <code>pubspec.yaml</code>
 configure the Angular transformer:
-</p><div class="example-title">pubspec.yaml</div><code-example language="yaml" format="linenums">name: angular2_getting_started
-description: QuickStart
-version: 0.0.1
-environment:
-  sdk: &#39;&gt;=1.13.0 &lt;2.0.0&#39;
-dependencies:
-  angular2: 2.0.0-beta.17
-  browser: ^0.10.0
-  dart_to_js_script_rewriter: ^1.0.1
-<span class="otl">transformers:</span>
-<span class="otl">- angular2:</span>
-    <span class="otl">entry_points: web/main.dart</span>
-- dart_to_js_script_rewriter
-</code-example><p>The <code>entry_points</code> item
+</p><div class="example-title">pubspec.yaml</div><code-example language="yaml" format="">BAD FILENAME: ../../_fragments/quickstart/dart/pubspec.yaml.md   Current path: docs,dart,latest,quickstart PathToDocs: ../../</code-example><p>The <code>entry_points</code> item
 identifies the Dart file in our app
 that has a <code>main()</code> function.
 For more information, see the
@@ -328,25 +276,12 @@ Don't worry,
 the Angular transformer converts the app's entry points
 (<code>entry_points</code> in <code>pubspec.yaml</code>)
 so that they don't use mirrors.
-</p></div><h4 id="dart_to_js_script_rewriter">Using dart_to_js_script_rewriter</h4><p>To improve the app&#39;s performance, convert the
+</p></div><div id="dart_to_js_script_rewriter"></div><h4>Using dart_to_js_script_rewriter</h4><p>To improve the app&#39;s performance, convert the
 HTML file to directly include the generated JavaScript;
 one way to do that is with <code>dart_to_js_script_rewriter</code>.
 To use the rewriter, specify <code>dart_to_js_script_rewriter</code> in both
 the <code>dependencies</code> and <code>transformers</code> sections of the pubspec.</p>
-<div class="example-title">pubspec.yaml</div><code-example language="yaml" format="linenums">name: angular2_getting_started
-description: QuickStart
-version: 0.0.1
-environment:
-  sdk: &#39;&gt;=1.13.0 &lt;2.0.0&#39;
-<span class="otl">dependencies:</span>
-  angular2: 2.0.0-beta.17
-  browser: ^0.10.0
-  <span class="otl">dart_to_js_script_rewriter: ^1.0.1</span>
-<span class="otl">transformers:</span>
-- angular2:
-    entry_points: web/main.dart
-<span class="otl">- dart_to_js_script_rewriter</span>
-</code-example><div class="alert is-important"><p>The <code>dart_to_js_script_rewriter</code> transformer must be
+<div class="example-title">pubspec.yaml</div><code-example language="yaml" format="">BAD FILENAME: ../../_fragments/quickstart/dart/pubspec.yaml.md   Current path: docs,dart,latest,quickstart PathToDocs: ../../</code-example><div class="alert is-important"><p>The <code>dart_to_js_script_rewriter</code> transformer must be
 <strong>after</strong> the <code>angular2</code> transformer in <code>pubspec.yaml</code>.</p>
 </div><p>For more information, see the docs for
 <a href="https://pub.dartlang.org/packages/dart_to_js_script_rewriter">dart_to_js_script_rewriter</a>.</p>
@@ -356,7 +291,7 @@ environment:
 <div class="alert is-important"><p>Be sure to terminate the <code>pub serve</code> process once you stop working on this app.</p>
 </div><div class="l-main-section"></div><h1 id="wrap-up">Wrap up</h1>
 <p>Our final project folder structure looks like this:</p>
-<div class="filetree"><div class="file">angular2-quickstart</div><div class="children"><div class="file">lib</div><div class="children"><div class="file">app_component.dart</div></div><div class="file">pubspec.yaml</div><div class="file">web</div><div class="children"><div class="file">index.html</div><div class="file">main.dart</div><div class="file">styles.css</div></div></div></div><div class="l-verbose-section"><p>This figure doesn&#39;t show generated files and directories.
+<div class="filetree"><div class="file">angular2_quickstart</div><div class="children"><div class="file">lib</div><div class="children"><div class="file">app_component.dart</div></div><div class="file">pubspec.yaml</div><div class="file">web</div><div class="children"><div class="file">index.html</div><div class="file">main.dart</div><div class="file">styles.css</div></div></div></div><div class="l-verbose-section"><p>This figure doesn&#39;t show generated files and directories.
 For example, a <code>pubspec.lock</code> file
 specifies versions and other identifying information for
 the packages that our app depends on.
@@ -365,59 +300,7 @@ containing the JavaScript version of our app.
 Pub, IDEs, and other tools often create
 other directories and dotfiles.</p>
 </div><p>Here are the file contents:</p>
-<code-tabs><code-pane language="dart" name="lib/app_component.dart" format="linenums">import &#39;package:angular2/core.dart&#39;;
-
-@Component(
-    selector: &#39;my-app&#39;,
-    template: &#39;&lt;h1&gt;My First Angular 2 App&lt;/h1&gt;&#39;)
-class AppComponent {}
-</code-pane><code-pane language="dart" name="web/main.dart" format="linenums">import &#39;package:angular2/platform/browser.dart&#39;;
-
-import &#39;package:angular2_getting_started/app_component.dart&#39;;
-
-void main() {
-  bootstrap(AppComponent);
-}
-</code-pane><code-pane language="html" name="web/index.html" format="linenums">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Getting Started&lt;/title&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
-
-    &lt;script async src=&quot;main.dart&quot; type=&quot;application/dart&quot;&gt;&lt;/script&gt;
-    &lt;script async src=&quot;packages/browser/dart.js&quot;&gt;&lt;/script&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;my-app&gt;Loading...&lt;/my-app&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code-pane><code-pane language="yaml" name="pubspec.yaml" format="linenums">name: angular2_getting_started
-description: QuickStart
-version: 0.0.1
-environment:
-  sdk: &#39;&gt;=1.13.0 &lt;2.0.0&#39;
-dependencies:
-  angular2: 2.0.0-beta.17
-  browser: ^0.10.0
-  dart_to_js_script_rewriter: ^1.0.1
-transformers:
-- angular2:
-    entry_points: web/main.dart
-- dart_to_js_script_rewriter
-</code-pane><code-pane language="css" name="web/styles.css" format="linenums">h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
-}
-body {
-  margin: 2em;
-}
-
-/*
-* See https://github.com/angular/angular.io/blob/master/public/docs/_examples/styles.css
-* for the full set of master styles used by the documentation samples
-*/
-</code-pane></code-tabs><div class="l-main-section"></div><h2 id="what-next-">What next?</h2>
+<code-tabs><code-pane language="dart" name="lib/app_component.dart" format="linenums">BAD FILENAME: ../../_fragments/quickstart/dart/lib/app_component.dart.md   Current path: docs,dart,latest,quickstart PathToDocs: ../../</code-pane><code-pane language="dart" name="web/main.dart" format="linenums">BAD FILENAME: ../../_fragments/quickstart/dart/web/main.dart.md   Current path: docs,dart,latest,quickstart PathToDocs: ../../</code-pane><code-pane language="html" name="web/index.html" format="linenums">BAD FILENAME: ../../_fragments/quickstart/dart/web/index.html.md   Current path: docs,dart,latest,quickstart PathToDocs: ../../</code-pane><code-pane language="yaml" name="pubspec.yaml" format="linenums">BAD FILENAME: ../../_fragments/quickstart/dart/pubspec.yaml.md   Current path: docs,dart,latest,quickstart PathToDocs: ../../</code-pane><code-pane language="css" name="web/styles.css" format="linenums">BAD FILENAME: ../../_fragments/quickstart/dart/web/styles_1.css.md   Current path: docs,dart,latest,quickstart PathToDocs: ../../</code-pane></code-tabs><div class="l-main-section"></div><h2 id="what-next-">What next?</h2>
 <p>Our first application doesn&#39;t do much. It&#39;s basically &quot;Hello, World&quot; for Angular 2.</p>
 <p>We kept it simple in our first pass: we wrote a little Angular component,
 created a simple <code>index.html</code>, and launched with a
@@ -425,11 +308,11 @@ static file server. That&#39;s about all we&#39;d expect to do for a &quot;Hello
 <p><strong>We have greater ambitions!</strong></p>
 <p>We&#39;re about to take the next step and build a small application that
 demonstrates the great things we can build with Angular 2.</p>
-<p>Join us on the <a href="./tutorial">Tour of Heroes Tutorial</a>!</p></div></div></div></article><div class="main-footer"><nav class="background-blue-grey-900 grid-fluid"><div class="c3 main-footer-branding"><div class="logo-inverse-large"></div></div><div class="c3"><h3 class="text-headline">RESOURCES</h3><ul class="text-body"><!-- TODO: (ericjim) make a libraries page to showcase all angular 2 libraries--><!--li <a href="/libraries.html">Libraries</a>--><li><a href="/about/">About</a></li><li><a href="/resources/">Books & Training</a></li><li><a href="/resources/">Tools & Libraries</a></li><li><a href="/resources/">Community</a></li><li><a href="/presskit.html">Press Kit</a></li></ul></div><div class="c3"><h3 class="text-headline">HELP</h3><ul class="text-body"><li><a href="http://stackoverflow.com/questions/tagged/angular2">Stack Overflow</a></li><li><a href="https://gitter.im/angular/angular">Gitter</a></li><li><a href="https://groups.google.com/forum/#!forum/angular"> Google Group</a></li><li><a href="https://github.com/angular/angular/issues"> Report Issues</a></li><li><a class="footer-feedback" ng-click="appCtrl.openFeedback()" aria-label="Submit feedback on this page"> Site Feedback</a></li></ul></div><div class="c3"><h3 class="text-headline">COMMUNITY</h3><ul class="text-body"><li><a href="/events.html">Events</a></li><li><a href="http://www.meetup.com/topics/angularjs/">Meetups</a></li><li><a href="https://twitter.com/angularjs"> Twitter</a></li><li><a href="https://github.com/angular/angular"> GitHub</a></li><li><a href="/contribute.html"> Contribute</a></li></ul></div></nav><footer class="background-steel"><small class="text-caption">Powered by Google ©2010-2016. Code licensed under an <a href="/license" class="text-snow">MIT-style License</a>. Documentation licensed under <a class="text-snow" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small><a aria-label="View Style Guide" href="/docs/dart/latest/styleguide.html" title="Style Guide" md-button="md-button" class="styleguide-trigger text-snow"><span class="icon-favorite"></span></a></footer></div><!-- VENDORS --><script src="/resources/js/vendor/prettify.js"></script><script src="/resources/js/vendor/lang-basic.js"></script><script src="/resources/js/vendor/lang-dart.js"></script><script src="/resources/js/vendor/lodash.js"></script><script src="/resources/js/vendor/clipboard.min.js"></script><!-- Angular Material Dependencies --><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script><!-- Firebase -->
-<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<p>Join us on the <a href="./tutorial">Tour of Heroes Tutorial</a>!</p></div></div></div></article><div class="main-footer"><nav class="background-blue-grey-900 grid-fluid"><div class="c3 main-footer-branding"><div class="logo-inverse-large"></div></div><div class="c2"><h3 class="text-headline">RESOURCES</h3><ul class="text-body"><!-- TODO: (ericjim) make a libraries page to showcase all angular 2 libraries--><!--li <a href="/libraries.html">Libraries</a>--><li><a href="/about/">About</a></li><li><a href="/resources/">Books & Training</a></li><li><a href="/resources/">Tools & Libraries</a></li><li><a href="/resources/">Community</a></li><li><a href="/presskit.html">Press Kit</a></li></ul></div><div class="c2"><h3 class="text-headline">HELP</h3><ul class="text-body"><li><a href="http://stackoverflow.com/questions/tagged/angular2">Stack Overflow</a></li><li><a href="https://gitter.im/angular/angular">Gitter</a></li><li><a href="https://groups.google.com/forum/#!forum/angular"> Google Group</a></li><li><a href="https://github.com/angular/angular/issues"> Report Issues</a></li><li><a class="footer-feedback" ng-click="appCtrl.openFeedback()" aria-label="Submit feedback on this page"> Site Feedback</a></li></ul></div><div class="c2"><h3 class="text-headline">COMMUNITY</h3><ul class="text-body"><li><a href="/events.html">Events</a></li><li><a href="http://www.meetup.com/topics/angularjs/">Meetups</a></li><li><a href="https://twitter.com/angularjs"> Twitter</a></li><li><a href="https://github.com/angular/angular"> GitHub</a></li><li><a href="/contribute.html"> Contribute</a></li></ul></div><div class="c2"><h3 class="text-headline">LANGUAGES</h3><ul class="text-body"><li><a href="https://angular.cn/">中文版</a></li></ul></div></nav><footer class="background-steel"><small class="text-caption">Powered by Google ©2010-2016. Code licensed under an <a href="/license" class="text-snow">MIT-style License</a>. Documentation licensed under <a class="text-snow" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</small><a aria-label="View Style Guide" href="/docs/dart/latest/styleguide.html" title="Style Guide" md-button="md-button" class="styleguide-trigger text-snow"><span class="icon-favorite"></span></a></footer></div><!-- VENDORS --><script src="/resources/js/vendor/prettify.js"></script><script src="/resources/js/vendor/lang-basic.js"></script><script src="/resources/js/vendor/lang-dart.js"></script><script src="/resources/js/vendor/lodash.js"></script><script src="/resources/js/vendor/clipboard.min.js"></script><!-- Angular Material Dependencies --><script src="/ajax/libs/angularjs/1.4.8/angular.min.js"></script><script src="/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script><script src="/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script><script src="/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script><!-- Firebase -->
+<script src="/js/client/2.2.4/firebase.js"></script>
 <!-- AngularFire -->
-<script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
-<!-- Angular.io Site JS --><script src="/resources/js/site.js"></script><script src="/resources/js/controllers/app-controller.js"></script><script src="/resources/js/controllers/resources-controller.js"></script><script src="/resources/js/directives/cheatsheet.js"></script><script src="/resources/js/directives/api-list.js"></script><script src="/resources/js/directives/bio.js"></script><script src="/resources/js/directives/bold.js"></script><script src="/resources/js/directives/code.js"></script><script src="/resources/js/directives/copy.js"></script><script src="/resources/js/directives/code-tabs.js"></script><script src="/resources/js/directives/code-pane.js"></script><script src="/resources/js/directives/code-example.js"></script><script src="/resources/js/directives/scroll-y-offset-element.js"></script><!-- GA --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+<script src="/libs/angularfire/1.2.0/angularfire.min.js"></script>
+<!-- Angular.io Site JS --><script src="/resources/js/site.js"></script><script src="/resources/js/util.js"></script><script src="/resources/js/controllers/app-controller.js"></script><script src="/resources/js/controllers/resources-controller.js"></script><script src="/resources/js/directives/cheatsheet.js"></script><script src="/resources/js/directives/api-list.js"></script><script src="/resources/js/directives/bio.js"></script><script src="/resources/js/directives/bold.js"></script><script src="/resources/js/directives/code.js"></script><script src="/resources/js/directives/copy.js"></script><script src="/resources/js/directives/code-tabs.js"></script><script src="/resources/js/directives/code-pane.js"></script><script src="/resources/js/directives/code-example.js"></script><script src="/resources/js/directives/if-docs.js"></script><script src="/resources/js/directives/live-example.js"></script><script src="/resources/js/directives/ngio-ex-path.js"></script><script src="/resources/js/directives/scroll-y-offset-element.js"></script><!-- GA --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
